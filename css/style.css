@@ -4,6 +4,15 @@
 body {
   font-family: 'Roboto', sans-serif;
   padding-top: 4.5rem;
+  background-color: black;
+}
+
+body h5 {
+  color:  #c0c0c0;
+}
+
+body p {
+  color: 	#c0c0c0;
 }
 
 body a {
@@ -21,6 +30,15 @@ hr {
   border-top: 1px solid #e5e5e5;
   margin: 1em 0;
   padding: 0;
+}
+
+.maintitle {
+  border: none;
+  background-color: none;
+  font-family: 'East Sea Dokdo', cursive;
+  font-style: italic;
+  color: #e7e7e7;
+  font-size: 200px;
 }
 
 .card {
