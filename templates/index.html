@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>mxtxt – Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="img/logo.png" type="image/png" sizes="16x16">
+  <link href="https://fonts.googleapis.com/css?family=Bad+Script|Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day|La+Belle+Aurore|Montez" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Mrs+Saint+Delafield" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Stalemate" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <link id=original rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.3.2/vivus.js"></script>
+</head>
+
+<!-- functions to change the first button -->
+<script>
+
+$(document).ready(function(){
+  $("button#theme1").click(function(){
+    $("#original").attr("href", "{{ url_for('static', filename='css/style1.css') }}");
+  });
+});
+
+$(document).ready(function(){
+  $("button#theme2").click(function(){
+    $("#original").attr("href", "{{ url_for('static', filename='css/style2.css') }}");
+  });
+});
+
+$(document).ready(function(){
+  $("button#theme3").click(function(){
+    $("#original").attr("href", "{{ url_for('static', filename='css/style3.css') }}");
+  });
+});
+
+$(document).ready(function(){
+  $("button#theme4").click(function(){
+    $("#original").attr("href", "{{ url_for('static', filename='css/style4.css') }}");
+  });
+});
+
+$(document).ready(function(){
+  $("button#theme5").click(function(){
+    $("#original").attr("href", "{{ url_for('static', filename='css/style5.css') }}");
+  });
+});
+
+$(document).ready(function(){
+  $("button#theme6").click(function(){
+    $("#original").attr("href", "{{ url_for('static', filename='css/style6.css') }}");
+  });
+});
+
+</script>
+
+<!-- end of functions to change the first button -->
+
+
+
+
+<body>
+
+  <!-- Header --->
+
+  <header>
+
+    <!-- Navigation --->
+    <nav class="navbar fixed-left navbar-expand navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><img src="img/logo.png" id="logo">mx<i>txt</i></a>
+        <div class="navbar-nav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"><p class="active">home</p></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="project/overview.html"><p>contents</p></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="documentation.html"><p>documentation</p></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html"><p>about</p></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="disclaimer.html"><p>disclaimer</p></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!--- style="width: 110%; margin: -20px auto -10% -13%;" ---->
+
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="maintitle">
+        <div>mxtxt</div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <button id="theme1" type="button" class="btn btn-light" onclick="changeTemplate()">change</button>
+  <button id="theme1" type="button" class="btn btn-light" onclick="theme1()">theme 1</button>
+  <button id="theme2" type="button" class="btn btn-light" onclick="theme2()">theme 2</button>
+  <button id="theme3" type="button" class="btn btn-light" onclick="theme3()">theme 3</button>
+  <button id="theme4" type="button" class="btn btn-light" onclick="theme4">theme 4</button>
+  <button id="theme5" type="button" class="btn btn-light" onclick="theme5">theme 5</button>
+  <button id="theme6" type="button" class="btn btn-light" onclick="theme6">theme 6</button>
+
+
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col col-lg-11 col-xl-10" style="border: none; background: none; margin-top: 0%;">
+        <div class="card-body">
+          <p class="card-text" align='center'> mxtxt is a tool to view your html documents in a variety of historical themes. it's a<em> trans-historical, typographic, theming </em> tour de force. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<hr>
+
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col col-lg-11 col-xl-10" style="border: none; background: none;">
+        <div class="card-body" align='center'>
+          <h5 class="card-title"><a href="project/overview.html" style="color: white;"></a></h5>
+          <div class="container" id="contents">
+            <div class="row">
+              <div class="col-sm-6 col-md-4">
+                <a href="project/items/game.html"><p><i class="fas fa-spinner"></i> Doc 1</p></a>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <a href="project/ermodel.html"><p><i class="fas fa-sitemap"></i> Doc 2</p></a>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <a href="project/alignement.html"><p><i class="fas fa-grip-lines"></i></i> Doc 3</p></a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6 col-md-4">
+                <a href="project/description.html"><p><i class="fas fa-i-cursor"></i> Doc 4</p></a>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <a href="project/description.html"><p><i class="fas fa-i-cursor"></i> Doc 5</p></a>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <a href="project/description.html"><p><i class="fas fa-i-cursor"></i> Doc 6</p></a>
+              </div>
+            </div>
+              <div class="col-sm-6 col-md-4" align='center'>
+                <a href="project/xml.html"><p><i class="fas fa-code"></i> Upload your own!</p></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer class="page-footer font-small">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center">
+      <div class="card-body" style="padding-top: 0;">
+        <p class="card-text"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"></a><br />The content is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+        <p class="card-text">The project was carried out by Delfina Sol Pandiani, Eleonora Peruch, Severin Josef Burg.</p>
+      </div>
+    </div>
+
+  </footer>
+
+</body>
+</html>
