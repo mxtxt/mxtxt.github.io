@@ -30,7 +30,7 @@
 $(document).ready(function(){
   $("button#themeX").click(function(){
     $('iframe').contents().find("head")
-      .append($("<link rel="stylesheet" type="text/css" href="css/style1.css">"));
+      .append($("<link rel="stylesheet" id=original type="text/css" href="css/style1.css">"));
     });
 });
 
