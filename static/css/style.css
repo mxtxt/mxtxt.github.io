@@ -1,6 +1,20 @@
 
 /* General */
 
+.mx {
+overflow:hidden;
+padding-bottom:56.25%;
+position:relative;
+height:0;
+}
+.mx iframe{
+left:5%;
+top:5%;
+height:90%;
+width:90%;
+position:absolute;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   padding-top: 4.5rem;
