@@ -26,6 +26,15 @@
 <!-- functions to change the first button -->
 <script>
 
+
+$(document).ready(function(){
+  $("button#themeX").click(function(){
+    $('iframe').contents().find("head")
+      .append($("<link rel="stylesheet" type="text/css" href="css/style1.css">"));
+    });
+});
+
+
 $(document).ready(function(){
   $("button#theme1").click(function(){
     $("#original").attr("href", "css/style1.css");
@@ -70,7 +79,7 @@ $(document).ready(function(){
     <iframe src="documentation.html" allowfullscreen></iframe>
   </div>
 
-  <button id="theme1" type="button" class="btn btn-light" onclick="changeTemplate()">change</button>
+  <button id="themeX" type="button" class="btn btn-light" onclick="themeX()">themeX</button>
   <button id="theme1" type="button" class="btn btn-light" onclick="theme1()">theme 1</button>
   <button id="theme2" type="button" class="btn btn-light" onclick="theme2()">theme 2</button>
   <button id="theme3" type="button" class="btn btn-light" onclick="theme3()">theme 3</button>
