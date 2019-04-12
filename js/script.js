@@ -1,10 +1,10 @@
-//
-// var cssLink = document.createElement("link");
-// cssLink.href = "css/style5.css";
-// cssLink.rel = "stylesheet";
-// cssLink.type = "text/css";
-// frames["iframe"].document.head.appendChild(cssLink);
-//
+
+var cssLink = document.createElement("link");
+cssLink.href = "css/style5.css";
+cssLink.rel = "stylesheet";
+cssLink.type = "text/css";
+frames["iframe"].document.head.appendChild(cssLink);
+
 
 $(document).ready(function(){
   $("button#theme1").click(function(){
