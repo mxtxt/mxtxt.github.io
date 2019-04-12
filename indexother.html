@@ -20,25 +20,19 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.3.2/vivus.js"></script>
-  <script src="js/script.js"></script>
 
 </head>
 
 <!-- functions to change the first button -->
 <script>
 
-// var cssLink = document.createElement("link");
-// cssLink.href = "css/style5.css";
-// cssLink.rel = "stylesheet";
-// cssLink.type = "text/css";
-// frames["iframe"].document.head.appendChild(cssLink);
-//
-//
-// $(document).ready(function(){
-//   $("button#theme1").click(function(){
-//     $("cssLink").attr("href", "css/style1.css");
-//   });
-// });
+var frm = frames['frame'].document;
+var otherhead = frm.getElementsByTagName("head")[0];
+var link = frm.createElement("link");
+link.setAttribute("rel", "stylesheet");
+link.setAttribute("type", "text/css");
+link.setAttribute("href", "css/style4.css");
+otherhead.appendChild(link);
 
 $(document).ready(function(){
   $("button#theme2").click(function(){
@@ -75,8 +69,11 @@ $(document).ready(function(){
 <body>
 
   <div class="mx">
-    <iframe src="documentation.html" allowfullscreen></iframe>
+    <iframe id="my-frame" src="documentation.html" allowfullscreen></iframe>
   </div>
+
+  <button data-theme="light">Light Theme</button>
+  <button data-theme="dark">Dark Theme</button>
 
   <button id="themeX" type="button" class="btn btn-light" onclick="themeX()">themeX</button>
   <button id="theme1" type="button" class="btn btn-light" onclick="theme1()">theme 1</button>
