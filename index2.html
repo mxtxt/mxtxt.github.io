@@ -26,25 +26,18 @@
 <!-- functions to change the first button -->
 <script>
 
-(function() {
-  // Load the light them when the iFrame is ready.
-  $('#my-iframe').on('load', function() {
-    activateTheme('light');
-  });
-
-  // Listen for clicks on buttons with a "data-theme" attribute, and activate that theme on click.
-  $('button[data-theme]').on('click', function(event) {
-    activateTheme($(this).data('theme'));
-  });
-
-  // Send message to the iFrame with the theme we want to activate.
-  function activateTheme(theme) {
-    var iframe = document.getElementById('my-iframe');
-    if (iframe && iframe.contentWindow) {
-      iframe.contentWindow.postMessage(theme, '*');
-    }
-  }
-})();
+// var cssLink = document.createElement("link");
+// cssLink.href = "css/style5.css";
+// cssLink.rel = "stylesheet";
+// cssLink.type = "text/css";
+// frames["iframe"].document.head.appendChild(cssLink);
+//
+//
+// $(document).ready(function(){
+//   $("button#theme1").click(function(){
+//     $("cssLink").attr("href", "css/style1.css");
+//   });
+// });
 
 $(document).ready(function(){
   $("button#theme2").click(function(){
@@ -81,11 +74,8 @@ $(document).ready(function(){
 <body>
 
   <div class="mx">
-    <iframe id="my-frame" src="documentation.html" allowfullscreen></iframe>
+    <iframe src="documentation.html" allowfullscreen></iframe>
   </div>
-
-  <button data-theme="light">Light Theme</button>
-  <button data-theme="dark">Dark Theme</button>
 
   <button id="themeX" type="button" class="btn btn-light" onclick="themeX()">themeX</button>
   <button id="theme1" type="button" class="btn btn-light" onclick="theme1()">theme 1</button>
