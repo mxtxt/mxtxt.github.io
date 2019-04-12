@@ -4,9 +4,12 @@
 html, body {
   height: 100vh;
   width: 100vw;
+  padding: 0;
+  margin: 0;
   background-color: #ffffff;
   font-family: 'Roboto', sans-serif;
 }
+
 
 
 /* Frame */
@@ -42,8 +45,11 @@ html, body {
   height: 100%;
 }
 
-
-/* Menu */
+/* Navbar */
+.navbar-brand h1 {
+  font-size: 1rem;
+  margin: 0.5rem 0 0.5rem 2.5rem;
+}
 
 
 /* Document Menu */
