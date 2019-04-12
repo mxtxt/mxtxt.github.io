@@ -26,13 +26,25 @@
 <!-- functions to change the first button -->
 <script>
 
-var frm = frames['frame'].document;
-var otherhead = frm.getElementsByTagName("head")[0];
-var link = frm.createElement("link");
-link.setAttribute("rel", "stylesheet");
-link.setAttribute("type", "text/css");
-link.setAttribute("href", "css/style4.css");
-otherhead.appendChild(link);
+(function() {
+  // Load the light them when the iFrame is ready.
+  $('#my-iframe').on('load', function() {
+    activateTheme('light');
+  });
+
+  // Listen for clicks on buttons with a "data-theme" attribute, and activate that theme on click.
+  $('button[data-theme]').on('click', function(event) {
+    activateTheme($(this).data('theme'));
+  });
+
+  // Send message to the iFrame with the theme we want to activate.
+  function activateTheme(theme) {
+    var iframe = document.getElementById('my-iframe');
+    if (iframe && iframe.contentWindow) {
+      iframe.contentWindow.postMessage(theme, '*');
+    }
+  }
+})();
 
 $(document).ready(function(){
   $("button#theme2").click(function(){
