@@ -5,39 +5,55 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="img/logo.png" type="image/png" sizes="16x16">
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Bad+Script|Roboto" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day|La+Belle+Aurore|Montez" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Mrs+Saint+Delafield" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Stalemate" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo" rel="stylesheet">
 
+  <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <!-- Fontawesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-  <link id=original rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- Stylesheet -->
+  <link id=original rel="stylesheet" type="text/css" href="css/styleSev.css">
 
+  <!-- Unnecessary? -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.3.2/vivus.js"></script>
+
   <script src="js/script.js"></script>
 
 </head>
 
 <body>
 
-  <div class="mx">
-    <iframe id="myframe" src="documentation.html"></iframe>
+  <div class="frame">
+    <div class="border top">
+    </div>
+    <div class="border bottom">
+    </div>
+    <div class="border left">
+    </div>
+    <div class="border right">
+      <button id="themeX" type="button" class="btn btn-light" onclick="themeX()">X</button>
+      <button id="theme1" type="button" class="btn btn-light" onclick="theme1()">1</button>
+      <button id="theme2" type="button" class="btn btn-light" onclick="theme2()">2</button>
+      <button id="theme3" type="button" class="btn btn-light" onclick="theme3()">3</button>
+      <button id="theme4" type="button" class="btn btn-light" onclick="theme4()">4</button>
+      <button id="theme5" type="button" class="btn btn-light" onclick="theme5()">5</button>
+      <button id="theme6" type="button" class="btn btn-light" onclick="theme6()">6</button>
+    </div>
   </div>
 
-  <button id="themeX" type="button" class="btn btn-light" onclick="themeX()">themeX</button>
-  <button id="theme1" type="button" class="btn btn-light" onclick="theme1()">theme 1</button>
-  <button id="theme2" type="button" class="btn btn-light" onclick="theme2()">theme 2</button>
-  <button id="theme3" type="button" class="btn btn-light" onclick="theme3()">theme 3</button>
-  <button id="theme4" type="button" class="btn btn-light" onclick="theme4">theme 4</button>
-  <button id="theme5" type="button" class="btn btn-light" onclick="theme5">theme 5</button>
-  <button id="theme6" type="button" class="btn btn-light" onclick="theme6">theme 6</button>
-
+  <div id="container">
+    <iframe src="documentation.html"></iframe>
+  </div>
 
 </body>
 </html>
