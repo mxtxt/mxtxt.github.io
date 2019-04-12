@@ -1,9 +1,10 @@
+var $head = $("#myframe").contents().find("head");
 
-var cssLink = document.createElement("link");
-cssLink.href = "css/style5.css";
-cssLink.rel = "stylesheet";
-cssLink.type = "text/css";
-frames["iframe"].document.head.appendChild(cssLink);
+$head.append($("<link/>", {
+    rel: "stylesheet",
+    href: "css/style5.css"
+    type: "text/css"
+}));
 
 
 $(document).ready(function(){
