@@ -34,25 +34,35 @@
 <body>
 
   <div class="frame">
-    <div class="border top">
+    <div class="frame top">
     </div>
-    <div class="border bottom">
+    <div class="frame bottom">
     </div>
-    <div class="border left">
+    <div class="frame left">
+      <div class="doc-nav">
+        <button id="doc1" type="button" class="doc-btn" onclick="doc()">1</button>
+        <button id="doc2" type="button" class="doc-btn" onclick="doc()">2</button>
+        <button id="doc3" type="button" class="doc-btn" onclick="doc()">3</button>
+        <button id="doc4" type="button" class="doc-btn" onclick="doc()">4</button>
+        <button id="doc5" type="button" class="doc-btn" onclick="doc()">5</button>
+        <button id="doc6" type="button" class="doc-btn" onclick="doc()">6</button>
+      </div>
     </div>
-    <div class="border right">
-      <button id="themeX" type="button" class="btn btn-light" onclick="themeX()">X</button>
-      <button id="theme1" type="button" class="btn btn-light" onclick="theme1()">1</button>
-      <button id="theme2" type="button" class="btn btn-light" onclick="theme2()">2</button>
-      <button id="theme3" type="button" class="btn btn-light" onclick="theme3()">3</button>
-      <button id="theme4" type="button" class="btn btn-light" onclick="theme4()">4</button>
-      <button id="theme5" type="button" class="btn btn-light" onclick="theme5()">5</button>
-      <button id="theme6" type="button" class="btn btn-light" onclick="theme6()">6</button>
+    <div class="frame right">
+      <div class="theme-nav">
+        <button id="themeX" type="button" class="theme-btn" onclick="themeX()">X</button>
+        <button id="theme1" type="button" class="theme-btn" onclick="theme1()">1</button>
+        <button id="theme2" type="button" class="theme-btn" onclick="theme2()">2</button>
+        <button id="theme3" type="button" class="theme-btn" onclick="theme3()">3</button>
+        <button id="theme4" type="button" class="theme-btn" onclick="theme4()">4</button>
+        <button id="theme5" type="button" class="theme-btn" onclick="theme5()">5</button>
+        <button id="theme6" type="button" class="theme-btn" onclick="theme6()">6</button>
+      </div>
     </div>
   </div>
 
-  <div id="container">
-    <iframe src="documentation.html"></iframe>
+  <div id="content">
+      <iframe src="documentation.html"></iframe>
   </div>
 
 </body>
