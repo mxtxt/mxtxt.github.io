@@ -1,9 +1,9 @@
 var $head = $("#myframe").contents().find("head");
 
 $head.append($("<link/>", {
-    rel: "stylesheet",
-    href: "css/style5.css"
-    type: "text/css"
+    rel= "stylesheet",
+    href= "css/style5.css"
+    type= "text/css"
 }));
 
 
