@@ -263,4 +263,5 @@ html, body {
   border: none;
   background-color: #f8f8f8;
   -webkit-overflow-scrolling: touch;
+  overflow: scroll;
 }
