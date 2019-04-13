@@ -248,6 +248,8 @@ html, body {
   left: 0;
   width: 100vw;
   height: 100vh;
+  -webkit-overflow-scrolling: touch;
+  overflow: scroll;
 }
 
 @media (min-width: 767px) {
@@ -261,6 +263,4 @@ html, body {
   height: 100%;
   border: none;
   background-color: #f8f8f8;
-  -webkit-overflow-scrolling: touch;
-  overflow: scroll;
 }
