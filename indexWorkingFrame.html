@@ -101,7 +101,7 @@
     $(document).ready(function(){
       $("button#theme1").click(function(){
         var iframe = document.getElementById("myFrame");
-        document.getElementById("demo").innerHTML = iframe.contentWindow.document.getElementById("original")[0];
+        document.getElementById("demo").innerHTML = iframe.contentWindow.document.getElementsByName("styling")[0];
       });
     });
 
