@@ -85,7 +85,7 @@
   </div>
 
   <div id="content">
-    <iframe id="document" src="documentation.html"></iframe>
+    <iframe id="document" src="docs/testDocumentation/documentation.html"></iframe>
   </div>
 
   <script>
@@ -106,7 +106,7 @@
     function switchTheme(input){
       var iframe = document.getElementById("document");
       var elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
-      elmnt.setAttribute("href", "css/" + input.id + ".css");
+      elmnt.setAttribute("href", "../../css/" + input.id + ".css");
     };
 
     function switchDoc(input){
