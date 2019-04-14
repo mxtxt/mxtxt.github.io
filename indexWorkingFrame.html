@@ -85,66 +85,52 @@
   </div>
 
   <div id="content">
-    <h1 id="demo"></h1>
-    <iframe id="myFrame" src="documentation.html"></iframe>
+    <iframe id="document" src="documentation.html"></iframe>
   </div>
 
   <script>
     function myFunction() {
-      var iframe = document.getElementById("myFrame");
+      var iframe = document.getElementById("document");
       var elmnt = iframe.contentWindow.document.getElementsByTagName("H2")[0];
       elmnt.style.display = "none";
     }
   </script>
 
   <script>
-  var iframe = document.getElementById("myFrame");
-  var elmnt = iframe.contentWindow.document.getElementsByName("styling")[0];
-
     $(document).ready(function(){
       $("button#theme1").click(function(){
-        var iframe = document.getElementById("myFrame");
-        var elmnt = iframe.contentWindow.document.getElementsByName("styling")[0];
+        var iframe = document.getElementById("document");
+        var elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
         elmnt.setAttribute("href", "css/style1.css");
       });
-    });
 
-    $(document).ready(function(){
       $("button#theme2").click(function(){
-        var iframe = document.getElementById("myFrame");
-        var elmnt = iframe.contentWindow.document.getElementsByName("styling")[0];
+        var iframe = document.getElementById("document");
+        var elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
         elmnt.setAttribute("href", "css/style2.css");
       });
-    });
 
-    $(document).ready(function(){
       $("button#theme3").click(function(){
-        var iframe = document.getElementById("myFrame");
-        var elmnt = iframe.contentWindow.document.getElementsByName("styling")[0];
+        var iframe = document.getElementById("document");
+        var elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
         elmnt.setAttribute("href", "css/style3.css");
       });
-    });
 
-    $(document).ready(function(){
       $("button#theme4").click(function(){
-        var iframe = document.getElementById("myFrame");
-        var elmnt = iframe.contentWindow.document.getElementsByName("styling")[0];
+        var iframe = document.getElementById("document");
+        var elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
         elmnt.setAttribute("href", "css/style4.css");
       });
-    });
 
-    $(document).ready(function(){
       $("button#theme5").click(function(){
-        var iframe = document.getElementById("myFrame");
-        var elmnt = iframe.contentWindow.document.getElementsByName("styling")[0];
+        var iframe = document.getElementById("document");
+        var elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
         elmnt.setAttribute("href", "css/style5.css");
       });
-    });
 
-    $(document).ready(function(){
       $("button#theme6").click(function(){
-        var iframe = document.getElementById("myFrame");
-        var elmnt = iframe.contentWindow.document.getElementsByName("styling")[0];
+        var iframe = document.getElementById("document");
+        var elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
         elmnt.setAttribute("href", "css/style6.css");
       });
     });
