@@ -101,19 +101,19 @@
         "docs/tls/TimesLiterarySupplement_Final.html",
       ];
 
+      var iframe = document.getElementById("document");
+
       var choiceTheme = listThemes[Math.floor(Math.random()*listThemes.length)];
       var choiceDoc = listDocs[Math.floor(Math.random()*listDocs.length)];
 
       document.getElementById("document").setAttribute("src", choiceDoc);
       document.getElementById("currentDoc").innerHTML = choiceDoc;
 
-      if (getElementById("document").attr("src") == choiceDoc ) {
-        var iframe = document.getElementById("document");
+      iframe.addEventListener("load", function() {
         var elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
         elmnt.setAttribute("href", "../../css/" + choiceTheme + ".css");
-
         document.getElementById("currentTheme").innerHTML = choiceTheme;
-      };
+      });
     };
 
     function switchTheme(input){
