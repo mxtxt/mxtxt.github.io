@@ -100,7 +100,7 @@
     $(document).ready(function(){
       $("button#theme1").click(function(){
         var iframe = document.getElementById("myFrame");
-        var elmnt = iframe.contentWindow.document.getElementsById("original")[0];
+        var elmnt = iframe.contentWindow.document.getElementById("original")[0];
         elmnt.attr("href", "css/style3.css");
       });
     });
