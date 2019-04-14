@@ -107,13 +107,17 @@
       document.getElementById("document").setAttribute("src", choiceDoc);
       document.getElementById("currentDoc").innerHTML = choiceDoc;
 
+      myIframe.addEventListener("load", function() {
+        this.contentWindow.document.notesform.ID_client.value = Client;
+      });
+
       if (document.getElementById("document").attr("src") == choiceDoc ) {
         var iframe = document.getElementById("document");
         var elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
         elmnt.setAttribute("href", "../../css/" + choiceTheme + ".css");
 
         document.getElementById("currentTheme").innerHTML = choiceTheme;
-      )};
+      };
     };
 
     function switchTheme(input){
