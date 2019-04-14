@@ -85,6 +85,7 @@
   </div>
 
   <div id="content">
+    <h1 id="demo"></h1>
     <iframe id="myFrame" src="documentation.html"></iframe>
   </div>
 
@@ -100,12 +101,12 @@
     $(document).ready(function(){
       $("button#theme1").click(function(){
         var iframe = document.getElementById("myFrame");
-        var elmnt = iframe.contentWindow.document.getElementById("original")[0];
-        elmnt.setAttribute("href", "css/style3.css");
+        document.getElementById("demo").innerHTML = iframe.contentWindow.document.getElementById("original")[0];
       });
     });
 
     $(document).ready(function(){
+      elmnt.setAttribute("href", "css/style3.css");
       $("button#theme2").click(function(){
         $("#original").attr("href", "css/style2.css");
       });
