@@ -98,8 +98,8 @@
 
   <script>
     $(document).ready(function(){
-      var iframe = document.getElementById("document");
-      var elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
+      let iframe = document.getElementById("document");
+      let elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
 
       $("button#theme1").click(function(){
         elmnt.setAttribute("href", "css/style1.css");
