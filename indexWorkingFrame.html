@@ -97,16 +97,14 @@
       var choiceTheme = listThemes[Math.floor(Math.random()*listThemes.length)];
       var choiceDoc = listDocs[Math.floor(Math.random()*listDocs.length)];
 
+      document.getElementById("document").setAttribute("src", choiceDoc);
+
       var iframe = document.getElementById("document");
       var elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
       elmnt.setAttribute("href", "../../css/" + choiceTheme + ".css");
 
-      document.getElementById("document").setAttribute("src", choiceDoc);
-
       document.getElementById("currentDoc").innerHTML = choiceDoc;
-      $(document).ready(function(){
-        document.getElementById("currentTheme").innerHTML = choiceTheme;
-      });
+      document.getElementById("currentTheme").innerHTML = choiceTheme;
     };
 
     function switchTheme(input){
