@@ -101,12 +101,12 @@
     $(document).ready(function(){
       $("button#theme1").click(function(){
         var iframe = document.getElementById("myFrame");
-        document.getElementById("demo").innerHTML = iframe.contentWindow.document.getElementsByName("styling")[0];
+        var elmnt = iframe.contentWindow.document.getElementsByName("styling")[0];
+        elmnt.setAttribute("href", "css/style3.css");
       });
     });
 
     $(document).ready(function(){
-      elmnt.setAttribute("href", "css/style3.css");
       $("button#theme2").click(function(){
         $("#original").attr("href", "css/style2.css");
       });
