@@ -54,13 +54,13 @@
     </div>
     <div class="frame right">
       <div class="theme-nav">
-        <button id="themeX" type="button" class="theme-btn" onclick="themeX()">X</button>
-        <button id="style1" type="button" class="theme-btn" onclick="themeSwitcher(this)">1</button>
-        <button id="style2" type="button" class="theme-btn" onclick="themeSwitcher(this)">2</button>
-        <button id="style3" type="button" class="theme-btn" onclick="themeSwitcher(this)">3</button>
-        <button id="style4" type="button" class="theme-btn" onclick="themeSwitcher(this)">4</button>
-        <button id="style5" type="button" class="theme-btn" onclick="themeSwitcher(this)">5</button>
-        <button id="style6" type="button" class="theme-btn" onclick="themeSwitcher(this)">6</button>
+        <button type="button" class="theme-btn" onclick="randomTheme()">X</button>
+        <button id="style1" type="button" class="theme-btn" onclick="switchTheme(this)">1</button>
+        <button id="style2" type="button" class="theme-btn" onclick="switchTheme(this)">2</button>
+        <button id="style3" type="button" class="theme-btn" onclick="switchTheme(this)">3</button>
+        <button id="style4" type="button" class="theme-btn" onclick="switchTheme(this)">4</button>
+        <button id="style5" type="button" class="theme-btn" onclick="switchTheme(this)">5</button>
+        <button id="style6" type="button" class="theme-btn" onclick="switchTheme(this)">6</button>
       </div>
     </div>
   </div>
@@ -89,13 +89,23 @@
   </div>
 
   <script>
-    function themeSwitcher(input){
-      iframe = document.getElementById("document");
-      elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
+    function randomTheme(input){
+      var listThemes = ["style1","style2","style3","style4","style5","style6",];
+
+      var choice = myArray[Math.floor(Math.random()*listThemes.length)];
+
+      var iframe = document.getElementById("document");
+      var elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
+      elmnt.setAttribute("href", "css/" + choice + ".css");
+    };
+
+    function switchTheme(input){
+      var iframe = document.getElementById("document");
+      var elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
       elmnt.setAttribute("href", "css/" + input.id + ".css");
     };
 
-    $(document).ready(themeSwitcher);
+    $(document).ready(randomTheme, themeSwitcher);
   </script>
 
   <script>
