@@ -91,12 +91,16 @@
   <script>
     function randomTheme(input){
       var listThemes = ["style1","style2","style3","style4","style5","style6",];
+      var listDocs = ["docs/bloomberg/Bloomberg_final.html","docs/eudirective/EUDirective_final.html","docs/harpers/Harpers_Final.html","docs/huffington/Huffington_Final.html","docs/thecut/JessicaPresler.html","docs/tls/TimesLiterarySupplement_Final.html",];
 
-      var choice = listThemes[Math.floor(Math.random()*listThemes.length)];
+      var choiceTheme = listThemes[Math.floor(Math.random()*listThemes.length)];
+      var choiceDoc = listDocs[Math.floor(Math.random()*listDocs.length)];
 
       var iframe = document.getElementById("document");
       var elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
-      elmnt.setAttribute("href", "css/" + choice + ".css");
+      elmnt.setAttribute("href", "css/" + choiceTheme + ".css");
+
+      document.getElementById("document").setAttribute("src", choiceDoc);
     };
 
     function switchTheme(input){
