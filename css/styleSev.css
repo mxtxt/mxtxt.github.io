@@ -54,6 +54,11 @@ html, body {
   }
 }
 
+@media (max-width: 766px) {
+  .frame {
+    display: none;
+  }
+}
 
 /* Navbar */
 .navbar-brand {
@@ -70,7 +75,8 @@ html, body {
 }
 
 #menu-toggle {
-  background-image: url("https://media.giphy.com/media/5rmQdXUaAzutq/giphy.gif");
+  /* background-image: url("https://media.giphy.com/media/5rmQdXUaAzutq/giphy.gif"); */
+  background-image: url("https://media.giphy.com/media/Ph0oIVQeuvh0k/giphy.gif");
   float: right;
   margin: 0.5rem 2.5rem 0.5rem 0;
   padding: 0;
@@ -116,7 +122,8 @@ html, body {
 }
 
 #menu-nav-wrapper {
-  background-image: url("https://media.giphy.com/media/5rmQdXUaAzutq/giphy.gif");
+  /* background-image: url("https://media.giphy.com/media/5rmQdXUaAzutq/giphy.gif"); */
+  background-image: url("https://media.giphy.com/media/Ph0oIVQeuvh0k/giphy.gif");
   background-repeat: repeat;
   display: none;
   height: 100%;

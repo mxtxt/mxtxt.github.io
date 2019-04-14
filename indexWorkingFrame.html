@@ -85,8 +85,20 @@
   </div>
 
   <div id="content">
-    <iframe src="documentation.html"></iframe>
+    <iframe id="myFrame" src="documentation.html" style="height:380px;width:100%"></iframe>
+
+    <p>Click the "Tryit" button to hide the first H1 element in the iframe (another document).</p>
+
+    <button onclick="myFunction()">Try it</button>
   </div>
+
+  <script>
+    function myFunction() {
+      var iframe = document.getElementById("myFrame");
+      var elmnt = iframe.contentWindow.document.getElementsByTagName("H2")[0];
+      elmnt.style.display = "none";
+    }
+  </script>
 
   <script>
     $("#menu-toggle").click(function(e) {
