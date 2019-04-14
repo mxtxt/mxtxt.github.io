@@ -100,7 +100,7 @@
     function switcher(input){
       iframe = document.getElementById("document");
       elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
-      elmnt.setAttribute("href", "css/" + input.id);
+      elmnt.setAttribute("href", "css/" + input.id + ".css");
     };
 
     $(document).ready(switcher);
