@@ -55,7 +55,7 @@
     <div class="frame right">
       <div class="theme-nav">
         <button id="themeX" type="button" class="theme-btn" onclick="themeX()">X</button>
-        <button id="theme1" type="button" class="theme-btn" onclick="theme1()">1</button>
+        <button id="theme1" type="button" class="theme-btn" onclick="theme1">1</button>
         <button id="theme2" type="button" class="theme-btn" onclick="theme2()">2</button>
         <button id="theme3" type="button" class="theme-btn" onclick="theme3()">3</button>
         <button id="theme4" type="button" class="theme-btn" onclick="theme4()">4</button>
@@ -85,11 +85,7 @@
   </div>
 
   <div id="content">
-    <iframe id="myFrame" src="documentation.html" style="height:380px;width:100%"></iframe>
-
-    <p>Click the "Tryit" button to hide the first H1 element in the iframe (another document).</p>
-
-    <button onclick="myFunction()">Try it</button>
+    <iframe id="myFrame" src="documentation.html"></iframe>
   </div>
 
   <script>
@@ -98,6 +94,46 @@
       var elmnt = iframe.contentWindow.document.getElementsByTagName("H2")[0];
       elmnt.style.display = "none";
     }
+  </script>
+
+  <script>
+    $(document).ready(function(){
+      $("button#theme1").click(function(){
+        var iframe = document.getElementById("myFrame");
+        var elmnt = iframe.contentWindow.document.getElementsById("original")[0];
+        elmnt.attr("href", "css/style3.css");
+      });
+    });
+
+    $(document).ready(function(){
+      $("button#theme2").click(function(){
+        $("#original").attr("href", "css/style2.css");
+      });
+    });
+
+    $(document).ready(function(){
+      $("button#theme3").click(function(){
+        $("#original").attr("href", "css/style3.css");
+      });
+    });
+
+    $(document).ready(function(){
+      $("button#theme4").click(function(){
+        $("#original").attr("href", "css/style4.css");
+      });
+    });
+
+    $(document).ready(function(){
+      $("button#theme5").click(function(){
+        $("#original").attr("href", "css/style5.css");
+      });
+    });
+
+    $(document).ready(function(){
+      $("button#theme6").click(function(){
+        $("#original").attr("href", "css/style6.css");
+      });
+    });
   </script>
 
   <script>
