@@ -92,7 +92,7 @@
     function randomTheme(input){
       var listThemes = ["style1","style2","style3","style4","style5","style6",];
 
-      var choice = myArray[Math.floor(Math.random()*listThemes.length)];
+      var choice = listThemes[Math.floor(Math.random()*listThemes.length)];
 
       var iframe = document.getElementById("document");
       var elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
@@ -105,7 +105,7 @@
       elmnt.setAttribute("href", "css/" + input.id + ".css");
     };
 
-    $(document).ready(randomTheme, themeSwitcher);
+    $(document).ready(randomTheme, switchTheme);
   </script>
 
   <script>
