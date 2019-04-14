@@ -55,12 +55,12 @@
     <div class="frame right">
       <div class="theme-nav">
         <button id="themeX" type="button" class="theme-btn" onclick="themeX()">X</button>
-        <button id="style1" type="button" class="theme-btn" onclick="switcher(this)">1</button>
-        <button id="theme2" type="button" class="theme-btn" onclick="theme2">2</button>
-        <button id="theme3" type="button" class="theme-btn" onclick="theme3">3</button>
-        <button id="theme4" type="button" class="theme-btn" onclick="theme4">4</button>
-        <button id="theme5" type="button" class="theme-btn" onclick="theme5">5</button>
-        <button id="theme6" type="button" class="theme-btn" onclick="theme6">6</button>
+        <button id="style1" type="button" class="theme-btn" onclick="themeSwitcher(this)">1</button>
+        <button id="style2" type="button" class="theme-btn" onclick="themeSwitcher(this)">2</button>
+        <button id="style3" type="button" class="theme-btn" onclick="themeSwitcher(this)">3</button>
+        <button id="style4" type="button" class="theme-btn" onclick="themeSwitcher(this)">4</button>
+        <button id="style5" type="button" class="theme-btn" onclick="themeSwitcher(this)">5</button>
+        <button id="style6" type="button" class="theme-btn" onclick="themeSwitcher(this)">6</button>
       </div>
     </div>
   </div>
@@ -97,7 +97,7 @@
   </script>
 
   <script>
-    function switcher(input){
+    function themeSwitcher(input){
       iframe = document.getElementById("document");
       elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
       elmnt.setAttribute("href", "css/" + input.id + ".css");
