@@ -56,11 +56,11 @@
       <div class="theme-nav">
         <button id="themeX" type="button" class="theme-btn" onclick="themeX()">X</button>
         <button id="theme1" type="button" class="theme-btn" onclick="theme1">1</button>
-        <button id="theme2" type="button" class="theme-btn" onclick="theme2()">2</button>
-        <button id="theme3" type="button" class="theme-btn" onclick="theme3()">3</button>
-        <button id="theme4" type="button" class="theme-btn" onclick="theme4()">4</button>
-        <button id="theme5" type="button" class="theme-btn" onclick="theme5()">5</button>
-        <button id="theme6" type="button" class="theme-btn" onclick="theme6()">6</button>
+        <button id="theme2" type="button" class="theme-btn" onclick="theme2">2</button>
+        <button id="theme3" type="button" class="theme-btn" onclick="theme3">3</button>
+        <button id="theme4" type="button" class="theme-btn" onclick="theme4">4</button>
+        <button id="theme5" type="button" class="theme-btn" onclick="theme5">5</button>
+        <button id="theme6" type="button" class="theme-btn" onclick="theme6">6</button>
       </div>
     </div>
   </div>
@@ -98,39 +98,30 @@
 
   <script>
     $(document).ready(function(){
+      var iframe = document.getElementById("document");
+      var elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
+
       $("button#theme1").click(function(){
-        var iframe = document.getElementById("document");
-        var elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
         elmnt.setAttribute("href", "css/style1.css");
       });
 
       $("button#theme2").click(function(){
-        var iframe = document.getElementById("document");
-        var elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
         elmnt.setAttribute("href", "css/style2.css");
       });
 
       $("button#theme3").click(function(){
-        var iframe = document.getElementById("document");
-        var elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
         elmnt.setAttribute("href", "css/style3.css");
       });
 
       $("button#theme4").click(function(){
-        var iframe = document.getElementById("document");
-        var elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
         elmnt.setAttribute("href", "css/style4.css");
       });
 
       $("button#theme5").click(function(){
-        var iframe = document.getElementById("document");
-        var elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
         elmnt.setAttribute("href", "css/style5.css");
       });
 
       $("button#theme6").click(function(){
-        var iframe = document.getElementById("document");
-        var elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
         elmnt.setAttribute("href", "css/style6.css");
       });
     });
