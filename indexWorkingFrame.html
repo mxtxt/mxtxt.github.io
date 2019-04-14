@@ -98,15 +98,16 @@
 
   <script>
     $(document).ready(function(){
-      $("button#theme1").click(function(){
+      $('button#theme1, button#theme2').on('click', function(){
         var iframe = document.getElementById("document");
         var elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
+      });
+
+      $("button#theme1").click(function(){
         elmnt.setAttribute("href", "css/style1.css");
       });
 
       $("button#theme2").click(function(){
-        var iframe = document.getElementById("document");
-        var elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
         elmnt.setAttribute("href", "css/style2.css");
       });
 
