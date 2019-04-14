@@ -107,7 +107,7 @@
       document.getElementById("document").setAttribute("src", choiceDoc);
       document.getElementById("currentDoc").innerHTML = choiceDoc;
 
-      if (document.getElementById("document").attr("src") == choiceDoc ) {
+      if (getElementById("document").attr("src") == choiceDoc ) {
         var iframe = document.getElementById("document");
         var elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
         elmnt.setAttribute("href", "../../css/" + choiceTheme + ".css");
