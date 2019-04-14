@@ -89,50 +89,13 @@
   </div>
 
   <script>
-    function myFunction() {
-      var iframe = document.getElementById("document");
-      var elmnt = iframe.contentWindow.document.getElementsByTagName("H2")[0];
-      elmnt.style.display = "none";
-    }
-  </script>
-
-  <script>
     function themeSwitcher(input){
       iframe = document.getElementById("document");
       elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
       elmnt.setAttribute("href", "css/" + input.id + ".css");
     };
 
-    $(document).ready(switcher);
-
-    $(document).ready(function(){
-      var iframe
-      var elmnt
-
-      $('button#theme1, button#theme2').on('click', function dataCollector(){
-        iframe = document.getElementById("document");
-        elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
-      });
-      $("button#theme2").click(function(){
-        elmnt.setAttribute("href", "css/style2.css");
-      });
-
-      $("button#theme3").click(function(){
-        elmnt.setAttribute("href", "css/style3.css");
-      });
-
-      $("button#theme4").click(function(){
-        elmnt.setAttribute("href", "css/style4.css");
-      });
-
-      $("button#theme5").click(function(){
-        elmnt.setAttribute("href", "css/style5.css");
-      });
-
-      $("button#theme6").click(function(){
-        elmnt.setAttribute("href", "css/style6.css");
-      });
-    });
+    $(document).ready(themeSwitcher);
   </script>
 
   <script>
