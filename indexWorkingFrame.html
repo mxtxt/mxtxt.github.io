@@ -37,6 +37,7 @@
     <div class="frame top">
       <div class="navbar-brand" href="https://www.mxtxt.github.io/">
         <h1>MXTXT</h1>
+        <p>Current: <span id="currentDoc"></span> + <span id="currentTheme"></span></</p>
       </div>
       <a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><p>Menu</p></a>
     </div>
@@ -89,7 +90,7 @@
   </div>
 
   <script>
-    function randomTheme(input){
+    function randomTheme(){
       var listThemes = ["style1","style2","style3","style4","style5","style6",];
       var listDocs = ["docs/bloomberg/Bloomberg_final.html","docs/eudirective/EUDirective_final.html","docs/harpers/Harpers_Final.html","docs/huffington/Huffington_Final.html","docs/thecut/JessicaPresler.html","docs/tls/TimesLiterarySupplement_Final.html",];
 
@@ -101,15 +102,21 @@
       elmnt.setAttribute("href", "../../css/" + choiceTheme + ".css");
 
       document.getElementById("document").setAttribute("src", choiceDoc);
+
+      document.getElementById("currentTheme").innerHTML = choiceTheme;
+      document.getElementById("currentDoc").innerHTML = choiceDoc;
     };
 
     function switchTheme(input){
       var iframe = document.getElementById("document");
       var elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
+
+      document.getElementById("currentTheme").innerHTML = input.id;
       elmnt.setAttribute("href", "../../css/" + input.id + ".css");
     };
 
     function switchDoc(input){
+      document.getElementById("currentDoc").innerHTML = input.id;
       document.getElementById("document").setAttribute("src", input.id);
     };
 
