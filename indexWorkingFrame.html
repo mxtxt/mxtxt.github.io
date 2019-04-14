@@ -44,12 +44,12 @@
     </div>
     <div class="frame left">
       <div class="doc-nav">
-        <button id="doc1" type="button" class="doc-btn" onclick="doc()">1</button>
-        <button id="doc2" type="button" class="doc-btn" onclick="doc()">2</button>
-        <button id="doc3" type="button" class="doc-btn" onclick="doc()">3</button>
-        <button id="doc4" type="button" class="doc-btn" onclick="doc()">4</button>
-        <button id="doc5" type="button" class="doc-btn" onclick="doc()">5</button>
-        <button id="doc6" type="button" class="doc-btn" onclick="doc()">6</button>
+        <button id="docs/bloomberg/Bloomberg_final.html" type="button" class="doc-btn" onclick="switchDoc(this)">1</button>
+        <button id="docs/eudirective/EUDirective_final.html" type="button" class="doc-btn" onclick="switchDoc(this)">2</button>
+        <button id="docs/harpers/Harpers_Final.html" type="button" class="doc-btn" onclick="switchDoc(this)">3</button>
+        <button id="docs/huffington/Huffington_Final.html" type="button" class="doc-btn" onclick="switchDoc(this)">4</button>
+        <button id="docs/thecut/JessicaPresler.html" type="button" class="doc-btn" onclick="switchDoc(this)">5</button>
+        <button id="docs/tls/TimesLiterarySupplement_Final.html" type="button" class="doc-btn" onclick="switchDoc(this)">6</button>
       </div>
     </div>
     <div class="frame right">
@@ -105,7 +105,11 @@
       elmnt.setAttribute("href", "css/" + input.id + ".css");
     };
 
-    $(document).ready(randomTheme, switchTheme);
+    function switchDoc(input){
+      document.getElementById("document").setAttribute("src", input.id);
+    };
+
+    $(document).ready(randomTheme, switchTheme, switchDoc);
   </script>
 
   <script>
