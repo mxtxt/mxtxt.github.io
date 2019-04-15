@@ -39,7 +39,7 @@ function switchTheme(input){
 
 function switchDoc(input){
   document.getElementById("currentDoc").innerHTML = input.id;
-  document.getElementById("document").setAttribute("src", input.id);
+  document.getElementById("document").setAttribute("src", "docs/" + input.id + ".html");
 
   if ($("#menu-nav-wrapper").hasClass("active")) {
     menuToggle();
@@ -48,7 +48,7 @@ function switchDoc(input){
 
 function switchPage(input){
   document.getElementById("currentPage").innerHTML = input.id;
-  document.getElementById("document").setAttribute("src", "pages/" + input.name);
+  document.getElementById("document").setAttribute("src", "pages/" + input.name + ".html");
 
   if ($("#menu-nav-wrapper").hasClass("active")) {
     menuToggle();
