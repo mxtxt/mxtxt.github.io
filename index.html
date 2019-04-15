@@ -35,8 +35,8 @@
 
   <div class="frame">
     <div class="frame top">
-      <div class="navbar-brand" href="https://www.mxtxt.github.io/">
-        <h1>MXTXT</h1>
+      <div class="navbar-brand">
+        <a href="https://www.mxtxt.github.io/"><h1>MXTXT</h1></a>
         <p style="font-size:0.5rem">Current: <span id="currentDoc"></span> + <span id="currentTheme"></span> + <span id="currentPage"></span></p>
       </div>
       <button id="menu-toggle" onclick="menuToggle()"><p>Menu</p></button>
@@ -70,16 +70,16 @@
     <div id="menu-nav-wrapper">
       <ul class="menu-nav">
         <li class="menu-item">
-          <a id="home.html" onclick="switchPage(this)">Home.</a>
+          <a name="home.html" onclick="switchPage(this)">Home.</a>
         </li>
         <li class="menu-item">
-          <a id="documentation.html" onclick="switchPage(this)">Documentation.</a>
+          <a name="documentation.html" onclick="switchPage(this)">Documentation.</a>
         </li>
         <li class="menu-item">
-          <a id="disclaimer.html" onclick="switchPage(this)">Disclaimer.</a>
+          <a name="disclaimer.html" onclick="switchPage(this)">Disclaimer.</a>
         </li>
         <li class="menu-item">
-          <a id="about.html" onclick="switchPage(this)">About.</a>
+          <a name="about.html" onclick="switchPage(this)">About.</a>
         </li>
       </ul>
     </div>
@@ -107,7 +107,7 @@
         elmnt.setAttribute("href", "../../css/" + choiceTheme + ".css");
         document.getElementById("currentTheme").innerHTML = choiceTheme;
       });
-      
+
       menuToggle();
     };
 
@@ -128,7 +128,7 @@
 
     function switchPage(input){
       document.getElementById("currentPage").innerHTML = input.id;
-      document.getElementById("document").setAttribute("src", "pages/" + input.id);
+      document.getElementById("document").setAttribute("src", "pages/" + input.name);
       menuToggle();
     };
   </script>
