@@ -1,43 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>mxtxt – Home</title>
+  <title>MXTXT – Home</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="img/logo.png" type="image/png" sizes="16x16">
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Bad+Script|Roboto" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day|La+Belle+Aurore|Montez" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Mrs+Saint+Delafield" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Stalemate" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo" rel="stylesheet">
 
+  <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <!-- Fontawesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-  <link id=original rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- Stylesheet -->
+  <link id=original rel="stylesheet" type="text/css" href="css/styleSev.css">
 
+  <!-- Unnecessary? -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.3.2/vivus.js"></script>
+
   <script src="js/script.js"></script>
 
 </head>
 
 <body>
 
-  <div class="mx">
-    <iframe id="myframe" src="documentation.html"></iframe>
+  <div class="frame">
+    <div class="frame top">
+      <div class="navbar-brand" href="https://www.mxtxt.github.io/">
+        <h1>MXTXT</h1>
+        <p style="font-size:0.5rem">Current: <span id="currentDoc"></span> + <span id="currentTheme"></span></</p>
+      </div>
+      <a href="#menu-toggle" id="menu-toggle"><p>Menu</p></a>
+    </div>
+    <div class="frame bottom">
+    </div>
+    <div class="frame left">
+      <div class="doc-nav">
+        <button id="docs/bloomberg/Bloomberg_final.html" type="button" class="doc-btn" onclick="switchDoc(this)">1</button>
+        <button id="docs/eudirective/EUDirective_final.html" type="button" class="doc-btn" onclick="switchDoc(this)">2</button>
+        <button id="docs/harpers/Harpers_Final.html" type="button" class="doc-btn" onclick="switchDoc(this)">3</button>
+        <button id="docs/huffington/Huffington_Final.html" type="button" class="doc-btn" onclick="switchDoc(this)">4</button>
+        <button id="docs/thecut/JessicaPresler.html" type="button" class="doc-btn" onclick="switchDoc(this)">5</button>
+        <button id="docs/tls/TimesLiterarySupplement_Final.html" type="button" class="doc-btn" onclick="switchDoc(this)">6</button>
+      </div>
+    </div>
+    <div class="frame right">
+      <div class="theme-nav">
+        <button type="button" class="theme-btn" onclick="randomTheme()">X</button>
+        <button id="style1" type="button" class="theme-btn" onclick="switchTheme(this)">1</button>
+        <button id="style2" type="button" class="theme-btn" onclick="switchTheme(this)">2</button>
+        <button id="style3" type="button" class="theme-btn" onclick="switchTheme(this)">3</button>
+        <button id="style4" type="button" class="theme-btn" onclick="switchTheme(this)">4</button>
+        <button id="style5" type="button" class="theme-btn" onclick="switchTheme(this)">5</button>
+        <button id="style6" type="button" class="theme-btn" onclick="switchTheme(this)">6</button>
+      </div>
+    </div>
   </div>
 
-  <button id="themeX" type="button" class="btn btn-light" onclick="themeX()">themeX</button>
-  <button id="theme1" type="button" class="btn btn-light" onclick="theme1()">theme 1</button>
-  <button id="theme2" type="button" class="btn btn-light" onclick="theme2()">theme 2</button>
-  <button id="theme3" type="button" class="btn btn-light" onclick="theme3()">theme 3</button>
-  <button id="theme4" type="button" class="btn btn-light" onclick="theme4">theme 4</button>
-  <button id="theme5" type="button" class="btn btn-light" onclick="theme5">theme 5</button>
-  <button id="theme6" type="button" class="btn btn-light" onclick="theme6">theme 6</button>
+  <div class="menu">
+    <div id="menu-nav-wrapper">
+      <ul class="menu-nav">
+        <li class="menu-item">
+          <a class="" href="">Home.</a>
+        </li>
+        <li class="menu-item">
+          <a class="" href="">Documentation.</a>
+        </li>
+        <li class="menu-item">
+          <a class="" href="">Disclaimer.</a>
+        </li>
+        <li class="menu-item">
+          <a class="" href="">About.</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 
+  <div id="content">
+    <iframe id="document" src="docs/testDocumentation/documentation.html"></iframe>
+  </div>
+
+  <script>
+    function randomTheme(){
+      var listThemes = ["style1","style2","style3","style4","style5","style6",];
+      var listDocs = ["docs/bloomberg/Bloomberg_final.html","docs/eudirective/EUDirective_final.html","docs/harpers/Harpers_Final.html","docs/huffington/Huffington_Final.html","docs/thecut/JessicaPresler.html","docs/tls/TimesLiterarySupplement_Final.html",];
+
+      var iframe = document.getElementById("document");
+
+      var choiceTheme = listThemes[Math.floor(Math.random()*listThemes.length)];
+      var choiceDoc = listDocs[Math.floor(Math.random()*listDocs.length)];
+
+      document.getElementById("document").setAttribute("src", choiceDoc);
+      document.getElementById("currentDoc").innerHTML = choiceDoc;
+
+      iframe.addEventListener("load", function() {
+        var elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
+        elmnt.setAttribute("href", "../../css/" + choiceTheme + ".css");
+        document.getElementById("currentTheme").innerHTML = choiceTheme;
+      });
+    };
+
+    function switchTheme(input){
+      var iframe = document.getElementById("document");
+      var elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
+
+      document.getElementById("currentTheme").innerHTML = input.id;
+      elmnt.setAttribute("href", "../../css/" + input.id + ".css");
+    };
+
+    function switchDoc(input){
+      document.getElementById("currentDoc").innerHTML = input.id;
+      document.getElementById("document").setAttribute("src", input.id);
+    };
+  </script>
+
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#menu-nav-wrapper").toggleClass("active");
+    });
+  </script>
 
 </body>
 </html>
