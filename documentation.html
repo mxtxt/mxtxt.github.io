@@ -258,11 +258,23 @@
     </div>
     <div>
       <h6>Widget</h6>
-      <p>This is some text about the code.<p>
+      <p>Multiple versions of a widget were developed. Before the iframe was implemented,
+        we created a css-themer widget that changed the css stylesheet on the whole current webpage.
+        The themer worked with six buttons that <p>
       <p>
         <pre>
-            <code>This is the code.
-            </code>
+          <code>
+              &#60;link id=original rel="stylesheet" type="text/css" href="css/style.css"&#62;
+          </code>
+        </pre>
+        <pre>
+          <code>
+            $(document).ready(function(){
+            $("button#theme2").click(function(){
+              $("#original").attr("href", "css/style2.css");
+              });
+            });
+          </code>
         </pre>
       </p>
       <fig>Here goes a picture of the code. </fig>
