@@ -70,16 +70,16 @@
     <div id="menu-nav-wrapper">
       <ul class="menu-nav">
         <li class="menu-item">
-          <a class="" href="index.html">Home.</a>
+          <a id="home.html" onclick="switchPage(this)">Home.</a>
         </li>
         <li class="menu-item">
-          <a class="" href="documentation.html">Documentation.</a>
+          <a id="documentation.html" onclick="switchPage(this)">Documentation.</a>
         </li>
         <li class="menu-item">
-          <a class="" href="disclaimer.html">Disclaimer.</a>
+          <a id="disclaimer.html" onclick="switchPage(this)">Disclaimer.</a>
         </li>
         <li class="menu-item">
-          <a class="" href="about.html">About.</a>
+          <a id="about.html" onclick="switchPage(this)">About.</a>
         </li>
       </ul>
     </div>
@@ -120,6 +120,11 @@
     function switchDoc(input){
       document.getElementById("currentDoc").innerHTML = input.id;
       document.getElementById("document").setAttribute("src", input.id);
+    };
+
+    function switchPage(input){
+      document.getElementById("currentPage").innerHTML = input.id;
+      document.getElementById("document").setAttribute("src", "pages/" + input.id);
     };
   </script>
 
