@@ -29,8 +29,8 @@ function switchTheme(input){
   var iframe = document.getElementById("document");
   var elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
 
-  document.getElementById("currentTheme").innerHTML = input.id;
-  elmnt.setAttribute("href", "../../css/" + input.id + ".css");
+  document.getElementById("currentTheme").innerHTML = input.name;
+  elmnt.setAttribute("href", "../../css/" + input.name + ".css");
 
   if ($("#menu-nav-wrapper").hasClass("active")) {
     menuToggle();
@@ -38,8 +38,8 @@ function switchTheme(input){
 };
 
 function switchDoc(input){
-  document.getElementById("currentDoc").innerHTML = input.id;
-  document.getElementById("document").setAttribute("src", "docs/" + input.id + ".html");
+  document.getElementById("currentDoc").innerHTML = input.name;
+  document.getElementById("document").setAttribute("src", "docs/" + input.name + ".html");
 
   if ($("#menu-nav-wrapper").hasClass("active")) {
     menuToggle();
@@ -47,7 +47,7 @@ function switchDoc(input){
 };
 
 function switchPage(input){
-  document.getElementById("currentPage").innerHTML = input.id;
+  document.getElementById("currentPage").innerHTML = input.name;
   document.getElementById("document").setAttribute("src", "pages/" + input.name + ".html");
 
   if ($("#menu-nav-wrapper").hasClass("active")) {
