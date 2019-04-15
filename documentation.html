@@ -260,13 +260,22 @@
       <h6>Widget</h6>
       <p>Multiple versions of a widget were developed. Before the iframe was implemented,
         we created a css-themer widget that changed the css stylesheet on the whole current webpage.
-        The themer worked with six buttons that <p>
+        The themer worked with six buttons that changed the href attribute of the link to the stylesheet of the webpage.
+        This link was identified via its id="original" in the html document. <p>
       <p>
         <pre>
           <code>
-              &#60;link id=original rel="stylesheet" type="text/css" href="css/style.css"&#62;
+            &#60;link id=original rel="stylesheet" type="text/css" href="css/style.css"&#62;
           </code>
         </pre>
+      <p> The six buttons in the html document had the form:
+      </p>
+        <pre>
+          <code>
+            &#60;button id="theme2" type="button" class="btn btn-light" onclick="theme2()"&#62;theme 2&#60;/button&#62;
+          </code>
+        </pre>
+      <p> and where controlled by the following javascript:</p>
         <pre>
           <code>
             $(document).ready(function(){
