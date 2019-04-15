@@ -1,6 +1,8 @@
 /* check out first-child and nth-child pseudoclasses. These will be very helpful
 to define special characteristics of certain elemens, since we cannot use classes or ids. */
 
+/* IMPORTANT - include comments for everything!!! This will make creating your
+documentation so much easier!! it is also a best practice to start doing! */
 html, body {
   background-color: ;
   height: 100vh;
