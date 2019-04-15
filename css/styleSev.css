@@ -54,11 +54,14 @@ html, body {
   }
 }
 
+
+/* Move everything out of frame */
+/*
 @media (max-width: 766px) {
   .frame {
     display: none;
   }
-}
+}*/
 
 /* Navbar */
 .navbar-brand {
@@ -81,6 +84,10 @@ html, body {
   margin: 0.5rem 2.5rem 0.5rem 0;
   padding: 0;
   border: none;
+}
+
+#menu-toggle:hover {
+  text-decoration: none;
 }
 
 #menu-toggle p {
@@ -218,9 +225,8 @@ html, body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  overflow-y: scroll;
+  overflow: scroll;
   -webkit-overflow-scrolling: touch;
-  overflow-x: hidden!important;
 }
 
 @media (min-width: 767px) {
