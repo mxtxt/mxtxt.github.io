@@ -1,44 +1,56 @@
-var $head = $("#myframe").contents().find("head");
+function menuToggle(){
+  $("#menu-nav-wrapper").toggleClass("active");
+};
 
-$head.append($("<link/>", {
-    rel= "stylesheet",
-    href= "css/style5.css"
-    type= "text/css"
-}));
+function randomTheme(){
+  var listThemes = ["style1","style2","style3","style4","style5","style6",];
+  var listDocs = ["docs/bloomberg/Bloomberg_final.html","docs/eudirective/EUDirective_final.html","docs/harpers/Harpers_Final.html","docs/huffington/Huffington_Final.html","docs/thecut/JessicaPresler.html","docs/tls/TimesLiterarySupplement_Final.html",];
 
+  var iframe = document.getElementById("document");
 
-$(document).ready(function(){
-  $("button#theme1").click(function(){
-    $("cssLink").attr("href", "css/style1.css");
+  var choiceTheme = listThemes[Math.floor(Math.random()*listThemes.length)];
+  var choiceDoc = listDocs[Math.floor(Math.random()*listDocs.length)];
+
+  document.getElementById("document").setAttribute("src", choiceDoc);
+  document.getElementById("currentDoc").innerHTML = choiceDoc;
+
+  iframe.addEventListener("load", function() {
+    var elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
+    elmnt.setAttribute("href", "../../css/" + choiceTheme + ".css");
+    document.getElementById("currentTheme").innerHTML = choiceTheme;
   });
-});
 
-$(document).ready(function(){
-  $("button#theme2").click(function(){
-    $("#original").attr("href", "css/style2.css");
-  });
-});
+  if ($("#menu-nav-wrapper").hasClass("active")) {
+    menuToggle();
+  };
+};
 
-$(document).ready(function(){
-  $("button#theme3").click(function(){
-    $("#original").attr("href", "css/style3.css");
-  });
-});
+function switchTheme(input){
+  var iframe = document.getElementById("document");
+  var elmnt = iframe.contentWindow.document.getElementsByName("theme")[0];
 
-$(document).ready(function(){
-  $("button#theme4").click(function(){
-    $("#original").attr("href", "css/style4.css");
-  });
-});
+  document.getElementById("currentTheme").innerHTML = input.id;
+  elmnt.setAttribute("href", "../../css/" + input.id + ".css");
 
-$(document).ready(function(){
-  $("button#theme5").click(function(){
-    $("#original").attr("href", "css/style5.css");
-  });
-});
+  if ($("#menu-nav-wrapper").hasClass("active")) {
+    menuToggle();
+  };
+};
 
-$(document).ready(function(){
-  $("button#theme6").click(function(){
-    $("#original").attr("href", "css/style6.css");
-  });
-});
+function switchDoc(input){
+  document.getElementById("currentDoc").innerHTML = input.id;
+  document.getElementById("document").setAttribute("src", input.id);
+
+  if ($("#menu-nav-wrapper").hasClass("active")) {
+    menuToggle();
+  };
+};
+
+function switchPage(input){
+  document.getElementById("currentPage").innerHTML = input.id;
+  document.getElementById("document").setAttribute("src", "pages/" + input.name);
+
+  if ($("#menu-nav-wrapper").hasClass("active")) {
+    menuToggle();
+  };
+};
