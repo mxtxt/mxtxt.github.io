@@ -37,9 +37,9 @@
     <div class="frame top">
       <div class="navbar-brand" href="https://www.mxtxt.github.io/">
         <h1>MXTXT</h1>
-        <p style="font-size:0.5rem">Current: <span id="currentDoc"></span> + <span id="currentTheme"></span> +  <span id="currentPage"></span></p>
+        <p style="font-size:0.5rem">Current: <span id="currentDoc"></span> + <span id="currentTheme"></span> + <span id="currentPage"></span></p>
       </div>
-      <a href="#menu-toggle" id="menu-toggle"><p>Menu</p></a>
+      <button id="menu-toggle" onclick="menuToggle()"><p>Menu</p></button>
     </div>
     <div class="frame bottom">
     </div>
@@ -107,6 +107,8 @@
         elmnt.setAttribute("href", "../../css/" + choiceTheme + ".css");
         document.getElementById("currentTheme").innerHTML = choiceTheme;
       });
+      
+      menuToggle();
     };
 
     function switchTheme(input){
@@ -115,24 +117,26 @@
 
       document.getElementById("currentTheme").innerHTML = input.id;
       elmnt.setAttribute("href", "../../css/" + input.id + ".css");
+      menuToggle();
     };
 
     function switchDoc(input){
       document.getElementById("currentDoc").innerHTML = input.id;
       document.getElementById("document").setAttribute("src", input.id);
+      menuToggle();
     };
 
     function switchPage(input){
       document.getElementById("currentPage").innerHTML = input.id;
       document.getElementById("document").setAttribute("src", "pages/" + input.id);
+      menuToggle();
     };
   </script>
 
   <script>
-    $("#menu-toggle").click(function(e) {
-      e.preventDefault();
+    function menuToggle(){
       $("#menu-nav-wrapper").toggleClass("active");
-    });
+    };
   </script>
 
 </body>
