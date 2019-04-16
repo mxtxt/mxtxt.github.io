@@ -3,7 +3,7 @@ function menuToggle(){
 };
 
 function randomTheme(){
-  var listThemes = ["style1","style2","style3","style4","style5","style6",];
+  var listThemes = ["style1","style2","themes/artDeco","style4","style5","themes/futurama",];
   var listDocs = ["docs/bloomberg/Bloomberg_final.html","docs/eudirective/EUDirective_final.html","docs/harpers/Harpers_Final.html","docs/huffington/Huffington_Final.html","docs/thecut/JessicaPresler.html","docs/tls/TimesLiterarySupplement_Final.html",];
 
   var frameContent = document.getElementById("frameDocument");

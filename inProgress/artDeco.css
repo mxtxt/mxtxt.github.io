@@ -4,11 +4,11 @@ to define special characteristics of certain elemens, since we cannot use classe
 @import url('https://fonts.googleapis.com/css?family=Poiret+One');
 @font-face {
     font-family: grenadier;
-    src: url("../../fonts/grenadier.otf") format("opentype");
+    src: url("fonts/grenadier.otf") format("opentype");
 }
 @font-face {
     font-family: parklane;
-    src: url("../../fonts/parklane.otf") format("opentype");
+    src: url("fonts/parklane.otf") format("opentype");
 }
 
 html {
