@@ -1,0 +1,272 @@
+/* check out first-child and nth-child pseudoclasses. These will be very helpful
+to define special characteristics of certain elemens, since we cannot use classes or ids. */
+
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+@font-face {
+    font-family: bodonibold;
+    src: url("../../fonts/vp/BodoniFLF-Bold.ttf") format("opentype");
+}
+@font-face {
+    font-family: bodoniitalic;
+    src: url("../../fonts/vp/BodoniFLF-Italic.ttf") format("opentype");
+}
+
+html {
+  background-image: url("../../img/bg/paper3.png");
+  background-repeat: repeat;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "bodonibold";
+  color: #fff;
+  height: 100vh;
+  margin: auto;
+  width: 50%;
+  padding: 0;
+}
+
+h1 {
+  font-family: "bodoniitalic";
+  font-size: 1rem; /* whatever number size you choose, but rem */
+  font-style: ;
+  margin: ;
+  padding: ;
+}
+
+h2 {
+  background: -webkit-linear-gradient(#BF953F, #FCF6BA, #FBF5B7, #AA771C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "parklane";
+  font-size: 4rem; /* whatever number size you choose, but rem */
+  font-style: ;
+  margin: ;
+  padding: ;
+}
+
+h3 {
+  background: -webkit-linear-gradient(#BF953F, #FCF6BA, #FBF5B7, #AA771C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "parklane";
+  font-size: 2rem; /* whatever number size you choose, but rem */
+  font-style: ;
+  margin: 0 0 5rem 0;
+  padding: ;
+}
+
+h4 {
+  font-family: #deba6c;
+  font-size: 1rem; /* whatever number size you choose, but rem */
+  font-style: ;
+  margin: ;
+  padding: ;
+}
+
+h5 {
+  font-family: ;
+  font-size: 1rem; /* whatever number size you choose, but rem */
+  font-style: ;
+  margin: ;
+  padding: ;
+}
+
+h6 {
+  font-family: ;
+  font-size: 1rem; /* whatever number size you choose, but rem */
+  font-style: ;
+  margin: ;
+  padding: ;
+}
+
+p {
+  font-family: ;
+  text-align: justify;
+  font-size: 1rem; /* whatever number size you choose, but rem */
+  font-style: ;
+  margin: ;
+  padding: ;
+}
+
+p:first-of-type {
+  font-family: ;
+  text-align: justify;
+  font-size: 1rem; /* whatever number size you choose, but rem */
+  font-style: ;
+  margin: ;
+  padding: ;
+}
+
+em {
+  font-family: ;
+  font-size: 1rem; /* whatever number size you choose, but rem */
+  font-style: ;
+  padding: ;
+}
+
+small {
+  font-family: ;
+  font-size: 1rem; /* whatever number size you choose, but rem */
+  font-style: ;
+  padding: ;
+}
+
+q {
+  font-family: ;
+  font-size: 1rem; /* whatever number size you choose, but rem */
+  font-style: ;
+  padding: ;
+}
+
+a {
+  font-family: ;
+  font-size: 1rem; /* whatever number size you choose, but rem */
+  font-style: ;
+  padding: ;
+}
+
+a:hover {
+  font-family: ;
+  font-size: 1rem; /* whatever number size you choose, but rem */
+  font-style: ;
+  padding: ;
+}
+
+header { /* example of a header that we want in the center of the page */
+  /* position: absolute; */
+  /* top: 50%; /* this positions the header at the vertical center  */
+  /* left: 50%; /* this positions the header at the horizontal center  */
+  /* transform: translate(-50%, -50%); */
+  text-align: center
+}
+
+section {
+  /* border-top: 1rem double #f7f7f7;  three values: thickness, styling, color */
+  border-bottom: ;
+  border-left: ;
+  border-right: ;
+  padding-top: ;
+  padding-bottom: ;
+  padding-left: ;
+  padding-right: ;
+}
+
+figure {
+  width: 100%; /* use percentage of viewwidth */
+  margin: 0;
+  padding: 0;
+}
+
+figure > figcaption {
+  width: 100%;
+  font-family: ;
+  font-family: "parklane";
+  font-size: 1rem; /* whatever number size you choose, but rem */
+  font-style: ;
+  padding: 0;
+}
+
+figure > figcaption > em {
+  font-family: ;
+  font-size: 1rem; /* whatever number size you choose, but rem */
+  font-style: ;
+  padding: ;
+}
+
+figure > img {
+  width: 100%; /* use percentage of the figure box width */
+  margin: 0;
+  padding: 0;
+  filter: grayscale();
+}
+
+figure > video {
+  width: 80%; /* use percentage of the figure box width */
+  margin: 0;
+  padding: 0;
+}
+
+figure > table {
+  font-family: ;
+  font-size: ;
+  font-style: ;
+  width: 80%; /* use percentage of the figure box width */
+  border-top: ;
+  border-bottom: ;
+  border-left: ;
+  border-right: ;
+  padding-top: ;
+  padding-bottom: ;
+  padding-left: ;
+  padding-right: ;
+}
+
+figure > table > th {
+  font-size: ;
+  font-weight: ;
+  border-top: ;
+  border-bottom: ;
+  border-left: ;
+  border-right: ;
+  padding-top: ;
+  padding-bottom: ;
+  padding-left: ;
+  padding-right: ;
+}
+
+figure > table > tr {
+  border-top: ;
+  border-bottom: ;
+  border-left: ;
+  border-right: ;
+  padding-top: ;
+  padding-bottom: ;
+  padding-left: ;
+  padding-right: ;
+}
+
+figure > table > tr > td:first-child { /* use this to style the first column of a table */
+}
+
+figure > table > tr > td:nth-child(n) { /* use this to style the n-th column of a table */
+}
+
+ul {
+  width: 90%; /* use percentage of viewwidth */
+  padding: 0;
+  text-indent: 2rem;
+  list-style-type: none; /* no symbol before each list element */
+}
+
+ul > li {
+}
+
+ul > li:before {
+  content: "--"; /* choose your own symbol before each list element */
+  padding-right: 5px;
+}
+
+ol {
+  width: 90%; /* use percentage of viewwidth */
+  padding: 0;
+  list-style-type: upper-roman;
+}
+
+ol > li {
+}
+
+ol > li > ol {
+  list-style-type: decimal;
+}
+
+ol > li > ol > li {
+}
+
+footer {
+  padding-top: ;
+  border-top: ;
+}
