@@ -178,7 +178,7 @@ html, body {
 .menu-item a {
   padding: 2.5vh;
   background-color: #ffffff;
-  color: #000000;
+  color: #000000!important;
   font-size: 10vh; /* Responsive font size */
   font-weight: bold;
   text-transform: lowercase;
@@ -186,10 +186,13 @@ html, body {
 }
 
 .menu-item a:hover {
+  cursor: pointer;
+  opacity: 0.5;
+  /*
   background-color: #000000;
-  color: #ffffff;
+  color: #ffffff!important;
   text-decoration: none;
-  mix-blend-mode: normal;
+  mix-blend-mode: normal;*/
 }
 
 
