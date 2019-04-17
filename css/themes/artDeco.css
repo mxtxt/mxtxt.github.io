@@ -23,10 +23,10 @@ html {
 body {
   font-family: "Poiret One", cursive;
   color: #fff;
-  height: 100vh;
+  height: 95%;
   margin: auto;
-  width: 50%;
-  padding: 0;
+  width: 60%;
+  padding: 10%;
 }
 
 h1 {
@@ -144,6 +144,29 @@ header { /* example of a header that we want in the center of the page */
   text-align: center
 }
 
+header:before {
+  content: "";
+  display: inline-block;
+  background-image: url("../../img/divider/divider-6.svg");
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  padding-top: 30%;
+}
+
+header:after {
+  content: "";
+  display: inline-block;
+  background-image: url("../../img/divider/divider-9.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  padding-top: 15%;
+}
+
 section {
   /* border-top: 1rem double #f7f7f7;  three values: thickness, styling, color */
   border-bottom: ;
@@ -155,14 +178,48 @@ section {
   padding-right: ;
 }
 
+/*
+section:after {
+  content: "";
+  display: inline-block;
+  background-image: url("../../img/divider/divider-5.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  padding-top: 15%;
+} */
+
 figure {
   width: 100%; /* use percentage of viewwidth */
   margin: 0;
   padding: 0;
 }
 
-figure > figcaption {
+figure:before {
+  content: "";
+  display: inline-block;
+  background-image: url("../../img/divider/divider-7.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   width: 100%;
+  padding-top: 15%;
+}
+
+figure:after {
+  content: "";
+  display: inline-block;
+  background-image: url("../../img/divider/divider-8.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  padding-top: 15%;
+}
+
+figure > figcaption {
+  width: 80%;
   font-family: ;
   font-family: "parklane";
   font-size: 1rem; /* whatever number size you choose, but rem */
@@ -178,10 +235,15 @@ figure > figcaption > em {
 }
 
 figure > img {
-  width: 100%; /* use percentage of the figure box width */
-  margin: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin: auto;
+  width: 80%; /* use percentage of the figure box width */
   padding: 0;
   filter: grayscale();
+  -webkit-clip-path: polygon(10% 0, 90% 0, 100% 7.5%, 100% 92.5%, 90% 100%, 10% 100%, 0 92.5%, 0 7.5%);
+  clip-path: polygon(10% 0, 90% 0, 100% 7.5%, 100% 92.5%, 90% 100%, 10% 100%, 0 92.5%, 0 7.5%);
 }
 
 figure > video {
