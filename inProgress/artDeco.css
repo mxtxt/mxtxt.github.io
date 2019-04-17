@@ -30,8 +30,11 @@ body {
 }
 
 h1 {
+  background: -webkit-linear-gradient(#BF953F, #FCF6BA, #FBF5B7, #AA771C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-family: "parklane";
-  font-size: 1rem; /* whatever number size you choose, but rem */
+  font-size: 2rem; /* whatever number size you choose, but rem */
   font-style: ;
   margin: ;
   padding: ;
@@ -60,26 +63,36 @@ h3 {
 }
 
 h4 {
-  font-family: #deba6c;
-  font-size: 1rem; /* whatever number size you choose, but rem */
+  background: -webkit-linear-gradient(#BF953F, #FCF6BA, #FBF5B7, #AA771C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-family: "parklane";
+  font-size: 2rem; /* whatever number size you choose, but rem */
   font-style: ;
-  margin: ;
+  margin: 0;
   padding: ;
 }
 
 h5 {
-  font-family: ;
+  background: -webkit-linear-gradient(#BF953F, #FCF6BA, #FBF5B7, #AA771C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "parklane";
   font-size: 1rem; /* whatever number size you choose, but rem */
   font-style: ;
-  margin: ;
+  margin: 0;
   padding: ;
 }
 
 h6 {
-  font-family: ;
+  background: -webkit-linear-gradient(#BF953F, #FCF6BA, #FBF5B7, #AA771C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "parklane";
   font-size: 1rem; /* whatever number size you choose, but rem */
   font-style: ;
-  margin: ;
+  margin: 0;
   padding: ;
 }
 
@@ -92,14 +105,15 @@ p {
   padding: ;
 }
 
+/*
 p:first-of-type {
   font-family: ;
   text-align: justify;
-  font-size: 1rem; /* whatever number size you choose, but rem */
+  font-size: 1rem; /* whatever number size you choose, but rem
   font-style: ;
   margin: ;
   padding: ;
-}
+}*/
 
 em {
   font-family: ;
@@ -141,13 +155,13 @@ header { /* example of a header that we want in the center of the page */
   /* top: 50%; /* this positions the header at the vertical center  */
   /* left: 50%; /* this positions the header at the horizontal center  */
   /* transform: translate(-50%, -50%); */
-  text-align: center
+  text-align: center;
 }
 
 header:before {
   content: "";
   display: inline-block;
-  background-image: url("../../img/divider/divider-6.svg");
+  background-image: url("../img/divider/divider-6.svg");
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-position: center;
@@ -159,12 +173,21 @@ header:before {
 header:after {
   content: "";
   display: inline-block;
-  background-image: url("../../img/divider/divider-9.svg");
+  background-image: url("../img/divider/divider-9.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   width: 100%;
   padding-top: 15%;
+}
+
+header > p {
+  text-align: center;
+  background: -webkit-linear-gradient(#BF953F, #FCF6BA, #FBF5B7, #AA771C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "parklane";
+  font-size: 1rem; /* whatever number size you choose, but rem */
 }
 
 section {
@@ -182,7 +205,7 @@ section {
 section:after {
   content: "";
   display: inline-block;
-  background-image: url("../../img/divider/divider-5.png");
+  background-image: url("../img/divider/divider-5.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -199,7 +222,7 @@ figure {
 figure:before {
   content: "";
   display: inline-block;
-  background-image: url("../../img/divider/divider-7.svg");
+  background-image: url("../img/divider/divider-7.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -210,7 +233,7 @@ figure:before {
 figure:after {
   content: "";
   display: inline-block;
-  background-image: url("../../img/divider/divider-8.svg");
+  background-image: url("../img/divider/divider-8.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -219,12 +242,16 @@ figure:after {
 }
 
 figure > figcaption {
+  background: -webkit-linear-gradient(#BF953F, #FCF6BA, #FBF5B7, #AA771C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   width: 80%;
-  font-family: ;
   font-family: "parklane";
   font-size: 1rem; /* whatever number size you choose, but rem */
   font-style: ;
-  padding: 0;
+  text-align: center;
+  margin: auto;
+  padding-top: 2rem;
 }
 
 figure > figcaption > em {
@@ -241,10 +268,21 @@ figure > img {
   margin: auto;
   width: 80%; /* use percentage of the figure box width */
   padding: 0;
-  filter: grayscale();
-  -webkit-clip-path: polygon(10% 0, 90% 0, 100% 7.5%, 100% 92.5%, 90% 100%, 10% 100%, 0 92.5%, 0 7.5%);
+  filter: grayscale(20%) sepia(20%) contrast(0.8);
+  -webkit-filter: grayscale(20%) sepia(20%) contrast(0.8);
   clip-path: polygon(10% 0, 90% 0, 100% 7.5%, 100% 92.5%, 90% 100%, 10% 100%, 0 92.5%, 0 7.5%);
+  -webkit-clip-path: polygon(10% 0, 90% 0, 100% 7.5%, 100% 92.5%, 90% 100%, 10% 100%, 0 92.5%, 0 7.5%);
+  /*-webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;*/
 }
+
+/*
+figure > img:hover {
+  filter: none;
+  -webkit-filter: none;
+}*/
 
 figure > video {
   width: 80%; /* use percentage of the figure box width */
@@ -329,6 +367,17 @@ ol > li > ol > li {
 }
 
 footer {
-  padding-top: ;
+  padding: 2rem 0;
   border-top: ;
+}
+
+footer:before {
+  content: "";
+  display: inline-block;
+  background-image: url("../img/divider/divider-5.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  padding-top: 15%;
 }
