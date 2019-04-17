@@ -222,6 +222,11 @@ html, body {
   background: none;
 }
 
+.theme-icon {
+  padding: 0; /* TBD */
+  width: 1.5rem;
+}
+
 /* Content */
 
 #content {
