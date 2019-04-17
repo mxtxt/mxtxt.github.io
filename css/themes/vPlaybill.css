@@ -43,9 +43,24 @@ to define special characteristics of certain elemens, since we cannot use classe
     font-family: plastische-plakat-antiqua;
     src: url("../../fonts/vp/Plastische-Plakat-Antiqua.ttf") format("opentype");
 }
+
+/* Cairo */
 @font-face {
     font-family: cairotiqua-light;
-    src: url("../../fonts/vp/Cairotiqua-Light.ttf.ttf") format("opentype");
+    src: url("../../fonts/vp/Cairotiqua-Light.ttf") format("opentype");
+}
+
+
+/* slab serif */
+@font-face {
+    font-family: klein-slabserif;
+    src: url("../../fonts/vp/Klein-Slabserif.ttf") format("opentype");
+}
+
+/* VIneta */
+@font-face {
+    font-family: vineta-regular;
+    src: url("../../fonts/vp/Vineta-Regular.ttf") format("opentype");
 }
 
 
@@ -102,7 +117,7 @@ h3 {
 }
 
 h4 {
-  font-family: "plastische-plakat-antiqua";
+  font-family: "vineta-regular";
   font-size: 4vw; /* whatever number size you choose, but rem */
   font-style: ;
   text-transform: uppercase;/* whatever number size you choose, but rem */
@@ -154,7 +169,7 @@ em {
 }
 
 small {
-  font-family: ;
+  font-family: "klein-slabserif";
   font-size: 1rem; /* whatever number size you choose, but rem */
   font-style: ;
   padding: ;
@@ -209,7 +224,7 @@ figure {
 figure > figcaption {
   width: 100%;
   font-family: ;
-  font-family: "bodoni-italic";
+  font-family: "klein-slabserif";
   font-size: 1rem; /* whatever number size you choose, but rem */
   font-style: ;
   padding: 0;
