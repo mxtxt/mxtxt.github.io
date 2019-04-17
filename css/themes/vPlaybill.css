@@ -1,70 +1,113 @@
 /* check out first-child and nth-child pseudoclasses. These will be very helpful
 to define special characteristics of certain elemens, since we cannot use classes or ids. */
 
+
+/* learn fittext.js*/
+/* learn circletype.js */
+/* */
+/* */
+/* */
+
+
 @import url('https://fonts.googleapis.com/css?family=Poiret+One');
+
+
+/* Bodoni  */
 @font-face {
-    font-family: bodonibold;
+    font-family: bodoni-bold;
     src: url("../../fonts/vp/BodoniFLF-Bold.ttf") format("opentype");
 }
 @font-face {
-    font-family: bodoniitalic;
+    font-family: bodoni-italic;
     src: url("../../fonts/vp/BodoniFLF-Italic.ttf") format("opentype");
 }
+@font-face {
+    font-family: bodoni-roman;
+    src: url("../../fonts/vp/BodoniFLF-Roman.ttf") format("opentype");
+}
+
+/* Egyptienne  */
+@font-face {
+    font-family: egyptienne-zierversalien;
+    src: url("../../fonts/vp/Egyptienne-Zierversalien.ttf") format("opentype");
+}
+@font-face {
+    font-family: fette-egyptienne;
+    src: url("../../fonts/vp/Fette-Egyptienne.ttf") format("opentype");
+}
+@font-face {
+    font-family: toskanische-egyptienneInitialen;
+    src: url("../../fonts/vp/ToskanischeEgyptienneInitialen.ttf") format("opentype");
+}
+@font-face {
+    font-family: plastische-plakat-antiqua;
+    src: url("../../fonts/vp/Plastische-Plakat-Antiqua.ttf") format("opentype");
+}
+@font-face {
+    font-family: cairotiqua-light;
+    src: url("../../fonts/vp/Cairotiqua-Light.ttf.ttf") format("opentype");
+}
+
 
 html {
   background-image: url("../../img/bg/paper3.jpg");
   background-repeat: repeat;
   height: 100vh;
   width: 100vw;
-  margin: 0;
-  padding: 0;
+  margin-right: 10vw;
+  align-items: center;
 }
 
 body {
-  font-family: "bodonibold";
+  font-family: "bodoni-bold";
   color: black;
-  height: 100vh;
-  margin: auto;
-  width: 50%;
-  padding: 0;
+  height: 100vh; /* the style requires an infinite scroll type of interaction, as the original docs were very long*/
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: center;
+  /* display: grid;
+  grid-template-columns: 1fr; */
 }
 
 h1 {
-  font-family: "bodoniitalic";
-  font-size: 1rem; /* whatever number size you choose, but rem */
+  font-family: "egyptienne-zierversalien";
+  font-size: 10vw;
+  text-transform: uppercase;/* whatever number size you choose, but rem */
   font-style: ;
   margin: ;
   padding: ;
 }
 
 h2 {
-  background: -webkit-linear-gradient(#black, #grey, #black, #grey);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: "bodoniitalic";
-  font-size: 4rem; /* whatever number size you choose, but rem */
+  font-family: "fette-egyptienne";
+  font-size: 4.6vw; /* whatever number size you choose, but rem */
+  text-transform: uppercase;/* whatever number size you choose, but rem */
   font-style: ;
   margin: ;
   padding: ;
+  width: ;
+  text-align: justify;
+  text-justify: inter-character;
 }
 
 h3 {
-  background: -webkit-linear-gradient(#black, #grey, #black, #grey);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: "bodoniitalic";
-  font-size: 2rem; /* whatever number size you choose, but rem */
+  font-family: "toskanische-egyptienneInitialen";
+  font-size: 4vw; /* whatever number size you choose, but rem */
+  text-transform: uppercase;/* whatever number size you choose, but rem */
   font-style: ;
-  margin: 0 0 5rem 0;
   padding: ;
+  text-align: justify;
+  text-justify: inter-character;
+  letter-spacing: 0.7vw;
 }
 
 h4 {
-  font-family: #deba6c;
-  font-size: 1rem; /* whatever number size you choose, but rem */
+  font-family: "plastische-plakat-antiqua";
+  font-size: 4vw; /* whatever number size you choose, but rem */
   font-style: ;
-  margin: ;
-  padding: ;
+  text-transform: uppercase;/* whatever number size you choose, but rem */
+  margin: 0;
+  padding: 0;
 }
 
 h5 {
@@ -84,26 +127,28 @@ h6 {
 }
 
 p {
-  font-family: ;
+  font-family: "bodoni-bold";
   text-align: justify;
-  font-size: 1rem; /* whatever number size you choose, but rem */
+  font-size: 3vw; /* whatever number size you choose, but rem */
+  text-transform: uppercase;
   font-style: ;
-  margin: ;
-  padding: ;
+  margin: 0;
+  margin-top: 3vh;
+  padding: 0;
 }
 
 p:first-of-type {
   font-family: ;
   text-align: justify;
-  font-size: 1rem; /* whatever number size you choose, but rem */
+  font-size: 3vw; /* whatever number size you choose, but rem */
   font-style: ;
   margin: ;
   padding: ;
 }
 
 em {
-  font-family: ;
-  font-size: 1rem; /* whatever number size you choose, but rem */
+  font-family: "plastische-plakat-antiqua";
+  font-size: 4rem; /* whatever number size you choose, but rem */
   font-style: ;
   padding: ;
 }
@@ -141,7 +186,7 @@ header { /* example of a header that we want in the center of the page */
   /* top: 50%; /* this positions the header at the vertical center  */
   /* left: 50%; /* this positions the header at the horizontal center  */
   /* transform: translate(-50%, -50%); */
-  text-align: center
+  /* text-align: center */
 }
 
 section {
@@ -164,7 +209,7 @@ figure {
 figure > figcaption {
   width: 100%;
   font-family: ;
-  font-family: "parklane";
+  font-family: "bodoni-italic";
   font-size: 1rem; /* whatever number size you choose, but rem */
   font-style: ;
   padding: 0;
@@ -177,11 +222,20 @@ figure > figcaption > em {
   padding: ;
 }
 
+
 figure > img {
   width: 100%; /* use percentage of the figure box width */
   margin: 0;
   padding: 0;
-  filter: grayscale();
+  border-radius: 50%;
+  filter: sepia();
+}
+
+figure:first-child img {
+  width: 100%; /* use percentage of the figure box width */
+  border-radius: 0%;
+  margin-right: 0%
+  padding: 0;
 }
 
 figure > video {
