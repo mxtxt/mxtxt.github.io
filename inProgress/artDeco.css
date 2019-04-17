@@ -147,7 +147,7 @@ header { /* example of a header that we want in the center of the page */
 header:before {
   content: "";
   display: inline-block;
-  background-image: url("../img/divider/divider-6.svg");
+  background-image: url("../../img/divider/divider-6.svg");
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-position: center;
@@ -159,7 +159,7 @@ header:before {
 header:after {
   content: "";
   display: inline-block;
-  background-image: url("../img/divider/divider-9.svg");
+  background-image: url("../../img/divider/divider-9.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -182,7 +182,7 @@ section {
 section:after {
   content: "";
   display: inline-block;
-  background-image: url("../img/divider/divider-5.png");
+  background-image: url("../../img/divider/divider-5.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -199,7 +199,7 @@ figure {
 figure:before {
   content: "";
   display: inline-block;
-  background-image: url("../img/divider/divider-7.svg");
+  background-image: url("../../img/divider/divider-7.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -210,7 +210,7 @@ figure:before {
 figure:after {
   content: "";
   display: inline-block;
-  background-image: url("../img/divider/divider-8.svg");
+  background-image: url("../../img/divider/divider-8.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
