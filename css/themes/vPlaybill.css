@@ -12,7 +12,7 @@ to define special characteristics of certain elemens, since we cannot use classe
 }
 
 html {
-  background-image: url("../../img/bg/paper3.png");
+  background-image: url("../../img/bg/paper3.jpg");
   background-repeat: repeat;
   height: 100vh;
   width: 100vw;
@@ -22,7 +22,7 @@ html {
 
 body {
   font-family: "bodonibold";
-  color: #fff;
+  color: black;
   height: 100vh;
   margin: auto;
   width: 50%;
@@ -38,10 +38,10 @@ h1 {
 }
 
 h2 {
-  background: -webkit-linear-gradient(#BF953F, #FCF6BA, #FBF5B7, #AA771C);
+  background: -webkit-linear-gradient(#black, #grey, #black, #grey);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: "parklane";
+  font-family: "bodoniitalic";
   font-size: 4rem; /* whatever number size you choose, but rem */
   font-style: ;
   margin: ;
@@ -49,10 +49,10 @@ h2 {
 }
 
 h3 {
-  background: -webkit-linear-gradient(#BF953F, #FCF6BA, #FBF5B7, #AA771C);
+  background: -webkit-linear-gradient(#black, #grey, #black, #grey);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: "parklane";
+  font-family: "bodoniitalic";
   font-size: 2rem; /* whatever number size you choose, but rem */
   font-style: ;
   margin: 0 0 5rem 0;
