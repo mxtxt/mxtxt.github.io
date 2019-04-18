@@ -64,7 +64,11 @@ function switchDoc(input){
   loadingOn();
 
   if (document.getElementById("currentTheme") == null){
-    randomTheme();
+    var frameContent = document.getElementById("frameDocument");
+    var elmnt = frameContent.contentWindow.document.getElementsByName("theme")[0];
+
+    document.getElementById("currentTheme").innerHTML = input.name;
+    elmnt.setAttribute("href", "../../css/" + "themes/artDeco" + ".css");
   };
 
   document.getElementById("currentDoc").innerHTML = input.name;
