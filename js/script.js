@@ -63,7 +63,7 @@ function switchTheme(input){
 function switchDoc(input){
   loadingOn();
 
-  if document.getElementById("currentTheme") == null {
+  if (document.getElementById("currentTheme") == null){
     randomTheme();
   };
 
