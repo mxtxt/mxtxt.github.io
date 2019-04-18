@@ -36,7 +36,7 @@ function random(){
     menuToggle();
   };
 
-  loadingOff();
+  frameContent.addEventListener("load", loadingOff);
 };
 
 function switchTheme(input){
@@ -52,7 +52,7 @@ function switchTheme(input){
     menuToggle();
   };
 
-  loadingOff();
+  frameContent.addEventListener("load", loadingOff);
 };
 
 function switchDoc(input){
@@ -65,7 +65,7 @@ function switchDoc(input){
     menuToggle();
   };
 
-  loadingOff();
+  document.getElementById("frameDocument").addEventListener("load", loadingOff);
 };
 
 function switchPage(input){
