@@ -1,8 +1,20 @@
 function menuToggle(){
-  $("#menu-nav-wrapper").toggleClass("active");
+  $(".menu").toggleClass("active");
 };
 
-function randomTheme(){
+function loadingOn(){
+  $(".loading-wrapper").toggleClass("active");
+};
+
+function loadingOff(){
+  setTimeout(function(){
+    $(".loading-wrapper").toggleClass("active");
+  }, 2000);
+};
+
+function random(){
+  loadingOn();
+
   var listThemes = ["style1","style2","themes/artDeco","style4","style5","themes/futurama",];
   var listDocs = ["docs/bloomberg/Bloomberg_final.html","docs/eudirective/EUDirective_final.html","docs/harpers/Harpers_Final.html","docs/huffington/Huffington_Final.html","docs/thecut/JessicaPresler.html","docs/tls/TimesLiterarySupplement_Final.html",];
 
@@ -20,37 +32,47 @@ function randomTheme(){
     document.getElementById("currentTheme").innerHTML = choiceTheme;
   });
 
-  if ($("#menu-nav-wrapper").hasClass("active")) {
+  if ($(".menu").hasClass("active")) {
     menuToggle();
   };
+
+  loadingOff();
 };
 
 function switchTheme(input){
+  loadingOn();
+
   var frameContent = document.getElementById("frameDocument");
   var elmnt = frameContent.contentWindow.document.getElementsByName("theme")[0];
 
   document.getElementById("currentTheme").innerHTML = input.name;
   elmnt.setAttribute("href", "../../css/" + input.name + ".css");
 
-  if ($("#menu-nav-wrapper").hasClass("active")) {
+  if ($(".menu").hasClass("active")) {
     menuToggle();
   };
+
+  loadingOff();
 };
 
 function switchDoc(input){
+  loadingOn();
+
   document.getElementById("currentDoc").innerHTML = input.name;
   document.getElementById("frameDocument").setAttribute("src", "docs/" + input.name + ".html");
 
-  if ($("#menu-nav-wrapper").hasClass("active")) {
+  if ($(".menu").hasClass("active")) {
     menuToggle();
   };
+
+  loadingOff();
 };
 
 function switchPage(input){
   document.getElementById("currentPage").innerHTML = input.name;
   document.getElementById("frameDocument").setAttribute("src", "pages/" + input.name + ".html");
 
-  if ($("#menu-nav-wrapper").hasClass("active")) {
+  if ($(".menu").hasClass("active")) {
     menuToggle();
   };
 };

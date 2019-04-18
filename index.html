@@ -55,7 +55,7 @@
     </div>
     <div class="frame right">
       <div class="theme-nav">
-        <button class="theme-btn" onclick="randomTheme()">X</button>
+        <button class="theme-btn" onclick="loadingTimer()">X</button>
         <button name="style1" class="theme-btn" onclick="switchTheme(this)">1</button>
         <button name="themes/vPlaybill" class="theme-btn" onclick="switchTheme(this)"><img src="img/icons/vPlaybill2.png" class="theme-icon"></button>
         <button name="themes/artDeco" class="theme-btn" onclick="switchTheme(this)"><img src="img/icons/artDeco.png" class="theme-icon"></button>
@@ -85,9 +85,12 @@
     </div>
   </div>
 
+  <div class="loading-wrapper">
+    <div id="loading"></div>
+  </div>
+
   <div id="content">
     <iframe id="frameDocument" src="pages/home.html"></iframe>
-    <div id="loading"></div>
   </div>
 ´
 </body>

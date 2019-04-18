@@ -125,6 +125,11 @@ html, body {
 .menu {
   width: 100vw;
   height: 100vh;
+  display: none;
+}
+
+.menu.active {
+  display: block;
 }
 
 @media (min-width: 767px) {
@@ -137,15 +142,10 @@ html, body {
   background-image: url("https://media.giphy.com/media/5rmQdXUaAzutq/giphy.gif");
   /* background-image: url("https://media.giphy.com/media/Ph0oIVQeuvh0k/giphy.gif"); */
   background-repeat: repeat;
-  display: none;
   height: 100%;
   width: 100%;
   position: relative;
-  z-index: 200;
-}
-
-#menu-nav-wrapper.active {
-  display: block;
+  z-index: 2000;
 }
 
 @media (max-width: 766px) {
@@ -229,6 +229,44 @@ html, body {
   padding: 0; /* TBD */
   width: 1.5rem;
 }
+
+
+/* Loading */
+
+.loading-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+
+.loading-wrapper.active {
+  display: block;
+}
+
+@media (min-width: 767px) {
+  .loading-wrapper {
+    padding: 2.5rem;
+  }
+}
+
+#loading {
+  background-image: url("https://media.giphy.com/media/5rmQdXUaAzutq/giphy.gif");
+  /* background-image: url("https://media.giphy.com/media/Ph0oIVQeuvh0k/giphy.gif"); */
+  background-repeat: repeat;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 200;
+}
+
+@media (max-width: 766px) {
+  #loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+}
+
 
 /* Content */
 
