@@ -63,7 +63,7 @@ function switchTheme(input){
 function switchDoc(input){
   loadingOn();
 
-  if (document.getElementById("currentTheme").innerHTML == null){
+  if (document.getElementById("currentTheme").innerHTML == ""){
     var frameContent = document.getElementById("frameDocument");
     var elmnt = frameContent.contentWindow.document.getElementsByName("theme")[0];
 
