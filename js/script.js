@@ -63,6 +63,9 @@ function switchTheme(input){
 function switchDoc(input){
   loadingOn();
 
+  document.getElementById("currentDoc").innerHTML = input.name;
+  document.getElementById("frameDocument").setAttribute("src", "docs/" + input.name + ".html");
+
   if (document.getElementById("currentTheme").innerHTML == ""){
     var frameContent = document.getElementById("frameDocument");
     var elmnt = frameContent.contentWindow.document.getElementsByName("theme")[0];
@@ -70,9 +73,6 @@ function switchDoc(input){
     document.getElementById("currentTheme").innerHTML = input.name;
     elmnt.setAttribute("href", "../../css/" + "themes/artDeco" + ".css");
   };
-
-  document.getElementById("currentDoc").innerHTML = input.name;
-  document.getElementById("frameDocument").setAttribute("src", "docs/" + input.name + ".html");
 
   if ($(".menu").hasClass("active")) {
     menuToggle();
