@@ -230,7 +230,7 @@ html, body {
   justify-content: center;
 }
 
-.theme-btn {
+.theme-btn, .random-btn {
   border: none;
   background: none;
 }

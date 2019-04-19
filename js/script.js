@@ -43,14 +43,11 @@ function randomTheme(){
   var frameContent = document.getElementById("frameDocument");
   var choiceTheme = listThemes[Math.floor(Math.random()*listThemes.length)];
 
-  document.getElementsByName(choiceTheme)[0].click();
-
   frameContent.addEventListener("load", function() {
     var elmnt = frameContent.contentWindow.document.getElementsByName("theme")[0];
     elmnt.setAttribute("href", "../../css/" + choiceTheme + ".css");
     document.getElementById("currentTheme").innerHTML = choiceTheme;
-
-
+    document.getElementsByName(choiceTheme)[0].click();
   });
 };
 
