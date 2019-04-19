@@ -2,15 +2,18 @@ function menuToggle(){
   $(".menu").toggleClass("active");
 };
 
+
 function loadingOn(){
   $(".loading-wrapper").toggleClass("active");
 };
+
 
 function loadingOff(){
   setTimeout(function(){
     $(".loading-wrapper").toggleClass("active");
   }, 2000);
 };
+
 
 function random(){
   loadingOn();
@@ -28,8 +31,9 @@ function random(){
     menuToggle();
   };
 
-  frameContent.addEventListener("load", loadingOff);
+  document.getElementById("frameDocument").addEventListener("load", loadingOff);
 };
+
 
 function randomTheme(){
   var listThemes = ["style1","style2","themes/artDeco","style4","style5","themes/futurama",];
@@ -43,6 +47,7 @@ function randomTheme(){
     document.getElementById("currentTheme").innerHTML = choiceTheme;
   });
 };
+
 
 function switchTheme(input){
   loadingOn();
@@ -59,6 +64,7 @@ function switchTheme(input){
 
   frameContent.addEventListener("load", loadingOff);
 };
+
 
 function switchDoc(input){
   loadingOn();
@@ -80,6 +86,7 @@ function switchDoc(input){
 
   document.getElementById("frameDocument").addEventListener("load", loadingOff);
 };
+
 
 function switchPage(input){
   document.getElementById("currentPage").innerHTML = input.name;
