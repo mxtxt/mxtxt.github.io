@@ -19,12 +19,13 @@ function loadingOff(){
 function random(){
   loadingOn();
 
-  var listDocs = ["docs/bloomberg/Bloomberg_final.html","docs/eudirective/EUDirective_final.html","docs/harpers/Harpers_Final.html","docs/huffington/Huffington_Final.html","docs/thecut/JessicaPresler.html","docs/tls/TimesLiterarySupplement_Final.html",];
+  var listDocs = ["bloomberg/Bloomberg_final","eudirective/EUDirective_finalEN","harpers/Harpers_Final","huffington/Huffington_Final","thecut/JessicaPresler","tls/TimesLiterarySupplement_Final"];
 
   var choiceDoc = listDocs[Math.floor(Math.random()*listDocs.length)];
 
-  document.getElementById("frameDocument").setAttribute("src", choiceDoc);
+  document.getElementById("frameDocument").setAttribute("src", "docs/" + choiceDoc + ".html");
   document.getElementById("currentDoc").innerHTML = choiceDoc;
+  document.getElementsByName(choiceDoc)[0].click();
 
   randomTheme();
 
@@ -37,15 +38,19 @@ function random(){
 
 
 function randomTheme(){
-  var listThemes = ["style1","style2","themes/artDeco","style4","style5","themes/futurama",];
+  var listThemes = ["style1","themes/vPlaybill","themes/artDeco","style4","style5","themes/futurama"];
 
   var frameContent = document.getElementById("frameDocument");
   var choiceTheme = listThemes[Math.floor(Math.random()*listThemes.length)];
+
+  document.getElementsByName(choiceTheme)[0].click();
 
   frameContent.addEventListener("load", function() {
     var elmnt = frameContent.contentWindow.document.getElementsByName("theme")[0];
     elmnt.setAttribute("href", "../../css/" + choiceTheme + ".css");
     document.getElementById("currentTheme").innerHTML = choiceTheme;
+
+
   });
 };
 
