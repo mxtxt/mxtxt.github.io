@@ -75,6 +75,15 @@ function switchDoc(input){
     randomTheme();
   };
 
+  if (document.getElementById("currentTheme").innerHTML != ""){
+    var frameContent = document.getElementById("frameDocument");
+    var elmnt = frameContent.contentWindow.document.getElementsByName("theme")[0];
+    var themeName = var  = document.getElementById("currentTheme").innerHTML;
+
+    document.getElementById("currentTheme").innerHTML = "Theme applied.";
+    elmnt.setAttribute("href", "../../css/" + themeName + ".css");
+  };
+
   if ($(".menu").hasClass("active")) {
     menuToggle();
   };
