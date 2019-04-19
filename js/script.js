@@ -84,7 +84,7 @@ function switchDoc(input){
     menuToggle();
   };
 
-  document.getElementById("frameDocument").addEventListener("load", loadingOff);
+  loadingOff();
 };
 
 
