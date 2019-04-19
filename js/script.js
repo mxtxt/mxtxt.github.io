@@ -48,6 +48,7 @@ function randomTheme(){
   });
 };
 
+var theTheme
 
 function switchTheme(input){
   loadingOn();
@@ -62,14 +63,14 @@ function switchTheme(input){
     menuToggle();
   };
 
+  theTheme = input.name;
+
   loadingOff();
 };
 
 
 function switchDoc(input){
   loadingOn();
-  
-  var themeName = document.getElementById("currentTheme").innerHTML;
 
   document.getElementById("frameDocument").setAttribute("src", "docs/" + input.name + ".html");
 
@@ -81,7 +82,7 @@ function switchDoc(input){
     var frameContent = document.getElementById("frameDocument");
     var elmnt = frameContent.contentWindow.document.getElementsByName("theme")[0];
 
-    elmnt.setAttribute("href", "../../css/" + themeName + ".css");
+    elmnt.setAttribute("href", "../../css/" + theTheme + ".css");
   };
 
   if ($(".menu").hasClass("active")) {
