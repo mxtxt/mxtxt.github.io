@@ -40,9 +40,7 @@ function randomTheme(){
   var frameContent = document.getElementById("frameDocument");
   var choiceTheme = listThemes[Math.floor(Math.random()*listThemes.length)];
 
-  frameContent.addEventListener("load", function() {
-    document.getElementsByName(choiceTheme)[0].click();
-  });
+  document.getElementsByName(choiceTheme)[0].click();
 };
 
 
@@ -52,8 +50,10 @@ function switchTheme(input){
   var frameContent = document.getElementById("frameDocument");
   var elmnt = frameContent.contentWindow.document.getElementsByName("theme")[0];
 
-  document.getElementById("currentTheme").innerHTML = input.name;
-  elmnt.setAttribute("href", "../../css/" + input.name + ".css");
+  frameContent.addEventListener("load", function() {
+    document.getElementById("currentTheme").innerHTML = input.name;
+    elmnt.setAttribute("href", "../../css/" + input.name + ".css");
+  });
 
   if ($(".menu").hasClass("active")) {
     menuToggle();
