@@ -36,6 +36,8 @@ function random(){
 
 function randomTheme(){
   var listThemes = ["style1","themes/vPlaybill","themes/artDeco","style4","style5","themes/futurama"];
+
+  var frameContent = document.getElementById("frameDocument");
   var choiceTheme = listThemes[Math.floor(Math.random()*listThemes.length)];
 
   frameContent.addEventListener("load", function() {
