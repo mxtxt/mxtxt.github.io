@@ -69,7 +69,6 @@ function switchTheme(input){
 function switchDoc(input){
   loadingOn();
 
-  document.getElementById("currentDoc").innerHTML = input.name;
   document.getElementById("frameDocument").setAttribute("src", "docs/" + input.name + ".html");
 
   if (document.getElementById("currentTheme").innerHTML == ""){
@@ -80,6 +79,7 @@ function switchDoc(input){
     menuToggle();
   };
 
+  document.getElementById("currentDoc").innerHTML = input.name;
   document.getElementById("frameDocument").addEventListener("load", loadingOff);
 };
 
