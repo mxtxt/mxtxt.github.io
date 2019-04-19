@@ -5,7 +5,10 @@ function menuToggle(){
 
 
 function loadingOn(){
-  $(".loading-wrapper").toggleClass("active");
+  if (!$(".loading-wrapper").hasClass("active")) {
+    $(".loading-wrapper").toggleClass("active");
+    loadingOff();
+  };
 };
 
 
@@ -17,43 +20,33 @@ function loadingOff(){
 
 
 function random(){
-  loadingOn();
-
-  var listDocs = ["docs/bloomberg/Bloomberg_final.html","docs/eudirective/EUDirective_final.html","docs/harpers/Harpers_Final.html","docs/huffington/Huffington_Final.html","docs/thecut/JessicaPresler.html","docs/tls/TimesLiterarySupplement_Final.html",];
+  var listDocs = ["bloomberg/Bloomberg_final","eudirective/EUDirective_finalEN","harpers/Harpers_Final","huffington/Huffington_Final","thecut/JessicaPresler","tls/TimesLiterarySupplement_Final"];
 
   var choiceDoc = listDocs[Math.floor(Math.random()*listDocs.length)];
-
-  document.getElementById("frameDocument").setAttribute("src", choiceDoc);
-  document.getElementById("currentDoc").innerHTML = choiceDoc;
+  document.getElementsByName(choiceDoc)[0].click();
 
   randomTheme();
 
   if ($(".menu").hasClass("active")) {
     menuToggle();
   };
-
-  document.getElementById("frameDocument").addEventListener("load", loadingOff);
 };
 
 
 function randomTheme(){
-  var listThemes = ["style1","style2","themes/artDeco","style4","style5","themes/futurama",];
+  var listThemes = ["style1","themes/vPlaybill","themes/artDeco","style4","style5","themes/futurama"];
 
   var frameContent = document.getElementById("frameDocument");
   var choiceTheme = listThemes[Math.floor(Math.random()*listThemes.length)];
 
   frameContent.addEventListener("load", function() {
-    var elmnt = frameContent.contentWindow.document.getElementsByName("theme")[0];
-    elmnt.setAttribute("href", "../../css/" + choiceTheme + ".css");
-    document.getElementById("currentTheme").innerHTML = choiceTheme;
+    document.getElementsByName(choiceTheme)[0].click();
   });
 };
 
-var theTheme
 
 function switchTheme(input){
   loadingOn();
-
   var frameContent = document.getElementById("frameDocument");
   var elmnt = frameContent.contentWindow.document.getElementsByName("theme")[0];
 
@@ -63,14 +56,12 @@ function switchTheme(input){
   if ($(".menu").hasClass("active")) {
     menuToggle();
   };
-
-  loadingOff();
 };
 
 
 function switchDoc(input){
   loadingOn();
-
+  document.getElementById("currentDoc").innerHTML = input.name;
   document.getElementById("frameDocument").setAttribute("src", "docs/" + input.name + ".html");
 
   if (document.getElementById("currentTheme").innerHTML == ""){
@@ -80,9 +71,6 @@ function switchDoc(input){
   if ($(".menu").hasClass("active")) {
     menuToggle();
   };
-
-  document.getElementById("currentDoc").innerHTML = input.name;
-  document.getElementById("frameDocument").addEventListener("load", loadingOff);
 };
 
 
