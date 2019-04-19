@@ -68,6 +68,8 @@ function switchTheme(input){
 
 function switchDoc(input){
   loadingOn();
+  
+  var themeName = document.getElementById("currentTheme").innerHTML;
 
   document.getElementById("frameDocument").setAttribute("src", "docs/" + input.name + ".html");
 
@@ -78,7 +80,6 @@ function switchDoc(input){
   if (document.getElementById("currentTheme").innerHTML != ""){
     var frameContent = document.getElementById("frameDocument");
     var elmnt = frameContent.contentWindow.document.getElementsByName("theme")[0];
-    var themeName = document.getElementById("currentTheme").innerHTML;
 
     elmnt.setAttribute("href", "../../css/" + themeName + ".css");
   };
