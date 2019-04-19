@@ -44,7 +44,7 @@
     <div class="frame bottom">
     </div>
     <div class="frame left">
-      <div class="doc-nav">
+      <div id="doc-nav">
         <button name="bloomberg/Bloomberg_final" class="doc-btn" onclick="switchDoc(this)">1</button>
         <button name="eudirective/EUDirective_finalEN" class="doc-btn" onclick="switchDoc(this)">2</button>
         <button name="harpers/Harpers_Final" class="doc-btn" onclick="switchDoc(this)">3</button>
@@ -54,7 +54,7 @@
       </div>
     </div>
     <div class="frame right">
-      <div class="theme-nav">
+      <div id="theme-nav">
         <button class="theme-btn" onclick="random()">X</button>
         <button name="style1" class="theme-btn" onclick="switchTheme(this)">1</button>
         <button name="themes/vPlaybill" class="theme-btn" onclick="switchTheme(this)"><img src="img/icons/vPlaybill2.png" class="theme-icon"></button>
@@ -68,18 +68,18 @@
 
   <div class="menu">
     <div id="menu-nav-wrapper">
-      <ul class="menu-nav">
+      <ul id="menu-nav">
         <li class="menu-item">
-          <a name="home" onclick="switchPage(this)">Home.</a>
+          <a name="home" class="menu-btn active" onclick="switchPage(this)">Home.</a>
         </li>
         <li class="menu-item">
-          <a name="documentation" onclick="switchPage(this)">Documentation.</a>
+          <a name="documentation" class="menu-btn" onclick="switchPage(this)">Documentation.</a>
         </li>
         <li class="menu-item">
-          <a name="disclaimer" onclick="switchPage(this)">Disclaimer.</a>
+          <a name="disclaimer" class="menu-btn" onclick="switchPage(this)">Disclaimer.</a>
         </li>
         <li class="menu-item">
-          <a name="about" onclick="switchPage(this)">About.</a>
+          <a name="about" class="menu-btn" onclick="switchPage(this)">About.</a>
         </li>
       </ul>
     </div>
@@ -92,6 +92,8 @@
   <div id="content">
     <iframe id="frameDocument" src="pages/home.html"></iframe>
   </div>
+
+  <script src="js/navHighlight.js"></script>
 
 </body>
 </html>

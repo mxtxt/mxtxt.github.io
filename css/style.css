@@ -156,7 +156,7 @@ html, body {
   }
 }
 
-.menu-nav {
+#menu-nav {
   height: 100%;
   display: flex;
   margin: 0;
@@ -175,7 +175,7 @@ html, body {
   margin-top: 0;
 }
 
-.menu-item a {
+.menu-btn {
   padding: 2.5vh;
   background-color: #ffffff;
   color: #000000!important;
@@ -185,7 +185,7 @@ html, body {
   mix-blend-mode: screen; /* This makes the cutout text possible */
 }
 
-.menu-item a:hover {
+.menu-btn:hover {
   cursor: pointer;
   opacity: 0.5;
   /*
@@ -195,9 +195,15 @@ html, body {
   mix-blend-mode: normal;*/
 }
 
+.menu-btn.active {
+  background-color: #000000;
+  color: #ffffff!important;
+  text-decoration: none;
+  mix-blend-mode: normal;
+}
 
 /* Document Menu */
-.doc-nav {
+#doc-nav {
   height: 100%;
   padding: 0; /* TBD */
   display: flex;
@@ -211,8 +217,12 @@ html, body {
   background: none;
 }
 
+.doc-btn.active {
+  background-color: #ff9933;
+}
+
 /* Theme Menu */
-.theme-nav {
+#theme-nav {
   height: 100%;
   padding: 0; /* TBD */
   display: flex;
@@ -223,6 +233,10 @@ html, body {
 .theme-btn {
   border: none;
   background: none;
+}
+
+.theme-btn.active {
+  background-color: #ff9933;
 }
 
 .theme-icon {

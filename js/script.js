@@ -1,3 +1,4 @@
+
 function menuToggle(){
   $(".menu").toggleClass("active");
 };
@@ -62,7 +63,7 @@ function switchTheme(input){
   if ($(".menu").hasClass("active")) {
     menuToggle();
   };
-  
+
   loadingOff();
 };
 
