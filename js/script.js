@@ -80,7 +80,6 @@ function switchDoc(input){
     var elmnt = frameContent.contentWindow.document.getElementsByName("theme")[0];
     var themeName = document.getElementById("currentTheme").innerHTML;
 
-    document.getElementById("currentTheme").innerHTML = "Theme applied.";
     elmnt.setAttribute("href", "../../css/" + themeName + ".css");
   };
 
