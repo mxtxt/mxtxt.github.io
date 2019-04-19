@@ -125,6 +125,11 @@ html, body {
 .menu {
   width: 100vw;
   height: 100vh;
+  display: none;
+}
+
+.menu.active {
+  display: block;
 }
 
 @media (min-width: 767px) {
@@ -137,15 +142,10 @@ html, body {
   background-image: url("https://media.giphy.com/media/5rmQdXUaAzutq/giphy.gif");
   /* background-image: url("https://media.giphy.com/media/Ph0oIVQeuvh0k/giphy.gif"); */
   background-repeat: repeat;
-  display: none;
   height: 100%;
   width: 100%;
   position: relative;
-  z-index: 200;
-}
-
-#menu-nav-wrapper.active {
-  display: block;
+  z-index: 2000;
 }
 
 @media (max-width: 766px) {
@@ -156,7 +156,7 @@ html, body {
   }
 }
 
-.menu-nav {
+#menu-nav {
   height: 100%;
   display: flex;
   margin: 0;
@@ -175,7 +175,7 @@ html, body {
   margin-top: 0;
 }
 
-.menu-item a {
+.menu-btn {
   padding: 2.5vh;
   background-color: #ffffff;
   color: #000000!important;
@@ -185,7 +185,7 @@ html, body {
   mix-blend-mode: screen; /* This makes the cutout text possible */
 }
 
-.menu-item a:hover {
+.menu-btn:hover {
   cursor: pointer;
   opacity: 0.5;
   /*
@@ -195,9 +195,15 @@ html, body {
   mix-blend-mode: normal;*/
 }
 
+.menu-btn.active {
+  background-color: #000000;
+  color: #ffffff!important;
+  text-decoration: none;
+  mix-blend-mode: normal;
+}
 
 /* Document Menu */
-.doc-nav {
+#doc-nav {
   height: 100%;
   padding: 0; /* TBD */
   display: flex;
@@ -211,8 +217,12 @@ html, body {
   background: none;
 }
 
+.doc-btn.active {
+  background-color: #ff9933;
+}
+
 /* Theme Menu */
-.theme-nav {
+#theme-nav {
   height: 100%;
   padding: 0; /* TBD */
   display: flex;
@@ -225,10 +235,52 @@ html, body {
   background: none;
 }
 
+.theme-btn.active {
+  background-color: #ff9933;
+}
+
 .theme-icon {
   padding: 0; /* TBD */
   width: 1.5rem;
 }
+
+
+/* Loading */
+
+.loading-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+
+.loading-wrapper.active {
+  display: block;
+}
+
+@media (min-width: 767px) {
+  .loading-wrapper {
+    padding: 2.5rem;
+  }
+}
+
+#loading {
+  background-image: url("https://media.giphy.com/media/5rmQdXUaAzutq/giphy.gif");
+  /* background-image: url("https://media.giphy.com/media/Ph0oIVQeuvh0k/giphy.gif"); */
+  background-repeat: repeat;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 200;
+}
+
+@media (max-width: 766px) {
+  #loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+}
+
 
 /* Content */
 
