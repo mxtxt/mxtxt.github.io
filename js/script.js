@@ -7,7 +7,7 @@ function menuToggle(){
 function loadingOn(){
   if (!$(".loading-wrapper").hasClass("active")) {
     $(".loading-wrapper").toggleClass("active");
-    loadingOff();
+    document.getElementById("frameDocument").addEventListener("load", loadingOff());
   };
 };
 
