@@ -62,7 +62,7 @@ function switchTheme(input){
     menuToggle();
   };
 
-  frameContent.addEventListener("load", loadingOff);
+  document.getElementById("frameDocument").addEventListener("load", loadingOff);
 };
 
 
