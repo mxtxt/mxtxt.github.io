@@ -5,7 +5,10 @@ function menuToggle(){
 
 
 function loadingOn(){
-  $(".loading-wrapper").toggleClass("active");
+  if (!$(".loading-wrapper").hasClass("active")) {
+    $(".loading-wrapper").toggleClass("active");
+    loadingOff();
+  };
 };
 
 
@@ -44,7 +47,6 @@ function randomTheme(){
 
 function switchTheme(input){
   loadingOn();
-
   var frameContent = document.getElementById("frameDocument");
   var elmnt = frameContent.contentWindow.document.getElementsByName("theme")[0];
 
@@ -54,14 +56,12 @@ function switchTheme(input){
   if ($(".menu").hasClass("active")) {
     menuToggle();
   };
-
-  loadingOff();
 };
 
 
 function switchDoc(input){
   loadingOn();
-
+  document.getElementById("currentDoc").innerHTML = input.name;
   document.getElementById("frameDocument").setAttribute("src", "docs/" + input.name + ".html");
 
   if (document.getElementById("currentTheme").innerHTML == ""){
@@ -71,9 +71,6 @@ function switchDoc(input){
   if ($(".menu").hasClass("active")) {
     menuToggle();
   };
-
-  document.getElementById("currentDoc").innerHTML = input.name;
-  document.getElementById("frameDocument").addEventListener("load", loadingOff);
 };
 
 
