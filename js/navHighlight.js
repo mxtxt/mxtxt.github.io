@@ -1,7 +1,7 @@
 
 // switchDoc
 var doc_nav = document.getElementById("doc-nav");
-var doc_btns = nav.getElementsByClassName("doc-btn");
+var doc_btns = doc_nav.getElementsByClassName("doc-btn");
 for (var i = 0; i < doc_btns.length; i++) {
   doc_btns[i].addEventListener("click", function() {
   var current = document.getElementsByClassName("active");
@@ -15,7 +15,7 @@ for (var i = 0; i < doc_btns.length; i++) {
 
 // switchTheme
 var theme_nav = document.getElementById("theme-nav");
-var theme_btns = nav.getElementsByClassName("theme-btn");
+var theme_btns = theme_nav.getElementsByClassName("theme-btn");
 for (var i = 0; i < theme_btns.length; i++) {
   theme_btns[i].addEventListener("click", function() {
   var current = document.getElementsByClassName("active");
@@ -29,7 +29,7 @@ for (var i = 0; i < theme_btns.length; i++) {
 
 // switchPage
 var menu_nav = document.getElementById("menu-nav");
-var menu_btns = nav.getElementsByClassName("menu-btn");
+var menu_btns = menu_nav.getElementsByClassName("menu-btn");
 for (var i = 0; i < menu_btns.length; i++) {
   menu_btns[i].addEventListener("click", function() {
   var current = document.getElementsByClassName("active");
