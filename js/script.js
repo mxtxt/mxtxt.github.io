@@ -73,11 +73,7 @@ function switchDoc(input){
   document.getElementById("frameDocument").setAttribute("src", "docs/" + input.name + ".html");
 
   if (document.getElementById("currentTheme").innerHTML == ""){
-    var frameContent = document.getElementById("frameDocument");
-    var elmnt = frameContent.contentWindow.document.getElementsByName("theme")[0];
-
-    document.getElementById("currentTheme").innerHTML = input.name;
-    elmnt.setAttribute("href", "../../css/" + "themes/artDeco" + ".css");
+    randomTheme();
   };
 
   if ($(".menu").hasClass("active")) {
