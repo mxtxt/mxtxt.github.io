@@ -43,11 +43,9 @@ to define special characteristics of certain elemens, since we cannot use classe
     font-family: plastische-plakat-antiqua;
     src: url("../../fonts/vp/Plastische-Plakat-Antiqua.ttf") format("opentype");
 }
-
-/* Cairo */
 @font-face {
     font-family: cairotiqua-light;
-    src: url("../../fonts/vp/Cairotiqua-Light.ttf") format("opentype");
+    src: url("../../fonts/vp/Cairotiqua-Light.ttf.ttf") format("opentype");
 }
 
 
@@ -62,7 +60,6 @@ to define special characteristics of certain elemens, since we cannot use classe
     font-family: vineta-regular;
     src: url("../../fonts/vp/Vineta-Regular.ttf") format("opentype");
 }
-
 
 html {
   background-image: url("../../img/bg/paper3.jpg");
@@ -85,24 +82,38 @@ body {
 }
 
 h1 {
-  font-family: "egyptienne-zierversalien";
-  font-size: 10vw;
+  font-family:  "vineta-regular";
+  font-size: 9vw;
   text-transform: uppercase;/* whatever number size you choose, but rem */
   font-style: ;
-  margin: ;
-  padding: ;
+  margin-bottom: 0%;
+  padding-bottom: 0;
+  text-align: center;
+  text-justify: inter-character;
+  border-top: 0.5vh dotted black;
 }
 
 h2 {
-  font-family: "fette-egyptienne";
-  font-size: 4.6vw; /* whatever number size you choose, but rem */
+  font-family: "plastische-plakat-antiqua";
+  font-size: 10vw; /* whatever number size you choose, but rem */
   text-transform: uppercase;/* whatever number size you choose, but rem */
   font-style: ;
   margin: ;
   padding: ;
   width: ;
-  text-align: justify;
+  text-align: center;
   text-justify: inter-character;
+  padding-top: 1vh;
+  border-top: 3vh double black;
+  padding-bottom: 1vh;
+  border-bottom: 3vh double black;
+}
+
+h2:hover {
+  font-family: "plastische-plakat-antiqua" ;
+  font-size: 13vw; /* whatever number size you choose, but rem */
+  font-style: ;
+  padding: ;
 }
 
 h3 {
@@ -111,13 +122,16 @@ h3 {
   text-transform: uppercase;/* whatever number size you choose, but rem */
   font-style: ;
   padding: ;
-  text-align: justify;
+  text-align: center;
   text-justify: inter-character;
   letter-spacing: 0.7vw;
+  padding-top: 0vh;
+  padding-bottom: 1vh;
+  border-bottom: 0.5vh double black;
 }
 
 h4 {
-  font-family: "vineta-regular";
+  font-family: "plastische-plakat-antiqua";
   font-size: 4vw; /* whatever number size you choose, but rem */
   font-style: ;
   text-transform: uppercase;/* whatever number size you choose, but rem */
@@ -144,32 +158,50 @@ h6 {
 p {
   font-family: "bodoni-bold";
   text-align: justify;
-  font-size: 3vw; /* whatever number size you choose, but rem */
-  text-transform: uppercase;
+  font-size: 2vw; /* whatever number size you choose, but rem */
+  text-transform: ;
   font-style: ;
   margin: 0;
   margin-top: 3vh;
   padding: 0;
+  padding-bottom: 2vh;
+  border-bottom: 1vh double black;
 }
 
-p:first-of-type {
-  font-family: ;
+header > p {
+  font-family: "fette-egyptienne";
   text-align: justify;
-  font-size: 3vw; /* whatever number size you choose, but rem */
+  font-size: 5vw; /* whatever number size you choose, but rem */
   font-style: ;
   margin: ;
   padding: ;
+  text-align: center;
+  text-justify: inter-character;
+  letter-spacing: 0.7vw;
+}
+
+header > p > a{
+  font-family: "plastische-plakat-antiqua";
+  text-align: justify;
+  font-size: 20vw; /* whatever number size you choose, but rem */
+  font-style: ;
+  margin: ;
+  padding: ;
+  text-align: center;
+  text-justify: inter-character;
+  letter-spacing: 0.7vw;
+  text-decoration-color: grey;
 }
 
 em {
   font-family: "plastische-plakat-antiqua";
-  font-size: 4rem; /* whatever number size you choose, but rem */
-  font-style: ;
+  font-size: 5vw; /* whatever number size you choose, but rem */
+  font-style: normal;
   padding: ;
 }
 
 small {
-  font-family: "klein-slabserif";
+  font-family: ;
   font-size: 1rem; /* whatever number size you choose, but rem */
   font-style: ;
   padding: ;
@@ -184,14 +216,16 @@ q {
 
 a {
   font-family: ;
-  font-size: 1rem; /* whatever number size you choose, but rem */
+  font-size: 5vw; /* whatever number size you choose, but rem */
   font-style: ;
   padding: ;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 a:hover {
-  font-family: ;
-  font-size: 1rem; /* whatever number size you choose, but rem */
+  font-family: "plastische-plakat-antiqua" ;
+  font-size: 10rem; /* whatever number size you choose, but rem */
   font-style: ;
   padding: ;
 }
@@ -224,7 +258,7 @@ figure {
 figure > figcaption {
   width: 100%;
   font-family: ;
-  font-family: "klein-slabserif";
+  font-family: "bodoni-italic";
   font-size: 1rem; /* whatever number size you choose, but rem */
   font-style: ;
   padding: 0;
@@ -239,15 +273,16 @@ figure > figcaption > em {
 
 
 figure > img {
-  width: 100%; /* use percentage of the figure box width */
+  width: 50%; /* use percentage of the figure box width */
   margin: 0;
   padding: 0;
   border-radius: 50%;
   filter: sepia();
 }
 
-img:first-of-type {
+figure:first-child img {
   width: 100%; /* use percentage of the figure box width */
+  height: 6vw;
   border-radius: 0%;
   margin-right: 0%
   padding: 0;
