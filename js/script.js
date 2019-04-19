@@ -62,9 +62,7 @@ function switchTheme(input){
   if ($(".menu").hasClass("active")) {
     menuToggle();
   };
-
-  theTheme = input.name;
-
+  
   loadingOff();
 };
 
@@ -76,13 +74,6 @@ function switchDoc(input){
 
   if (document.getElementById("currentTheme").innerHTML == ""){
     randomTheme();
-  };
-
-  if (document.getElementById("currentTheme").innerHTML != ""){
-    var frameContent = document.getElementById("frameDocument");
-    var elmnt = frameContent.contentWindow.document.getElementsByName("theme")[0];
-
-    elmnt.setAttribute("href", "../../css/" + theTheme + ".css");
   };
 
   if ($(".menu").hasClass("active")) {
