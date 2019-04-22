@@ -3,13 +3,10 @@ to define special characteristics of certain elemens, since we cannot use classe
 
 
 /* fix lists, justify - EU */
-/* fix tables, use leader dots - Huffington, */
-/* fix image - caption ratio */
 /* fix japan graph image */
-/* fix link color, form blue to ? */
 /* fix quotes -- delete automatic quotation marks */
 /* fix footer nth child, alternating - EU, Huff, the cut, tls */
-/* use toskanische-egyptienneInitialen for something without numbers */
+/* fix background image decoration, delete from tables */
 
 /*--------------Fonts--------------*/
 
@@ -162,14 +159,13 @@ header > p {
   font-family: "fette-egyptienne";
   font-size: 2.7vw;
   font-weight: 500;
-  line-height: 3vh;
   text-align: center;
   text-transform: uppercase;
   text-justify: inter-character;
   letter-spacing: 1.5vw;
 
   margin-top: 1vh;
-  padding-top: 1vh;
+  padding-top: 2vh;
 
   margin-bottom: 1vh;
   padding-bottom: 1vh;
@@ -260,6 +256,11 @@ h4 {
 
   margin-bottom: 1vh;
   padding-bottom: 1vh;
+
+  background-image: url("../../img/bg/decleft0.png"), url("../../img/bg/decright0.png");
+  background-repeat: no-repeat;
+  background-position: left, right;
+  background-size: 10%;
 }
 
 p:last-child {
@@ -310,13 +311,17 @@ small {
   font-size: 1vw;
 }
 
-/*--------------Fisrt Figure--------------*/
+/*--------------First Figure--------------*/
 
 figure:first-child {
   padding-top: 0;
   padding-bottom: 0;
   border-top: none;
   border-bottom: none;
+  background-image: url("../../img/bg/decleft1.png"), url("../../img/bg/decright1.png");
+  background-repeat: no-repeat;
+  background-position: left, right;
+  background-size: 20%;
 }
 
 figure:first-child figcaption {
@@ -345,6 +350,17 @@ figure {
   padding-top: 2vh;
   padding-bottom: 2vh;
   border-bottom: 0.5vh dotted black;
+  background-image: url("../../img/bg/decleft.png"), url("../../img/bg/decright.png");
+  background-repeat: no-repeat;
+  background-position: left, right;
+  background-size: 25%;
+}
+
+figure:has(table) {
+  background-image: none;
+  background-size: 0;
+  /* will have to do with jquery,
+  $("p:has(img)") */
 }
 
 figure:last-child {
@@ -354,6 +370,7 @@ figure:last-child {
 figure > figcaption {
   font-family: "semplicita-ombra";
   width: 100%;
+  padding-top: 2vh;
   font-size: 2vw;
   text-align: justify;
 }
@@ -381,57 +398,55 @@ figure > img {
 /*--------------Figures: Videos--------------*/
 
 figure > video {
-  width: 80%; /* use percentage of the figure box width */
+  width: 50%; /* use percentage of the figure box width */
   margin: 0;
   padding: 0;
+  border-radius: 40%;
+  filter: sepia();
 }
 
 /*--------------Figures: Tables--------------*/
 
 figure > table {
-  font-family: ;
-  font-size: ;
-  font-style: ;
-  width: 80%; /* use percentage of the figure box width */
-  border-top: ;
-  border-bottom: ;
-  border-left: ;
-  border-right: ;
-  padding-top: ;
-  padding-bottom: ;
-  padding-left: ;
-  padding-right: ;
+  width: 100%;
+  font-family: "semplicita-medium";
+  font-size: 3vw;
 }
 
-figure > table > th {
-  font-size: ;
-  font-weight: ;
-  border-top: ;
-  border-bottom: ;
-  border-left: ;
-  border-right: ;
-  padding-top: ;
-  padding-bottom: ;
-  padding-left: ;
-  padding-right: ;
+th {
+  font-family: "toskanische-egyptienneInitialen";
+  font-size: 6vw;
 }
 
-figure > table > tr {
-  border-top: ;
-  border-bottom: ;
-  border-left: ;
-  border-right: ;
-  padding-top: ;
-  padding-bottom: ;
-  padding-left: ;
-  padding-right: ;
+td {
+    padding:1em 0 0 0;
+    vertical-align:bottom;
+    }
+
+td:first-child {
+    text-align: left;
+    font-weight: 700;
+    overflow: hidden;
+    position: relative;
+    }
+
+td:first-child::after {
+    content: '';
+    position: absolute;
+    bottom: .4em;
+    width:1500px;
+    margin-left: 1vw;
+    border-bottom:0.5vw dotted black;
 }
 
-figure > table > tr > td:first-child { /* use this to style the first column of a table */
-}
+td:last-child {
+    text-align:right;
+    width:3em;
+    }
 
-figure > table > tr > td:nth-child(n) { /* use this to style the n-th column of a table */
-}
+figure > table > tr > td:first-child { } /* use this to style the first column of a table */
+
+figure > table > tr > td:nth-child(n) { } /* use this to style the n-th column of a table */
 
 /*--------------Lists--------------*/
 
