@@ -1,12 +1,8 @@
-/* check out first-child and nth-child pseudoclasses. These will be very helpful
-to define special characteristics of certain elemens, since we cannot use classes or ids. */
-
-
-/* fix lists, justify - EU */
 /* fix japan graph image */
 /* fix quotes -- delete automatic quotation marks */
-/* fix footer nth child, alternating - EU, Huff, the cut, tls */
 /* fix background image decoration, delete from tables */
+
+
 
 /*--------------Fonts--------------*/
 
@@ -246,7 +242,7 @@ section {
 
 h4 {
   font-family: "semplicita-ombra";
-  font-size: 13vw;
+  font-size: 11vw;
   font-weight: 100;
   text-align: center;
   text-transform: uppercase;
@@ -289,7 +285,7 @@ p > em {
 
 a {
   font-family: "klein-slabserif";
-  font-size: 4vw;
+  font-size: 3vw;
   text-transform: uppercase;
   text-decoration: none; /* take out the automatic underlining */
   color: red;
@@ -352,7 +348,7 @@ figure {
   border-bottom: 0.5vh dotted black;
   background-image: url("../../img/bg/decleft.png"), url("../../img/bg/decright.png");
   background-repeat: no-repeat;
-  background-position: left, right;
+  background-position: left top, right top;
   background-size: 25%;
 }
 
@@ -411,6 +407,7 @@ figure > table {
   width: 100%;
   font-family: "semplicita-medium";
   font-size: 3vw;
+  overflow: scroll;
 }
 
 th {
@@ -420,7 +417,7 @@ th {
 
 td {
     padding:1em 0 0 0;
-    vertical-align:bottom;
+    border: 0.3vw solid black;
     }
 
 td:first-child {
@@ -430,66 +427,92 @@ td:first-child {
     position: relative;
     }
 
-td:first-child::after {
-    content: '';
-    position: absolute;
-    bottom: .4em;
-    width:1500px;
-    margin-left: 1vw;
-    border-bottom:0.5vw dotted black;
-}
-
 td:last-child {
     text-align:right;
-    width:3em;
-    }
+}
 
-figure > table > tr > td:first-child { } /* use this to style the first column of a table */
+section > figure > table {
+   width: 100%;
+   table-layout: fixed;
+   font-family: "semplicita-medium";
+   font-size: 2vw;
+   border: 4px dashed black;
+   border-collapse: collapse;
+}
 
-figure > table > tr > td:nth-child(n) { } /* use this to style the n-th column of a table */
+section > figure > table  th {
+   font-family: "fette-egyptienne";
+   font-size: 2vw;
+   border: 2px solid black;
+}
+
+section > figure > table  td {
+   border: 2px dotted black;
+}
 
 /*--------------Lists--------------*/
 
-ul {
-  width: 90%; /* use percentage of viewwidth */
-  padding: 0;
-  text-indent: 2rem;
-  list-style-type: none; /* no symbol before each list element */
+section > ol {
+  width: 89%;
+  list-style-type: upper-roman;
+  border: 4px dashed black;
+
+  padding-left: 10%;
+
+  font-family: "bodoni-bold";
+  font-size: 2vw;
+  text-align: justify;
+
+  margin-top: 1vh;
+  padding-top: 0vh;
+
+  margin-bottom: 1vh;
+  padding-bottom: 1vh;
 }
 
-ul > li {
+section > ol > li {
+  margin: 5px;
+  border-bottom: 0.7vh solid black;
 }
 
-ul > li:before {
-  content: "--"; /* choose your own symbol before each list element */
-  padding-right: 5px;
+section > ol > li > em {
+  font-family: "fette-egyptienne";
+  text-transform: uppercase;
+}
+
+section > ul {
+  width: 89%;
+  border: 4px dashed black;
+
+  padding-left: 10%;
+
+  font-family: "bodoni-bold";
+  font-size: 2vw;
+  text-align: justify;
+
+  margin-top: 1vh;
+  padding-top: 0vh;
+
+  margin-bottom: 1vh;
+  padding-bottom: 1vh;
 }
 
 li > small {
-  font-family: ;
-  font-size: 1rem;
-  font-style: ;
-  padding: ;
-}
-
-ol {
-  width: 90%; /* use percentage of viewwidth */
-  padding: 0;
-  list-style-type: upper-roman;
-}
-
-ol > li {
-}
-
-ol > li > ol {
-  list-style-type: decimal;
-}
-
-ol > li > ol > li {
+  font-size: 2vw;
 }
 
 /*--------------Footer--------------*/
 
-footer > p {
+footer {
+  width: 100%;
+}
+
+footer > ul > li {
+  font-size: 2vw;
+  text-align: justify;
+}
+
+footer > ul > li > a {
+  font-size: 2vw;
   text-align: justify;
 }
