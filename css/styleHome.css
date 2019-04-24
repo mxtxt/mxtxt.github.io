@@ -18,14 +18,14 @@ a:hover {
   color: #149dcc;
 }
 h1, h2, h3, h4, h5, .display-1, .display-2 {
- line-height: 1;
- word-break: break-word;
- word-wrap: break-word;
+  line-height: 1;
+  word-break: break-word;
+  word-wrap: break-word;
 }
 section {
- background-position: 50% 50%;
- background-repeat: no-repeat;
- background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .small-text {
   font-style: normal;
@@ -163,8 +163,8 @@ section {
   text-align: left;
 }
 .themes img {
- display: block;
- width: 100%;
+  display: block;
+  width: 100%;
 }
 .themes {
   padding-top: 60px;
@@ -245,5 +245,5 @@ section {
   }
 }
 .media {
- display: -webkit-flex;
+  display: -webkit-flex;
 }
