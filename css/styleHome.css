@@ -98,7 +98,7 @@ section {
   -webkit-flex-direction: row;
 }
 .timeline-wrapper .timeline-element:hover .timeline-text-content {
-  box-shadow: 0 7px 20px 0px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 7px 20px 0px rgba(0, 0, 0, 0.5);
   transition: all .4s;
 }
 .timeline-wrapper .reverse {
