@@ -19,17 +19,6 @@ a:hover {
 }
 h1, h2, h3, h4, h5, .display-1, .display-2 {
   line-height: 1;
-  word-break: break-word;
-  word-wrap: break-word;
-}
-section {
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.small-text {
-  font-style: normal;
-  line-height: 1.6;
 }
 .display-1 {
   font-family: 'Roboto', sans-serif;
@@ -91,8 +80,6 @@ section {
 .timeline-wrapper .timeline-element {
   margin-bottom: 50px;
   position: relative;
-  word-wrap: break-word;
-  word-break: break-word;
   display: -webkit-flex;
   flex-direction: row;
   -webkit-flex-direction: row;
@@ -178,7 +165,6 @@ section {
   display: -webkit-flex;
   flex-direction: column;
   -webkit-flex-direction: column;
-  word-break: break-word;
 }
 .themes .media {
   margin: initial;
