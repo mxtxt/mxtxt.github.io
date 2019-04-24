@@ -218,7 +218,7 @@ html, body {
 }
 
 .doc-btn.active {
-  background-color: #ff9933;
+  background-color: #f9eb0f;
 }
 
 /* Theme Menu */
@@ -236,7 +236,7 @@ html, body {
 }
 
 .theme-btn.active {
-  background-color: #ff9933;
+  background-color: #f9eb0f;
 }
 
 .theme-icon {
@@ -304,5 +304,4 @@ html, body {
   width: 100%;
   height: 100%;
   border: none;
-  background-color: #f8f8f8;
 }
