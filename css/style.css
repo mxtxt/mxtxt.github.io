@@ -190,6 +190,12 @@ html, body {
   mix-blend-mode: screen; /* This makes the cutout text possible */
 }
 
+@media (max-width: 766px) {
+  .menu-btn {
+    font-size: 10vw;
+  }
+}
+
 .menu-btn:hover {
   cursor: pointer;
   opacity: 0.5;
