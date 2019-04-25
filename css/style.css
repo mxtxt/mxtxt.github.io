@@ -84,7 +84,7 @@ html, body {
   margin: 0.5rem 2.5rem 0.5rem 0;
   padding: 0;
   border: none;
-  z-index: 1000;
+  z-index: 100;
 }
 
 #menu-toggle:hover {
@@ -108,7 +108,7 @@ html, body {
     top: 1.5rem;
     right: 1.5rem;
     margin: 0;
-    z-index: 300;
+    z-index: 150;
   }
 
   #menu-toggle p {
