@@ -300,8 +300,13 @@ html, body {
   }
 }
 
-#content #frameDocument {
-  width: 100%;
-  height: 100%;
+#content iframe {
+  position: absolute;
+  top: 2.5rem;
+  left: 2.5rem;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  width: calc(100% - 5rem);
+  height: calc(100% - 5rem);
   border: none;
 }
