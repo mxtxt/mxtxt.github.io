@@ -4,8 +4,7 @@ body {
   color: #232323;
   font-style: normal;
   line-height: 1.5;
-  height: auto;
-  min-height: 100vh;
+  height: 100vh;
 }
 a {
   font-style: normal;
