@@ -102,7 +102,7 @@
   <script>
     function speak(){
       var frameContent = document.getElementById("frameDocument");
-      var text = frameContent.contentWindow.document.getElementById('frameDocument').innerText;
+      var text = frameContent.contentWindow.document.getElementsByTagName('body').innerText;
       document.getElementById("currentDoc").innerHTML = text;
       var msg = new SpeechSynthesisUtterance(text);
       window.speechSynthesis.speak(msg);
