@@ -48,7 +48,7 @@
     </div>
   </div>
 
-  <button id="menu-toggle" onclick="speak()"><p>Menu</p></button>
+  <button id="menu-toggle" onclick="menuToggle()"><p>Menu</p></button>
 
   <div class="menu">
     <div id="menu-nav-wrapper">
@@ -101,6 +101,7 @@
   <script src="js/navHighlight.js"></script>
   <script>
     function speak(){
+      alert(document.getElementsByClassName("switch-menu").textContent);
       var frameContent = document.getElementById("frameDocument");
       var text = frameContent.contentWindow.document.getElementsByTagName('body').innerText;
       document.getElementById("currentDoc").innerHTML = text;
