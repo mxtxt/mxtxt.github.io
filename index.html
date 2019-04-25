@@ -39,32 +39,16 @@
         <a href="index.html"><h1>MXTXT</h1></a>
         <p style="font-size:0.5rem">Current: <span id="currentDoc"></span> + <span id="currentTheme"></span> + <span id="currentPage"></span></p>
       </div>
-      <button id="menu-toggle" onclick="menuToggle()"><p>Menu</p></button>
     </div>
     <div class="frame bottom">
     </div>
     <div class="frame left">
-      <div id="doc-nav">
-        <button name="bloomberg/Bloomberg_final" class="doc-btn" onclick="switchDoc(this)">1</button>
-        <button name="eudirective/EUDirective_finalEN" class="doc-btn" onclick="switchDoc(this)">2</button>
-        <button name="harpers/Harpers_Final" class="doc-btn" onclick="switchDoc(this)">3</button>
-        <button name="huffington/Huffington_Final" class="doc-btn" onclick="switchDoc(this)">4</button>
-        <button name="thecut/JessicaPresler" class="doc-btn" onclick="switchDoc(this)">5</button>
-        <button name="tls/TimesLiterarySupplement_Final" class="doc-btn" onclick="switchDoc(this)">6</button>
-      </div>
     </div>
     <div class="frame right">
-      <div id="theme-nav">
-        <button class="random-btn" onclick="random()">X</button>
-        <button name="style1" class="theme-btn" onclick="switchTheme(this)">1</button>
-        <button name="themes/vPlaybill" class="theme-btn" onclick="switchTheme(this)"><img src="img/icons/vPlaybill2.png" class="theme-icon"></button>
-        <button name="themes/artDeco" class="theme-btn" onclick="switchTheme(this)"><img src="img/icons/artDeco.png" class="theme-icon"></button>
-        <button name="style4" class="theme-btn" onclick="switchTheme(this)">4</button>
-        <button name="style5" class="theme-btn" onclick="switchTheme(this)">5</button>
-        <button name="themes/futurama" class="theme-btn" onclick="switchTheme(this)"><img src="img/icons/futurama.png" class="theme-icon"></button>
-      </div>
     </div>
   </div>
+
+  <button id="menu-toggle" onclick="menuToggle()"><p>Menu</p></button>
 
   <div class="menu">
     <div id="menu-nav-wrapper">
@@ -82,6 +66,27 @@
           <a name="about" class="menu-btn" onclick="random()">RANDOM (About.)</a>
         </li>
       </ul>
+    </div>
+  </div>
+
+  <div class="switch-menu">
+    <div id="doc-nav">
+      <button name="bloomberg/Bloomberg_final" class="doc-btn" onclick="switchDoc(this)">1</button>
+      <button name="eudirective/EUDirective_finalEN" class="doc-btn" onclick="switchDoc(this)">2</button>
+      <button name="harpers/Harpers_Final" class="doc-btn" onclick="switchDoc(this)">3</button>
+      <button name="huffington/Huffington_Final" class="doc-btn" onclick="switchDoc(this)">4</button>
+      <button name="thecut/JessicaPresler" class="doc-btn" onclick="switchDoc(this)">5</button>
+      <button name="tls/TimesLiterarySupplement_Final" class="doc-btn" onclick="switchDoc(this)">6</button>
+    </div>
+
+    <div id="theme-nav">
+      <button class="random-btn" onclick="random()">X</button>
+      <button name="style1" class="theme-btn" onclick="switchTheme(this)">1</button>
+      <button name="themes/vPlaybill" class="theme-btn" onclick="switchTheme(this)"><img src="img/icons/vPlaybill2.png" class="theme-icon"></button>
+      <button name="themes/artDeco" class="theme-btn" onclick="switchTheme(this)"><img src="img/icons/artDeco.png" class="theme-icon"></button>
+      <button name="style4" class="theme-btn" onclick="switchTheme(this)">4</button>
+      <button name="style5" class="theme-btn" onclick="switchTheme(this)">5</button>
+      <button name="themes/futurama" class="theme-btn" onclick="switchTheme(this)"><img src="img/icons/futurama.png" class="theme-icon"></button>
     </div>
   </div>
 
