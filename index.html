@@ -49,6 +49,7 @@
   </div>
 
   <button id="menu-toggle" onclick="menuToggle()"><p>Menu</p></button>
+  <button id="menu-toggle" onclick="speak()"><p>READ</p></button>
 
   <div class="menu">
     <div id="menu-nav-wrapper">
@@ -101,9 +102,8 @@
   <script src="js/navHighlight.js"></script>
   <script>
     function speak(){
-      alert(document.getElementsByClassName("switch-menu").textContent);
       var frameContent = document.getElementById("frameDocument");
-      var text = frameContent.contentWindow.document.getElementsByTagName('body').innerText;
+      var text = frameContent.contentWindow.document.body.textContent;
       document.getElementById("currentDoc").innerHTML = text;
       var msg = new SpeechSynthesisUtterance(text);
       window.speechSynthesis.speak(msg);
