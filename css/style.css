@@ -290,14 +290,10 @@ html, body {
 /* Content */
 
 #content {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 2.5rem;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
+  overflow: scroll!important;
+  -webkit-overflow-scrolling: touch!important;
 }
 
 /*
@@ -309,6 +305,8 @@ html, body {
 
 #content iframe {
   position: absolute;
+  top: 2.5rem;
+  left: 2.5rem;
   width: calc(100vw - 5rem);
   height: calc(100vh - 5rem);
   border: none;
