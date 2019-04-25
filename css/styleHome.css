@@ -53,6 +53,7 @@ h1, h2, h3, h4, h5, .display-1, .display-2 {
 }
 .intro {
   display: flex;
+  flex-wrap: wrap;
   background-color: #f9eb0f;
   height: 80%;
   align-items: center;
