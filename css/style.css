@@ -147,6 +147,7 @@ html, body {
 @media (max-width: 766px) {
   #menu-nav-wrapper {
     position: fixed;
+    min-height: 100vh;
     top: 0;
     left: 0;
   }
