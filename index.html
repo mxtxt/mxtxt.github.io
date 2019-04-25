@@ -48,7 +48,7 @@
     </div>
   </div>
 
-  <button id="menu-toggle" onclick="menuToggle()"><p>Menu</p></button>
+  <button id="menu-toggle" onclick="speak()"><p>Menu</p></button>
 
   <div class="menu">
     <div id="menu-nav-wrapper">
@@ -99,6 +99,15 @@
   </div>
 
   <script src="js/navHighlight.js"></script>
+  <script>
+    function speak(){
+      var frameContent = document.getElementById("frameDocument");
+      var text = frameContent.contentWindow.document.getElementById('frameDocument').innerText;
+      document.getElementById("currentDoc").innerHTML = text;
+      var msg = new SpeechSynthesisUtterance(text);
+      window.speechSynthesis.speak(msg);
+    };
+  </script>
 
 </body>
 </html>
