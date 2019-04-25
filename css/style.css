@@ -283,14 +283,16 @@ html, body {
     bottom: 0;
     z-index: 1000;
     flex-direction: column;
+    justify-content: center;
+    text-align: center;
   }
 
   /* Document Menu */
   #doc-nav {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2.5vh;
     background-color: white;
-    position: absolute;
-    top: 40%; left: 50%;
-    transform: translate(-50%,-60%);
   }
 
   .doc-btn {
@@ -305,12 +307,11 @@ html, body {
 
   /* Theme Menu */
   #theme-nav {
-  background-color: white;
-  position: absolute;
-  width: auto;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%,-40%);
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2.5vh;
+    background-color: white;
   }
 
   .theme-btn {
