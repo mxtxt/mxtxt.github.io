@@ -54,13 +54,20 @@ h1, h2, h3, h4, h5, .display-1, .display-2 {
 .intro {
   display: flex;
   background-color: #f9eb0f;
-  height: auto;
+  height: 100%;
   align-items: center;
   -webkit-align-items: center;
 }
 .intro p {
   color: #232323;
 }
+
+@media (max-width: 768px) {
+  .intro {
+    height: auto;
+  }
+}
+
 .timeline-wrapper {
   padding-top: 90px;
   padding-bottom: 90px;
