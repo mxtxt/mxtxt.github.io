@@ -1,6 +1,7 @@
 
 function menuToggle(){
   $(".menu").toggleClass("active");
+  $(".switch-menu").toggleClass("active");
 };
 
 
