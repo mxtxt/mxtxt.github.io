@@ -100,6 +100,7 @@ function sendData(data) {
 
   // Set up our request
   XHR.open('POST', 'https://talkify.net/api/speech/v1/download');
+  XHR.responseType("arraybuffer");
   XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
   XHR.setRequestHeader("X-API-Key", "493cbf85-63ea-4afb-9d0b-f04a87682761");
 
