@@ -72,8 +72,10 @@ let wave = new CircularAudioWave(document.getElementById('chart-container'));
 
 function speak(){
   var frameContent = document.getElementById("frameDocument");
-  var text = frameContent.contentWindow.document.body.textContent;
-  sendData(text);
+  var documentText = frameContent.contentWindow.document.body.textContent;
+  var keyValuePair = {};
+  keyValuePair['text'] = documentText;
+  sendData(keyValuePair);
 };
 
 function sendData(data) {
