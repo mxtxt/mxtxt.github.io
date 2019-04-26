@@ -91,8 +91,8 @@ function sendData(data) {
 
   XHR.onload = function(e) {
     var arraybuffer = XHR.response; // not responseText
-    var blob = new Blob(arraybuffer, {type:'audio/mpeg'});
-    recordedAudio.src = URL.createObjectURL(blob);
+    //var blob = new Blob(XHR.response, {type:'audio/mpeg'});
+    recordedAudio.src = URL.createObjectURL(XHR.response);
     recordedAudio.controls=true;
     recordedAudio.autoplay=true;
     console.log(recordedAudio.src)
@@ -100,7 +100,7 @@ function sendData(data) {
 
   // Set up our request
   XHR.open('POST', 'https://talkify.net/api/speech/v1/download');
-  XHR.responseType = "arraybuffer";
+  XHR.responseType = "blob";
   XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
   XHR.setRequestHeader("X-API-Key", "493cbf85-63ea-4afb-9d0b-f04a87682761");
 
