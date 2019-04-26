@@ -3,6 +3,7 @@
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="talkify.js"></script>
+  <script src="circular-audio-wave.min.js"></script>
   <style>
   #record {
     background-color: red; /* Green */
@@ -55,6 +56,9 @@ h2 {
 </head>
 <body>
 
+  <button onclick="wave.play()">Play</button>
+  <div id="chart-container" style="width: 100%; height: 100%;"></div>
+
   <button type="button" onclick="sendData({text:'Text to download here'})">Click Me!</button>
 
   <h2>Record</h2>
@@ -70,6 +74,37 @@ h2 {
 </body>
 
 <script>
+/**
+* sends a request to the specified url from a form. this will change the window location.
+* @param {string} path the path to send the post request to
+* @param {object} params the paramiters to add to the url
+* @param {string} [method=post] the method to use on the form
+*/
+
+function post(path, params, method) {
+   method = method || "post"; // Set method to post by default if not specified.
+
+   // The rest of this code assumes you are not using a library.
+   // It can be made less wordy if you use one.
+   var form = document.createElement("form");
+   form.setAttribute("method", method);
+   form.setAttribute("action", path);
+
+   for(var key in params) {
+       if(params.hasOwnProperty(key)) {
+           var hiddenField = document.createElement("input");
+           hiddenField.setAttribute("type", "hidden");
+           hiddenField.setAttribute("name", key);
+           hiddenField.setAttribute("value", params[key]);
+
+           form.appendChild(hiddenField);
+       }
+   }
+
+   document.body.appendChild(form);
+   form.submit();
+}
+
 function sendData(data) {
   var XHR = new XMLHttpRequest();
   var urlEncodedData = "";
@@ -97,18 +132,23 @@ function sendData(data) {
 
   XHR.onload = function(e) {
     var arraybuffer = XHR.response; // not responseText
-  /* ... */
+    let blob = new Blob(arraybuffer,{type:'audio/mpeg-3'});
+    recordedAudio.src = URL.createObjectURL(blob);
+    recordedAudio.controls=true;
+    recordedAudio.autoplay=true;
   }
 
   // Set up our request
   XHR.open('POST', 'https://talkify.net/api/speech/v1/download');
-  XHR.responseType = "arraybuffer";
   XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
   XHR.setRequestHeader("X-API-Key", "493cbf85-63ea-4afb-9d0b-f04a87682761");
 
   // Finally, send our data.
   XHR.send(urlEncodedData);
 }
+
+var pathAudio;
+let wave = new CircularAudioWave(document.getElementById('chart-container'));
 
 navigator.mediaDevices.getUserMedia({audio:true})
   .then(stream => {handlerFunction(stream)})
@@ -123,6 +163,9 @@ navigator.mediaDevices.getUserMedia({audio:true})
             recordedAudio.src = URL.createObjectURL(blob);
             recordedAudio.controls=true;
             recordedAudio.autoplay=true;
+            pathAudio = recordedAudio.src;
+            console.log(recordedAudio.src)
+            wave.loadAudio(recordedAudio.src);
           }
         }
       }
@@ -144,5 +187,6 @@ navigator.mediaDevices.getUserMedia({audio:true})
     }
 
 </script>
+
 
 </html>
