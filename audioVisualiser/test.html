@@ -2,64 +2,19 @@
 <html>
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="circular-audio-wave.min.js"></script>
-  <script src="talkify.min.js"></script>
+  <script src="talkify.js"></script>
 </head>
 <body>
 
-  <section id="root">
-    <h3>
-        This demo will load automatically, be patient.
-    </h3>
-    <p>
-      Hi, this is a short demo of the Talkify library. Let me describe some of my features.
-    </p>
-    <p>
-      I work for any elements, such as paragraphs, divs and many more. I also support many languages and I will detect them automatically for you, like this:
-    </p>
-    <p>
-      Hey, ich kann sehr hilfreich sein, wenn Sie versuchen, Deutsch zu lernen werden
-    </p>
-    <p>
-      嘿，我是非常有益的，如果你正在努力学习德语
-    </p>
-    <p>
-      あなたはドイツ語を学ぼうとしている場合はねえ、私は非常に役に立ちます
-    </p>
-    <p>
-      Hej, jag kan vara till stor hjälp om du försöker lära dig svenska
-    </p>
-  </section>
+<button name="thecut/JessicaPresler" class="doc-btn" onclick="talkifyTest()">5</button>
 
 </body>
 
 <script>
-talkify.config.remoteService.host = 'https://talkify.net';
-talkify.config.remoteService.apiKey = 'bab3b315-6104-4e02-b499-ba146cb65da0';
-
-talkify.config.ui.audioControls = {
-  enabled: false, //<-- Disable to get the browser built in audio controls
-  container: document.getElementById("player-and-voices")
+function talkifyTest(){
+  var player = new talkify.TtsPlayer(); //or new talkify.Html5Player()
+  player.playText('Hello world');
 };
-
-  $(document).ready(function() {
-  var player = new talkify.TtsPlayer()
-    .enableTextHighlighting();
-
-  var playlist = new talkify.playlist()
-    .begin()
-    .usingPlayer(player)
-    .withRootSelector('#root')
-    .withTextInteraction()
-    .build()
-    .play();
-});
 </script>
-<!--
-<script>
-  let wave = new CircularAudioWave(document.getElementById('chart-container'));
-  wave.loadAudio('audio1.mp3');
-</script>-->
 
-<script src="talkify.min.js"></script>
 </html>
