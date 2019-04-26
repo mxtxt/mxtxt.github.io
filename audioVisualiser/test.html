@@ -74,37 +74,6 @@ h2 {
 </body>
 
 <script>
-/**
-* sends a request to the specified url from a form. this will change the window location.
-* @param {string} path the path to send the post request to
-* @param {object} params the paramiters to add to the url
-* @param {string} [method=post] the method to use on the form
-*/
-
-function post(path, params, method) {
-   method = method || "post"; // Set method to post by default if not specified.
-
-   // The rest of this code assumes you are not using a library.
-   // It can be made less wordy if you use one.
-   var form = document.createElement("form");
-   form.setAttribute("method", method);
-   form.setAttribute("action", path);
-
-   for(var key in params) {
-       if(params.hasOwnProperty(key)) {
-           var hiddenField = document.createElement("input");
-           hiddenField.setAttribute("type", "hidden");
-           hiddenField.setAttribute("name", key);
-           hiddenField.setAttribute("value", params[key]);
-
-           form.appendChild(hiddenField);
-       }
-   }
-
-   document.body.appendChild(form);
-   form.submit();
-}
-
 function sendData(data) {
   var XHR = new XMLHttpRequest();
   var urlEncodedData = "";
@@ -120,22 +89,13 @@ function sendData(data) {
   // the '+' character; matches the behaviour of browser form submissions.
   urlEncodedData = urlEncodedDataPairs.join('&').replace(/%20/g, '+');
 
-  // Define what happens on successful data submission
-  XHR.addEventListener('load', function(event) {
-    alert('Yeah! Data sent and response loaded.');
-  });
-
-  // Define what happens in case of error
-  XHR.addEventListener('error', function(event) {
-    alert('Oops! Something goes wrong.');
-  });
-
   XHR.onload = function(e) {
     var arraybuffer = XHR.response; // not responseText
     let blob = new Blob(arraybuffer,{type:'audio/mpeg-3'});
     recordedAudio.src = URL.createObjectURL(blob);
     recordedAudio.controls=true;
     recordedAudio.autoplay=true;
+    console.log(recordedAudio.src)
   }
 
   // Set up our request
