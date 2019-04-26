@@ -6,15 +6,18 @@
 </head>
 <body>
 
-<button name="thecut/JessicaPresler" class="doc-btn" onclick="talkifyTest()">5</button>
+<button name="thecut/JessicaPresler" class="doc-btn" onclick="">5</button>
 
 </body>
 
 <script>
-function talkifyTest(){
+talkify.config.remoteService.host = 'https://talkify.net';
+talkify.config.remoteService.apiKey = '493cbf85-63ea-4afb-9d0b-f04a87682761';
+
+$(document).ready(function() {
   var player = new talkify.TtsPlayer(); //or new talkify.Html5Player()
   player.playText('Hello world');
-};
+});
 </script>
 
 </html>
