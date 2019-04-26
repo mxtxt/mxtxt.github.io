@@ -6,14 +6,15 @@
 </head>
 <body>
 
-<button name="thecut/JessicaPresler" class="doc-btn" onclick="">5</button>
+  <form method="POST" action="https://talkify.net/api/speech/v1/download">
+      <input type="hidden" name="text" value="Text to download here" /><input type="submit"/>
+  </form>
 
 </body>
 
 <script>
 talkify.config.remoteService.host = 'https://talkify.net';
 talkify.config.remoteService.apiKey = '493cbf85-63ea-4afb-9d0b-f04a87682761';
-
 $(document).ready(function() {
   var player = new talkify.TtsPlayer(); //or new talkify.Html5Player()
   player.playText('Hello world');
