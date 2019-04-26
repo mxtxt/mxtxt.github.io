@@ -19,7 +19,7 @@ window.addEventListener("load", function () {
     var XHR = new XMLHttpRequest();
 
     // Bind the FormData object and the form element
-    var FD = new FormData(form);
+    var FD = "value=Text to download here"; // new FormData(form);
 
     // Set up our request
     XHR.open("POST", "https://talkify.net/api/speech/v1/download");
