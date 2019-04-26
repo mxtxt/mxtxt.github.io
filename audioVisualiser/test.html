@@ -74,6 +74,8 @@ h2 {
 </body>
 
 <script>
+let wave = new CircularAudioWave(document.getElementById('chart-container'));
+
 function sendData(data) {
   var XHR = new XMLHttpRequest();
   var urlEncodedData = "";
@@ -90,11 +92,10 @@ function sendData(data) {
   urlEncodedData = urlEncodedDataPairs.join('&').replace(/%20/g, '+');
 
   XHR.onload = function(e) {
-    var arraybuffer = XHR.response; // not responseText
+    // var arraybuffer = XHR.response; // not responseText
     //var blob = new Blob(XHR.response, {type:'audio/mpeg'});
     recordedAudio.src = URL.createObjectURL(XHR.response);
-    recordedAudio.controls=true;
-    recordedAudio.autoplay=true;
+    wave.loadAudio(recordedAudio.src);
     console.log(recordedAudio.src)
   }
 
@@ -109,7 +110,7 @@ function sendData(data) {
 }
 
 var pathAudio;
-let wave = new CircularAudioWave(document.getElementById('chart-container'));
+// let wave = new CircularAudioWave(document.getElementById('chart-container'));
 
 navigator.mediaDevices.getUserMedia({audio:true})
   .then(stream => {handlerFunction(stream)})
