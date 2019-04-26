@@ -91,7 +91,7 @@ function sendData(data) {
 
   XHR.onload = function(e) {
     var arraybuffer = XHR.response; // not responseText
-    let blob = new Blob(arraybuffer,{type:'audio/mpeg-3'});
+    var blob = new Blob(XHR.response,{type:'audio/mpeg'});
     recordedAudio.src = URL.createObjectURL(blob);
     recordedAudio.controls=true;
     recordedAudio.autoplay=true;
