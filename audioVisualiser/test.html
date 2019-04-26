@@ -8,15 +8,9 @@
 
   <button type="button" onclick="sendData({value:'Text to download here'})">Click Me!</button>
 
-  <form id="myForm">
-      <input type="hidden" name="text" value="Text to download here"/>
-      <input type="submit"/>
-  </form>
-
 </body>
 
 <script>
-
 function sendData(data) {
   var XHR = new XMLHttpRequest();
   var urlEncodedData = "";
@@ -50,33 +44,6 @@ function sendData(data) {
   // Finally, send our data.
   XHR.send(urlEncodedData);
 }
-
-window.addEventListener("load", function () {
-  function sendData() {
-    var XHR = new XMLHttpRequest();
-
-    // Bind the FormData object and the form element
-    var FD = "value=Text to download here"; // new FormData(form);
-
-    // Set up our request
-    XHR.open("POST", "https://talkify.net/api/speech/v1/download");
-    XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    XHR.setRequestHeader("X-API-Key", "493cbf85-63ea-4afb-9d0b-f04a87682761");
-
-    // The data sent is what the user provided in the form
-    XHR.send(FD);
-  }
-
-  // Access the form element...
-  var form = document.getElementById("myForm");
-
-  // ...and take over its submit event.
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    sendData();
-  });
-});
 </script>
 
 </html>
