@@ -100,14 +100,6 @@
   </div>
 
   <script src="js/navHighlight.js"></script>
-  <script>
-    function speak(){
-      var frameContent = document.getElementById("frameDocument");
-      var text = frameContent.contentWindow.document.body.textContent;
-      var msg = new SpeechSynthesisUtterance(text);
-      window.speechSynthesis.speak(msg);
-    };
-  </script>
 
 </body>
 </html>

@@ -25,13 +25,15 @@
 <script>
 let wave = new CircularAudioWave(document.getElementById('chart-container'));
 
-window.onload(function(){
+function speak(){
   var frameContent = document.getElementById("frameDocument");
   var documentText = frameContent.contentWindow.document.body.textContent;
   var keyValuePair = {};
   keyValuePair['text'] = documentText;
   sendData(keyValuePair);
-});
+};
+
+window.onload = speak;
 
 function sendData(data) {
   var XHR = new XMLHttpRequest();
