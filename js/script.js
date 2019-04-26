@@ -74,8 +74,8 @@ function switchDoc(input){
   };
 };
 
-function activateFuturama(){
-  document.getElementById("frameDocument").setAttribute("src", "futurama/futurama.html");
+function activateAurora(){
+  document.getElementById("frameDocument").setAttribute("src", "aurora/aurora.html");
 
   if ($(".menu").hasClass("active")) {
     menuToggle();
