@@ -21,20 +21,11 @@ window.addEventListener("load", function () {
     // Bind the FormData object and the form element
     var FD = new FormData(form);
 
-    // Define what happens on successful data submission
-    XHR.addEventListener("load", function(event) {
-      alert(event.target.responseText);
-    });
-
-    // Define what happens in case of error
-    XHR.addEventListener("error", function(event) {
-      alert('Oops! Something went wrong.');
-    });
-
     // Set up our request
     XHR.open("POST", "https://talkify.net/api/speech/v1/download", true);
     XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     XHR.setRequestHeader("X-API-Key", "493cbf85-63ea-4afb-9d0b-f04a87682761");
+    XHR.responseType = 'audio/mpeg';
 
     // The data sent is what the user provided in the form
     XHR.send(FD);
