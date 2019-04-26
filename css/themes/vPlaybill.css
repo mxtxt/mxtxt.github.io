@@ -300,7 +300,10 @@ q {
   font-family: "vineta-regular";
   font-size: 3.5vw;
   text-align: justify;
-  /* find way of deleting the automatically added quotes*/
+}
+
+q:before, q:after {
+  content:''
 }
 
 small {
