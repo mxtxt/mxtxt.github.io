@@ -75,6 +75,7 @@ function switchDoc(input){
 };
 
 function activateAurora(){
+  loadingOn();
   document.getElementById("frameDocument").setAttribute("src", "aurora/aurora.html");
 
   if ($(".menu").hasClass("active")) {

@@ -46,11 +46,8 @@ function sendData(data) {
   urlEncodedData = urlEncodedDataPairs.join('&').replace(/%20/g, '+');
 
   XHR.onload = function(e) {
-    // var arraybuffer = XHR.response; // not responseText
-    //var blob = new Blob(XHR.response, {type:'audio/mpeg'});
     var audioPath = URL.createObjectURL(XHR.response);
     wave.loadAudio(audioPath);
-    console.log(audioPath)
   }
 
   // Set up our request
@@ -59,10 +56,8 @@ function sendData(data) {
   XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
   XHR.setRequestHeader("X-API-Key", "493cbf85-63ea-4afb-9d0b-f04a87682761");
 
-  // Finally, send our data.
   XHR.send(urlEncodedData);
 }
-
 </script>
 
 
