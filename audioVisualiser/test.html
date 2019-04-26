@@ -94,9 +94,9 @@ function sendData(data) {
   XHR.onload = function(e) {
     // var arraybuffer = XHR.response; // not responseText
     //var blob = new Blob(XHR.response, {type:'audio/mpeg'});
-    recordedAudio.src = URL.createObjectURL(XHR.response);
-    wave.loadAudio(recordedAudio.src);
-    console.log(recordedAudio.src)
+    var audioPath = URL.createObjectURL(XHR.response);
+    wave.loadAudio(audioPath);
+    console.log(audioPath)
   }
 
   // Set up our request
