@@ -3,25 +3,52 @@
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="talkify.js"></script>
-  <script>
-  talkify.config.remoteService.host = 'https://talkify.net';
-  talkify.config.remoteService.apiKey = '493cbf85-63ea-4afb-9d0b-f04a87682761';
-  </script>
 </head>
 <body>
 
-  <form method="POST" action="https://talkify.net/api/speech/v1/download">
-      <input type="hidden" name="text" value="Text to download here" /><input type="submit"/>
+  <form id="myForm">
+      <input type="hidden" name="text" value="Text to download here">
+      <input type="submit">
   </form>
 
 </body>
 
 <script>
-talkify.config.remoteService.host = 'https://talkify.net';
-talkify.config.remoteService.apiKey = '493cbf85-63ea-4afb-9d0b-f04a87682761';
-$(document).ready(function() {
-  var player = new talkify.TtsPlayer(); //or new talkify.Html5Player()
-  player.playText('Hello world');
+window.addEventListener("load", function () {
+  function sendData() {
+    var XHR = new XMLHttpRequest();
+
+    // Bind the FormData object and the form element
+    var FD = new FormData(form);
+
+    // Define what happens on successful data submission
+    XHR.addEventListener("load", function(event) {
+      alert(event.target.responseText);
+    });
+
+    // Define what happens in case of error
+    XHR.addEventListener("error", function(event) {
+      alert('Oops! Something went wrong.');
+    });
+
+    // Set up our request
+    XHR.open("POST", "https://talkify.net/api/speech/v1/download", true);
+    XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    XHR.setRequestHeader("X-API-Key", "493cbf85-63ea-4afb-9d0b-f04a87682761");
+
+    // The data sent is what the user provided in the form
+    XHR.send(FD);
+  }
+
+  // Access the form element...
+  var form = document.getElementById("myForm");
+
+  // ...and take over its submit event.
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    sendData();
+  });
 });
 </script>
 
