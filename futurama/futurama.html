@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="talkify.min.js"></script>
+  <script src="circular-audio-wave.min.js"></script>
+</head>
+<body style="padding: 0; margin: 0;">
+
+  <div style="position:absolute; z-index: 100;">
+    <button type="button" onclick="speak()">Generate Audio</button>
+    <button onclick="wave.play()">Play Audio</button>
+  </div>
+
+  <div style="z-index: 50; width: 100vw; height: 100vh; position:fixed; background: #d3d3d3;">
+    <div id="chart-container" style="width: 100%; height: 100%;"></div>
+  </div>
+
+  <div id="content">
+    <iframe id="frameDocument" style="display: none;" src="../docs/bloomberg/Bloomberg_final.html"></iframe>
+  </div>
+
+</body>
+
+<script>
+let wave = new CircularAudioWave(document.getElementById('chart-container'));
+
+function speak(){
+  var frameContent = document.getElementById("frameDocument");
+  var documentText = frameContent.contentWindow.document.body.textContent;
+  var keyValuePair = {};
+  keyValuePair['text'] = documentText;
+  sendData(keyValuePair);
+};
+
+function sendData(data) {
+  var XHR = new XMLHttpRequest();
+  var urlEncodedData = "";
+  var urlEncodedDataPairs = [];
+  var name;
+
+  // Turn the data object into an array of URL-encoded key/value pairs.
+  for(name in data) {
+    urlEncodedDataPairs.push(encodeURIComponent(name) + '=' + encodeURIComponent(data[name]));
+  }
+
+  // Combine the pairs into a single string and replace all %-encoded spaces to
+  // the '+' character; matches the behaviour of browser form submissions.
+  urlEncodedData = urlEncodedDataPairs.join('&').replace(/%20/g, '+');
+
+  XHR.onload = function(e) {
+    // var arraybuffer = XHR.response; // not responseText
+    //var blob = new Blob(XHR.response, {type:'audio/mpeg'});
+    var audioPath = URL.createObjectURL(XHR.response);
+    wave.loadAudio(audioPath);
+    console.log(audioPath)
+  }
+
+  // Set up our request
+  XHR.open('POST', 'https://talkify.net/api/speech/v1/download');
+  XHR.responseType = "blob";
+  XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  XHR.setRequestHeader("X-API-Key", "493cbf85-63ea-4afb-9d0b-f04a87682761");
+
+  // Finally, send our data.
+  XHR.send(urlEncodedData);
+}
+
+</script>
+
+
+</html>

@@ -1,6 +1,7 @@
 
 function menuToggle(){
   $(".menu").toggleClass("active");
+  $(".switch-menu").toggleClass("active");
 };
 
 
@@ -73,6 +74,13 @@ function switchDoc(input){
   };
 };
 
+function activateFuturama(){
+  document.getElementById("frameDocument").setAttribute("src", "futurama/futurama.html");
+
+  if ($(".menu").hasClass("active")) {
+    menuToggle();
+  };
+};
 
 function switchPage(input){
   document.getElementById("currentPage").innerHTML = input.name;

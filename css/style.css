@@ -5,7 +5,6 @@
 transition: all 0.5s linear;
 */
 
-
 /* General */
 
 html, body {
@@ -18,50 +17,44 @@ html, body {
   overflow: hidden;
 }
 
-
-
 /* Frame */
-@media (min-width: 767px) {
-  .frame {
-    position: fixed;
-    width: 2.5rem;
-    height: 2.5rem;
-    z-index: 100;
-  }
-
-  .frame.top {
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-
-  .frame.bottom {
-    bottom: 0;
-    left: 0;
-    width: 100%;
-  }
-
-  .frame.left {
-    top: 0;
-    left: 0;
-    height: 100%;
-  }
-
-  .frame.right {
-    top: 0;
-    right: 0;
-    height: 100%;
-  }
+.frame {
+  position: fixed;
+  width: 2.5rem;
+  height: 2.5rem;
+  z-index: 100;
 }
 
+.frame.top {
+  top: 0;
+  left: 0;
+  width: 100%;
+}
 
-/* Move everything out of frame */
-/*
+.frame.bottom {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.frame.left {
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.frame.right {
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
 @media (max-width: 766px) {
   .frame {
     display: none;
   }
-}*/
+}
+
 
 /* Navbar */
 .navbar-brand {
@@ -83,12 +76,14 @@ html, body {
 }
 
 #menu-toggle {
+  position: relative;
   background-image: url("https://media.giphy.com/media/5rmQdXUaAzutq/giphy.gif");
   /* background-image: url("https://media.giphy.com/media/Ph0oIVQeuvh0k/giphy.gif"); */
   float: right;
   margin: 0.5rem 2.5rem 0.5rem 0;
   padding: 0;
   border: none;
+  z-index: 100;
 }
 
 #menu-toggle:hover {
@@ -112,7 +107,7 @@ html, body {
     top: 1.5rem;
     right: 1.5rem;
     margin: 0;
-    z-index: 300;
+    z-index: 150;
   }
 
   #menu-toggle p {
@@ -145,12 +140,13 @@ html, body {
   height: 100%;
   width: 100%;
   position: relative;
-  z-index: 2000;
+  z-index: 900;
 }
 
 @media (max-width: 766px) {
   #menu-nav-wrapper {
     position: fixed;
+    min-height: 100vh;
     top: 0;
     left: 0;
   }
@@ -165,6 +161,12 @@ html, body {
   justify-content: center;
   list-style: none;
   text-align: center;
+}
+
+@media (max-width: 766px) {
+  #menu-nav {
+    height: 70vh;
+  }
 }
 
 .menu-item {
@@ -185,6 +187,12 @@ html, body {
   mix-blend-mode: screen; /* This makes the cutout text possible */
 }
 
+@media (max-width: 766px) {
+  .menu-btn {
+    font-size: 10vw;
+  }
+}
+
 .menu-btn:hover {
   cursor: pointer;
   opacity: 0.5;
@@ -202,48 +210,124 @@ html, body {
   mix-blend-mode: normal;
 }
 
-/* Document Menu */
-#doc-nav {
-  height: 100%;
-  padding: 0; /* TBD */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+/* Switch Menu */
+
+@media (min-width: 767px) {
+  .switch-menu {
+    position: fixed;
+    height: 100%;
+    z-index: 500;
+  }
+
+  /* Document Menu */
+  #doc-nav {
+    position: fixed;
+    height: 100%;
+    width: 2.5rem;
+    padding: 0; /* TBD */
+    display: flex;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .doc-btn {
+    margin: 0.5rem 0.2rem;
+    border: 1px solid black;
+    background: none;
+  }
+
+  .doc-btn.active {
+    background-color: #f9eb0f;
+  }
+
+  /* Theme Menu */
+  #theme-nav {
+    position: fixed;
+    height: 100%;
+    width: 2.5rem;
+    padding: 0; /* TBD */
+    display: flex;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .theme-btn {
+    border: none;
+    background: none;
+  }
+
+  .theme-btn.active {
+    background-color: #f9eb0f;
+  }
+
+  .theme-icon {
+    padding: 0; /* TBD */
+    width: 1.5rem;
+  }
 }
 
-.doc-btn {
-  margin: 0.5rem 0.2rem;
-  border: 1px solid black;
-  background: none;
-}
+@media (max-width: 766px) {
+  .switch-menu {
+    display: none;
+  }
 
-.doc-btn.active {
-  background-color: #f9eb0f;
-}
+  .switch-menu.active {
+    position: fixed;
+    display: flex;
+    height: 30vh;
+    width: 100%;
+    bottom: 0;
+    z-index: 1000;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
 
-/* Theme Menu */
-#theme-nav {
-  height: 100%;
-  padding: 0; /* TBD */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+  /* Document Menu */
+  #doc-nav {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2.5vh;
+    background-color: white;
+  }
 
-.theme-btn {
-  border: none;
-  background: none;
-}
+  .doc-btn {
+    margin: 0.5rem 0.2rem;
+    border: 1px solid black;
+    background: none;
+  }
 
-.theme-btn.active {
-  background-color: #f9eb0f;
-}
+  .doc-btn.active {
+    background-color: #f9eb0f;
+  }
 
-.theme-icon {
-  padding: 0; /* TBD */
-  width: 1.5rem;
-}
+  /* Theme Menu */
+  #theme-nav {
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2.5vh;
+    background-color: white;
+  }
 
+  .theme-btn {
+    border: none;
+    background: none;
+  }
+
+  .theme-btn.active {
+    background-color: #f9eb0f;
+  }
+
+  .theme-icon {
+    padding: 0; /* TBD */
+    width: 1.5rem;
+  }
+}
 
 /* Loading */
 
@@ -285,23 +369,33 @@ html, body {
 /* Content */
 
 #content {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100vw;
   height: 100vh;
-  overflow: scroll;
-  -webkit-overflow-scrolling: touch;
+  overflow: scroll!important;
+  -webkit-overflow-scrolling: touch!important;
 }
 
+/*
 @media (min-width: 767px) {
   #content {
     padding: 2.5rem;
   }
-}
+}*/
 
 #content iframe {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 2.5rem;
+  left: 2.5rem;
+  width: calc(100vw - 5rem);
+  height: calc(100vh - 5rem);
   border: none;
 }
+
+
+@media (max-width: 767px) {
+  #content iframe {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }

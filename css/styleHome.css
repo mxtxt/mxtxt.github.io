@@ -1,11 +1,12 @@
 html,
 body {
-  position: relative;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
   color: #232323;
   font-style: normal;
   line-height: 1.5;
-  height: auto;
-  min-height: 100vh;
 }
 a {
   font-style: normal;
@@ -53,13 +54,20 @@ h1, h2, h3, h4, h5, .display-1, .display-2 {
 .intro {
   display: flex;
   background-color: #f9eb0f;
-  height: 100vh;
+  height: 100%;
   align-items: center;
   -webkit-align-items: center;
 }
 .intro p {
   color: #232323;
 }
+
+@media (max-width: 768px) {
+  .intro {
+    height: auto;
+  }
+}
+
 .timeline-wrapper {
   padding-top: 90px;
   padding-bottom: 90px;
