@@ -76,6 +76,21 @@ function switchDoc(input){
   document.getElementById("currentDoc").innerHTML = input.name;
   document.getElementById("frameDocument").setAttribute("src", "docs/" + input.name + ".html");
 
+  var jquery   = document.createElement("script");
+  jquery.type  = "text/javascript";
+  jquery.src   = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js";
+  document.head.appendChild(jquery);
+
+  var circularWave   = document.createElement("script");
+  circularWave.type  = "text/javascript";
+  circularWave.src   = "js/circularWave.min.js";
+  document.head.appendChild(circularWave);
+
+  var aurora   = document.createElement("script");
+  aurora.type  = "text/javascript";
+  aurora.src   = "js/aurora.js";
+  document.body.appendChild(aurora);
+
   if (document.getElementById("currentTheme").innerHTML == ""){
     randomTheme();
   };
