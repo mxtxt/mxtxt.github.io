@@ -105,8 +105,14 @@ function playSong() {
     }, false);
 };
 
-$(document).ready(function stopSong() {
-  var tpaudio = document.getElementById("tpaudio");
-  tpaudio.pause();
-  tpaudio.currentTime = 0.0;
-});
+function stopSong() {
+  if(document.getElementById("tpaudio")){
+    alert("Element exists");
+    var tpaudio = document.getElementById("tpaudio");
+    tpaudio.pause();
+    tpaudio.currentTime = 0.0;
+  }
+  else {
+    alert("Element does not exist");
+  }
+};
