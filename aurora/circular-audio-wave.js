@@ -15107,7 +15107,7 @@ class CircularAudioWave {
         "sunburst" !== this.opts.mode && (this.chartOption.series[0].animation = !1, this.chartOption.series[2].rippleEffect.period = 150 / this.bpm)
     }
     play() {
-      if (this.context.state === 'suspended') {
+      if (this.context.state === 'suspended' && this.playing === false) {
         this.context.resume();
         this.playing = true;
       } else if (this.sourceNode && this.sourceNode.buffer && this.playing === false) {
