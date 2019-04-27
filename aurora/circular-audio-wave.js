@@ -15107,10 +15107,28 @@ class CircularAudioWave {
         "sunburst" !== this.opts.mode && (this.chartOption.series[0].animation = !1, this.chartOption.series[2].rippleEffect.period = 150 / this.bpm)
     }
     play() {
-        this.sourceNode && this.sourceNode.buffer ? (this.playing = !0, this.presetOption(), this.sourceNode.start(0), this._debouncedDraw()) : alert("Audio is not ready")
+      if (this.context.state === 'suspended') {
+        this.context.resume();
+      }
+
+      if (this.playing === 'false') {
+        this.sourceNode.play();
+        this.playing = 'true';
+      // if track is playing pause it
+      } else if (this.dataset.playing === 'true') {
+        this.sourceNode.pause();
+        this.playing = 'false';
+      }
+
+        // this.sourceNode && this.sourceNode.buffer ? (this.playing = !0, this.presetOption(), this.sourceNode.start(0), this._debouncedDraw()) : alert("Audio is not ready")
     }
-    reset() {
-        this.sourceNode.stop(0)
+    pause() {
+      if (this.playing) {
+          let e = this._generateWaveData(t);
+          this.chartOption.series[0].data = e.data, e.maxR > this.lastMaxR ? this.lastMaxR = e.maxR + 4 : this.playing ? this.lastMaxR -= 2 : this.lastMaxR = this.minChartValue, "sunburst" !== this.opts.mode && (this.chartOption.series[1].data = Array.apply(null, {
+              length: 361
+          }).map(Function.call, t => [this.lastMaxR, t])), this.chart.setOption(this.chartOption, !0), this.tick++
+      }
     }
     destroy() {
         this.chart.dispose()
