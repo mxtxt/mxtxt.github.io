@@ -21,7 +21,7 @@ function loadingOff(){
 
 
 function random(){
-  var listDocs = ["bloomberg/Bloomberg_final","eudirective/EUDirective_finalEN","harpers/Harpers_Final","huffington/Huffington_Final","thecut/JessicaPresler","tls/TimesLiterarySupplement_Final"];
+  var listDocs = ["bloomberg/Bloomberg_final","EU_Directive/EUDirective_EN","harpers/Harpers_Final","huffington/Huffington_Final","thecut/thecut","tls/TimesLiterarySupplement_Final"];
 
   var choiceDoc = listDocs[Math.floor(Math.random()*listDocs.length)];
   document.getElementsByName(choiceDoc)[0].click();
@@ -35,7 +35,7 @@ function random(){
 
 
 function randomTheme(){
-  var listThemes = ["style1","themes/vPlaybill","themes/artDeco","style4","style5","themes/futurama"];
+  var listThemes = ["style1","themes/vPlaybill","themes/artDeco","style4","style5"];
 
   var frameContent = document.getElementById("frameDocument");
   var choiceTheme = listThemes[Math.floor(Math.random()*listThemes.length)];
