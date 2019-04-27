@@ -58,16 +58,14 @@ function switchTheme(input){
     menuToggle();
   };
 
+  var sounds = document.getElementsByTagName('audio');
+  for(i=0; i<sounds.length; i++) sounds[i].pause();
+
   if (input.name == "themes/tropicalia") {
     var audioElement = document.createElement('audio');
     document.head.appendChild(audioElement);
     audioElement.setAttribute('src', '../tropaudio/Tropicalia.mp3');
     audioElement.play();
-  };
-
-  if (input.name != "themes/tropicalia") {
-    var sounds = document.getElementsByTagName('audio');
-    for(i=0; i<sounds.length; i++) sounds[i].pause();
   };
 
 };
