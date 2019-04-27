@@ -76,6 +76,7 @@ function switchDoc(input){
   document.getElementById("currentDoc").innerHTML = input.name;
   document.getElementById("frameDocument").setAttribute("src", "docs/" + input.name + ".html");
 
+
   injectAurora();
 
   if (document.getElementById("currentTheme").innerHTML == ""){
@@ -91,6 +92,7 @@ function switchDoc(input){
 function injectAurora(){
   var frameContent = document.getElementById("frameDocument");
 
+  if
   frameContent.addEventListener("load", function() {
     var jquery   = frameContent.contentWindow.document.createElement("script");
     jquery.type  = "text/javascript";
@@ -101,10 +103,11 @@ function injectAurora(){
     circularWave.type  = "text/javascript";
     circularWave.src   = "../../js/circularWave.min.js";
     circularWave.async = true;
+    circularWave.name = "circularWave";
     frameContent.contentWindow.document.head.appendChild(circularWave);
 
-    bodyArea = frameContent.contentWindow.document.getElementsByTagName('body')[0];
-    bodyArea.insertAdjacentHTML('afterbegin','<div style="z-index: 50; width: 100vw; height: 100vh; position:fixed; background: #d3d3d3;"><button onclick="speak()">Pause/Resume</button><div id="chart-container" onclick="wave.play()" style="width: 100%; height: 100%; cursor: pointer;"></div></div>');
+    bodyArea = frameContent.contentWindow.document.getElementsByTagName("body")[0];
+    bodyArea.insertAdjacentHTML('afterbegin','<div style="display: none; z-index: 50; width: 100vw; height: 100vh; position:fixed; background: #d3d3d3;"><button onclick="speak()">Pause/Resume</button><div id="chart-container" onclick="wave.play()" style="width: 100%; height: 100%; cursor: pointer;"></div></div>');
 
     var aurora   = frameContent.contentWindow.document.createElement("script");
     aurora.type  = "text/javascript";
