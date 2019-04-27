@@ -15119,7 +15119,6 @@ class CircularAudioWave {
         this.playing = false;
         status = 'suspended';
         this.reset();
-
       } else if (status === "suspended") {
         this.context.resume();
         this.playing = true;
