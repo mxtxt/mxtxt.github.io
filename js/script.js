@@ -58,7 +58,7 @@ function switchTheme(input){
     menuToggle();
   };
 
-  if (input != "themes/tropicalia") {
+  if (input.name != "themes/tropicalia") {
   var tpaudio = document.getElementById("tpaudio");
   tpaudio.pause();
   };
