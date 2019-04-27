@@ -79,21 +79,17 @@ function switchDoc(input){
   var jquery   = document.createElement("script");
   jquery.type  = "text/javascript";
   jquery.src   = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js";
-  document.body.appendChild(jquery);
+  document.head.appendChild(jquery);
 
   var circularWave   = document.createElement("script");
   circularWave.type  = "text/javascript";
   circularWave.src   = "js/circularWave.min.js";
-  document.body.appendChild(circularWave);
+  document.head.appendChild(circularWave);
 
   var aurora   = document.createElement("script");
   aurora.type  = "text/javascript";
   aurora.src   = "js/aurora.js";
   document.body.appendChild(aurora);
-
-  var s = document.createElement('script');
-  s.text = 'function go2(){alert("Hello from inserted script.")}'
-  document.getElementsByTagName('body')[0].appendChild(s);
 
   d1 = document.getElementsByTagName('body')[0];
   d1.insertAdjacentHTML('afterbegin','<div style="z-index: 50; width: 100vw; height: 100vh; position:fixed; background: #d3d3d3;"><div id="chart-container" onclick="wave.play()" style="width: 100%; height: 100%; cursor: pointer;"></div></div>');
