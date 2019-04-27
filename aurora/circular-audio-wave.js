@@ -15127,6 +15127,7 @@ class CircularAudioWave {
       }
 
       var statePlayer = "playing";
+      return console.log(statePlayer)
     }
     pause() {
     }
