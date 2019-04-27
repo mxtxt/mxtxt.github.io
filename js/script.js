@@ -54,13 +54,12 @@ function switchTheme(input){
   document.getElementById("currentTheme").innerHTML = input.name;
   elmnt.setAttribute("href", "../../css/" + input.name + ".css");
 
+  $('audio').pause();
+  
   if ($(".menu").hasClass("active")) {
     menuToggle();
   };
 
-  $('audio').each(function(){
-    this.pause(); // Stop playing
-  });
 };
 
 
