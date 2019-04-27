@@ -15107,7 +15107,7 @@ class CircularAudioWave {
         "sunburst" !== this.opts.mode && (this.chartOption.series[0].animation = !1, this.chartOption.series[2].rippleEffect.period = 150 / this.bpm)
     }
     play() {
-      if(this.sourceNode && this.sourceNode.buffer && !("statePlayer" in window)) {
+      if(this.sourceNode && this.sourceNode.buffer && !(this.statePlayer in window)) {
         this.playing = true;
         this.presetOption();
         this.sourceNode.start(0);
