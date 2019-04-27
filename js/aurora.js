@@ -7,8 +7,6 @@ function speak(){
   sendData(keyValuePair);
 }
 
-window.onload = speak;
-
 function sendData(data) {
   var XHR = new XMLHttpRequest();
   var urlEncodedData = "";

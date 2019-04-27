@@ -76,8 +76,8 @@ function switchDoc(input){
   document.getElementById("currentDoc").innerHTML = input.name;
   document.getElementById("frameDocument").setAttribute("src", "docs/" + input.name + ".html");
 
-
   injectAurora();
+  speak();
 
   if (document.getElementById("currentTheme").innerHTML == ""){
     randomTheme();
