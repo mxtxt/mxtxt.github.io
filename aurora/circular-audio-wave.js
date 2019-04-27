@@ -15113,12 +15113,12 @@ class CircularAudioWave {
         this._debouncedDraw();
       } else if(this.context.state === 'running' && this.playing === true) {
         this.context.suspend();
-        this.reset();
+        this.tick = 0;
+        this.chartOption = JSON.parse(JSON.stringify(this.defaultChartOption));
       } else if(this.sourceNode && this.sourceNode.buffer && this.playing === false) {
         this.playing = true;
         this.presetOption();
         this.sourceNode.start(0);
-        this._debouncedDraw();
       }
     }
     pause() {
