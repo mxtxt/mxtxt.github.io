@@ -1,7 +1,7 @@
 let wave = new CircularAudioWave(document.getElementById('aurora'));
 
 function speak(){
-  var documentText = document.body.textContent;
+  var documentText = "Test text"; //document.body.textContent;
   var keyValuePair = {};
   keyValuePair['text'] = documentText;
   sendData(keyValuePair);
