@@ -15112,11 +15112,11 @@ class CircularAudioWave {
         this.presetOption();
         this.sourceNode.start(0);
         this._debouncedDraw();
+      } else if(this.context.state === 'suspended') {
+        this.context.resume();
       } else if(this.context.state === 'running') {
         this.context.suspend();
         this.reset();
-      } else if(this.context.state === 'suspended') {
-        this.context.resume();
       }
     }
     pause() {
