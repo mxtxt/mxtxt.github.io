@@ -108,7 +108,7 @@ function injectAurora(){
       frameContent.contentWindow.document.head.appendChild(circularWave);
 
       bodyArea = frameContent.contentWindow.document.getElementsByTagName("body")[0];
-      bodyArea.insertAdjacentHTML('afterbegin','<div id="auroraWrapper" style="display: none;"><button onclick="speak()">Pause/Resume</button><div id="chart-container" onclick="wave.play()"></div></div>');
+      bodyArea.insertAdjacentHTML('afterbegin','<div id="auroraWrapper" style="display: none;"><button onclick="speak()">Pause/Resume</button><div id="aurora" onclick="wave.play()"></div></div>');
 
       var aurora   = frameContent.contentWindow.document.createElement("script");
       aurora.type  = "text/javascript";

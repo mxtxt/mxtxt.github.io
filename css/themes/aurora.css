@@ -10,7 +10,7 @@ to define special characteristics of certain elemens, since we cannot use classe
   background: #d3d3d3;
 }
 
-#chart-container {
+#aurora {
   width: 100%;
   height: 100%;
   cursor: pointer;
