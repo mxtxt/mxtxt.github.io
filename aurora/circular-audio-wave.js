@@ -15108,7 +15108,7 @@ class CircularAudioWave {
     }
 
     play() {
-      if (this.sourceNode && this.sourceNode.buffer && "status" not in window) {
+      if (this.sourceNode && this.sourceNode.buffer && !("status" in window)) {
         this.playing = true;
         this.presetOption();
         this.sourceNode.start(0);
