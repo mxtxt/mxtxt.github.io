@@ -1,0 +1,647 @@
+/* use jquery clone() method for text/titles*/
+/* use css box-shadow for images*/
+/* add tropicalia music */
+
+/* red #A02818
+red coral #B5493F
+yellow #D5D74B
+orange #C18842
+grey 	#7F7E69
+
+bright orange #E9542C
+dark orange 	#ED4F31
+brighter yellow #F8B729
+green #56853F
+
+desafio yellow 	#F1DA02
+desafio grey #515851
+defatio light grey #9B9B93
+
+light black #302D2E
+
+*/
+
+/*--------------Fonts--------------*/
+
+/********AZEDO********/
+/* azedo-bold */
+@font-face {
+    font-family: azedo-bold;
+    src: url("../../fonts/tropicalia/Azedo-Bold.otf") format("opentype");
+}
+
+/* azedo-light */
+@font-face {
+    font-family: azedo-light;
+    src: url("../../fonts/tropicalia/Azedo-Light.otf") format("opentype");
+}
+
+/********BOOMTOWN DECO********/
+/* boomtown-deco */
+@font-face {
+    font-family: boomtown-deco;
+    src: url("../../fonts/tropicalia/Boomtown-deco.otf") format("opentype");
+}
+
+/********DOGSMOKE********/
+/* dogsmoke */
+@font-face {
+    font-family: dogsmoke;
+    src: url("../../fonts/tropicalia/Dogsmoke.ttf") format("opentype");
+}
+
+/* dogsmoke-ii */
+@font-face {
+    font-family: dogsmoke-ii;
+    src: url("../../fonts/tropicalia/Dogsmoke-II.ttf") format("opentype");
+}
+
+/* dogsmoke-thunder-ii */
+@font-face {
+    font-family: dogsmoke-thunder-ii;
+    src: url("../../fonts/tropicalia/Dogsmoke-Thunder-II.ttf") format("opentype");
+}
+
+/* dogsmoke-thunder */
+@font-face {
+    font-family: dogsmoke-thunder;
+    src: url("../../fonts/tropicalia/Dogsmoke-Thunder.ttf") format("opentype");
+}
+
+/* dogsmoke-ii */
+@font-face {
+    font-family: dogsmoke-ii;
+    src: url("../../fonts/tropicalia/Dogsmoke-II.ttf") format("opentype");
+}
+
+/********OTHER********/
+/* tropicalia */
+@font-face {
+    font-family: tropicalia;
+    src: url("../../fonts/tropicalia/Tropicalia-Brush.ttf") format("opentype");
+}
+
+/* ostrichsans-medium-heavy */
+@font-face {
+    font-family: ostrichsans-medium-heavy;
+    src: url("../../fonts/tropicalia/ostrichsans-medium-webfont.ttf") format("opentype");
+}
+
+/* village */
+@font-face {
+    font-family: village;
+    src: url("../../fonts/tropicalia/Village.ttf") format("opentype");
+}
+
+/* flames */
+@font-face {
+    font-family: flames;
+    src: url("../../fonts/tropicalia/Flames.ttf") format("opentype");
+}
+
+/* beamie */
+@font-face {
+    font-family: beamie;
+    src: url("../../fonts/tropicalia/beamie.ttf") format("opentype");
+}
+
+/* ftact */
+@font-face {
+    font-family: ftact;
+    src: url("../../fonts/tropicalia/Ftact.ttf") format("opentype");
+}
+
+/* lettersinthehands */
+@font-face {
+    font-family: lettersinthehands;
+    src: url("../../fonts/tropicalia/Lettersinthehands.ttf") format("opentype");
+}
+
+/* pseudolux-regular */
+@font-face {
+    font-family: pseudolux-regular;
+    src: url("../../fonts/tropicalia/Pseudolux-Regular.ttf") format("opentype");
+}
+
+/* pseudolux */
+@font-face {
+    font-family: pseudolux;
+    src: url("../../fonts/tropicalia/Pseudolux.ttf") format("opentype");
+}
+
+
+
+/*--------------General Structure--------------*/
+
+html {
+  background-image: url("../../img/bg/yellow.png");
+  background-repeat: repeat;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  max-height: 100vh;
+}
+
+body {
+  color: black;
+  font-family: "bodoni-bold";
+  height: 100vh;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: center;
+}
+
+header {
+  width: 100%;
+}
+
+header > section > p {
+  font-family: "semplicita-ombra";
+  font-size: 3.2vw;
+  font-weight: 500;
+  line-height: 1vh;
+  text-align: center;
+  text-transform: uppercase;
+
+  margin-top: 1vh;
+  padding-top: 2vh;
+
+  margin-bottom: 1vh;
+  padding-bottom: 2vh;
+  border-bottom: 0.3vh solid black;
+}
+
+header > p {
+  font-family: "fette-egyptienne";
+  font-size: 2.7vw;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  text-justify: inter-character;
+  letter-spacing: 1.5vw;
+
+  margin-top: 1vh;
+  padding-top: 2vh;
+
+  margin-bottom: 1vh;
+  padding-bottom: 1vh;
+  border-bottom: 0.3vh solid black;
+}
+
+header > p > a {
+  font-family: "woodcut";
+  font-size: 5vw;
+  font-weight: 100;
+  line-height: 3vh;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2vw;
+  color: red;
+}
+
+header > p > a:hover {
+  font-family: "woodcut";
+  font-size: 5.2vw;
+  color: black;
+}
+
+h1 {
+  font-family: "dogsmoke";
+  font-size: 6vw;
+  font-weight: 500;
+  line-height: 0.85em;
+  text-align: center;
+  text-transform: uppercase;
+
+  margin-top: 1vh;
+  padding-top: 1vh;
+
+  margin-bottom: 1vh;
+  padding-bottom: 1vh;
+  border-bottom: 0.5vh dotted black;
+  line-height:1;
+  color: gray;
+  background: url(http://eofdreams.com/data_images/dreams/image/image-07.jpg) no-repeat -1034px -942px;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+}
+
+h2 {
+  font-family: "beamie";
+  font-size: 6vw;
+  line-height: 0.9em;
+  text-align: center;
+  text-transform: uppercase;
+
+  margin-top: 1vh;
+  padding-top: 1vh;
+
+  margin-bottom: 1vh;
+  padding-bottom: 1vh;
+  border-bottom: 1vh double black;
+  color: #fff;
+  text-shadow:
+
+  0 0  40px #0f0,
+  0 0  60px #0f0,
+  0 0  90px #0f0;
+  writing-mode: vertical-rl;
+  float: left;
+}
+
+h2:hover {
+  font-size: 12vw;
+}
+
+h3 {
+  font-family: "flames";
+  font-size: 4vw;
+  font-weight: 100;
+  text-align: center;
+  text-transform: uppercase;
+
+  margin-top: 1vh;
+  padding-top: 0vh;
+
+  margin-bottom: 1vh;
+  padding-bottom: 1vh;
+  border-bottom: 0.5vh double black;
+  writing-mode: vertical-rl;
+  float: left;
+}
+
+/* article {
+  display: none;
+} */
+
+section {
+  border-top: 3vh double black;
+}
+
+h4 {
+  font-family: "beamie";
+  font-size: 11vw;
+  font-weight: 100;
+  text-align: center;
+  text-transform: uppercase;
+
+  margin-top: 1vh;
+  padding-top: 0vh;
+
+  margin-bottom: 1vh;
+  padding-bottom: 1vh;
+
+  background-image: url("../../img/bg/decleft0.png"), url("../../img/bg/decright0.png");
+  background-repeat: no-repeat;
+  background-position: left, right;
+  background-size: 10%;
+}
+
+p:last-child {
+  border-bottom: none; /* because sections have upper borders, erase the bottom border of the last paragraph of a section or body*/
+}
+
+p {
+  font-family: "bodoni-bold";
+  font-size: 2vw;
+  text-align: justify;
+
+  margin-top: 1vh;
+  padding-top: 0vh;
+
+  margin-bottom: 1vh;
+  padding-bottom: 1vh;
+  border-bottom: 0.7vh double black; /* all paragraphs except the last one (see above) have a bottom border*/
+}
+
+p > em {
+  font-family: "klein-slabserif";
+  font-size: 4vw; /* no italics */
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+a {
+  font-family: "klein-slabserif";
+  font-size: 3vw;
+  text-transform: uppercase;
+  text-decoration: none; /* take out the automatic underlining */
+  color: red;
+}
+
+a:hover {
+  font-family: "plastische-plakat-antiqua";
+  font-size: 5vw;
+}
+
+q {
+  font-family: "vineta-regular";
+  font-size: 3.5vw;
+  text-align: justify;
+  /* find way of deleting the automatically added quotes*/
+}
+
+small {
+  font-size: 1vw;
+}
+
+/*--------------First Figure--------------*/
+
+figure:first-child {
+  padding-top: 0;
+  padding-bottom: 0;
+  border-top: none;
+  border-bottom: none;
+  background-repeat: no-repeat;
+  background-position: left, right;
+  background-size: 20%;
+}
+
+figure:first-child figcaption {
+  display: none;
+}
+
+figure:first-child img {
+  width: 10%; /* use percentage of the figure box width */
+  border-radius: 10%;
+  transition: all .2s ease-in-out;
+  margin-bottom: 10vw;
+}
+
+figure:first-child img:hover {
+  transform: scale(1.1);
+}
+
+/*--------------Figures--------------*/
+
+figure {
+  width: 100%;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  border-bottom: 0.5vh dotted black;
+  background-image: url("../../img/bg/decleft.png"), url("../../img/bg/decright.png");
+  background-repeat: no-repeat;
+  background-position: left top, right top;
+  background-size: 25%;
+}
+
+figure:has(table) {
+  background-image: none;
+  background-size: 0;
+  /* will have to do with jquery,
+  $("p:has(img)") */
+}
+
+figure:last-child {
+  border-bottom: none; /* because sections have upper borders, erase the bottom border of the last figure of a section or body*/
+}
+
+figure > figcaption {
+  font-family: "semplicita-ombra";
+  width: 100%;
+  padding-top: 2vh;
+  font-size: 2vw;
+  text-align: justify;
+}
+
+figure > figcaption > em {
+  font-family: "toskanische-egyptienneInitialen";
+  font-size: 2vw;
+}
+
+figure > figcaption > small {
+  font-family: "semplicita-medium";
+  font-size: 2vw;
+}
+
+/*--------------Figures: Images--------------*/
+
+figure > img {
+	width: 100px;
+	height: 100px;
+  float:left;
+	border-radius: 50px;
+  border-color: yellow;
+	box-shadow: 120px    0px 0  15px green,
+				-60px  104px 0   0px red,
+				-60px -104px 0 -15px yellow;
+
+}
+
+/*--------------Figures: Videos--------------*/
+
+figure > video {
+  width: 50%; /* use percentage of the figure box width */
+  margin: 0;
+  padding: 0;
+  border-radius: 40%;
+  filter: sepia();
+}
+
+/*--------------Figures: Tables--------------*/
+
+figure > table {
+  width: 100%;
+  font-family: "semplicita-medium";
+  font-size: 3vw;
+  overflow: scroll;
+}
+
+th {
+  font-family: "toskanische-egyptienneInitialen";
+  font-size: 6vw;
+}
+
+td {
+    padding:1em 0 0 0;
+    border: 0.3vw solid black;
+    }
+
+td:first-child {
+    text-align: left;
+    font-weight: 700;
+    overflow: hidden;
+    position: relative;
+    }
+
+td:last-child {
+    text-align:right;
+}
+
+section > figure > table {
+   width: 100%;
+   table-layout: fixed;
+   font-family: "semplicita-medium";
+   font-size: 2vw;
+   border: 4px dashed black;
+   border-collapse: collapse;
+}
+
+section > figure > table  th {
+   font-family: "fette-egyptienne";
+   font-size: 2vw;
+   border: 2px solid black;
+}
+
+section > figure > table  td {
+   border: 2px dotted black;
+}
+
+/*--------------Lists--------------*/
+
+section > ol {
+  width: 89%;
+  list-style-type: upper-roman;
+  border: 4px dashed black;
+
+  padding-left: 10%;
+
+  font-family: "bodoni-bold";
+  font-size: 2vw;
+  text-align: justify;
+
+  margin-top: 1vh;
+  padding-top: 0vh;
+
+  margin-bottom: 1vh;
+  padding-bottom: 1vh;
+}
+
+section > ol > li {
+  margin: 5px;
+  border-bottom: 0.7vh solid black;
+}
+
+section > ol > li > em {
+  font-family: "fette-egyptienne";
+  text-transform: uppercase;
+}
+
+section > ul {
+  width: 89%;
+  border: 4px dashed black;
+
+  padding-left: 10%;
+
+  font-family: "bodoni-bold";
+  font-size: 2vw;
+  text-align: justify;
+
+  margin-top: 1vh;
+  padding-top: 0vh;
+
+  margin-bottom: 1vh;
+  padding-bottom: 1vh;
+}
+
+li > small {
+  font-size: 2vw;
+}
+
+/*--------------Footer--------------*/
+
+footer {
+  width: 100%;
+}
+
+footer > ul > li {
+  font-size: 2vw;
+  text-align: justify;
+}
+
+footer > ul > li > a {
+  font-size: 2vw;
+  text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*--------------collapsible button--------------*/
+
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.lbl-toggle {
+  display: block;
+
+  font-weight: bold;
+  font-family: "flames";
+  font-size: 3vw;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 1rem;
+
+  color: #A77B0E;
+  background: #FAE042;
+
+  cursor: pointer;
+
+  border-radius: 7px;
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle:hover {
+  color: #7C5A0B;
+}
+
+.lbl-toggle::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
+}
+
+.collapsible-content .content-inner {
+  background: rgba(250, 224, 66, .2);
+  border-bottom: 1px solid rgba(250, 224, 66, .45);
+
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: .5rem 1rem;
+}
+
+.collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+
+  transition: max-height .25s ease-in-out;
+}
+
+
+.toggle:checked + .lbl-toggle + .collapsible-content {
+  max-height: 350px;
+}
+
+.toggle:checked + .lbl-toggle::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
