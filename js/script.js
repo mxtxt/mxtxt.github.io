@@ -86,12 +86,11 @@ function switchDoc(input){
   circularWave.src   = "js/circularWave.min.js";
   document.head.appendChild(circularWave);
 
-  document.addEventListener("load", function() {
-    var aurora   = document.createElement("script");
-    aurora.type  = "text/javascript";
-    aurora.src   = "js/aurora.js";
-    document.body.appendChild(aurora);
-  });
+  var aurora   = document.createElement("script");
+  aurora.type  = "text/javascript";
+  aurora.src   = "js/aurora.js";
+  aurora.defer = true;
+  document.body.appendChild(aurora);
 
   if (document.getElementById("currentTheme").innerHTML == ""){
     randomTheme();
