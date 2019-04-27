@@ -76,9 +76,10 @@ function switchDoc(input){
   document.getElementById("currentDoc").innerHTML = input.name;
   document.getElementById("frameDocument").setAttribute("src", "docs/" + input.name + ".html");
 
-  document.getElementsByTagName('head')[0].insertAdjacentHTML('beforeend','<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <script src="js/circularWave.min.js"></script><script src="js/aurora.js" defer></script>');
+  document.getElementsByTagName('head')[0].insertAdjacentHTML('beforeend','<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <script src="js/circularWave.min.js" defer></script>');
   d1 = document.getElementsByTagName('body')[0];
   d1.insertAdjacentHTML('afterbegin','<div style="z-index: 50; width: 100vw; height: 100vh; position:fixed; background: #d3d3d3;"><div id="chart-container" onclick="wave.play()" style="width: 100%; height: 100%; cursor: pointer;"></div></div>');
+  d1.insertAdjacentHTML('beforeend','<script src="js/aurora.js"></script>');
 
   if (document.getElementById("currentTheme").innerHTML == ""){
     randomTheme();
