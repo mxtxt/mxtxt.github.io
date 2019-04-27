@@ -58,11 +58,6 @@ function switchTheme(input){
     menuToggle();
   };
 
-  if (input.name != "themes/tropicalia") {
-  var tpaudio = document.getElementById("tpaudio");
-  tpaudio.pause();
-  };
-
 };
 
 
@@ -108,4 +103,9 @@ function playSong() {
   audioElement.addEventListener('ended', function() {
     this.play();
     }, false);
-  };
+};
+
+function stopSong() {
+  var tpaudio = document.getElementById("tpaudio");
+  tpaudio.pause();
+};
