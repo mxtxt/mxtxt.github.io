@@ -99,6 +99,7 @@ function playSong() {
   var audioElement = document.createElement('audio');
   audioElement.setAttribute('src', '../tropaudio/Tropicalia.mp3');
   audioElement.setAttribute('id', 'tpaudio');
+  document.header.appendChild(audioElement); 
   audioElement.play();
   audioElement.addEventListener('ended', function() {
     this.play();
