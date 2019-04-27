@@ -15115,10 +15115,10 @@ class CircularAudioWave {
       }
 
       if ("statePlayer" in window) {
-        if(this.context.state === 'suspended' && statePlayer = "stopped") {
+        if(this.context.state === 'suspended' && this.statePlayer === "stopped") {
           this.context.resume();
           this.playing = true;
-        } else if(this.context.state === 'running' && statePlayer = "playing") {
+        } else if(this.context.state === 'running' && statePlayer === "playing") {
           this.context.suspend();
           this.playing = false;
           this.reset();
