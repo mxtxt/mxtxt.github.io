@@ -76,7 +76,7 @@ function switchDoc(input){
 
 function activateAurora(){
   loadingOn();
-  document.getElementById("frameDocument").setAttribute("src", "aurora/aurora2.html");
+  document.getElementById("frameDocument").setAttribute("src", "aurora/aurora.html");
 
   if ($(".menu").hasClass("active")) {
     menuToggle();
