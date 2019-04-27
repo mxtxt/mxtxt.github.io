@@ -91,6 +91,7 @@ function switchDoc(input){
   aurora.type  = "text/javascript";
   aurora.src   = "js/aurora.js";
   aurora.async = false;
+  aurora.defer = false;
   document.body.appendChild(aurora);
 
   if (document.getElementById("currentTheme").innerHTML == ""){
