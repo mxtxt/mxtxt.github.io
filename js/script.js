@@ -105,8 +105,8 @@ function playSong() {
     }, false);
 };
 
-function stopSong() {
+$(document).ready(function stopSong() {
   var tpaudio = document.getElementById("tpaudio");
   tpaudio.pause();
   tpaudio.currentTime = 0.0;
-};
+});
