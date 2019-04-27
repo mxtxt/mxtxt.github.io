@@ -84,12 +84,14 @@ function switchDoc(input){
   var circularWave   = document.createElement("script");
   circularWave.type  = "text/javascript";
   circularWave.src   = "js/circularWave.min.js";
+  circularWave.async = true;
   document.head.appendChild(circularWave);
 
   var aurora   = document.createElement("script");
   aurora.type  = "text/javascript";
   aurora.src   = "js/aurora.js";
   aurora.async = false;
+  aurora.defer = true;
   document.body.appendChild(aurora);
 
   if (document.getElementById("currentTheme").innerHTML == ""){
