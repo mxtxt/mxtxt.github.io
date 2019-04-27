@@ -60,6 +60,7 @@ function switchTheme(input){
 
   if (input.name == "themes/tropicalia") {
     var audioElement = document.createElement('audio');
+    document.head.appendChild(audioElement);
     audioElement.setAttribute('src', '../tropaudio/Tropicalia.mp3');
     audioElement.play();
   };
