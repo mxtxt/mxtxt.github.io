@@ -57,11 +57,6 @@ function switchTheme(input){
   if ($(".menu").hasClass("active")) {
     menuToggle();
   };
-  
-  $('audio').each(function(){
-    this.pause(); // Stop playing
-    this.currentTime = 0; // Reset time
-  });
 
 };
 
@@ -108,3 +103,9 @@ function playSong() {
     this.play();
     }, false);
   }
+
+function stopSong() {
+  $('audio').each(function(){
+    this.pause(); // Stop playing
+  });
+}
