@@ -66,9 +66,8 @@ function switchTheme(input){
   };
 
   if (input.name != "themes/tropicalia") {
-    var tpaudio = document.getElementByTagName('audio');
-      tpaudio.pause();
-      tpaudio.currentTime = 0.0;
+    var sounds = document.getElementsByTagName('audio');
+    for(i=0; i<sounds.length; i++) sounds[i].pause();
   };
 
 };
