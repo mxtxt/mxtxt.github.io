@@ -15108,21 +15108,21 @@ class CircularAudioWave {
     }
 
     play() {
-      if (this.sourceNode && this.sourceNode.buffer && !("status" in window)) {
+      if (this.sourceNode && this.sourceNode.buffer && !("statusPlayer" in window)) {
         this.playing = true;
         this.presetOption();
         this.sourceNode.start(0);
         this._debouncedDraw();
-        var status = "playing";
-      } else if (status === "playing") {
+        var statusPlayer = "playing";
+      } else if (statusPlayer === "playing") {
         this.context.suspend();
         this.playing = false;
-        status = 'suspended';
+        statusPlayer = 'suspended';
         this.reset();
-      } else if (status === "suspended") {
+      } else if (statusPlayer === "suspended") {
         this.context.resume();
         this.playing = true;
-        status = 'playing';
+        statusPlayer = 'playing';
       }
     }
     pause() {
