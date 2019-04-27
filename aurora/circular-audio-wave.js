@@ -15118,8 +15118,10 @@ class CircularAudioWave {
         this._debouncedDraw();
       // if track is playing pause it
       } else if (this.playing === true) {
+        this.presetOption();
         this.context.suspend();
         this.playing = false;
+        this._debouncedDraw();
       }
 
         // this.sourceNode && this.sourceNode.buffer ? (this.playing = !0, this.presetOption(), this.sourceNode.start(0), this._debouncedDraw()) : alert("Audio is not ready")
