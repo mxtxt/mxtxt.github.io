@@ -104,7 +104,7 @@ function injectAurora(){
       circularWave.type  = "text/javascript";
       circularWave.src   = "../../js/circularWave.min.js";
       circularWave.async = true;
-      circularWave.name = "circularWave";
+      circularWave.setAttribute("name","circularWave");
       frameContent.contentWindow.document.head.appendChild(circularWave);
 
       bodyArea = frameContent.contentWindow.document.getElementsByTagName("body")[0];
