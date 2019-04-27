@@ -130,434 +130,425 @@ light black #302D2E
 }
 
 
+@import url('https://fonts.googleapis.com/css?family=Gothic+A1');
 
 /*--------------General Structure--------------*/
 
 html {
-  background-image: url("../../img/bg/yellow.png");
-  background-repeat: repeat;
+  background-color: white;
   height: 100vh;
   width: 100vw;
-  align-items: center;
-  max-height: 100vh;
 }
 
 body {
   color: black;
-  font-family: "bodoni-bold";
+  font-family: "Arial";
+  /* max-height: 200vw;
+  overflow-y: hidden; */
+  width: 100%;
   height: 100vh;
-  padding-left: 10%;
-  padding-right: 10%;
-  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 header {
   width: 100%;
 }
 
-header > section > p {
-  font-family: "semplicita-ombra";
-  font-size: 3.2vw;
-  font-weight: 500;
-  line-height: 1vh;
-  text-align: center;
-  text-transform: uppercase;
+header > section > p { /* this is for the EU one */
+  font-family: "flames";
+  font-size: ;
+  font-weight: ;
+  line-height: ;
+  text-align: ;
+  text-transform: ;
 
-  margin-top: 1vh;
-  padding-top: 2vh;
+  margin-top: ;
+  padding-top: ;
 
-  margin-bottom: 1vh;
-  padding-bottom: 2vh;
-  border-bottom: 0.3vh solid black;
+  margin-bottom: ;
+  padding-bottom: ;
+  border-bottom: ;
 }
 
 header > p {
-  font-family: "fette-egyptienne";
-  font-size: 2.7vw;
-  font-weight: 500;
-  text-align: center;
-  text-transform: uppercase;
-  text-justify: inter-character;
-  letter-spacing: 1.5vw;
+  font-family: "flames";
+  font-size: ;
+  font-weight: ;
 
-  margin-top: 1vh;
-  padding-top: 2vh;
+  margin-top: ;
+  padding-top: ;
 
-  margin-bottom: 1vh;
-  padding-bottom: 1vh;
-  border-bottom: 0.3vh solid black;
+  margin-bottom: ;
+  padding-bottom: ;
+  border-bottom: ;
 }
 
 header > p > a {
-  font-family: "woodcut";
-  font-size: 5vw;
-  font-weight: 100;
-  line-height: 3vh;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.2vw;
-  color: red;
+  font-family: ;
+  font-size: ;
+  font-weight: ;
+  line-height: ;
+  text-align: ;
+  text-transform: ;
+  letter-spacing: ;
+  color: ;
 }
 
 header > p > a:hover {
-  font-family: "woodcut";
-  font-size: 5.2vw;
-  color: black;
+  font-family: ;
+  font-size: ;
+  color: ;
 }
 
 h1 {
-  font-family: "dogsmoke";
-  font-size: 6vw;
-  font-weight: 500;
-  line-height: 0.85em;
-  text-align: center;
-  text-transform: uppercase;
+  width: 100%;
+  font-family: "azedo-bold";
+  font-size: 15vw;
+  text-align: ;
+  text-transform: ;
 
-  margin-top: 1vh;
-  padding-top: 1vh;
-
-  margin-bottom: 1vh;
-  padding-bottom: 1vh;
-  border-bottom: 0.5vh dotted black;
-  line-height:1;
-  color: gray;
-  background: url(http://eofdreams.com/data_images/dreams/image/image-07.jpg) no-repeat -1034px -942px;
+  line-height: 1em;
+  color: ;
+  background: url("https://www.unitypixel.com/files/wallpapers/Psychedelic-Background-Wallpaper-10397.jpg") no-repeat;
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
      -moz-background-clip: text;
           background-clip: text;
+
 }
 
 h2 {
-  font-family: "beamie";
-  font-size: 6vw;
-  line-height: 0.9em;
-  text-align: center;
-  text-transform: uppercase;
+  font-family: 'ostrichsans-medium-heavy', sans-serif;
+  font-size: 10vw;
+  color: white;
+  line-height: ;
+  text-align: ;
+  text-transform: ;
 
-  margin-top: 1vh;
-  padding-top: 1vh;
+  margin-top: ;
+  padding-top: ;
 
-  margin-bottom: 1vh;
-  padding-bottom: 1vh;
-  border-bottom: 1vh double black;
-  color: #fff;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  /* color: ;
   text-shadow:
-
-  0 0  40px #0f0,
-  0 0  60px #0f0,
-  0 0  90px #0f0;
-  writing-mode: vertical-rl;
-  float: left;
-}
-
-h2:hover {
-  font-size: 12vw;
+  0 0  40px red,
+  0 0  60px red,
+  0 0  90px red; */
+  writing-mode: ;
+  float: right;
 }
 
 h3 {
-  font-family: "flames";
-  font-size: 4vw;
-  font-weight: 100;
-  text-align: center;
-  text-transform: uppercase;
+  font-family: "ostrichsans-medium-heavy";
+  font-size: 5vw;
+  font-weight: ;
+  color: white;
+  text-align: ;
+  text-transform: ;
 
-  margin-top: 1vh;
-  padding-top: 0vh;
+  margin-top: 0;
+  padding-top: 0;
 
-  margin-bottom: 1vh;
-  padding-bottom: 1vh;
-  border-bottom: 0.5vh double black;
-  writing-mode: vertical-rl;
-  float: left;
+  margin-bottom: ;
+  padding-bottom: ;
+  writing-mode: ;
+  float: ;
+  background-color: black;
 }
 
-/* article {
-  display: none;
-} */
-
 section {
-  border-top: 3vh double black;
 }
 
 h4 {
   font-family: "beamie";
-  font-size: 11vw;
+  font-size: 10vw;
   font-weight: 100;
-  text-align: center;
-  text-transform: uppercase;
+  text-align: ;
+  text-transform: ;
 
-  margin-top: 1vh;
-  padding-top: 0vh;
+  margin-top: ;
+  padding-top: ;
 
-  margin-bottom: 1vh;
-  padding-bottom: 1vh;
+  margin-bottom: ;
+  padding-bottom: ;
 
-  background-image: url("../../img/bg/decleft0.png"), url("../../img/bg/decright0.png");
-  background-repeat: no-repeat;
-  background-position: left, right;
-  background-size: 10%;
+  background-size: 24px 24px;
+  background-color: #fff;
+  background-image: repeating-radial-gradient( black 8px, white 12px);
 }
 
+h4:hover {
+  animation: cells 0.4s linear infinite;
+}
+
+
 p:last-child {
-  border-bottom: none; /* because sections have upper borders, erase the bottom border of the last paragraph of a section or body*/
 }
 
 p {
-  font-family: "bodoni-bold";
-  font-size: 2vw;
-  text-align: justify;
+  font-family: "Arial";
+  width: 20vw;
+  float: left;
+  font-size: ;
+  text-align: ;
 
-  margin-top: 1vh;
-  padding-top: 0vh;
+  margin-top: ;
+  padding-top: ;
 
-  margin-bottom: 1vh;
-  padding-bottom: 1vh;
-  border-bottom: 0.7vh double black; /* all paragraphs except the last one (see above) have a bottom border*/
+  margin-bottom: ;
+  padding-bottom: ;
 }
 
 p > em {
-  font-family: "klein-slabserif";
-  font-size: 4vw; /* no italics */
-  font-style: normal;
-  text-transform: uppercase;
+  font-family: 'Gothic A1', sans-serif;
+  font-size: ; /* no italics */
+  font-style: ;
+  text-transform: ;
 }
 
 a {
-  font-family: "klein-slabserif";
-  font-size: 3vw;
-  text-transform: uppercase;
-  text-decoration: none; /* take out the automatic underlining */
-  color: red;
+  font-family: ;
+  font-size: ;
+  text-transform: ;
+  text-decoration: ;
+  color: ;
 }
 
 a:hover {
-  font-family: "plastische-plakat-antiqua";
-  font-size: 5vw;
+  font-family: ;
+  font-size: ;
 }
 
 q {
-  font-family: "vineta-regular";
-  font-size: 3.5vw;
-  text-align: justify;
-  /* find way of deleting the automatically added quotes*/
+  font-family: ;
+  font-size: ;
+  text-align: ;
 }
 
 small {
-  font-size: 1vw;
+  font-size: ;
 }
 
 /*--------------First Figure--------------*/
 
 figure:first-child {
-  padding-top: 0;
-  padding-bottom: 0;
-  border-top: none;
-  border-bottom: none;
-  background-repeat: no-repeat;
-  background-position: left, right;
-  background-size: 20%;
+  padding-top: ;
+  padding-bottom: ;
+  border-top: ;
+  border-bottom: ;
+  background-repeat: ;
+  background-position: ;
+  background-size: ;
+  display: none !important;
 }
 
 figure:first-child figcaption {
-  display: none;
+  display: ;
 }
 
 figure:first-child img {
-  width: 10%; /* use percentage of the figure box width */
-  border-radius: 10%;
-  transition: all .2s ease-in-out;
-  margin-bottom: 10vw;
+  width: ; /* use percentage of the figure box width */
+  border-radius:;
+  /* transition: all .2s ease-in-out; */
+  margin-bottom: ;
+  /* animation-name: vanishIn !important; */
+  display: ;
 }
 
 figure:first-child img:hover {
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
 }
 
 /*--------------Figures--------------*/
 
 figure {
-  width: 100%;
-  margin: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
-  border-bottom: 0.5vh dotted black;
-  background-image: url("../../img/bg/decleft.png"), url("../../img/bg/decright.png");
-  background-repeat: no-repeat;
-  background-position: left top, right top;
-  background-size: 25%;
+  width: ;
+  margin: ;
+  padding-left: ;
+  padding-right: ;
+  padding-top: ;
+  padding-bottom: ;
+  background-repeat: ;
+  background-position: ;
+  background-size: ;
 }
 
 figure:has(table) {
-  background-image: none;
-  background-size: 0;
+  background-image: ;
+  background-size: ;
   /* will have to do with jquery,
   $("p:has(img)") */
 }
 
 figure:last-child {
-  border-bottom: none; /* because sections have upper borders, erase the bottom border of the last figure of a section or body*/
+  border-bottom: ; /* because sections have upper borders, erase the bottom border of the last figure of a section or body*/
 }
 
 figure > figcaption {
-  font-family: "semplicita-ombra";
-  width: 100%;
-  padding-top: 2vh;
-  font-size: 2vw;
-  text-align: justify;
+  font-family: ;
+  width: ;
+  padding-top: ;
+  font-size: ;
+  text-align: ;
 }
 
 figure > figcaption > em {
-  font-family: "toskanische-egyptienneInitialen";
-  font-size: 2vw;
+  font-family: ;
+  font-size: ;
 }
 
 figure > figcaption > small {
-  font-family: "semplicita-medium";
-  font-size: 2vw;
+  font-family: ;
+  font-size: ;
 }
 
 /*--------------Figures: Images--------------*/
 
 figure > img {
-	width: 100px;
-	height: 100px;
-  float:left;
-	border-radius: 50px;
-  border-color: yellow;
-	box-shadow: 120px    0px 0  15px green,
-				-60px  104px 0   0px red,
-				-60px -104px 0 -15px yellow;
+  display: ;
+  position: ;
+  width: 30vw;
+  height: 30vw;
+  overflow: ;
+  border-radius: 50%;
+  float: ;
+  animation: colorRotate 10s  infinite;
+  border-radius: 50%;
+  border-color: ;
+  box-shadow: 0px    0px 0 3vw yellow;
+	/* box-shadow: 220px    0px 0  -70px green,
+				-160px  104px 0   -70px red,
+				-60px -104px 0 -100px yellow; */
 
 }
 
 /*--------------Figures: Videos--------------*/
 
 figure > video {
-  width: 50%; /* use percentage of the figure box width */
-  margin: 0;
-  padding: 0;
-  border-radius: 40%;
-  filter: sepia();
+  width: ; /* use percentage of the figure box width */
+  margin: ;
+  padding: ;
+  border-radius: ;
+  filter: ;
 }
 
 /*--------------Figures: Tables--------------*/
 
 figure > table {
-  width: 100%;
-  font-family: "semplicita-medium";
-  font-size: 3vw;
-  overflow: scroll;
+  width: ;
+  font-family: ;
+  font-size: ;
+  overflow: ;
 }
 
 th {
-  font-family: "toskanische-egyptienneInitialen";
-  font-size: 6vw;
+  font-family: ;
+  font-size: ;
 }
 
 td {
-    padding:1em 0 0 0;
-    border: 0.3vw solid black;
+    padding:;
+    border: ;
     }
 
 td:first-child {
-    text-align: left;
-    font-weight: 700;
-    overflow: hidden;
-    position: relative;
+    text-align: ;
+    font-weight: ;
+    overflow: ;
+    position: ;
     }
 
 td:last-child {
-    text-align:right;
+    text-align:;
 }
 
 section > figure > table {
-   width: 100%;
-   table-layout: fixed;
-   font-family: "semplicita-medium";
-   font-size: 2vw;
-   border: 4px dashed black;
-   border-collapse: collapse;
+   width: %;
+   table-layout: ;
+   font-family: ;
+   font-size: ;
+   border: ;
+   border-collapse: ;
 }
 
 section > figure > table  th {
-   font-family: "fette-egyptienne";
-   font-size: 2vw;
-   border: 2px solid black;
+   font-family: ;
+   font-size: ;
+   border: ;
 }
 
 section > figure > table  td {
-   border: 2px dotted black;
+   border: ;
 }
 
 /*--------------Lists--------------*/
 
 section > ol {
-  width: 89%;
-  list-style-type: upper-roman;
-  border: 4px dashed black;
+  width: ;
+  list-style-type: ;
+  border: ;
 
-  padding-left: 10%;
+  padding-left: ;
 
-  font-family: "bodoni-bold";
-  font-size: 2vw;
-  text-align: justify;
+  font-family: ;
+  font-size: ;
+  text-align: ;
 
-  margin-top: 1vh;
-  padding-top: 0vh;
+  margin-top: ;
+  padding-top: ;
 
-  margin-bottom: 1vh;
-  padding-bottom: 1vh;
+  margin-bottom: ;
+  padding-bottom: ;
 }
 
 section > ol > li {
-  margin: 5px;
-  border-bottom: 0.7vh solid black;
+  margin: ;
+  border-bottom: ;
 }
 
 section > ol > li > em {
-  font-family: "fette-egyptienne";
-  text-transform: uppercase;
+  font-family: ;
+  text-transform: ;
 }
 
 section > ul {
-  width: 89%;
-  border: 4px dashed black;
+  width: ;
+  border: ;
 
-  padding-left: 10%;
+  padding-left: ;
 
-  font-family: "bodoni-bold";
-  font-size: 2vw;
-  text-align: justify;
+  font-family: ;
+  font-size: ;
+  text-align: ;
 
-  margin-top: 1vh;
-  padding-top: 0vh;
+  margin-top: ;
+  padding-top: ;
 
-  margin-bottom: 1vh;
-  padding-bottom: 1vh;
+  margin-bottom: ;
+  padding-bottom: ;
 }
 
 li > small {
-  font-size: 2vw;
+  font-size: ;
 }
 
 /*--------------Footer--------------*/
 
 footer {
-  width: 100%;
+  width: ;
 }
 
 footer > ul > li {
-  font-size: 2vw;
-  text-align: justify;
+  font-size: ;
+  text-align: ;
 }
 
 footer > ul > li > a {
-  font-size: 2vw;
-  text-align: justify;
+  font-size: ;
+  text-align: ;
 }
 
 
@@ -565,83 +556,178 @@ footer > ul > li > a {
 
 
 
+/* animations */
 
-
-
-
-
-/*--------------collapsible button--------------*/
-
-
-input[type='checkbox'] {
-  display: none;
-}
-
-.lbl-toggle {
-  display: block;
-
-  font-weight: bold;
-  font-family: "flames";
-  font-size: 3vw;
-  text-transform: uppercase;
-  text-align: center;
-
-  padding: 1rem;
-
-  color: #A77B0E;
-  background: #FAE042;
-
-  cursor: pointer;
-
-  border-radius: 7px;
-  transition: all 0.25s ease-out;
-}
-
-.lbl-toggle:hover {
-  color: #7C5A0B;
-}
-
-.lbl-toggle::before {
-  content: ' ';
-  display: inline-block;
-
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-left: 5px solid currentColor;
-
-  vertical-align: middle;
-  margin-right: .7rem;
-  transform: translateY(-2px);
-
-  transition: transform .2s ease-out;
-}
-
-.collapsible-content .content-inner {
-  background: rgba(250, 224, 66, .2);
-  border-bottom: 1px solid rgba(250, 224, 66, .45);
-
-  border-bottom-left-radius: 7px;
-  border-bottom-right-radius: 7px;
-  padding: .5rem 1rem;
-}
-
-.collapsible-content {
-  max-height: 0px;
-  overflow: hidden;
-
-  transition: max-height .25s ease-in-out;
+/* Psychedelic CSS Filter Animations - A PEN BY Luke Andersen*/
+@keyframes colorRotate {
+ 100% {
+   -webkit-filter: hue-rotate(180deg);
+ }
 }
 
 
-.toggle:checked + .lbl-toggle + .collapsible-content {
-  max-height: 350px;
+/* CSS3 trippy psychedelic cube - http://cssdeck.com/labs/css3-trippy-psychedelic-cube */
+
+@-moz-keyframes spinningH {
+  from {
+    -moz-transform: rotateX(0deg) rotateY(0deg);
+  }
+  to{
+    -moz-transform: rotateX(360deg) rotateY(360deg);
+  }
 }
 
-.toggle:checked + .lbl-toggle::before {
-  transform: rotate(90deg) translateX(-3px);
+@-webkit-keyframes spinningH {
+  from {
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+  }
+  to{
+    -webkit-transform: rotateX(360deg) rotateY(360deg);
+  }
 }
 
-.toggle:checked + .lbl-toggle {
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+@-o-keyframes spinningH {
+  from {
+    -o-transform: rotateX(0deg) rotateY(0deg);
+  }
+  to{
+    -o-transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+@-ms-keyframes spinningH {
+  from {
+    -ms-transform: rotateX(0deg) rotateY(0deg);
+  }
+  to{
+    -ms-transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+@keyframes spinningH {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  to{
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+ #container {
+  margin-top: 25%;
+  -webkit-perspective : 1000px;
+  -moz-perspective    : 1000px;
+  -o-perspective      : 1000px;
+  -ms-perspective     : 1000px;
+  perspective         : 1000px;
+
+  -webkit-perspective-origin  : 50% 50%;
+  -moz-perspective-origin     : 50% 50%;
+  -moz-transform-origin       : 50% 50%;
+  -o-perspective-origin       : 50% 50%;
+  -ms-perspective-origin      : 50% 50%;
+  perspective-origin          : 50% 50%;
+ }
+
+.animate {
+  -webkit-animation : spinningH 6s infinite linear;
+  -moz-animation    : spinningH 6s infinite linear;
+  -o-animation      : spinningH 6s infinite linear;
+  -ms-animation     : spinningH 6s infinite linear;
+  animation         : spinningH 6s infinite linear;
+}
+
+#cube {
+  position: relative;
+  margin: 0 auto;
+  height: 400px;
+  width: 400px;
+
+  -webkit-transition  : -webkit-transform 2s linear;
+  -moz-transition     : -moz-transform 2s linear;
+  -o-transition       : -o-transform 2s linear;
+  -ms-transition      : -ms-transform 2s linear;
+  transition          : transform 2s linear;
+
+  -webkit-transform-style : preserve-3d;
+  -moz-transform-style    : preserve-3d;
+  -o-transform-style      : preserve-3d;
+  -ms-transform-style     : preserve-3d;
+  transform-style         : preserve-3d;
+}
+
+#cube>div {
+  position: absolute;
+  height: 360px;
+  width: 360px;
+  padding: 20px;
+  opacity: 0.9;
+  background-position:center center;
+}
+
+#cube div:nth-child(1) {
+  -webkit-transform : translateZ(200px);
+  -moz-transform    : translateZ(200px);
+  -o-transform      : translateZ(200px);
+  -ms-transform     : translateZ(200px);
+  transform         : translateZ(200px);
+  background-color  : #2E272F;
+  background-image: url("../../docs/huffington/image1.jpg");
+  background-repeat : no-repeat;
+}
+
+#cube div:nth-child(2) {
+  -webkit-transform : rotateY(90deg) translateZ(200px);
+  -moz-transform    : rotateY(90deg) translateZ(200px);
+  -o-transform      : rotateY(90deg) translateZ(200px);
+  -ms-transform     : rotateY(90deg) translateZ(200px);
+  transform         : rotateY(90deg) translateZ(200px);
+  background-color  : #2D3A4D;
+  background-image: url("../../docs/huffington/image2.jpg");
+  background-repeat : no-repeat;
+}
+
+#cube div:nth-child(3) {
+  -webkit-transform : rotateY(180deg) translateZ(200px);
+  -moz-transform    : rotateY(180deg) translateZ(200px);
+  -o-transform      : rotateY(180deg) translateZ(200px);
+  -ms-transform     : rotateY(180deg) translateZ(200px);
+  transform         : rotateY(180deg) translateZ(200px);
+  background-color  : #2D1C12;
+  background-image: url("../../docs/huffington/image3.jpg");
+  background-repeat : no-repeat;
+}
+
+#cube div:nth-child(4) {
+  -webkit-transform : rotateY(-90deg) translateZ(200px);
+  -moz-transform    : rotateY(-90deg) translateZ(200px);
+  -o-transform      : rotateY(-90deg) translateZ(200px);
+  -ms-transform     : rotateY(-90deg) translateZ(200px);
+  transform         : rotateY(-90deg) translateZ(200px);
+  background-color  : #693C1F;
+  background-image: url("../../docs/huffington/image4.jpg");
+  background-repeat : no-repeat;
+}
+
+#cube div:nth-child(5) {
+  -webkit-transform : rotateX(-90deg) translateZ(200px) rotate(180deg);
+  -moz-transform    : rotateX(-90deg) translateZ(200px) rotate(180deg);
+  -o-transform      : rotateX(-90deg) translateZ(200px) rotate(180deg);
+  -ms-transform     : rotateX(-90deg) translateZ(200px) rotate(180deg);
+  transform         : rotateX(-90deg) translateZ(200px) rotate(180deg);
+  background-color  : #955122;
+  background-image: url("../../docs/huffington/image5.jpg");
+  background-repeat :no-repeat;
+}
+
+#cube div:nth-child(6)  {
+  -webkit-transform : rotateX(90deg) translateZ(200px);
+  -moz-transform    : rotateX(90deg) translateZ(200px);
+  -o-transform      : rotateX(90deg) translateZ(200px);
+  -ms-transform     : rotateX(90deg) translateZ(200px);
+  transform         : rotateX(90deg) translateZ(200px);
+  background-color  : #E34C26;
+  background-image: url("../../docs/huffington/image6.jpg");
+  background-repeat :no-repeat;
+  text-align:center;
 }
