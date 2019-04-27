@@ -15114,6 +15114,8 @@ class CircularAudioWave {
         this._debouncedDraw();
       } else if(this.context.state === 'suspended') {
         this.context.resume();
+        this.presetOption();
+        this._debouncedDraw();
       } else if(this.context.state === 'running') {
         this.context.suspend();
       }
