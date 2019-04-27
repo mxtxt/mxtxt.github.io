@@ -15118,21 +15118,12 @@ class CircularAudioWave {
         this._debouncedDraw();
       // if track is playing pause it
       } else if (this.playing === true) {
-        this.presetOption();
         this.context.suspend();
         this.playing = false;
-        this._debouncedDraw();
+        this.reset();
       }
-
-        // this.sourceNode && this.sourceNode.buffer ? (this.playing = !0, this.presetOption(), this.sourceNode.start(0), this._debouncedDraw()) : alert("Audio is not ready")
     }
     pause() {
-      if (this.playing) {
-          let e = this._generateWaveData(t);
-          this.chartOption.series[0].data = e.data, e.maxR > this.lastMaxR ? this.lastMaxR = e.maxR + 4 : this.playing ? this.lastMaxR -= 2 : this.lastMaxR = this.minChartValue, "sunburst" !== this.opts.mode && (this.chartOption.series[1].data = Array.apply(null, {
-              length: 361
-          }).map(Function.call, t => [this.lastMaxR, t])), this.chart.setOption(this.chartOption, !0), this.tick++
-      }
     }
     destroy() {
         this.chart.dispose()
