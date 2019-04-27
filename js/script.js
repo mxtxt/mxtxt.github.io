@@ -35,7 +35,7 @@ function random(){
 
 
 function randomTheme(){
-  var listThemes = ["style1","themes/vPlaybill","themes/artDeco","style4","style5"];
+  var listThemes = ["style1","themes/vPlaybill","themes/artDeco","style4","style5","themes/aurora"];
 
   var frameContent = document.getElementById("frameDocument");
   var choiceTheme = listThemes[Math.floor(Math.random()*listThemes.length)];
@@ -108,7 +108,7 @@ function injectAurora(){
       frameContent.contentWindow.document.head.appendChild(circularWave);
 
       bodyArea = frameContent.contentWindow.document.getElementsByTagName("body")[0];
-      bodyArea.insertAdjacentHTML('afterbegin','<div style="display: none; z-index: 50; width: 100vw; height: 100vh; position:fixed; background: #d3d3d3;"><button onclick="speak()">Pause/Resume</button><div id="chart-container" onclick="wave.play()" style="width: 100%; height: 100%; cursor: pointer;"></div></div>');
+      bodyArea.insertAdjacentHTML('afterbegin','<div id="auroraWrapper" style="display: none;"><button onclick="speak()">Pause/Resume</button><div id="chart-container" onclick="wave.play()" style="width: 100%; height: 100%; cursor: pointer;"></div></div>');
 
       var aurora   = frameContent.contentWindow.document.createElement("script");
       aurora.type  = "text/javascript";
