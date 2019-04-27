@@ -91,3 +91,19 @@ function switchPage(input){
     menuToggle();
   };
 };
+
+
+function playSong() {
+  $(document).ready(function() {
+      var audioElement = document.createElement('audio');
+      audioElement.setAttribute('src', '../tropaudio/Tropicalia.mp3');
+
+      audioElement.addEventListener('ended', function() {
+          this.play();
+      }, false);
+
+      $('#restart').click(function() {
+          audioElement.currentTime = 0;
+      });
+  });
+}
