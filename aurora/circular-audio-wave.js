@@ -15107,29 +15107,22 @@ class CircularAudioWave {
         "sunburst" !== this.opts.mode && (this.chartOption.series[0].animation = !1, this.chartOption.series[2].rippleEffect.period = 150 / this.bpm)
     }
     play() {
-      if(typeof statePlayer == "undefined") {
+      if(this.sourceNode && this.sourceNode.buffer) {
         this.playing = true;
         this.presetOption();
         this.sourceNode.start(0);
         this._debouncedDraw();
       }
-
-      if (!(typeof statePlayer == "undefined")) {
-        if(this.context.state === 'suspended' && this.statePlayer == "stopped") {
-          this.context.resume();
-          this.playing = true;
-        } else if(this.context.state === 'running' && statePlayer === "playing") {
-          this.context.suspend();
-          this.playing = false;
-          this.reset();
-          statePlayer = "stopped"
-        }
-      }
-
-      var statePlayer = "playing";
-      return console.log(statePlayer)
     }
     pause() {
+      if(this.context.state === 'suspended') {
+        this.context.resume();
+        this.playing = true;
+      } else if(this.context.state === 'running') {
+        this.context.suspend();
+        this.playing = false;
+        this.reset();
+      }
     }
     destroy() {
         this.chart.dispose()
