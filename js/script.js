@@ -76,26 +76,7 @@ function switchDoc(input){
   document.getElementById("currentDoc").innerHTML = input.name;
   document.getElementById("frameDocument").setAttribute("src", "docs/" + input.name + ".html");
 
-  var jquery   = document.createElement("script");
-  jquery.type  = "text/javascript";
-  jquery.src   = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js";
-  document.head.appendChild(jquery);
-
-  var circularWave   = document.createElement("script");
-  circularWave.type  = "text/javascript";
-  circularWave.src   = "js/circularWave.min.js";
-  circularWave.async = true;
-  document.head.appendChild(circularWave);
-
-  d1 = document.getElementsByTagName('body')[0];
-  d1.insertAdjacentHTML('afterbegin','<div style="z-index: 50; width: 100vw; height: 100vh; position:fixed; background: #d3d3d3;"><div id="chart-container" onclick="wave.play()" style="width: 100%; height: 100%; cursor: pointer;"></div></div>');
-
-  var aurora   = document.createElement("script");
-  aurora.type  = "text/javascript";
-  aurora.src   = "js/aurora.js";
-  aurora.async = false;
-  aurora.defer = true;
-  document.body.appendChild(aurora);
+  injectAurora();
 
   if (document.getElementById("currentTheme").innerHTML == ""){
     randomTheme();
@@ -107,6 +88,32 @@ function switchDoc(input){
 
 };
 
+function injectAurora(){
+  var frameContent = document.getElementById("frameDocument");
+
+  frameContent.addEventListener("load", function() {
+    var jquery   = frameContent.contentWindow.document.createElement("script");
+    jquery.type  = "text/javascript";
+    jquery.src   = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js";
+    frameContent.contentWindow.document.head.appendChild(jquery);
+
+    var circularWave   = frameContent.contentWindow.document.createElement("script");
+    circularWave.type  = "text/javascript";
+    circularWave.src   = "../../js/circularWave.min.js";
+    circularWave.async = true;
+    frameContent.contentWindow.document.head.appendChild(circularWave);
+
+    bodyArea = frameContent.contentWindow.document.getElementsByTagName('body')[0];
+    bodyArea.insertAdjacentHTML('afterbegin','<div style="z-index: 50; width: 100vw; height: 100vh; position:fixed; background: #d3d3d3;"><div id="chart-container" onclick="wave.play()" style="width: 100%; height: 100%; cursor: pointer;"></div></div>');
+
+    var aurora   = frameContent.contentWindow.document.createElement("script");
+    aurora.type  = "text/javascript";
+    aurora.src   = "../../js/aurora.js";
+    aurora.async = false;
+    aurora.defer = true;
+    frameContent.contentWindow.document.body.appendChild(aurora);
+  });
+};
 
 function activateAurora(){
   loadingOn();
