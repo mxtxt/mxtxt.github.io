@@ -15115,7 +15115,7 @@ class CircularAudioWave {
         this.sourceNode.play();
         this.playing = 'true';
       // if track is playing pause it
-      } else if (this.dataset.playing === 'true') {
+      } else if (this.playing === 'true') {
         this.sourceNode.pause();
         this.playing = 'false';
       }
