@@ -15121,7 +15121,7 @@ class CircularAudioWave {
       } else if(this.context.state === 'running') {
         this.context.suspend();
         this.playing = false;
-        
+        this.reset();
       }
     }
     destroy() {
