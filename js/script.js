@@ -58,6 +58,9 @@ function switchTheme(input){
     menuToggle();
   };
 
+  $('audio').each(function(){
+    this.pause(); // Stop playing
+  });
 };
 
 
@@ -102,10 +105,4 @@ function playSong() {
   audioElement.addEventListener('ended', function() {
     this.play();
     }, false);
-  }
-
-function stopSong() {
-  $('audio').each(function(){
-    this.pause(); // Stop playing
-  });
-}
+  };
