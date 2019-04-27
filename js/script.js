@@ -54,11 +54,12 @@ function switchTheme(input){
   document.getElementById("currentTheme").innerHTML = input.name;
   elmnt.setAttribute("href", "../../css/" + input.name + ".css");
 
-  $('audio').pause();
-  
   if ($(".menu").hasClass("active")) {
     menuToggle();
   };
+
+  var tpaudio = document.getElementById("tpaudio");
+  tpaudio.pause();
 
 };
 
@@ -100,6 +101,7 @@ function switchPage(input){
 function playSong() {
   var audioElement = document.createElement('audio');
   audioElement.setAttribute('src', '../tropaudio/Tropicalia.mp3');
+  audioElement.setAttribute('id', 'tpaudio');
   audioElement.play();
   audioElement.addEventListener('ended', function() {
     this.play();
