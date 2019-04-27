@@ -15111,13 +15111,15 @@ class CircularAudioWave {
         this.context.resume();
       }
 
-      if (this.playing === 'false') {
-        this.sourceNode.start();
-        this.playing = 'true';
+      if (this.sourceNode && this.sourceNode.buffer && this.playing === false) {
+        this.playing = true;
+        this.presetOption();
+        this.sourceNode.start(0);
+        this._debouncedDraw();
       // if track is playing pause it
-      } else if (this.playing === 'true') {
+      } else if (this.playing === true) {
         this.sourceNode.pause();
-        this.playing = 'false';
+        this.playing = false;
       }
 
         // this.sourceNode && this.sourceNode.buffer ? (this.playing = !0, this.presetOption(), this.sourceNode.start(0), this._debouncedDraw()) : alert("Audio is not ready")
