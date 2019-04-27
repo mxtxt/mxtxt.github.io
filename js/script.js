@@ -57,6 +57,7 @@ function switchTheme(input){
   if ($(".menu").hasClass("active")) {
     menuToggle();
   };
+
 };
 
 
@@ -72,6 +73,7 @@ function switchDoc(input){
   if ($(".menu").hasClass("active")) {
     menuToggle();
   };
+
 };
 
 function activateAurora(){
@@ -101,3 +103,9 @@ function playSong() {
     this.play();
     }, false);
   }
+
+function stopSong() {
+  $('audio').each(function(){
+    this.pause(); // Stop playing
+  });
+}
