@@ -91,10 +91,6 @@ function switchDoc(input){
   aurora.src   = "js/aurora.js";
   document.body.appendChild(aurora);
 
-  d1 = document.getElementsByTagName('body')[0];
-  d1.insertAdjacentHTML('afterbegin','<div style="z-index: 50; width: 100vw; height: 100vh; position:fixed; background: #d3d3d3;"><div id="chart-container" onclick="wave.play()" style="width: 100%; height: 100%; cursor: pointer;"></div></div>');
-
-
   if (document.getElementById("currentTheme").innerHTML == ""){
     randomTheme();
   };
