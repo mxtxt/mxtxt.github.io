@@ -66,12 +66,9 @@ function switchTheme(input){
   };
 
   if (input.name != "themes/tropicalia") {
-    if(document.getElementById("tpaudio")){
-      alert("Element exists");
-      var tpaudio = document.getElementById("tpaudio");
+    var tpaudio = document.getElementByTagName('audio');
       tpaudio.pause();
       tpaudio.currentTime = 0.0;
-    }
   };
 
 };
