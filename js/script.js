@@ -63,6 +63,16 @@ function switchTheme(input){
     audioElement.setAttribute('src', '../tropaudio/Tropicalia.mp3');
     audioElement.play();
   };
+
+  if (input.name != "themes/tropicalia") {
+    if(document.getElementById("tpaudio")){
+      alert("Element exists");
+      var tpaudio = document.getElementById("tpaudio");
+      tpaudio.pause();
+      tpaudio.currentTime = 0.0;
+    }
+  };
+
 };
 
 
