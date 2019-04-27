@@ -2,7 +2,7 @@
 to define special characteristics of certain elemens, since we cannot use classes or ids. */
 
 #auroraWrapper {
-  display: block;
+  display: block!important;
   z-index: 50;
   width: 100vw;
   height: 100vh;
