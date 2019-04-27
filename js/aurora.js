@@ -1,4 +1,6 @@
-let wave = new CircularAudioWave(document.getElementById('chart-container'));
+function loadWave(){
+  let wave = new CircularAudioWave(document.getElementById('chart-container'));
+}
 
 function speak(){
   var frameContent = document.getElementById("frameDocument");
@@ -6,9 +8,9 @@ function speak(){
   var keyValuePair = {};
   keyValuePair['text'] = documentText;
   sendData(keyValuePair);
-};
+}
 
-window.onload = speak;
+window.onload = speak, loadWave;
 
 function sendData(data) {
   var XHR = new XMLHttpRequest();
