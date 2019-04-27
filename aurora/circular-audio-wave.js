@@ -15118,7 +15118,7 @@ class CircularAudioWave {
         this._debouncedDraw();
       // if track is playing pause it
       } else if (this.playing === true) {
-        this.sourceNode.pause();
+        this.sourceNode.suspend();
         this.playing = false;
       }
 
