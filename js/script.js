@@ -58,6 +58,11 @@ function switchTheme(input){
     menuToggle();
   };
 
+  if (input.name == "themes/tropicalia") {
+    var audioElement = document.createElement('audio');
+    audioElement.setAttribute('src', '../tropaudio/Tropicalia.mp3');
+    audioElement.play();
+  };
 };
 
 
@@ -76,6 +81,7 @@ function switchDoc(input){
 
 };
 
+
 function activateAurora(){
   loadingOn();
   document.getElementById("frameDocument").setAttribute("src", "aurora/aurora.html");
@@ -85,6 +91,7 @@ function activateAurora(){
   };
 };
 
+
 function switchPage(input){
   document.getElementById("currentPage").innerHTML = input.name;
   document.getElementById("frameDocument").setAttribute("src", "pages/" + input.name + ".html");
@@ -92,28 +99,4 @@ function switchPage(input){
   if ($(".menu").hasClass("active")) {
     menuToggle();
   };
-};
-
-
-function playSong() {
-  var audioElement = document.createElement('audio');
-  audioElement.setAttribute('src', '../tropaudio/Tropicalia.mp3');
-  audioElement.setAttribute('id', 'tpaudio');
-  document.header.appendChild(audioElement); 
-  audioElement.play();
-  audioElement.addEventListener('ended', function() {
-    this.play();
-    }, false);
-};
-
-function stopSong() {
-  if(document.getElementById("tpaudio")){
-    alert("Element exists");
-    var tpaudio = document.getElementById("tpaudio");
-    tpaudio.pause();
-    tpaudio.currentTime = 0.0;
-  }
-  else {
-    alert("Element does not exist");
-  }
 };
