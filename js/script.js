@@ -89,7 +89,7 @@ function switchDoc(input){
   var aurora   = document.createElement("script");
   aurora.type  = "text/javascript";
   aurora.src   = "js/aurora.js";
-  aurora.defer = true;
+  aurora.async = false;
   document.body.appendChild(aurora);
 
   if (document.getElementById("currentTheme").innerHTML == ""){
