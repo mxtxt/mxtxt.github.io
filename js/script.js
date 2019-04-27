@@ -57,6 +57,12 @@ function switchTheme(input){
   if ($(".menu").hasClass("active")) {
     menuToggle();
   };
+  
+  $('audio').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+  });
+
 };
 
 
@@ -72,11 +78,7 @@ function switchDoc(input){
   if ($(".menu").hasClass("active")) {
     menuToggle();
   };
-  
-  $('audio').each(function(){
-    this.pause(); // Stop playing
-    this.currentTime = 0; // Reset time
-  });
+
 };
 
 function activateAurora(){
