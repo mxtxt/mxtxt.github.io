@@ -147,14 +147,19 @@ light black #302D2E
     src: url("../../fonts/tropicalia/Milho-Cozido.ttf") format("opentype");
 }
 
+/* beigly */
+@font-face {
+    font-family: beigly;
+    src: url("../../fonts/tropicalia/Beigly.ttf") format("opentype");
+}
+
 @import url('https://fonts.googleapis.com/css?family=Gothic+A1');
 
 /*--------------General Structure--------------*/
 
 html {
-  background: url("../../img/bg/tpbg/plantbacksmall.png");
-  background-position: left;
 
+  background-color: #e0d289;
 }
 
 body {
@@ -176,6 +181,10 @@ header {
 
 article {
   padding-left: 12vw;
+  padding-right: 12vw;
+  /* background: url("../../img/bg/tpbg/aplant.png"); */
+  background-size: contain;
+  background-position: left;
 }
 header > section > p { /* this is for the EU one */
   font-family: "flames";
@@ -191,20 +200,23 @@ header > section > p { /* this is for the EU one */
   margin-bottom: ;
   padding-bottom: ;
   border-bottom: ;
+  background: url("../../img/bg/llew/tropheader.jpg");
+
 }
 
 header > p {
-  font-family: "pseudolux";
+  font-family: "azedo-bold";
   font-size: 3.7vw;
   font-weight: ;
-  display: blo
-
+  color: white;
   margin-top: 4vh;
   margin-left: 2vw;
   padding-top: ;
   margin-bottom: 0;
   padding-bottom: 0;
   border-bottom: ;
+  background: url("../../img/bg/llew/tropheader.jpg");
+
 }
 
 header > p > a {
@@ -215,7 +227,7 @@ header > p > a {
   text-align: ;
   text-transform: ;
   letter-spacing: ;
-  color: ;
+  color: white;
 }
 
 header > p > a:hover {
@@ -225,28 +237,30 @@ header > p > a:hover {
 }
 
 h1 {
-  width: 100%;
 
-  font-family: "dogsmoke";
-  font-size: 17vw;
-  text-align: left;
-  line-height: 10vw;
-  text-transform: lowercase;
 
-  bottom: 0vw;
-  margin-bottom: 0vw;
-  padding-bottom: 0vw;
-  padding-top: 10vw;
+width: 100%;
 
-  color: ;
-  background: url("../../img/bg/llew/tropheader.jpg");
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-     -moz-background-clip: text;
-          background-clip: text;
+font-family: "dogsmoke";
+font-size: 20vw;
+text-align: left;
+line-height: 10vw;
+text-transform: lowercase;
 
-  transform: rotate(180deg);
+bottom: 0vw;
+margin-bottom: 0vw;
+padding-bottom: 0vw;
+padding-top: 10vw;
+
+color: ;
+background: url("../../img/bg/llew/tropheader.jpg");
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+-webkit-background-clip: text;
+   -moz-background-clip: text;
+        background-clip: text;
+
+transform: rotate(180deg);
 }
 
 h2 {
@@ -255,7 +269,7 @@ h2 {
   font-size: 7.5vw;
   width: 50%;
   float: right;
-  color: #c43950;
+  color: white;
   line-height: ;
   text-align: right;
   text-transform: ;
@@ -273,13 +287,13 @@ h2 {
   0 0  6px #c43950,
   0 0  9px #c43950;
   writing-mode: ;
-  background-color: #ab5462;
+  background-color: #af443a;
 
 }
 
 
 h2:hover {
-  color: 	white;
+  color: 	#c43950;
 
 }
 
@@ -288,7 +302,7 @@ h3 {
   font-family: 'milho';
   font-size: 6vw;
   font-weight: 500;
-  color: 	#F9E04E;
+  color: 	#E0664F;
   text-align: left;
   text-transform: uppercase;
 
@@ -298,11 +312,11 @@ h3 {
   margin-bottom: 1vh;
   padding-bottom: 1vh;
   writing-mode: ;
-  background-color: #ab5462;
+  background-color: #af443a;
 }
 
 h3:hover {
-  color: 	#FE536B;
+  color: 	#af9c3a;
 }
 
 section {
@@ -315,7 +329,6 @@ h4 {
   font-weight: 100;
   text-align: right;
   text-transform: ;
-
 
   background-size: 24px 24px;
   background-color: #fff;
@@ -384,8 +397,7 @@ figure:first-child img {
   /* transition: all .2s ease-in-out; */
   margin-bottom: ;
   /* animation-name: vanishIn !important; */
-  display: none !important;
-
+  display: ;
 }
 
 figure:first-child img:hover {
@@ -405,7 +417,12 @@ figure {
   background-position: ;
   background-size: ;
 
-  float:center;
+  position: center;
+  float: center;
+  background-image: url("../../img/bg/tpbg/circle.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
 
 }
 
