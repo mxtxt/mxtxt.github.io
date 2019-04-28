@@ -40,5 +40,5 @@ function injectAuroraScript(){
 }
 
 function loadAurora(){
-  frameContent.contentWindow.speak();
+  frameContent.contentWindow.initiate();
 };
