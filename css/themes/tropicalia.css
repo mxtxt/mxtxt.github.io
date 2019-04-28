@@ -384,7 +384,8 @@ figure:first-child img {
   /* transition: all .2s ease-in-out; */
   margin-bottom: ;
   /* animation-name: vanishIn !important; */
-  display: ;
+  display: none !important;
+
 }
 
 figure:first-child img:hover {
