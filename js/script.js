@@ -122,20 +122,15 @@ function injectAuroraScript(){
   aurora.type  = "text/javascript";
   aurora.src   = "../../js/aurora.js";
   if(aurora.addEventListener) {
-    aurora.addEventListener("load",speak,false);
+    aurora.addEventListener("load",loadAurora,false);
   } else if(aurora.readyState) {
-    aurora.onreadystatechange = speak;
+    aurora.onreadystatechange = loadAurora;
   }
   frameContent.contentWindow.document.body.appendChild(aurora);
 }
 
-function activateAurora(){
-  loadingOn();
-  document.getElementById("frameDocument").setAttribute("src", "aurora/aurora.html");
-
-  if ($(".menu").hasClass("active")) {
-    menuToggle();
-  };
+function loadAurora(){
+  speak();
 };
 
 
