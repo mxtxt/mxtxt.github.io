@@ -1,4 +1,5 @@
-var frameContent = document.getElementById("frameDocument");
+var frameContent;
+frameContent = document.getElementById("frameDocument");
 
 function injectAurora(){
   var injected = frameContent.contentWindow.document.getElementsByName("auroraWave")[0];
