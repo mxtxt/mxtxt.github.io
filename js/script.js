@@ -109,12 +109,18 @@ function injectAurora(){
       bodyArea = frameContent.contentWindow.document.getElementsByTagName("body")[0];
       bodyArea.insertAdjacentHTML('afterbegin','<div id="auroraWrapper" style="display: none;"><button onclick="speak()">Pause/Resume</button><div id="aurora" onclick="wave.play()"></div></div>');
 
-      var aurora   = frameContent.contentWindow.document.createElement("script");
+      var aurora = frameContent.contentWindow.document.createElement("script");
       aurora.type  = "text/javascript";
       aurora.src   = "../../js/aurora.js";
-      aurora.async = false;
-      aurora.defer = true;
+      if(aurora.addEventListener) {
+        aurora.addEventListener("load",callback,false);
+      } else if(aurora.readyState) {
+        aurora.onreadystatechange = callback;
+      }
       frameContent.contentWindow.document.body.appendChild(aurora);
+      function callback() {
+        console.log("loaded");
+      }
     });
   };
 };
