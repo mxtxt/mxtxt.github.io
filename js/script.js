@@ -130,7 +130,8 @@ function injectAuroraScript(){
 }
 
 function loadAurora(){
-  speak();
+  var frameContent = document.getElementById("frameDocument");
+  frameContent.contentWindow.speak();
 };
 
 
