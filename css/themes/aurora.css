@@ -10,7 +10,7 @@ html, body {
   display: block!important;
   z-index: 50;
   width: 100vw;
-  height: 100vh;
+  height: 100vh!important;
   position:fixed;
   background: #d3d3d3;
 }
