@@ -1,9 +1,9 @@
-var wave = new CircularAudioWave(document.getElementById('chart-container'));
+var wave = new CircularAudioWave(document.getElementById("chart-container"));
 
 function initiate(){
   var documentText = document.body.textContent;
   var keyValuePair = {};
-  keyValuePair['text'] = documentText;
+  keyValuePair["text"] = documentText;
   sendData(keyValuePair);
 }
 
@@ -15,12 +15,12 @@ function sendData(data) {
 
   // Turn the data object into an array of URL-encoded key/value pairs.
   for(name in data) {
-    urlEncodedDataPairs.push(encodeURIComponent(name) + '=' + encodeURIComponent(data[name]));
+    urlEncodedDataPairs.push(encodeURIComponent(name) + "=" + encodeURIComponent(data[name]));
   }
 
   // Combine the pairs into a single string and replace all %-encoded spaces to
   // the '+' character; matches the behaviour of browser form submissions.
-  urlEncodedData = urlEncodedDataPairs.join('&').replace(/%20/g, '+');
+  urlEncodedData = urlEncodedDataPairs.join("&").replace(/%20/g, "+");
 
   XHR.onload = function(e) {
     var audioPath = URL.createObjectURL(XHR.response);
@@ -28,10 +28,22 @@ function sendData(data) {
   }
 
   // Set up our request
-  XHR.open('POST', 'https://talkify.net/api/speech/v1/download');
+  XHR.open("POST", "https://talkify.net/api/speech/v1/download");
   XHR.responseType = "blob";
-  XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  XHR.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
   XHR.setRequestHeader("X-API-Key", "493cbf85-63ea-4afb-9d0b-f04a87682761");
 
   XHR.send(urlEncodedData);
+
+  XHR.onreadystatechange = function() {
+  if (XHR.readyState == 1) {
+    document.getElementById("status").innerText = "Request sent"
+  } else if (XHR.readyState == 2) {
+    document.getElementById("status").innerText = "Request accepted"
+  } else if (XHR.readyState == 3) {
+    document.getElementById("status").innerText = "Loading"
+  } else if (XHR.readyState == 4) {
+    document.getElementById("status").innerText = "Ready"
+  }
+};
 }
