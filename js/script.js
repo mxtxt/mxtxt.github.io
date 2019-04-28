@@ -94,6 +94,9 @@ function injectAurora(){
 
   if (!executed) {
     frameContent.addEventListener("load", function() {
+      bodyArea = frameContent.contentWindow.document.getElementsByTagName("body")[0];
+      bodyArea.insertAdjacentHTML('afterbegin','<div id="auroraWrapper" style="display: none;"><button onclick="speak()">Pause/Resume</button><div id="chart-container" onclick="wave.play()"></div></div>');
+
       var jquery   = frameContent.contentWindow.document.createElement("script");
       jquery.type  = "text/javascript";
       jquery.src   = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js";
@@ -109,9 +112,6 @@ function injectAurora(){
         circularWave.onreadystatechange = injectAuroraScript;
       }
       frameContent.contentWindow.document.body.appendChild(circularWave);
-
-      bodyArea = frameContent.contentWindow.document.getElementsByTagName("body")[0];
-      bodyArea.insertAdjacentHTML('afterbegin','<div id="auroraWrapper" style="display: none;"><button onclick="speak()">Pause/Resume</button><div id="chart-container" onclick="wave.play()"></div></div>');
     });
   };
 };
