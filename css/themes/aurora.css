@@ -1,14 +1,13 @@
 /* check out first-child and nth-child pseudoclasses. These will be very helpful
 to define special characteristics of certain elemens, since we cannot use classes or ids. */
 
-html, body {
-  display: none;
-  padding: 0;
-  margin: 0;
+html, body * {
+  visibility: hidden;
 }
 
 #auroraWrapper {
   display: block!important;
+  visibility: visible;
   z-index: 50;
   width: 100vw;
   height: 100vh;
@@ -18,6 +17,7 @@ html, body {
 
 #chart-container {
   display: block!important;
+  visibility: visible;
   width: 100%;
   height: 100%;
   cursor: pointer;
