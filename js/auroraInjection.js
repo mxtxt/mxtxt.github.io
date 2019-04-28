@@ -1,7 +1,5 @@
-var frameContent;
-frameContent = document.getElementById("frameDocument");
-
 function injectAurora(){
+  var frameContent = document.getElementById("frameDocument");
   var injected = frameContent.contentWindow.document.getElementsByName("auroraWave")[0];
 
   if (!injected) {
@@ -29,6 +27,7 @@ function injectAurora(){
 };
 
 function injectAuroraScript(){
+  var frameContent = document.getElementById("frameDocument");
   var auroraBrain = frameContent.contentWindow.document.createElement("script");
   auroraBrain.type  = "text/javascript";
   auroraBrain.src   = "../../js/auroraBrain.js";
@@ -41,5 +40,6 @@ function injectAuroraScript(){
 }
 
 function loadAurora(){
+  var frameContent = document.getElementById("frameDocument");
   frameContent.contentWindow.initiate();
 };
