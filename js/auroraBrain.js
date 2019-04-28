@@ -1,6 +1,5 @@
-let wave = new CircularAudioWave(document.getElementById('chart-container'));
-
 function speak(){
+  let wave = new CircularAudioWave(document.getElementById('chart-container'));
   var documentText = document.body.textContent;
   var keyValuePair = {};
   keyValuePair['text'] = documentText;
