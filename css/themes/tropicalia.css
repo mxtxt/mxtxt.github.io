@@ -135,23 +135,26 @@ light black #302D2E
     src: url("../../fonts/tropicalia/Yoxall.ttf") format("opentype");
 }
 
+/* ipanema */
+@font-face {
+    font-family: ipanema;
+    src: url("../../fonts/tropicalia/Ipanema-Secco.ttf") format("opentype");
+}
+
+/* milho */
+@font-face {
+    font-family: milho;
+    src: url("../../fonts/tropicalia/Milho-Cozido.ttf") format("opentype");
+}
+
 @import url('https://fonts.googleapis.com/css?family=Gothic+A1');
 
 /*--------------General Structure--------------*/
 
 html {
-  background-color: #F1DA02;
-  /* background-image: url("../../img/bg/tpbg/psych4.jpg")
+  background: url("../../img/bg/tpbg/plantbacksmall.png");
+  background-position: left;
 
-  border: 12vw transparent #C18842 */
-  /*
-  background:
-      repeating-radial-gradient(rgba(0,0,0,0.001),
-      rgba(0,0,0,0.05) 5%, transparent 5%, transparent 10%),
-      url(ava-gardner.jpg);
-      background-position: 0 0, 0 0;
-      background-repeat: no-repeat, no-repeat;
-      background-size: cover; */
 }
 
 body {
@@ -159,18 +162,21 @@ body {
   font-family: "Arial";
   /* max-height: 200vw;
   overflow-y: hidden; */
-  height: 100vh;
   padding-left: 0;
   padding-right: 0;
 }
 
 header {
   width: 100%;
-
+  padding-top: 0;
+  margin-top: 0;
+  top: 0;
   padding-bottom: 0;
-
 }
 
+article {
+  padding-left: 12vw;
+}
 header > section > p { /* this is for the EU one */
   font-family: "flames";
   font-size: ;
@@ -230,10 +236,10 @@ h1 {
   bottom: 0vw;
   margin-bottom: 0vw;
   padding-bottom: 0vw;
-  padding-top: 5vw;
+  padding-top: 10vw;
 
   color: ;
-  background: url("../../img/bg/tpbg/psych4.jpg");
+  background: url("../../img/bg/llew/tropheader.jpg");
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -244,6 +250,7 @@ h1 {
 }
 
 h2 {
+  display: block;
   font-family: 'yoxall', sans-serif;
   font-size: 7.5vw;
   width: 50%;
@@ -266,6 +273,7 @@ h2 {
   0 0  6px #c43950,
   0 0  9px #c43950;
   writing-mode: ;
+  background-color: #ab5462;
 
 }
 
@@ -277,15 +285,15 @@ h2:hover {
 
 h3 {
   display: block;
-  font-family: 'ostrichsans-medium-heavy', sans-serif;
-  font-size: 9vw;
+  font-family: 'milho';
+  font-size: 6vw;
   font-weight: 500;
   color: 	#F9E04E;
   text-align: left;
-  text-transform: lowercase;
+  text-transform: uppercase;
 
   margin-top: 0;
-  padding-top: 0;
+  padding-top: 2vw;
   padding-left: 2vw;
   margin-bottom: 1vh;
   padding-bottom: 1vh;
@@ -296,8 +304,9 @@ h3 {
 h3:hover {
   color: 	#FE536B;
 }
+
 section {
-  border-bottom: 1vw dotted black;
+  /* border-bottom: 1vw dotted black; */
 }
 
 h4 {
@@ -320,10 +329,10 @@ h4:hover {
 }
 
 
-p {
-  font-family: "Arial";
-
-
+article p {
+  font-family: 'ostrichsans-medium-heavy';
+  text-transform: uppercase;
+  font-size: 2vw;
 }
 
 p > em {
@@ -375,7 +384,8 @@ figure:first-child img {
   /* transition: all .2s ease-in-out; */
   margin-bottom: ;
   /* animation-name: vanishIn !important; */
-  display: ;
+  display: none !important;
+
 }
 
 figure:first-child img:hover {
@@ -396,7 +406,6 @@ figure {
   background-size: ;
 
   float:center;
-  display: none;
 
 }
 
@@ -448,7 +457,7 @@ figure > img {
 				-60px -104px 0 -100px yellow; */
   margin-top: 5vh;
   margin-bottom: 5vh;
-
+  saturate: 600%;
   float: left;
   align-self: left;
 }
