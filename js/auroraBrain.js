@@ -34,16 +34,4 @@ function sendData(data) {
   XHR.setRequestHeader("X-API-Key", "493cbf85-63ea-4afb-9d0b-f04a87682761");
 
   XHR.send(urlEncodedData);
-
-  XHR.onreadystatechange = function() {
-  if (XHR.readyState == 1) {
-    document.getElementById("status").innerText = "Request sent"
-  } else if (XHR.readyState == 2) {
-    document.getElementById("status").innerText = "Request accepted"
-  } else if (XHR.readyState == 3) {
-    document.getElementById("status").innerText = "Loading"
-  } else if (XHR.readyState == 4) {
-    document.getElementById("status").innerText = "Ready"
-  }
-};
 }
