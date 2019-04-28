@@ -115,11 +115,6 @@ function injectAurora(){
       aurora.async = false;
       aurora.defer = true;
       frameContent.contentWindow.document.body.appendChild(aurora);
-
-      var loadAurora   = frameContent.contentWindow.document.createElement("script");
-      loadAurora.type  = "text/javascript";
-      loadAurora.text   = "speak()";
-      frameContent.contentWindow.document.body.appendChild(loadAurora);
     });
   };
 };
