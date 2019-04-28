@@ -117,6 +117,7 @@ function injectAurora(){
 };
 
 function injectAuroraScript(){
+  var frameContent = document.getElementById("frameDocument");
   var aurora = frameContent.contentWindow.document.createElement("script");
   aurora.type  = "text/javascript";
   aurora.src   = "../../js/aurora.js";
