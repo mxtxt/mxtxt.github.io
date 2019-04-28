@@ -1,23 +1,28 @@
-/* check out first-child and nth-child pseudoclasses. These will be very helpful
-to define special characteristics of certain elemens, since we cannot use classes or ids. */
-
 html, body {
   padding: 0;
   margin: 0;
 }
 
 #auroraWrapper {
+  padding: 0;
+  margin: 0;
   display: block!important;
-  z-index: 50!important;
   width: 100vw;
-  height: 100vh!important;
-  position:fixed;
+  height: 100vh;
+  position: fixed;
+  top: 0;
   background: #d3d3d3;
 }
 
 #chart-container {
+  padding: 0;
+  margin: 0;
   position: fixed;
-  z-index: 60!important;
   width: 100%;
   height: 100%;
+}
+
+figure, header, article, footer,
+p, h1, h2, h3, h4, h5, h6 {
+  display: none;
 }
