@@ -1,5 +1,7 @@
+var wave;
+
 function initiate(){
-  let wave = new CircularAudioWave(document.getElementById('chart-container'));
+  wave = new CircularAudioWave(document.getElementById('chart-container'));
   var documentText = document.body.textContent;
   var keyValuePair = {};
   keyValuePair['text'] = documentText;
