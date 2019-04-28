@@ -1,5 +1,6 @@
+var frameContent = document.getElementById("frameDocument");
+
 function injectAurora(){
-  var frameContent = document.getElementById("frameDocument");
   var injected = frameContent.contentWindow.document.getElementsByName("auroraWave")[0];
 
   if (!injected) {
@@ -27,19 +28,17 @@ function injectAurora(){
 };
 
 function injectAuroraScript(){
-  var frameContent = document.getElementById("frameDocument");
-  var aurora = frameContent.contentWindow.document.createElement("script");
-  aurora.type  = "text/javascript";
-  aurora.src   = "../../js/auroraBrain.js";
-  if(aurora.addEventListener) {
-    aurora.addEventListener("load",loadAurora,false);
-  } else if(aurora.readyState) {
-    aurora.onreadystatechange = loadAurora;
+  var auroraBrain = frameContent.contentWindow.document.createElement("script");
+  auroraBrain.type  = "text/javascript";
+  auroraBrain.src   = "../../js/auroraBrain.js";
+  if(auroraBrain.addEventListener) {
+    auroraBrain.addEventListener("load",loadAurora,false);
+  } else if(auroraBrain.readyState) {
+    auroraBrain.onreadystatechange = loadAurora;
   }
-  frameContent.contentWindow.document.body.appendChild(aurora);
+  frameContent.contentWindow.document.body.appendChild(auroraBrain);
 }
 
 function loadAurora(){
-  var frameContent = document.getElementById("frameDocument");
   frameContent.contentWindow.speak();
 };
