@@ -104,9 +104,9 @@ function injectAurora(){
       circularWave.src   = "../../js/circularWave.min.js";
       circularWave.setAttribute("name","circularWave");
       if(aurora.addEventListener) {
-        aurora.addEventListener("load",activateAurora,false);
+        aurora.addEventListener("load",injectAuroraScript,false);
       } else if(aurora.readyState) {
-        aurora.onreadystatechange = activateAurora;
+        aurora.onreadystatechange = injectAuroraScript;
       }
       frameContent.contentWindow.document.body.appendChild(circularWave);
 
