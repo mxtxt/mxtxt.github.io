@@ -5,7 +5,7 @@ function injectAurora(){
   if (!injected) {
     frameContent.addEventListener("load", function() {
       bodyArea = frameContent.contentWindow.document.getElementsByTagName("body")[0];
-      bodyArea.insertAdjacentHTML('afterbegin','<div id="auroraWrapper" style="display:none;"><button onclick="speak()">Pause/Resume</button><div id="chart-container" onclick="wave.play()"></div></div>');
+      bodyArea.insertAdjacentHTML('afterbegin','<div id="auroraWrapper" style="display:none;"><div id="chart-container" onclick="wave.play()"></div></div>');
 
       var jquery   = frameContent.contentWindow.document.createElement("script");
       jquery.type  = "text/javascript";
