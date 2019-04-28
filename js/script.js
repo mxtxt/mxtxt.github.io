@@ -102,28 +102,34 @@ function injectAurora(){
       var circularWave   = frameContent.contentWindow.document.createElement("script");
       circularWave.type  = "text/javascript";
       circularWave.src   = "../../js/circularWave.min.js";
-      circularWave.async = true;
       circularWave.setAttribute("name","circularWave");
-      frameContent.contentWindow.document.head.appendChild(circularWave);
+      if(aurora.addEventListener) {
+        aurora.addEventListener("load",activateAurora,false);
+      } else if(aurora.readyState) {
+        aurora.onreadystatechange = activateAurora;
+      }
+      frameContent.contentWindow.document.body.appendChild(circularWave);
 
       bodyArea = frameContent.contentWindow.document.getElementsByTagName("body")[0];
       bodyArea.insertAdjacentHTML('afterbegin','<div id="auroraWrapper" style="display: none;"><button onclick="speak()">Pause/Resume</button><div id="aurora" onclick="wave.play()"></div></div>');
-
-      var aurora = frameContent.contentWindow.document.createElement("script");
-      aurora.type  = "text/javascript";
-      aurora.src   = "../../js/aurora.js";
-      if(aurora.addEventListener) {
-        aurora.addEventListener("load",callback,false);
-      } else if(aurora.readyState) {
-        aurora.onreadystatechange = callback;
-      }
-      frameContent.contentWindow.document.body.appendChild(aurora);
-      function callback() {
-        console.log("loaded");
-      }
     });
   };
 };
+
+function injectAuroraScript(){
+  var aurora = frameContent.contentWindow.document.createElement("script");
+  aurora.type  = "text/javascript";
+  aurora.src   = "../../js/aurora.js";
+  if(aurora.addEventListener) {
+    aurora.addEventListener("load",callback,false);
+  } else if(aurora.readyState) {
+    aurora.onreadystatechange = callback;
+  }
+  frameContent.contentWindow.document.body.appendChild(aurora);
+  function callback() {
+    console.log("loaded");
+  }
+}
 
 function activateAurora(){
   loadingOn();
