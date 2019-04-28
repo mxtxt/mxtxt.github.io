@@ -1,6 +1,6 @@
 function injectAurora(){
   var frameContent = document.getElementById("frameDocument");
-  var injected = frameContent.contentWindow.document.getElementsByName("circularWave")[0];
+  var injected = frameContent.contentWindow.document.getElementsByName("auroraWave")[0];
 
   if (!injected) {
     frameContent.addEventListener("load", function() {
@@ -12,16 +12,16 @@ function injectAurora(){
       jquery.src   = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js";
       frameContent.contentWindow.document.head.appendChild(jquery);
 
-      var circularWave   = frameContent.contentWindow.document.createElement("script");
-      circularWave.type  = "text/javascript";
-      circularWave.src   = "../../js/auroraWave.min.js";
-      circularWave.setAttribute("name","circularWave");
-      if(circularWave.addEventListener) {
-        circularWave.addEventListener("load",injectAuroraScript,false);
-      } else if(circularWave.readyState) {
-        circularWave.onreadystatechange = injectAuroraScript;
+      var auroraWave   = frameContent.contentWindow.document.createElement("script");
+      auroraWave.type  = "text/javascript";
+      auroraWave.src   = "../../js/auroraWave.min.js";
+      auroraWave.setAttribute("name","auroraWave");
+      if(auroraWave.addEventListener) {
+        auroraWave.addEventListener("load",injectAuroraScript,false);
+      } else if(auroraWave.readyState) {
+        auroraWave.onreadystatechange = injectAuroraScript;
       }
-      frameContent.contentWindow.document.body.appendChild(circularWave);
+      frameContent.contentWindow.document.body.appendChild(auroraWave);
     });
   };
 };
