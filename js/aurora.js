@@ -1,4 +1,4 @@
-let wave = new CircularAudioWave(document.getElementById('aurora'));
+let wave = new CircularAudioWave(document.getElementById('chart-container'));
 
 function speak(){
   var documentText = "Test text"; //document.body.textContent;
