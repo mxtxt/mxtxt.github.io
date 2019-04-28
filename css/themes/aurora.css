@@ -1,6 +1,11 @@
 /* check out first-child and nth-child pseudoclasses. These will be very helpful
 to define special characteristics of certain elemens, since we cannot use classes or ids. */
 
+html, body, {
+ padding: 0;
+ margin: 0;
+}
+
 #auroraWrapper {
   display: block!important;
   z-index: 50;
@@ -16,13 +21,8 @@ to define special characteristics of certain elemens, since we cannot use classe
   cursor: pointer;
 }
 
-html, body, {
- padding: 0;
- margin: 0;
-}
-
 h1, h2, h3, h4, h5, h6,
 p, em, small, q, a, header,
 section, figure, ul, ol, footer {
-  display: none;
+  
 }
