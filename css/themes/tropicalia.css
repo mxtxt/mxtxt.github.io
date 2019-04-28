@@ -129,15 +129,29 @@ light black #302D2E
     src: url("../../fonts/tropicalia/Pseudolux.ttf") format("opentype");
 }
 
+/* yoxall */
+@font-face {
+    font-family: yoxall;
+    src: url("../../fonts/tropicalia/Yoxall.ttf") format("opentype");
+}
 
 @import url('https://fonts.googleapis.com/css?family=Gothic+A1');
 
 /*--------------General Structure--------------*/
 
 html {
-  background-color: white;
-  height: 100vh;
-  width: 100vw;
+  background-color: #F1DA02;
+  /* background-image: url("../../img/bg/tpbg/psych4.jpg")
+
+  border: 12vw transparent #C18842 */
+  /*
+  background:
+      repeating-radial-gradient(rgba(0,0,0,0.001),
+      rgba(0,0,0,0.05) 5%, transparent 5%, transparent 10%),
+      url(ava-gardner.jpg);
+      background-position: 0 0, 0 0;
+      background-repeat: no-repeat, no-repeat;
+      background-size: cover; */
 }
 
 body {
@@ -145,7 +159,6 @@ body {
   font-family: "Arial";
   /* max-height: 200vw;
   overflow-y: hidden; */
-  width: 100%;
   height: 100vh;
   padding-left: 0;
   padding-right: 0;
@@ -153,6 +166,9 @@ body {
 
 header {
   width: 100%;
+
+  padding-bottom: 0;
+
 }
 
 header > section > p { /* this is for the EU one */
@@ -172,15 +188,16 @@ header > section > p { /* this is for the EU one */
 }
 
 header > p {
-  font-family: "flames";
-  font-size: ;
+  font-family: "pseudolux";
+  font-size: 3.7vw;
   font-weight: ;
+  display: blo
 
-  margin-top: ;
+  margin-top: 4vh;
+  margin-left: 2vw;
   padding-top: ;
-
-  margin-bottom: ;
-  padding-bottom: ;
+  margin-bottom: 0;
+  padding-bottom: 0;
   border-bottom: ;
 }
 
@@ -203,77 +220,93 @@ header > p > a:hover {
 
 h1 {
   width: 100%;
-  font-family: "azedo-bold";
-  font-size: 15vw;
-  text-align: ;
-  text-transform: ;
 
-  line-height: 1em;
+  font-family: "dogsmoke";
+  font-size: 17vw;
+  text-align: left;
+  line-height: 10vw;
+  text-transform: lowercase;
+
+  bottom: 0vw;
+  margin-bottom: 0vw;
+  padding-bottom: 0vw;
+  padding-top: 5vw;
+
   color: ;
-  background: url("https://www.unitypixel.com/files/wallpapers/Psychedelic-Background-Wallpaper-10397.jpg") no-repeat;
+  background: url("../../img/bg/tpbg/psych4.jpg");
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
      -moz-background-clip: text;
           background-clip: text;
 
+  transform: rotate(180deg);
 }
 
 h2 {
-  font-family: 'ostrichsans-medium-heavy', sans-serif;
-  font-size: 10vw;
-  color: white;
+  font-family: 'yoxall', sans-serif;
+  font-size: 7.5vw;
+  width: 50%;
+  float: right;
+  color: #c43950;
   line-height: ;
-  text-align: ;
+  text-align: right;
   text-transform: ;
 
-  margin-top: ;
-  padding-top: ;
+  display: block;
+  margin-top: 1vh;
+  padding-top: 1vh;
 
   margin-bottom: 0;
   padding-bottom: 0;
-  /* color: ;
+
+  color: ;
   text-shadow:
-  0 0  40px red,
-  0 0  60px red,
-  0 0  90px red; */
+  0 0 3px #c43950,
+  0 0  6px #c43950,
+  0 0  9px #c43950;
   writing-mode: ;
-  float: right;
+
+}
+
+
+h2:hover {
+  color: 	white;
+
 }
 
 h3 {
-  font-family: "ostrichsans-medium-heavy";
-  font-size: 5vw;
-  font-weight: ;
-  color: white;
-  text-align: ;
-  text-transform: ;
+  display: block;
+  font-family: 'ostrichsans-medium-heavy', sans-serif;
+  font-size: 9vw;
+  font-weight: 500;
+  color: 	#F9E04E;
+  text-align: left;
+  text-transform: lowercase;
 
   margin-top: 0;
   padding-top: 0;
-
-  margin-bottom: ;
-  padding-bottom: ;
+  padding-left: 2vw;
+  margin-bottom: 1vh;
+  padding-bottom: 1vh;
   writing-mode: ;
-  float: ;
-  background-color: black;
+  background-color: #ab5462;
 }
 
+h3:hover {
+  color: 	#FE536B;
+}
 section {
+  border-bottom: 1vw dotted black;
 }
 
 h4 {
   font-family: "beamie";
-  font-size: 10vw;
+  font-size: 9vw;
   font-weight: 100;
-  text-align: ;
+  text-align: right;
   text-transform: ;
 
-  margin-top: ;
-  padding-top: ;
-
-  margin-bottom: ;
-  padding-bottom: ;
 
   background-size: 24px 24px;
   background-color: #fff;
@@ -282,24 +315,15 @@ h4 {
 
 h4:hover {
   animation: cells 0.4s linear infinite;
+  direction: rtl;
+  unicode-bidi: bidi-override;
 }
 
-
-p:last-child {
-}
 
 p {
   font-family: "Arial";
-  width: 20vw;
-  float: left;
-  font-size: ;
-  text-align: ;
 
-  margin-top: ;
-  padding-top: ;
 
-  margin-bottom: ;
-  padding-bottom: ;
 }
 
 p > em {
@@ -345,10 +369,6 @@ figure:first-child {
   display: none !important;
 }
 
-figure:first-child figcaption {
-  display: ;
-}
-
 figure:first-child img {
   width: ; /* use percentage of the figure box width */
   border-radius:;
@@ -374,6 +394,10 @@ figure {
   background-repeat: ;
   background-position: ;
   background-size: ;
+
+  float:center;
+  display: none;
+
 }
 
 figure:has(table) {
@@ -388,11 +412,11 @@ figure:last-child {
 }
 
 figure > figcaption {
-  font-family: ;
-  width: ;
+  font-family: "azedo-bold" ;
+  width: 50%;
   padding-top: ;
-  font-size: ;
-  text-align: ;
+  font-size: 3vw;
+  text-align: justify;
 }
 
 figure > figcaption > em {
@@ -410,19 +434,23 @@ figure > figcaption > small {
 figure > img {
   display: ;
   position: ;
-  width: 30vw;
-  height: 30vw;
+  width: 45%;
+
   overflow: ;
   border-radius: 50%;
-  float: ;
+  float: left;
   animation: colorRotate 10s  infinite;
   border-radius: 50%;
   border-color: ;
-  box-shadow: 0px    0px 0 3vw yellow;
+  box-shadow: 0px    0px 0 3vw #F1DA02;
 	/* box-shadow: 220px    0px 0  -70px green,
 				-160px  104px 0   -70px red,
 				-60px -104px 0 -100px yellow; */
+  margin-top: 5vh;
+  margin-bottom: 5vh;
 
+  float: left;
+  align-self: left;
 }
 
 /*--------------Figures: Videos--------------*/
@@ -561,7 +589,7 @@ footer > ul > li > a {
 /* Psychedelic CSS Filter Animations - A PEN BY Luke Andersen*/
 @keyframes colorRotate {
  100% {
-   -webkit-filter: hue-rotate(180deg);
+   -webkit-filter: hue-rotate(-360deg);
  }
 }
 
