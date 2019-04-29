@@ -1,28 +1,215 @@
-html, body {
+
+@font-face {
+    font-family: neuropol;
+    src: url("../../fonts/aurora/neuropol/neuropol.ttf") format("truetype");
+}
+@font-face {
+    font-family: b2sq;
+    src: url("../../fonts/aurora/b2sq/b2sq.ttf") format("truetype");
+}
+@font-face {
+    font-family: auroraFont;
+    src: url("../../fonts/aurora/aurora/aurora.ttf") format("truetype");
+}
+
+html {
   padding: 0;
   margin: 0;
 }
 
-#auroraWrapper {
+body {
   padding: 0;
   margin: 0;
-  display: block!important;
   width: 100vw;
   height: 100vh;
+  background: linear-gradient(60deg, #8bbbcc 0%, #86b9ca 49%, #4051b5 82%);
+  background-size: 200%;
+  animation: aurora 10s infinite;
+  background-attachment: fixed!important;
+}
+
+body:before {
+  background: radial-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15));
+  background-size: 200%;
+  content: " ";
+  position: fixed;
+  animation: aurora 7s infinite;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes aurora {
+  0% {
+    background-position: left top;
+  }
+  25% {
+    background-position: right top;
+  }
+  50% {
+    background-position: right bottom;
+  }
+  75% {
+    background-position: left bottom;
+  }
+  100% {
+    background-position: left top;
+  }
+}
+
+/* Hide Content – display: none in a parent cannot be overwritten in a child */
+
+section, article, footer {
+  padding: 0;
+  margin: 0;
+  height: 0;
+  width: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, q, ul, ol {
+  display: none;
+}
+
+header {
+  font-family: b2sq;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 42.5vw;
+  margin: 27.5vw 0 0 2.5vw;
+  padding: 1.5rem;
+  top: 0;
+  left: 0;
+  background: radial-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.4));
+  background-size: 200%;
+  animation: aurora 7s infinite;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+header > h1 {
+  display: block;
+  margin: 1rem 0;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+header > h2 {
+  display: block;
+  margin: 1rem 0;
+  font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 2rem;
+}
+
+header > h3 {
+  display: block;
+  margin: 1rem 0;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+header > p {
+  display: block;
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+#auroraWrapper {
+  background: radial-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.4));
+  background-size: 200%;
+  animation: aurora 7s infinite;
+  border-radius: 5px;
+  display: block!important;
   position: fixed;
   top: 0;
-  background: #d3d3d3;
+  left: 0;
+  padding: 0;
+  margin: 2.5vw 0 0 2.5vw;
+  width: 22.5vw;
+  height: 22.5vw;
+}
+
+#auroraWrapper:after {
+  display: block;
+  white-space: pre-wrap;
+  background: radial-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.4));
+  background-size: 200%;
+  animation: aurora 7s infinite;
+  border-radius: 5px;
+  font-family: b2sq;
+  font-size: 2rem;
+  line-height: 2rem;
+  content: "Hi, \A I am Aurora.";
+  position: absolute;
+  top: 0;
+  left: 22.5vw;
+  padding: 1.5rem;
+  margin: 0 2.5vw;
+  width: 17.5vw;
+  height: 22.5vw;
+  box-sizing: border-box;
 }
 
 #chart-container {
   padding: 0;
   margin: 0;
-  position: fixed;
-  width: 100%;
-  height: 100%;
+  height: 100%!important;
+  width: 100%!important;
 }
 
-figure, header, article, footer,
-p, h1, h2, h3, h4, h5, h6 {
-  display: none;
+figure {
+  background: radial-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.4));
+  background-size: 200%;
+  animation: aurora 7s infinite;
+  border-radius: 5px;
+  padding: 0.5vw;
+  margin: 2.5vw 0 2.5vw 47.5vw;
+  float: left;
+  z-index: 100;
+  position: relative;
+  box-sizing: border-box;
+}
+
+figure > img {
+  width: 50vw;
+  border-radius: 5px;
+}
+
+figure > img:nth-child(2) {
+  margin-top: 2.5vw;
+}
+
+figure > table {
+  width: 50vw;
+  border-spacing: 0;
+}
+
+figure > table th {
+  border-bottom: 1px solid black;
+}
+
+figure > table td {
+  border-bottom: 1px solid black;
+}
+
+figure > figcaption {
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  line-height: 2rem;
+  margin-top: 0.5vw;
+  font-family: b2sq;
+}
+
+figure > figcaption em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+figure > figcaption small {
+  font-size: 1rem;
+  font-style: normal;
 }
