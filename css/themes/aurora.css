@@ -9,22 +9,23 @@ html {
 }
 
 body {
-  padding: 0;
+  padding: 2.5vw;
   margin: 0;
   width: 100vw;
   height: 100vh;
   background: linear-gradient(60deg, #8bbbcc 0%, #86b9ca 49%, #4051b5 82%);
   background-size: 200%;
-  animation: aurora 10s infinite;
-  background-attachment: fixed!important;
+  animation: aurora 15s infinite;
+  box-sizing: border-box;
 }
 
 body:before {
+  margin: -2.5vw;
   background: radial-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15));
   background-size: 200%;
   content: " ";
   position: fixed;
-  animation: aurora 7s infinite;
+  animation: aurora 15s infinite;
   width: 100%;
   height: 100%;
 }
@@ -71,21 +72,37 @@ header {
   padding: 1.5rem;
   top: 0;
   left: 0;
-  background: radial-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.4));
+  background: radial-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.3));
   background-size: 200%;
-  animation: aurora 7s infinite;
+  animation: aurora 15s infinite;
   border-radius: 5px;
   box-sizing: border-box;
 }
 
-header > h1 {
+header, figure,
+#auroraWrapper, #auroraWrapper:after {
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+header > section {
+  display: block;
+  width: auto;
+  height: auto;
+  box-sizing: border-box;
+}
+
+header > h1,
+header > section > h1 {
   display: block;
   margin: 1rem 0;
   font-size: 2rem;
   line-height: 2rem;
 }
 
-header > h2 {
+header > h2,
+header > section > h2 {
   display: block;
   margin: 1rem 0;
   font-weight: bold;
@@ -93,7 +110,8 @@ header > h2 {
   line-height: 2rem;
 }
 
-header > h3 {
+header > h3,
+header > section > h3 {
   display: block;
   margin: 1rem 0;
   font-weight: bold;
@@ -101,17 +119,28 @@ header > h3 {
   line-height: 2rem;
 }
 
-header > p {
+header > p,
+header > section > p {
   display: block;
-  margin: 0 0 1rem 0;
+  margin: 0 0 0 0;
   font-size: 1rem;
   line-height: 1rem;
 }
 
+header a {
+  color: #e91e62;
+  text-decoration: none;
+}
+
+header a:hover {
+  color: #3f51b5;
+  text-decoration: none;
+}
+
 #auroraWrapper {
-  background: radial-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.4));
+  background: radial-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.3));
   background-size: 200%;
-  animation: aurora 7s infinite;
+  animation: aurora 15s infinite;
   border-radius: 5px;
   display: block!important;
   position: fixed;
@@ -121,14 +150,15 @@ header > p {
   margin: 2.5vw 0 0 2.5vw;
   width: 22.5vw;
   height: 22.5vw;
+  box-sizing: border-box;
 }
 
 #auroraWrapper:after {
   display: block;
   white-space: pre-wrap;
-  background: radial-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.4));
+  background: radial-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.3));
   background-size: 200%;
-  animation: aurora 7s infinite;
+  animation: aurora 15s infinite;
   border-radius: 5px;
   font-family: rajdhaniLight;
   font-size: 2rem;
@@ -152,20 +182,19 @@ header > p {
 }
 
 figure {
-  background: radial-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.4));
+  background: radial-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.3));
   background-size: 200%;
-  animation: aurora 7s infinite;
+  animation: aurora 15s infinite;
   border-radius: 5px;
-  padding: 0.5vw;
-  margin: 2.5vw 0 2.5vw 47.5vw;
+  margin: 0 0 2.5vw 45vw;
   float: left;
-  z-index: 100;
   position: relative;
+  padding: 0.5vw;
   box-sizing: border-box;
 }
 
 figure > img {
-  width: 50vw;
+  width: 49vw;
   border-radius: 5px;
 }
 
@@ -174,7 +203,10 @@ figure > img:nth-child(2) {
 }
 
 figure > table {
-  width: 50vw;
+  font-family: rajdhaniLight;
+  width: 49vw;
+  font-size: 0.7rem;
+  margin: 0;
   border-spacing: 0;
 }
 
@@ -189,9 +221,10 @@ figure > table td {
 figure > figcaption {
   display: flex;
   flex-direction: column;
-  font-size: 2rem;
-  line-height: 2rem;
+  font-size: 1rem;
+  line-height: 1rem;
   margin-top: 0.5vw;
+  padding: 0.5vw;
   font-family: rajdhaniLight;
 }
 
