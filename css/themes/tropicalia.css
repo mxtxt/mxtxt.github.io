@@ -226,10 +226,10 @@ h2 {
     text-align: right;
     /* floated to the right. SOURCE Image 3. */
     float: right;
+    margin-top: 1vh;
     /* no space between the title and the next element. SOURCE Image 2. */
     margin-bottom: 0;
     padding-bottom: 0;
-    margin-top: 0;
     /* right padding. SOURCE Image 8. */
     padding-right: 2vw;
 }
