@@ -312,7 +312,7 @@ small {
 
 /*--------------First Figure--------------*/
 
-figure:first-child {
+figure:first-of-type {
   padding-top: 0;
   padding-bottom: 0;
   border-top: none;
@@ -323,11 +323,11 @@ figure:first-child {
   background-size: 20%;
 }
 
-figure:first-child figcaption {
+figure:first-of-type figcaption {
   display: none;
 }
 
-figure:first-child img {
+figure:first-of-type img {
   width: 50%; /* use percentage of the figure box width */
   border-radius: 10%;
   max-height: 70vh;
@@ -335,7 +335,7 @@ figure:first-child img {
   float: none;
 }
 
-figure:first-child img:hover {
+figure:first-of-type img:hover {
   transform: scale(1.1);
 }
 
