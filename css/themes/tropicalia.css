@@ -1,27 +1,9 @@
 /* use jquery clone() method for text/titles*/
 /* use css box-shadow for images*/
-/* add tropicalia music */
 
-/* red #A02818
-red coral #B5493F
-yellow #D5D74B
-orange #C18842
-grey 	#7F7E69
 
-bright orange #E9542C
-dark orange 	#ED4F31
-brighter yellow #F8B729
-green #56853F
-
-desafio yellow 	#F1DA02
-desafio grey #515851
-defatio light grey #9B9B93
-
-light black #302D2E
-
-*/
-
-/*--------------Fonts--------------*/
+/*-------------------------------Fonts------------------------------- */
+/*----Psychedelic, Pop Art, Sans-Serif, Brazilian----*/
 
 /********AZEDO********/
 /* azedo-bold */
@@ -155,338 +137,344 @@ light black #302D2E
 
 @import url('https://fonts.googleapis.com/css?family=Gothic+A1');
 
-/*--------------General Structure--------------*/
+/*-------------------------------General------------------------------- */
 
 html {
-
+  /* whole document background color. SOURCE Image 1 */
   background-color: #e0d289;
 }
 
 body {
+  /* default sans-serif font of the body. SOURCE Espinosa, 2018. */
+  font-family: "yoxall";
+  /* default color of the body */
   color: black;
-  font-family: "Arial";
-  /* max-height: 200vw;
-  overflow-y: hidden; */
+
+  /* by default body has no side padding */
   padding-left: 0;
   padding-right: 0;
 }
 
+
+/*--------------------Header Structure and Style--------------------- */
+
 header {
+  /* header takes up 100% of the width of its parent element, the body. */
   width: 100%;
+  /* by default header has no padding */
   padding-top: 0;
   margin-top: 0;
   top: 0;
   padding-bottom: 0;
 }
 
-article {
-  padding-left: 12vw;
-  padding-right: 12vw;
-  /* background: url("../../img/bg/tpbg/aplant.png"); */
-  background-size: contain;
-  background-position: left;
-}
-header > section > p { /* this is for the EU one */
-  font-family: "flames";
-  font-size: ;
-  font-weight: ;
-  line-height: ;
-  text-align: ;
-  text-transform: ;
-
-  margin-top: ;
-  padding-top: ;
-
-  margin-bottom: ;
-  padding-bottom: ;
-  border-bottom: ;
-  background: url("../../img/bg/llew/tropheader.jpg");
-
-}
-
-header > p {
-  font-family: "azedo-bold";
-  font-size: 3.7vw;
-  font-weight: ;
-  color: white;
-  margin-top: 4vh;
-  margin-left: 2vw;
-  padding-top: ;
-  margin-bottom: 0;
-  padding-bottom: 0;
-  border-bottom: ;
-  background: url("../../img/bg/llew/tropheader.jpg");
-
-}
-
-header > p > a {
-  font-family: ;
-  font-size: ;
-  font-weight: ;
-  line-height: ;
-  text-align: ;
-  text-transform: ;
-  letter-spacing: ;
-  color: white;
-}
-
-header > p > a:hover {
-  font-family: ;
-  font-size: ;
-  color: ;
-}
-
 h1 {
+  /* psychedelic font. SOURCE Tafarelo de Oliveira, 2011. */
+  font-family: "dogsmoke";
+  /* lowercase. SOURCE Image 2. */
+  text-transform: lowercase;
+  /* font size fallback in case viewport width units aren't responsive. */
+  font-size: 100px;
+  /* font size is 20% of the width of the viewport. SOURCE Image 2. */
+  font-size: 20vw;
+  /* has limited line-height to give it a psychedelic effect. */
+  line-height: 10vw;
 
+  /* see-through colorful background. SOURCE Image 4. */
+  background: url("../../img/bg/llew/tropheader.jpg");
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  /* makes transitions ease in and out */
+  transition: transform 5s ease-in-out;
 
-width: 100%;
+  /* takes up 100% of the width of its parent element, the header. */
+  width: 100%;
+  /* aligned to the right. SOURCE Image 3. */
+  text-align: right;
+  /* upper padding. SOURCE Image 2. */
+  padding-top: 10vw;
+  /* no space between the title and the next element. SOURCE Image 2. */
+  margin-bottom: 0vw;
+  padding-bottom: 0vw;
+}
 
-font-family: "dogsmoke";
-font-size: 20vw;
-text-align: left;
-line-height: 10vw;
-text-transform: lowercase;
-
-bottom: 0vw;
-margin-bottom: 0vw;
-padding-bottom: 0vw;
-padding-top: 10vw;
-
-color: ;
-background: url("../../img/bg/llew/tropheader.jpg");
- -webkit-background-clip: text;
- -webkit-text-fill-color: transparent;
--webkit-background-clip: text;
-   -moz-background-clip: text;
-        background-clip: text;
-
-transform: rotate(180deg);
+h1:hover {
+  /* animation to turn text upside down in a clockwise number. */
+  transform: translateX(-10vw);
+  transform: rotate(180deg);
 }
 
 h2 {
-  display: block;
-  font-family: 'yoxall', sans-serif;
-  font-size: 7.5vw;
-  width: 50%;
-  float: right;
-  color: white;
-  line-height: ;
-  text-align: right;
-  text-transform: ;
+    /* sans-serif font. SOURCE Espinosa, 2018. */
+    font-family: 'yoxall', sans-serif;
+    font-size: 7.8vw;
+    /* font color cosmic latte */
+    color: #fff8e7;
+    /* pop-art inspirted shadow effect. SOURCE Image 6. */
+    text-shadow:
+      -0.5vw -0.5vw 2px #c43950,
+      0.5vw 0.5vw 3px #c43950;
+    /* background color coral red. SOURCE Image 7. */
+    background-color: #af443a;
 
-  display: block;
-  margin-top: 1vh;
-  padding-top: 1vh;
-
-  margin-bottom: 0;
-  padding-bottom: 0;
-
-  color: ;
-  text-shadow:
-  0 0 3px #c43950,
-  0 0  6px #c43950,
-  0 0  9px #c43950;
-  writing-mode: ;
-  background-color: #af443a;
-
+    /*takes up 100% of the width of its parent element, the header */
+    width: 50%;
+    /* aligned to the right. SOURCE Image 3. */
+    text-align: right;
+    /* floated to the right. SOURCE Image 3. */
+    float: right;
+    /* no space between the title and the next element. SOURCE Image 2. */
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    /* right padding. SOURCE Image 8. */
+    padding-right: 2vw;
 }
-
 
 h2:hover {
-  color: 	#c43950;
-
-}
-
-h3 {
-  display: block;
-  font-family: 'milho';
-  font-size: 6vw;
-  font-weight: 500;
-  color: 	#E0664F;
-  text-align: left;
-  text-transform: uppercase;
-
-  margin-top: 0;
-  padding-top: 2vw;
-  padding-left: 2vw;
-  margin-bottom: 1vh;
-  padding-bottom: 1vh;
-  writing-mode: ;
-  background-color: #af443a;
-}
-
-h3:hover {
+  /* hover green color. SOURCE Image 7. */
   color: 	#af9c3a;
 }
 
+h3 {
+  /* psychedelic font. */
+  font-family: 'beamie';
+  font-weight: 100;
+  font-size: 6.3vw;
+  text-transform: uppercase;
+  /* font color from SOURCE Image 7. */
+  color: #E0664F;
+  /* background color coral red. SOURCE Image 7. */
+  background-color: #af443a;
+
+
+  /* aligned to the left. SOURCE Image 3. */
+  text-align: left;
+  /* upper padding. SOURCE Image 5. */
+  margin-top: 0;
+  padding-top: 3vw;
+  /* no space between the title and the next element. SOURCE Image 2. */
+  margin-bottom: 1vh;
+  padding-bottom: 1vh;
+  /* left padding. SOURCE Image 8. */
+  padding-left: 2vw;
+}
+
+h3:hover {
+  color: #c43950;
+}
+
+header p {
+
+  /* sans-serif font. */
+  font-family: 'boomtown-deco';
+  font-size: 3vw;
+  /* font color cosmic latte */
+  color: #fff8e7;
+  /* pop-art inspirted shadow effect for easier reading. SOURCE Image 6. */
+  text-shadow:
+    -0.1vw -0.1vw 2px grey,
+    0.1vw 0.1vw 4px grey;
+  /* background color same as h1. SOURCE Image 7. */
+  background: url("../../img/bg/llew/tropheader.jpg");
+
+  /* upper padding */
+  padding-top: 0.5vw;
+  /* no space between the title and the next element. SOURCE Image 2. */
+  margin-bottom: 0;
+  padding-bottom: 0;
+  /* left padding, same as main body of the article. */
+  padding-left: 5vw;
+}
+
+header > p > a {
+  /* font color cosmic latte. */
+  color: #fff8e7;
+}
+
+header > p > a:hover {
+  /* on hover, font color black. */
+  color: pink;
+}
+
+/*------------------Main Article Structure and Style------------------- */
+
+article {
+  /* upper padding. */
+  padding-top: 3vw;
+  /* side padding matches header paragraphs'. */
+  padding-left: 5vw;
+  padding-right: 5vw;
+  /* article is divided into two columns. SOURCE Image 9. */
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+}
+
 section {
-  /* border-bottom: 1vw dotted black; */
+  /* space between one section and the other */
+  margin-bottom: 0.5vw;
+  /* each section finishes with a coral red rounded border. */
+  border-top: 2vw solid #af443a;
+  /* each section finishes with a coral red rounded border. */
+  border-bottom: 2vw solid #af443a;
+  /* borders have rounded corners. SOURCE Image 7. */
+  border-radius: 25px;
 }
 
 h4 {
-  font-family: "beamie";
+  /* psychedelic font. */
+  font-family: 'beamie';
   font-size: 9vw;
+  /* makes the psychedelic effect visible. */
   font-weight: 100;
-  text-align: right;
-  text-transform: ;
 
-  background-size: 24px 24px;
-  background-color: #fff;
-  background-image: repeating-radial-gradient( black 8px, white 12px);
+  text-align: right;
+  /* makes the background touch the border. */
+  margin-top: 0;
+  /* upper padding for extra background. */
+  padding-top: 1vw;
+  /* makes the background touch the border. */
+  margin-bottom: 0;
+  /* upper padding for extra background. */
+  padding-bottom: 1vw;
 }
 
 h4:hover {
+  /* animation right to left */
   animation: cells 0.4s linear infinite;
   direction: rtl;
   unicode-bidi: bidi-override;
+  /* this is a special background designed by @samurai. SOURCE http://simurai.com/lab/2011/10/03/space-cacss#top  */
+  background-size: 24px 24px;
+  background-color: #fff;
+  background-image: repeating-radial-gradient(#d0bb4c 8px, #e0d289 12px);
 }
-
 
 article p {
+  /* inspired by border of IMAGE Source 10. */
   font-family: 'ostrichsans-medium-heavy';
-  text-transform: uppercase;
-  font-size: 2vw;
+  font-size: 2.5vw;
+  text-align: justify;
 }
 
-p > em {
-  font-family: 'Gothic A1', sans-serif;
-  font-size: ; /* no italics */
-  font-style: ;
-  text-transform: ;
+article p > em {
+  /* same as html background color */
+  color: #e0d289;
+  /* exact complementary color of #e0d289, html background color */
+  background-color: #c489e0;
+  /* don't make it cursive. */
+  font-style: normal;
 }
 
 a {
-  font-family: ;
-  font-size: ;
-  text-transform: ;
-  text-decoration: ;
-  color: ;
+  /* exact complementary color of #e0d289, html background color */
+  color: #c489e0;
+  /* do not underline */
+  text-decoration: none;
+  /* literally tropicalia-inspired font. */
+  font-family: 'tropicalia';
 }
 
 a:hover {
-  font-family: ;
-  font-size: ;
+  /* make the link disappear from view */
+  color: #e0d289;
 }
 
 q {
-  font-family: ;
-  font-size: ;
-  text-align: ;
+  font-family: 'boomtown-deco';
+  font-size: 4.5vw;
+  text-align: justify;
 }
 
 small {
-  font-size: ;
+  /* make the text 1 viewport width smaller */
+  font-size: 1.5vw;
 }
+
+/*------------------------------Figures------------------------------- */
 
 /*--------------First Figure--------------*/
 
 figure:first-child {
-  padding-top: ;
-  padding-bottom: ;
-  border-top: ;
-  border-bottom: ;
-  background-repeat: ;
-  background-position: ;
-  background-size: ;
+  /* because usually the first figure contains a logo, hide this figure. */
   display: none !important;
 }
 
-figure:first-child img {
-  width: ; /* use percentage of the figure box width */
-  border-radius:;
-  /* transition: all .2s ease-in-out; */
-  margin-bottom: ;
-  /* animation-name: vanishIn !important; */
-  display: ;
-}
-
-figure:first-child img:hover {
-  /* transform: scale(1.1); */
-}
-
-/*--------------Figures--------------*/
+/*--------------Other Figures--------------*/
 
 figure {
-  width: ;
-  margin: ;
-  padding-left: ;
-  padding-right: ;
-  padding-top: ;
-  padding-bottom: ;
-  background-repeat: ;
-  background-position: ;
-  background-size: ;
-
-  position: center;
-  float: center;
-  background-image: url("../../img/bg/tpbg/circle.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 60%;
-
+  /* this is a special background designed by @samurai. SOURCE http://simurai.com/lab/2011/10/03/space-cacss#top  */
+  background-size: 24px 24px;
+  background-color: #fff;
+  background-image: repeating-radial-gradient(#d0bb4c 8px, #e0d289 12px);
+  /* make the figure background take up all the figure space*/
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
 
+/* IMPORTANT NEEDS CHANGE */
 figure:has(table) {
-  background-image: ;
-  background-size: ;
   /* will have to do with jquery,
   $("p:has(img)") */
 }
-
-figure:last-child {
-  border-bottom: ; /* because sections have upper borders, erase the bottom border of the last figure of a section or body*/
-}
+/* IMPORTANT NEEDS CHANGE */
 
 figure > figcaption {
-  font-family: "azedo-bold" ;
-  width: 50%;
-  padding-top: ;
-  font-size: 3vw;
+  font-family: "milho" ;
+  font-size: 2vw;
   text-align: justify;
-}
 
-figure > figcaption > em {
-  font-family: ;
-  font-size: ;
+  width: 100%;
 }
 
 figure > figcaption > small {
-  font-family: ;
-  font-size: ;
+    /* make the text 0.5 viewport width smaller */
+    font-size: 1.5vw;
 }
 
-/*--------------Figures: Images--------------*/
+/*-------------Figures: Images-------------*/
 
 figure > img {
-  display: ;
-  position: ;
-  width: 45%;
-
-  overflow: ;
+  /* make the image round */
   border-radius: 50%;
-  float: left;
+  /* create a border that works as a shadow */
+  box-shadow: 0 0 0 2vw #e0d289;
+  /* make the colors rotate as a gradient through the color wheel */
   animation: colorRotate 10s  infinite;
-  border-radius: 50%;
-  border-color: ;
-  box-shadow: 0px    0px 0 3vw #F1DA02;
-	/* box-shadow: 220px    0px 0  -70px green,
-				-160px  104px 0   -70px red,
-				-60px -104px 0 -100px yellow; */
+
+  /* image takes up 80 percent of the figure width. */
+  width: 80%;
+  /* for taller than average images, restrict. */
+  max-height: 50vh;
   margin-top: 5vh;
   margin-bottom: 5vh;
-  saturate: 600%;
-  float: left;
-  align-self: left;
+  margin-left: 5vw;
+  margin-right: 5vw;
 }
 
 /*--------------Figures: Videos--------------*/
 
 figure > video {
-  width: ; /* use percentage of the figure box width */
-  margin: ;
-  padding: ;
-  border-radius: ;
-  filter: ;
+  /* make the image round */
+  border-radius: 50%;
+  /* create a border that works as a shadow */
+  box-shadow: 0 0 0 2vw #e0d289;
+  /* make the colors rotate as a gradient through the color wheel */
+  animation: colorRotate 10s  infinite;
+
+  /* image takes up 80 percent of the figure width. */
+  width: 80%;
+  /* for taller than average images, restrict. */
+  max-height: 50vh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
 }
 
 /*--------------Figures: Tables--------------*/
@@ -538,7 +526,7 @@ section > figure > table  td {
    border: ;
 }
 
-/*--------------Lists--------------*/
+/*-------------------------------Lists-------------------------------- */
 
 section > ol {
   width: ;
@@ -589,10 +577,13 @@ li > small {
   font-size: ;
 }
 
-/*--------------Footer--------------*/
+/*------------------------------Footer------------------------------- */
 
 footer {
   width: ;
+  background: url("../../img/bg/tpbg/aplant.png");
+  background-size: cover;
+  background-position: left;
 }
 
 footer > ul > li {
@@ -605,12 +596,7 @@ footer > ul > li > a {
   text-align: ;
 }
 
-
-
-
-
-
-/* animations */
+/*-----------------------------Animations------------------------------ */
 
 /* Psychedelic CSS Filter Animations - A PEN BY Luke Andersen*/
 @keyframes colorRotate {
@@ -619,169 +605,10 @@ footer > ul > li > a {
  }
 }
 
+/*-----------------------------MEDIA SMALL SCREEN------------------------------ */
 
-/* CSS3 trippy psychedelic cube - http://cssdeck.com/labs/css3-trippy-psychedelic-cube */
-
-@-moz-keyframes spinningH {
-  from {
-    -moz-transform: rotateX(0deg) rotateY(0deg);
+@media screen and (max-width: 600px) {
+  .section {
+    width: 100%;
   }
-  to{
-    -moz-transform: rotateX(360deg) rotateY(360deg);
-  }
-}
-
-@-webkit-keyframes spinningH {
-  from {
-    -webkit-transform: rotateX(0deg) rotateY(0deg);
-  }
-  to{
-    -webkit-transform: rotateX(360deg) rotateY(360deg);
-  }
-}
-
-@-o-keyframes spinningH {
-  from {
-    -o-transform: rotateX(0deg) rotateY(0deg);
-  }
-  to{
-    -o-transform: rotateX(360deg) rotateY(360deg);
-  }
-}
-
-@-ms-keyframes spinningH {
-  from {
-    -ms-transform: rotateX(0deg) rotateY(0deg);
-  }
-  to{
-    -ms-transform: rotateX(360deg) rotateY(360deg);
-  }
-}
-
-@keyframes spinningH {
-  from {
-    transform: rotateX(0deg) rotateY(0deg);
-  }
-  to{
-    transform: rotateX(360deg) rotateY(360deg);
-  }
-}
-
- #container {
-  margin-top: 25%;
-  -webkit-perspective : 1000px;
-  -moz-perspective    : 1000px;
-  -o-perspective      : 1000px;
-  -ms-perspective     : 1000px;
-  perspective         : 1000px;
-
-  -webkit-perspective-origin  : 50% 50%;
-  -moz-perspective-origin     : 50% 50%;
-  -moz-transform-origin       : 50% 50%;
-  -o-perspective-origin       : 50% 50%;
-  -ms-perspective-origin      : 50% 50%;
-  perspective-origin          : 50% 50%;
- }
-
-.animate {
-  -webkit-animation : spinningH 6s infinite linear;
-  -moz-animation    : spinningH 6s infinite linear;
-  -o-animation      : spinningH 6s infinite linear;
-  -ms-animation     : spinningH 6s infinite linear;
-  animation         : spinningH 6s infinite linear;
-}
-
-#cube {
-  position: relative;
-  margin: 0 auto;
-  height: 400px;
-  width: 400px;
-
-  -webkit-transition  : -webkit-transform 2s linear;
-  -moz-transition     : -moz-transform 2s linear;
-  -o-transition       : -o-transform 2s linear;
-  -ms-transition      : -ms-transform 2s linear;
-  transition          : transform 2s linear;
-
-  -webkit-transform-style : preserve-3d;
-  -moz-transform-style    : preserve-3d;
-  -o-transform-style      : preserve-3d;
-  -ms-transform-style     : preserve-3d;
-  transform-style         : preserve-3d;
-}
-
-#cube>div {
-  position: absolute;
-  height: 360px;
-  width: 360px;
-  padding: 20px;
-  opacity: 0.9;
-  background-position:center center;
-}
-
-#cube div:nth-child(1) {
-  -webkit-transform : translateZ(200px);
-  -moz-transform    : translateZ(200px);
-  -o-transform      : translateZ(200px);
-  -ms-transform     : translateZ(200px);
-  transform         : translateZ(200px);
-  background-color  : #2E272F;
-  background-image: url("../../docs/huffington/image1.jpg");
-  background-repeat : no-repeat;
-}
-
-#cube div:nth-child(2) {
-  -webkit-transform : rotateY(90deg) translateZ(200px);
-  -moz-transform    : rotateY(90deg) translateZ(200px);
-  -o-transform      : rotateY(90deg) translateZ(200px);
-  -ms-transform     : rotateY(90deg) translateZ(200px);
-  transform         : rotateY(90deg) translateZ(200px);
-  background-color  : #2D3A4D;
-  background-image: url("../../docs/huffington/image2.jpg");
-  background-repeat : no-repeat;
-}
-
-#cube div:nth-child(3) {
-  -webkit-transform : rotateY(180deg) translateZ(200px);
-  -moz-transform    : rotateY(180deg) translateZ(200px);
-  -o-transform      : rotateY(180deg) translateZ(200px);
-  -ms-transform     : rotateY(180deg) translateZ(200px);
-  transform         : rotateY(180deg) translateZ(200px);
-  background-color  : #2D1C12;
-  background-image: url("../../docs/huffington/image3.jpg");
-  background-repeat : no-repeat;
-}
-
-#cube div:nth-child(4) {
-  -webkit-transform : rotateY(-90deg) translateZ(200px);
-  -moz-transform    : rotateY(-90deg) translateZ(200px);
-  -o-transform      : rotateY(-90deg) translateZ(200px);
-  -ms-transform     : rotateY(-90deg) translateZ(200px);
-  transform         : rotateY(-90deg) translateZ(200px);
-  background-color  : #693C1F;
-  background-image: url("../../docs/huffington/image4.jpg");
-  background-repeat : no-repeat;
-}
-
-#cube div:nth-child(5) {
-  -webkit-transform : rotateX(-90deg) translateZ(200px) rotate(180deg);
-  -moz-transform    : rotateX(-90deg) translateZ(200px) rotate(180deg);
-  -o-transform      : rotateX(-90deg) translateZ(200px) rotate(180deg);
-  -ms-transform     : rotateX(-90deg) translateZ(200px) rotate(180deg);
-  transform         : rotateX(-90deg) translateZ(200px) rotate(180deg);
-  background-color  : #955122;
-  background-image: url("../../docs/huffington/image5.jpg");
-  background-repeat :no-repeat;
-}
-
-#cube div:nth-child(6)  {
-  -webkit-transform : rotateX(90deg) translateZ(200px);
-  -moz-transform    : rotateX(90deg) translateZ(200px);
-  -o-transform      : rotateX(90deg) translateZ(200px);
-  -ms-transform     : rotateX(90deg) translateZ(200px);
-  transform         : rotateX(90deg) translateZ(200px);
-  background-color  : #E34C26;
-  background-image: url("../../docs/huffington/image6.jpg");
-  background-repeat :no-repeat;
-  text-align:center;
 }

@@ -69,7 +69,7 @@ function switchTheme(input){
   if (input.name == "themes/tropicalia") {
     var audioElement = document.createElement('audio');
     document.head.appendChild(audioElement);
-    audioElement.setAttribute('src', '../audio/tropicalia/Alfomega.mp3');
+    audioElement.setAttribute('src', '../audio/tropicalia/Sambar.mp3');
     audioElement.play();
   };
 
