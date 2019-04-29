@@ -189,14 +189,13 @@ figure {
   margin: 0 0 2.5vw 45vw;
   float: left;
   position: relative;
+  padding: 0.5vw;
   box-sizing: border-box;
 }
 
 figure > img {
-  width: 50vw;
-  padding: 0.5vw;
+  width: 49vw;
   border-radius: 5px;
-  box-sizing: border-box;
 }
 
 figure > img:nth-child(2) {
@@ -205,9 +204,8 @@ figure > img:nth-child(2) {
 
 figure > table {
   font-family: rajdhaniLight;
-  width: 50vw;
+  width: 49vw;
   font-size: 0.7rem;
-  padding: 0.5vw;
   margin: 0;
   border-spacing: 0;
 }
