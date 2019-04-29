@@ -312,7 +312,7 @@ small {
 
 /*--------------First Figure--------------*/
 
-figure:first-of-type {
+body > figure {
   padding-top: 0;
   padding-bottom: 0;
   border-top: none;
@@ -323,11 +323,11 @@ figure:first-of-type {
   background-size: 20%;
 }
 
-figure:first-of-type figcaption {
+body > figure figcaption {
   display: none;
 }
 
-figure:first-of-type img {
+body > figure img {
   width: 50%; /* use percentage of the figure box width */
   border-radius: 10%;
   max-height: 70vh;
@@ -335,7 +335,7 @@ figure:first-of-type img {
   float: none;
 }
 
-figure:first-of-type img:hover {
+body > figure img:hover {
   transform: scale(1.1);
 }
 
@@ -349,6 +349,10 @@ figure {
   padding-top: 2vh;
   padding-bottom: 2vh;
   border-bottom: 0.5vh dotted black;
+  background-image: url("../../img/bg/decleft.png"), url("../../img/bg/decright.png");
+  background-repeat: no-repeat;
+  background-position: left top, right top;
+  background-size: 25%;
 }
 
 figure:has(table) {
@@ -382,16 +386,12 @@ figure > figcaption > small {
 
 /*--------------Figures: Images--------------*/
 
-article figure > img {
+figure > img {
   width: 50%;
   margin: 0;
   padding: 0;
   border-radius: 40%;
   filter: sepia();
-  background-image: url("../../img/bg/decleft.png"), url("../../img/bg/decright.png");
-  background-repeat: no-repeat;
-  background-position: left top, right top;
-  background-size: 25%;
 }
 
 /*--------------Figures: Videos--------------*/
