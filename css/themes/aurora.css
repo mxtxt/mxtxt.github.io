@@ -1,15 +1,6 @@
-
 @font-face {
-    font-family: neuropol;
-    src: url("../../fonts/aurora/neuropol/neuropol.ttf") format("truetype");
-}
-@font-face {
-    font-family: b2sq;
-    src: url("../../fonts/aurora/b2sq/b2sq.ttf") format("truetype");
-}
-@font-face {
-    font-family: auroraFont;
-    src: url("../../fonts/aurora/aurora/aurora.ttf") format("truetype");
+    font-family: rajdhaniLight;
+    src: url("../../fonts/aurora/rajdhani/Rajdhani-Light.ttf") format("truetype");
 }
 
 html {
@@ -70,7 +61,7 @@ h1, h2, h3, h4, h5, h6, p, q, ul, ol {
 }
 
 header {
-  font-family: b2sq;
+  font-family: rajdhaniLight;
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -139,7 +130,7 @@ header > p {
   background-size: 200%;
   animation: aurora 7s infinite;
   border-radius: 5px;
-  font-family: b2sq;
+  font-family: rajdhaniLight;
   font-size: 2rem;
   line-height: 2rem;
   content: "Hi, \A I am Aurora.";
@@ -201,7 +192,7 @@ figure > figcaption {
   font-size: 2rem;
   line-height: 2rem;
   margin-top: 0.5vw;
-  font-family: b2sq;
+  font-family: rajdhaniLight;
 }
 
 figure > figcaption em {
