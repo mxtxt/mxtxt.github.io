@@ -9,17 +9,18 @@ html {
 }
 
 body {
-  padding: 0;
+  padding: 2.5vw;
   margin: 0;
   width: 100vw;
   height: 100vh;
   background: linear-gradient(60deg, #8bbbcc 0%, #86b9ca 49%, #4051b5 82%);
   background-size: 200%;
   animation: aurora 15s infinite;
-  background-attachment: fixed!important;
+  box-sizing: border-box;
 }
 
 body:before {
+  margin: -2.5vw;
   background: radial-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15));
   background-size: 200%;
   content: " ";
@@ -126,6 +127,16 @@ header > section > p {
   line-height: 1rem;
 }
 
+header a {
+  color: #e91e62;
+  text-decoration: none;
+}
+
+header a:hover {
+  color: #3f51b5;
+  text-decoration: none;
+}
+
 #auroraWrapper {
   background: radial-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.3));
   background-size: 200%;
@@ -139,6 +150,7 @@ header > section > p {
   margin: 2.5vw 0 0 2.5vw;
   width: 22.5vw;
   height: 22.5vw;
+  box-sizing: border-box;
 }
 
 #auroraWrapper:after {
@@ -174,17 +186,17 @@ figure {
   background-size: 200%;
   animation: aurora 15s infinite;
   border-radius: 5px;
-  padding: 0.5vw;
-  margin: 2.5vw 0 2.5vw 47.5vw;
+  margin: 0 0 2.5vw 45vw;
   float: left;
-  z-index: 100;
   position: relative;
   box-sizing: border-box;
 }
 
 figure > img {
   width: 50vw;
+  padding: 0.5vw;
   border-radius: 5px;
+  box-sizing: border-box;
 }
 
 figure > img:nth-child(2) {
@@ -192,7 +204,11 @@ figure > img:nth-child(2) {
 }
 
 figure > table {
+  font-family: rajdhaniLight;
   width: 50vw;
+  font-size: 0.7rem;
+  padding: 0.5vw;
+  margin: 0;
   border-spacing: 0;
 }
 
@@ -207,9 +223,10 @@ figure > table td {
 figure > figcaption {
   display: flex;
   flex-direction: column;
-  font-size: 2rem;
-  line-height: 2rem;
+  font-size: 1rem;
+  line-height: 1rem;
   margin-top: 0.5vw;
+  padding: 0.5vw;
   font-family: rajdhaniLight;
 }
 
