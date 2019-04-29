@@ -320,7 +320,7 @@ body > figure {
   background-image: url("../../img/bg/decleft1.png"), url("../../img/bg/decright1.png");
   background-repeat: no-repeat;
   background-position: left, right;
-  background-size: 40%;
+  background-size: 25%;
 }
 
 body > figure figcaption {
