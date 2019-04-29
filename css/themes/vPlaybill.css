@@ -115,7 +115,7 @@
 /*--------------General Structure--------------*/
 
 html {
-  background-image: url("../../img/bg/papersmall.png");
+  background-image: url("../../img/bg/playbill/papersmall.png");
   background-repeat: repeat;
   height: 100vh;
   width: 100vw;
@@ -253,7 +253,7 @@ h4 {
   margin-bottom: 1vh;
   padding-bottom: 1vh;
 
-  background-image: url("../../img/bg/decleft0.png"), url("../../img/bg/decright0.png");
+  background-image: url("../../img/bg/playbill/decleft0.png"), url("../../img/bg/playbill/decright0.png");
   background-repeat: no-repeat;
   background-position: left, right;
   background-size: 10%;
@@ -317,7 +317,7 @@ body > figure {
   padding-bottom: 0;
   border-top: none;
   border-bottom: none;
-  background-image: url("../../img/bg/decleft1.png"), url("../../img/bg/decright1.png");
+  background-image: url("../../img/bg/playbill/decleft1.png"), url("../../img/bg/playbill/decright1.png");
   background-repeat: no-repeat;
   background-position: left, right;
   background-size: 25%;
@@ -349,7 +349,7 @@ figure {
   padding-top: 2vh;
   padding-bottom: 2vh;
   border-bottom: 0.5vh dotted black;
-  background-image: url("../../img/bg/decleft.png"), url("../../img/bg/decright.png");
+  background-image: url("../../img/bg/playbill/decleft.png"), url("../../img/bg/playbill/decright.png");
   background-repeat: no-repeat;
   background-position: left top, right top;
   background-size: 25%;
