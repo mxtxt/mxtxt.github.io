@@ -399,8 +399,8 @@ small {
 
 /*--------------First Figure--------------*/
 
-figure:first-child {
-  /* because usually the first figure contains a logo, hide this figure. */
+body > figure {
+  /* do not display figures that aren't part of the main article. */
   display: none !important;
 }
 
