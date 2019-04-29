@@ -155,7 +155,6 @@ body {
   padding-right: 0;
 }
 
-
 /*--------------------Header Structure and Style--------------------- */
 
 header {
@@ -226,10 +225,10 @@ h2 {
     text-align: right;
     /* floated to the right. SOURCE Image 3. */
     float: right;
-    margin-top: 0.7vh;
     /* no space between the title and the next element. SOURCE Image 2. */
     margin-bottom: 0;
     padding-bottom: 0;
+    margin-top: 0.7vh;
     /* right padding. SOURCE Image 8. */
     padding-right: 2vw;
 }
@@ -408,7 +407,7 @@ body > figure {
 
 figure {
   /* this is a special background designed by @samurai. SOURCE http://simurai.com/lab/2011/10/03/space-cacss#top  */
-  background-size: 24px 24px;
+  background-size: 10vw 10vw;
   background-color: #fff;
   background-image: repeating-radial-gradient(#d0bb4c 8px, #e0d289 12px);
   /* make the figure background take up all the figure space*/
@@ -416,13 +415,6 @@ figure {
   margin-left: 0;
   margin-right: 0;
 }
-
-/* IMPORTANT NEEDS CHANGE */
-figure:has(table) {
-  /* will have to do with jquery,
-  $("p:has(img)") */
-}
-/* IMPORTANT NEEDS CHANGE */
 
 figure > figcaption {
   font-family: "milho" ;
@@ -445,12 +437,12 @@ figure > img {
   /* create a border that works as a shadow */
   box-shadow: 0 0 0 2vw #e0d289;
   /* make the colors rotate as a gradient through the color wheel */
-  animation: colorRotate 10s  infinite;
+  animation: colorRotate 10s infinite;
 
   /* image takes up 80 percent of the figure width. */
   width: 80%;
   /* for taller than average images, restrict. */
-  max-height: 50vh;
+  max-height: 40vh;
   margin-top: 5vh;
   margin-bottom: 5vh;
   margin-left: 5vw;
@@ -580,10 +572,21 @@ li > small {
 /*------------------------------Footer------------------------------- */
 
 footer {
-  width: ;
+  /* psychedelic font. */
+  font-family: 'yoxall';
+  font-size: 2vw;
+  /* background image by same artist as h1 background */
   background: url("../../img/bg/tpbg/aplant.png");
   background-size: cover;
   background-position: left;
+  /* green rounded border */
+  border-top: 2vw solid green;
+  border-bottom: 2vw solid green;
+  border-radius: 25px;
+
+  width: 100%;
+  /* space between footer and article */
+  margin-top: 2vw;
 }
 
 footer > ul > li {
