@@ -1,7 +1,3 @@
-/* use jquery clone() method for text/titles*/
-/* use css box-shadow for images*/
-
-
 /*-------------------------------Fonts------------------------------- */
 /*----Psychedelic, Pop Art, Sans-Serif, Brazilian----*/
 
@@ -166,7 +162,7 @@
 
 html {
   /* whole document background color. SOURCE Image 1 */
-  background-color: #e0d289;
+  background-color: #A9A355; /* alternate #e0d289 */
 }
 
 body {
@@ -178,7 +174,7 @@ body {
   /* by default body has no side padding */
   padding-left: 0;
   padding-right: 0;
-  border: 5vw solid #af443a;
+  border: 5vw solid #252C2D; /* alternate #af443a */
 
 }
 
