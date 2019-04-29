@@ -456,16 +456,15 @@ section > figure > table  td {
 /*--------------Lists--------------*/
 
 section > ol {
-  width: 89%;
-  list-style-type: upper-roman;
-  border: 4px dashed black;
-
-  padding-left: 10%;
 
   font-family: "bodoni-bold";
   font-size: 2vw;
-  text-align: justify;
+  list-style-type: upper-roman;
+  border: 4px dashed black;
 
+  text-align: justify;
+  width: 89%;
+  padding-left: 10%;
   margin-top: 1vh;
   padding-top: 0vh;
 
@@ -488,7 +487,6 @@ section > ul {
   border: 4px dashed black;
 
   padding-left: 10%;
-
   font-family: "bodoni-bold";
   font-size: 2vw;
   text-align: justify;
