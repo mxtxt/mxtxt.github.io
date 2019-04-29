@@ -349,10 +349,6 @@ figure {
   padding-top: 2vh;
   padding-bottom: 2vh;
   border-bottom: 0.5vh dotted black;
-  background-image: url("../../img/bg/decleft.png"), url("../../img/bg/decright.png");
-  background-repeat: no-repeat;
-  background-position: left top, right top;
-  background-size: 25%;
 }
 
 figure:has(table) {
@@ -386,12 +382,16 @@ figure > figcaption > small {
 
 /*--------------Figures: Images--------------*/
 
-figure > img {
+article figure > img {
   width: 50%;
   margin: 0;
   padding: 0;
   border-radius: 40%;
   filter: sepia();
+  background-image: url("../../img/bg/decleft.png"), url("../../img/bg/decright.png");
+  background-repeat: no-repeat;
+  background-position: left top, right top;
+  background-size: 25%;
 }
 
 /*--------------Figures: Videos--------------*/
