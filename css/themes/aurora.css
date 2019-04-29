@@ -15,7 +15,7 @@ body {
   height: 100vh;
   background: linear-gradient(60deg, #8bbbcc 0%, #86b9ca 49%, #4051b5 82%);
   background-size: 200%;
-  animation: aurora 10s infinite;
+  animation: aurora 15s infinite;
   background-attachment: fixed!important;
 }
 
@@ -24,7 +24,7 @@ body:before {
   background-size: 200%;
   content: " ";
   position: fixed;
-  animation: aurora 7s infinite;
+  animation: aurora 15s infinite;
   width: 100%;
   height: 100%;
 }
@@ -71,21 +71,37 @@ header {
   padding: 1.5rem;
   top: 0;
   left: 0;
-  background: radial-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.4));
+  background: radial-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.3));
   background-size: 200%;
-  animation: aurora 7s infinite;
+  animation: aurora 15s infinite;
   border-radius: 5px;
   box-sizing: border-box;
 }
 
-header > h1 {
+header, figure,
+#auroraWrapper, #auroraWrapper:after {
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+header > section {
+  display: block;
+  width: auto;
+  height: auto;
+  box-sizing: border-box;
+}
+
+header > h1,
+header > section > h1 {
   display: block;
   margin: 1rem 0;
   font-size: 2rem;
   line-height: 2rem;
 }
 
-header > h2 {
+header > h2,
+header > section > h2 {
   display: block;
   margin: 1rem 0;
   font-weight: bold;
@@ -93,7 +109,8 @@ header > h2 {
   line-height: 2rem;
 }
 
-header > h3 {
+header > h3,
+header > section > h3 {
   display: block;
   margin: 1rem 0;
   font-weight: bold;
@@ -101,17 +118,18 @@ header > h3 {
   line-height: 2rem;
 }
 
-header > p {
+header > p,
+header > section > p {
   display: block;
-  margin: 0 0 1rem 0;
+  margin: 0 0 0 0;
   font-size: 1rem;
   line-height: 1rem;
 }
 
 #auroraWrapper {
-  background: radial-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.4));
+  background: radial-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.3));
   background-size: 200%;
-  animation: aurora 7s infinite;
+  animation: aurora 15s infinite;
   border-radius: 5px;
   display: block!important;
   position: fixed;
@@ -126,9 +144,9 @@ header > p {
 #auroraWrapper:after {
   display: block;
   white-space: pre-wrap;
-  background: radial-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.4));
+  background: radial-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.3));
   background-size: 200%;
-  animation: aurora 7s infinite;
+  animation: aurora 15s infinite;
   border-radius: 5px;
   font-family: rajdhaniLight;
   font-size: 2rem;
@@ -152,9 +170,9 @@ header > p {
 }
 
 figure {
-  background: radial-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.4));
+  background: radial-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.3));
   background-size: 200%;
-  animation: aurora 7s infinite;
+  animation: aurora 15s infinite;
   border-radius: 5px;
   padding: 0.5vw;
   margin: 2.5vw 0 2.5vw 47.5vw;
