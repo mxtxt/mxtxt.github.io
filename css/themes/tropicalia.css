@@ -340,13 +340,13 @@ header > p > a {
 
 /*------------------Main Article Structure and Style------------------- */
 
-article {
+main {
   /* upper padding. */
   padding-top: 3vw;
   /* side padding matches header paragraphs'. */
   padding-left: 5vw;
   padding-right: 5vw;
-  /* article is divided into two columns. SOURCE Image 9. */
+  /* main is divided into two columns. SOURCE Image 9. */
   -webkit-column-count: 1;
      -moz-column-count: 1;
           column-count: 1;
@@ -387,14 +387,14 @@ h4 {
   background-image: repeating-radial-gradient(#A9A355 8px, white 12px);
 }
 
-article p {
+main p {
   /* sans-serif font */
   font-family: 'texgyreadventor-regular';
   font-size: 3.5vw;
   text-align: justify;
 }
 
-article p > em {
+main p > em {
   /* literally tropicalia-inspired font. */
   font-family: 'tropicalia';
   font-size: 4.5vw;
@@ -572,7 +572,7 @@ body > footer {
 
 }
 
-article footer {
+main footer {
   font-family: 'texgyreadventor-regular';
   font-size: 3vw;
 }
@@ -606,7 +606,7 @@ article footer {
       color: pink;
     }
 
-    article {
+    main {
       padding-left: 7.5vw;
       padding-right: 7.5vw;
       -webkit-column-count: 2;
@@ -619,11 +619,11 @@ article footer {
       font-size: 5vw;
     }
 
-    article p {
+    main p {
       font-size: 1.5vw;
     }
 
-    article p > em {
+    main p > em {
       font-size: 2.5vw;
     }
 
@@ -688,7 +688,7 @@ article footer {
       font-size: 1.5vw;
     }
 
-    article footer {
+    main footer {
       font-size: 1.3vw;
     }
 
