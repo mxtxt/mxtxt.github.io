@@ -198,7 +198,7 @@
 /*-----------------------------Media Queries------------------------------ */
 /* ----------- Small devices----------- */
 /* ----------- Small devices----------- */
-@media only screen
+@media screen
   and (max-width: 812px)
   (-webkit-min-device-pixel-ratio: 2) {
 
