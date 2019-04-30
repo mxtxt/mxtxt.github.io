@@ -278,6 +278,7 @@ html, body {
     left: 50vw;
     flex-direction: column;
     justify-content: center;
+    float: bottom;
   }
 
   .source-btn {
