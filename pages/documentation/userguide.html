@@ -43,50 +43,50 @@
               <pre>
                 <code class="html">
                   &#60;html&#62;
-                    &#60;head&#62; <!--- in the head you put all your metadata. --->
-                      &#60;meta charset="utf-8"&#62; <!--- in the meta tag you specify the character set used in the page. --->
-                      &#60;link name="theme" rel="stylesheet" type="text/css" href="#"&#62; <!--- link is used for linking the stylesheet. --->
+                    &#60;head&#62; &#60;!--- in the head you put all your metadata. ---&#62;
+                      &#60;meta charset="utf-8"&#62; &#60;!--- in the meta tag you specify the character set used in the page. ---&#62;
+                      &#60;link name="theme" rel="stylesheet" type="text/css" href="#"&#62; &#60;!--- link is used for linking the stylesheet. ---&#62;
                     &#60;/head&#62;
 
-                    &#60;body&#62; <!--- the body contains all the actual content of the document. --->
-                      &#60;header&#62; <!--- the header defines a header section for the element that contains it. --->
-                        &#60;h1&#62;Your magazine title. &#60;/h1&#62; <!--- title of the document. --->
-                        &#60;h2&#62;document title. &#60;/h2&#62; <!--- title of the content of the document. --->
-                        &#60;h3&#62;document subtitle. &#60;/h3&#62; <!--- subtitle of the document. --->
+                    &#60;body&#62; &#60;!--- the body contains all the actual content of the document. ---&#62;
+                      &#60;header&#62; &#60;!--- the header defines a header section for the element that contains it. ---&#62;
+                        &#60;h1&#62;Your magazine title. &#60;/h1&#62; &#60;!--- title of the document. ---&#62;
+                        &#60;h2&#62;document title. &#60;/h2&#62; &#60;!--- title of the content of the document. ---&#62;
+                        &#60;h3&#62;document subtitle. &#60;/h3&#62; &#60;!--- subtitle of the document. --->
                         &#60;p&#62;You can add a paragraph to your header. &#60;/p&#62;
-                        <!--- p defines a paragraph of a text.
-                        You can put the name of the author/illustrator in the p within the header. --->
+                        &#60;!--- p defines a paragraph of a text.
+                        You can put the name of the author/illustrator in the p within the header. ---&#62;
                       &#60;/header&#62;
 
                       &#60;main&#62;
-                      <!--- The <main> tag specifies the main content of a document. The content inside the <main> element should be unique to the document.
+                      &#60;!--- The <main> tag specifies the main content of a document. The content inside the <main> element should be unique to the document.
                       It should not contain any content that is repeated across documents such as sidebars, navigation links, copyright information, site logos, and search forms.
-                      Note: There must not be more than one &#60;main&#62; element in a document. The <main> element must NOT be a descendant of an <article>, <aside>, <footer>, <header>, or <nav> element. --->
+                      Note: There must not be more than one main element in a document. The main element must NOT be a descendant of an article, aside, footer, header, or nav element. ---&#62;
 
-                        &#60;section&#62; <!--- used if the document contains clearly separate sections or chapters. --->
-                          &#60;h4&#62;This is the section title&#60;/h4&#62; <!--- section title. --->
-                          &#60;p&#62; This is the first line. &#60;br&#62; <!--- br is used for line breaks, like in dialogues. ---->
-                          This is the &#60;em&#62;second&#60;/em&#62; line. &#60;/p&#62; <!--- em is used for emphasized content. --->
+                        &#60;section&#62; &#60;!--- used if the document contains clearly separate sections or chapters. ---&#62;
+                          &#60;h4&#62;This is the section title&#60;/h4&#62; &#60;!--- section title. ---&#62;
+                          &#60;p&#62; This is the first line. &#60;br&#62; &#60;!--- br is used for line breaks, like in dialogues. ----&#62;
+                          This is the &#60;em&#62;second&#60;/em&#62; line. &#60;/p&#62; &#60;!--- em is used for emphasized content. ---&#62;
 
-                          &#60;p&#62;&#60;small&#62;The text size of this paragraph will be smaller. &#60;/small&#62;&#60;/p&#62; <!--- small is used for smaller content. --->
+                          &#60;p&#62;&#60;small&#62;The text size of this paragraph will be smaller. &#60;/small&#62;&#60;/p&#62; &#60;!--- small is used for smaller content. ---&#62;
 
                           &#60;p&#62; This is a paragraph. &#60;a href="#"&#62;&#60;/a&#62;&#60;/p&#62;
-                          <!--- a defines a hyperlink, which is used to link from one page to another.
+                          &#60;!--- a defines a hyperlink, which is used to link from one page to another.
                           href is the most important attribute of the <a>; element. It indicates the link's destination.
                             href=“URL” link to another webpage;
                             href=“#value” link to an element with a specified id (id=“value”) within a page.
-                          If the href attribute is not present, the <a>; tag is not a hyperlink. --->
+                          If the href attribute is not present, the a tag is not a hyperlink. ---&#62;
 
                           &#60;p&#62; This is a paragraph. &#60;a id=""&#62;&#60;/a&#62;&#60;/p&#62;
-                          <!--- The id attribute can be used to define bookmarks in a page. HTML bookmarks are used to allow readers to jump to specific parts within the same Web page.
+                          &#60;!--- The id attribute can be used to define bookmarks in a page. HTML bookmarks are used to allow readers to jump to specific parts within the same Web page.
                           Bookmarks can be useful if your webpage is very long. To make a bookmark, you must first create the bookmark, and then add a link to it.
-                          When the link is clicked, the page will scroll to the location with the bookmark. Use the href attribute (href="#value") to link the bookmark to another part of the same webpage. --->
+                          When the link is clicked, the page will scroll to the location with the bookmark. Use the href attribute (href="#value") to link the bookmark to another part of the same webpage. ---&#62;
 
-                          &#60;q&#62;This is a quotation. &#60;/q&#62; <!--- q is used for short quotations--->
+                          &#60;q&#62;This is a quotation. &#60;/q&#62; &#60;!--- q is used for short quotations---&#62;
 
-                          &#60;figure&#62; <!--- figure specifies self-contained content, like illustrations, diagrams, photos, code listings, etc. --->
-                            &#60;img src="../path/to/your/figure.jpg"&#62; <!--- the src attribute of img specifies the URL of the image--->
-                            &#60;figcaption&#62; This is the figure caption. &#60;/figcaption&#62; <!--- figcaption is used for defining a caption for a <figure> element. --->
+                          &#60;figure&#62; &#60;!--- figure specifies self-contained content, like illustrations, diagrams, photos, code listings, etc. ---&#62;
+                            &#60;img src="../path/to/your/figure.jpg"&#62; &#60;!--- the src attribute of img specifies the URL of the image---&#62;
+                            &#60;figcaption&#62; This is the figure caption. &#60;/figcaption&#62; &#60;!--- figcaption is used for defining a caption for a figure element. ---&#62;
                           &#60;/figure&#62;
                         &#60;/section&#62;
 
@@ -96,7 +96,7 @@
                           &#60;p&#62; This is a paragraph. &#60;/p&#62;
       
                           &#60;figure&#62;
-                            &#60;video src="../path/to/your/video.jpg"&#62; <!--- the src attribute specifies the URL of the video. --->
+                            &#60;video src="../path/to/your/video.jpg"&#62; &#60;!--- the src attribute specifies the URL of the video. ---&#62;
                             &#60;figcaption&#62; This is the figure caption. &#60;/figcaption&#62;
                           &#60;/figure&#62;
                         &#60;/section&#62;
@@ -116,14 +116,14 @@
                           &#60;p&#62; This is a paragraph. &#60;/p&#62;
 
                           &#60;figure&#62;
-                            &#60;table&#62; <!--- table can have <th>, <tr>, <td>, <colspan>, <rowspan> and <caption> within it. --->
-                              &#60;caption&#62;This is the table caption. &#60;/caption&#62; <!--- caption is used for creating table captions. --->
-                              &#60;tr&#62; <!--- tr defines a table row. --->
-                                &#60;th&#62;This is a table header&#60;/th&#62; <!--- th defines a table header, which is bold and centered by default. --->
+                            &#60;table&#62; &#60;!--- table can have th, tr, td, colspan, rowspan and caption within it. ---&#62;
+                              &#60;caption&#62;This is the table caption. &#60;/caption&#62; &#60;!--- caption is used for creating table captions. ---&#62;
+                              &#60;tr&#62; &#60;!--- tr defines a table row. ---&#62;
+                                &#60;th&#62;This is a table header&#60;/th&#62; &#60;!--- th defines a table header, which is bold and centered by default. ---&#62;
                                 &#60;th&#62;This is another table header&#60;/th&#62;
                               &#60;/tr&#62;
                               &#60;tr&#62;
-                                &#60;td&#62;These are table data in a cell&#60;/td&#62; <!--- td defines a table cell containing data. --->
+                                &#60;td&#62;These are table data in a cell&#60;/td&#62; &#60;!--- td defines a table cell containing data. ---&#62;
                                 &#60;td&#62;This is another cell&#60;/td&#62;
                               &#60;/tr&#62;
                             &#60;/table&#62;
@@ -139,8 +139,8 @@
                                 &#60;td rowspan=""&#62;This is a cell&#60;/td&#62;
                                 &#60;td colspan=""&#62;This is a cell&#60;/td&#62;
                                 &#60;td&#62;&#60;/td&#62;
-                                <!--- rowspan and colspan are attributes of th and td.
-                                They are used to specify the number of rows and columns a cell should span. --->
+                                &#60;!--- rowspan and colspan are attributes of th and td.
+                                They are used to specify the number of rows and columns a cell should span. ---&#62;
                               &#60;/tr&#62;
                               &#60;tr&#62;
                                 &#60;td&#62;This is a cell&#60;/td&#62;
@@ -149,13 +149,13 @@
                              &#60;/table&#62;
                           &#60;/figure&#62;
 
-                          &#60;ol&#62; <!--- ol defines an ordered list, which can be numerical or alphabetical. ---->
-                            &#60;li&#62;This is the first item. &#60;/li&#62; <!--- li defines an item of the list. --->
+                          &#60;ol&#62; &#60;!--- ol defines an ordered list, which can be numerical or alphabetical. ---&#62;
+                            &#60;li&#62;This is the first item. &#60;/li&#62; &#60;!--- li defines an item of the list. ---&#62;
                             &#60;li&#62;This is the second item. &#60;/li&#62;
                             &#60;li&#62;This is the third item. &#60;/li&#62;
                           &#60;/ol&#62;
 
-                          &#60;ul&#62; <!--- ul defines an unordered list. --->
+                          &#60;ul&#62; &#60;!--- ul defines an unordered list. ---&#62;
                             &#60;li&#62;This is one item of the list. &#60;/li&#62;
                             &#60;li&#62;This is another item of the list. &#60;/li&#62;
                           &#60;/ul&#62;
@@ -166,8 +166,8 @@
                       &#60;footer&#62;
                         &#60;p&#62;Here you can put the copyrights. &#60;/p&#62;
                       &#60;/footer&#62;
-                      <!--- The <footer> tag defines a footer for a document or section.
-                      Used for credits, copyrights, etc. You can have several <footer> elements in one document. --->
+                      &#60;!--- The <footer> tag defines a footer for a document or section.
+                      Used for credits, copyrights, etc. You can have several <footer> elements in one document. ---&#62;
 
                     &#60;/body&#62;
                   &#60;/html&#62;
