@@ -267,6 +267,32 @@ html, body {
     padding: 0; /* TBD */
     width: 1.5rem;
   }
+
+  #source-nav {
+    position: fixed;
+    height: 100%;
+    width: 2.5rem;
+    padding: 0; /* TBD */
+    display: flex;
+    bottom: 0;
+    left: 50vw;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .source-btn {
+    border: none;
+    background: none;
+  }
+
+  .source-btn.active {
+    background-color: #f9eb0f;
+  }
+
+  .source-icon {
+    padding: 0; /* TBD */
+    width: 1.5rem;
+  }
 }
 
 @media (max-width: 766px) {
