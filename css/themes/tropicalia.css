@@ -199,8 +199,7 @@
 /* ----------- Small devices----------- */
 /* ----------- Small devices----------- */
 @media screen
-  and (max-width: 812px)
-  (-webkit-min-device-pixel-ratio: 2) {
+  and (max-width: 812px) {
 
     /*-------------------------------General------------------------------- */
 
