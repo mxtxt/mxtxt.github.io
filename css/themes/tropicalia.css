@@ -1,3 +1,201 @@
+/*-------------------------------Fonts------------------------------- */
+/*----Psychedelic, Pop Art, Sans-Serif, Brazilian----*/
+/* franklin */
+@font-face {
+  font-family: franklin;
+  src: url("../../fonts/tropicalia/franklin.eot"); /* IE9*/
+  src: url("../../fonts/tropicalia/franklin.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("../../fonts/tropicalia/franklin.woff2") format("woff2"), /* chrome、firefox */
+  url("../../fonts/tropicalia/franklin.woff") format("woff"), /* chrome、firefox */
+  url("../../fonts/tropicalia/franklin.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("../../fonts/tropicalia/franklin.svg#Franklin Gothic Hand W01 Cond") format("svg"); /* iOS 4.1- */
+}
+
+/********AZEDO********/
+/* azedo-bold */
+@font-face {
+    font-family: azedo-bold;
+    src: url("../../fonts/tropicalia/Azedo-Bold.otf") format("opentype");
+}
+
+/* azedo-light */
+@font-face {
+    font-family: azedo-light;
+    src: url("../../fonts/tropicalia/Azedo-Light.otf") format("opentype");
+}
+
+/********BOOMTOWN DECO********/
+/* boomtown-deco */
+@font-face {
+    font-family: boomtown-deco;
+    src: url("../../fonts/tropicalia/Boomtown-deco.otf") format("opentype");
+}
+
+/********DOGSMOKE********/
+/* dogsmoke */
+@font-face {
+    font-family: dogsmoke;
+    src: url("../../fonts/tropicalia/Dogsmoke.ttf") format("opentype");
+}
+
+/* dogsmoke-ii */
+@font-face {
+    font-family: dogsmoke-ii;
+    src: url("../../fonts/tropicalia/Dogsmoke-II.ttf") format("opentype");
+}
+
+/* dogsmoke-thunder-ii */
+@font-face {
+    font-family: dogsmoke-thunder-ii;
+    src: url("../../fonts/tropicalia/Dogsmoke-Thunder-II.ttf") format("opentype");
+}
+
+/* dogsmoke-thunder */
+@font-face {
+    font-family: dogsmoke-thunder;
+    src: url("../../fonts/tropicalia/Dogsmoke-Thunder.ttf") format("opentype");
+}
+
+/* dogsmoke-ii */
+@font-face {
+    font-family: dogsmoke-ii;
+    src: url("../../fonts/tropicalia/Dogsmoke-II.ttf") format("opentype");
+}
+
+/********TEXGYREADVENTOR********/
+/* texgyreadventor-italic */
+@font-face {
+    font-family: texgyreadventor-italic;
+    src: url("../../fonts/tropicalia/texgyreadventor-italic.otf") format("opentype");
+}
+
+/* texgyreadventor-bolditalic */
+@font-face {
+    font-family: texgyreadventor-bolditalic;
+    src: url("../../fonts/tropicalia/texgyreadventor-bolditalic.otf") format("opentype");
+}
+
+/* texgyreadventor-bold */
+@font-face {
+    font-family: texgyreadventor-bold;
+    src: url("../../fonts/tropicalia/texgyreadventor-bold.otf") format("opentype");
+}
+
+/* texgyreadventor-regular */
+@font-face {
+    font-family: texgyreadventor-regular;
+    src: url("../../fonts/tropicalia/texgyreadventor-regular.otf") format("opentype");
+}
+
+/********OTHER********/
+/* tropicalia */
+@font-face {
+    font-family: tropicalia;
+    src: url("../../fonts/tropicalia/Tropicalia-Brush.ttf") format("opentype");
+}
+
+/* ostrichsans */
+@font-face {
+    font-family: ostrichsans;
+    src: url("../../fonts/tropicalia/ostrichsans-medium-webfont.ttf") format("opentype");
+}
+
+/* village */
+@font-face {
+    font-family: village;
+    src: url("../../fonts/tropicalia/Village.ttf") format("opentype");
+}
+
+/* flames */
+@font-face {
+    font-family: flames;
+    src: url("../../fonts/tropicalia/Flames.ttf") format("opentype");
+}
+
+/* beamie */
+@font-face {
+    font-family: beamie;
+    src: url("../../fonts/tropicalia/beamie.ttf") format("opentype");
+}
+
+/* ftact */
+@font-face {
+    font-family: ftact;
+    src: url("../../fonts/tropicalia/Ftact.ttf") format("opentype");
+}
+
+/* lettersinthehands */
+@font-face {
+    font-family: lettersinthehands;
+    src: url("../../fonts/tropicalia/Lettersinthehands.ttf") format("opentype");
+}
+
+/* pseudolux-regular */
+@font-face {
+    font-family: pseudolux-regular;
+    src: url("../../fonts/tropicalia/Pseudolux-Regular.ttf") format("opentype");
+}
+
+/* pseudolux */
+@font-face {
+    font-family: pseudolux;
+    src: url("../../fonts/tropicalia/Pseudolux.ttf") format("opentype");
+}
+
+/* yoxall */
+@font-face {
+    font-family: yoxall;
+    src: url("../../fonts/tropicalia/Yoxall.ttf") format("opentype");
+}
+
+/* ipanema */
+@font-face {
+    font-family: ipanema;
+    src: url("../../fonts/tropicalia/Ipanema-Secco.ttf") format("opentype");
+}
+
+/* milho */
+@font-face {
+    font-family: milho;
+    src: url("../../fonts/tropicalia/Milho-Cozido.ttf") format("opentype");
+}
+
+/* beigly */
+@font-face {
+    font-family: beigly;
+    src: url("../../fonts/tropicalia/Beigly.ttf") format("opentype");
+}
+
+@import url('https://fonts.googleapis.com/css?family=Gothic+A1');
+
+/*-----------------------------Animations------------------------------ */
+
+/* Psychedelic CSS Filter Animations - A PEN BY Luke Andersen*/
+@keyframes colorRotate {
+ 100% {
+   -webkit-filter: hue-rotate(-360deg);
+ }
+}
+
+/* Change color */
+@keyframes colorChange {
+  from {color: red;}
+  to {color: yellow;}
+}
+
+/* animation goback */
+@keyframes unpuzzle {
+  transform: rotate(-100deg);
+}
+
+/* simurai http://simurai.com/lab/2011/10/03/space-cacss */
+@keyframes cells {
+  from { background-size: 22px 22px; }
+  to { background-size: 24px 24px; }
+}
+
+
+
 html {
   background-color: #ABA362; /* alternate #e0d289 */
 }
