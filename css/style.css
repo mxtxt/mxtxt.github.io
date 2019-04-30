@@ -222,17 +222,13 @@ html, body {
   }
 
   #source-button {
-    position: fixed;
+    border: none;
     height: 100%;
     width: 2.5rem;
-    padding: 0; /* TBD */
-    display: flex;
     float: bottom;
     margin-bottom: 0;
     padding-bottom: 0;
     padding-left: 50vw;
-    flex-direction: column;
-    justify-content: center;
   }
 
   .switch-menu {
