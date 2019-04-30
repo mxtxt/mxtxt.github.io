@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, .display-1, .display-2 {
 
 }
 
-.documentation, .about, .disclaimer {
+.documentation, .about, .disclaimer, .theframe, .userguide, .themelist, .doctheme {
   background-color: #C8D2DE;
   padding-top: 5vh;
   padding-bottom: 5vh;
@@ -67,6 +67,26 @@ h1, h2, h3, h4, h5, .display-1, .display-2 {
 .documentation h1 > small {
   font-weight: 700;
   font-size: 2rem;
+}
+
+.theframe h3 {
+  color: #D02D1C;
+}
+
+.userguide h3 {
+  color: #D02D1C;
+}
+
+.themelist a {
+  color: #D02D1C;
+}
+
+.themelist a:hover {
+  color: #1f7ba9;
+}
+
+.doctheme h1 > small{
+  font-weight: bolder;
 }
 
 @media (max-width: 768px) {
