@@ -224,8 +224,7 @@ html, body {
   }
 
   .doc-btn {
-    margin: 0.5rem 0.2rem;
-    border: 1px solid black;
+    border: none;
     background: none;
   }
 
@@ -258,6 +257,11 @@ html, body {
   .theme-icon {
     padding: 0; /* TBD */
     width: 1.5rem;
+  }
+
+  .random-btn {
+    border: none;
+    background: none;
   }
 
   #source-nav {
