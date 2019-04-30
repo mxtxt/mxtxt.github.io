@@ -225,6 +225,7 @@ html, body {
     padding: 0; /* TBD */
     display: flex;
     bottom: 0;
+    padding-left: 50vw;
     flex-direction: column;
     justify-content: center;
   }
