@@ -311,7 +311,7 @@ html, body {
     width: 80vw;
     background-color: #ffffff;
     z-index: -1;
-    top: 70vh;
+    top: 55vh;
     left: 50%;
     transform: translate(-50%);
   }
