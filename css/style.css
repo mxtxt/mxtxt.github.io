@@ -212,11 +212,28 @@ html, body {
 /* Switch Menu */
 
 @media (min-width: 767px) {
-  .switch-menu {
+  .source-menu {
     position: fixed;
     height: 100%;
     z-index: 500;
   }
+
+  #source-button {
+    position: fixed;
+    height: 100%;
+    width: 2.5rem;
+    padding: 0; /* TBD */
+    display: flex;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .switch-menu {
+      position: fixed;
+      height: 100%;
+      z-index: 500;
+    }
 
   /* Document Menu */
   #doc-nav {
