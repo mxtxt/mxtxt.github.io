@@ -259,7 +259,7 @@
 
       /* transition */
       transform: rotate(180deg);
-      transition: transform 3s ease-in-out 3.1s;
+      transition: transform 3s ease-in-out 2.9s;
     }
 
     h2 {
@@ -649,7 +649,7 @@
 
       /* transition */
       transform: rotate(-180deg);
-      transition: transform 5s ease-in-out 4s;
+      transition: transform 5s ease-in-out 2.9s;
     }
 
     h2 {
@@ -699,7 +699,7 @@
       /* transition */
       transform: rotate(-180deg);
 
-      transition: transform 5s ease-in-out 4s, color 5s linear 1s;
+      transition: transform 5s ease-in-out 2.9s, color 5s linear 1s;
 
     }
 
