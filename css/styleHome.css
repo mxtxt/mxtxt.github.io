@@ -56,7 +56,7 @@ h1, h2, h3, h4, h5, .display-1, .display-2 {
 .intro {
   display: flex;
   background-color: #e2dfae;
-  background: url("../img/bg/mxtxtsmall.png");
+  background: url("../img/bg/mxtxtbacksmall.png");
 
   height: 100%;
   align-items: center;
