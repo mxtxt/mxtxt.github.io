@@ -216,6 +216,9 @@ html, body {
     position: fixed;
     height: 100%;
     z-index: 500;
+    float: bottom;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 
   #source-button {
@@ -225,6 +228,8 @@ html, body {
     padding: 0; /* TBD */
     display: flex;
     float: bottom;
+    margin-bottom: 0;
+    padding-bottom: 0;
     padding-left: 50vw;
     flex-direction: column;
     justify-content: center;
