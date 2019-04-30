@@ -58,13 +58,13 @@ html, body {
 
 
 /* Navbar */
-.navbar-brand {
+.navbarName {
   float: left;
   margin: 0.5rem 0 0.5rem 2.5rem;
   padding: 0;
 }
 
-.navbar-brand h1 {
+.navbarName h1 {
   color: #000000;
   font-size: 1rem;
   font-weight: bold;
@@ -72,7 +72,7 @@ html, body {
   padding: 0;
 }
 
-.navbar-brand a:hover {
+.navbarName a:hover {
   text-decoration: none;
 }
 
@@ -142,15 +142,6 @@ html, body {
   z-index: 900;
 }
 
-@media (max-width: 766px) {
-  #menu-nav-wrapper {
-    position: fixed;
-    min-height: 100vh;
-    top: 0;
-    left: 0;
-  }
-}
-
 #menu-nav {
   height: 100%;
   display: flex;
@@ -162,14 +153,8 @@ html, body {
   text-align: center;
 }
 
-@media (max-width: 766px) {
-  #menu-nav {
-    height: 70vh;
-  }
-}
-
 .menu-item {
-  margin-top: 2.5rem;
+  margin-top: 4vmin;
 }
 
 .menu-item:first-child {
@@ -177,29 +162,18 @@ html, body {
 }
 
 .menu-btn {
-  padding: 2.5vh;
+  padding: 2.5vmin;
   background-color: #ffffff;
   color: #000000!important;
-  font-size: 10vh; /* Responsive font size */
+  font-size: 10vmin; /* Responsive font size */
   font-weight: bold;
   text-transform: lowercase;
   mix-blend-mode: screen; /* This makes the cutout text possible */
 }
 
-@media (max-width: 766px) {
-  .menu-btn {
-    font-size: 10vw;
-  }
-}
-
 .menu-btn:hover {
   cursor: pointer;
   opacity: 0.5;
-  /*
-  background-color: #000000;
-  color: #ffffff!important;
-  text-decoration: none;
-  mix-blend-mode: normal;*/
 }
 
 .menu-btn.active {
@@ -209,7 +183,32 @@ html, body {
   mix-blend-mode: normal;
 }
 
-/* Switch Menu */
+@media (max-width: 766px) {
+  #menu-nav-wrapper {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+  }
+
+  #menu-nav {
+    max-height: 60vh;
+  }
+
+  .menu-item {
+    margin-top: 3vmin;
+  }
+
+  .menu-item:first-of-type {
+    margin-top: 10vmin;
+  }
+
+  .menu-btn {
+    font-size: 10vmin;
+  }
+}
+
+/* Switch Menu – SCREEN */
 
 @media (min-width: 767px) {
   .switch-menu {
@@ -291,6 +290,7 @@ html, body {
     width: 1.5rem;
   }
 }
+/* Switch Menu – MOBILE */
 
 @media (max-width: 766px) {
   .switch-menu {
@@ -300,26 +300,38 @@ html, body {
   .switch-menu.active {
     position: fixed;
     display: flex;
-    height: 30vh;
-    width: 100%;
-    bottom: 0;
+    width: 100vw;
+    height: 20vh;
+    top: 70vh;
     z-index: 1000;
     flex-direction: column;
     justify-content: center;
     text-align: center;
   }
 
+  .switch-menu.active:before {
+    content: '';
+    position: fixed;
+    height: 20vh;
+    width: 80vw;
+    background-color: #ffffff;
+    z-index: -1;
+    top: 70vh;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
   /* Document Menu */
   #doc-nav {
+    height: 10vh;
+    width: 80vw;
     margin-left: auto;
     margin-right: auto;
-    padding: 2.5vh;
-    background-color: white;
   }
 
   .doc-btn {
     margin: 0.5rem 0.2rem;
-    border: 1px solid black;
+    border: none;
     background: none;
   }
 
@@ -329,14 +341,14 @@ html, body {
 
   /* Theme Menu */
   #theme-nav {
-    margin-top: 1rem;
+    height: 10vh;
+    width: 80vw;
     margin-left: auto;
     margin-right: auto;
-    padding: 2.5vh;
-    background-color: white;
   }
 
   .theme-btn {
+    margin: 0.5rem 0.2rem;
     border: none;
     background: none;
   }
@@ -348,6 +360,14 @@ html, body {
   .theme-icon {
     padding: 0; /* TBD */
     width: 1.5rem;
+  }
+
+  .random-btn {
+    top: 70vh;
+    height: 20vh;
+    width: 10vw;
+    position: fixed;
+    margin-left: auto;
   }
 }
 
