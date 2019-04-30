@@ -47,17 +47,40 @@ function randomTheme(){
 function switchTheme(input){
   loadingOn();
   var frameContent = document.getElementById("frameDocument");
-  var elmnt = frameContent.contentWindow.document.getElementsByName("theme")[0];
 
-  if (document.getElementById("currentTheme").innerHTML != ""){
-    frameContent.contentWindow.location.reload();
-  };
+  if (document.getElementById("currentDoc").innerHTML == "EU_Directive/EU_Directive"){
+    if (document.getElementById("currentTheme").innerHTML != ""){
+      frameContent.contentWindow.location.reload();
+    };
 
-  frameContent.addEventListener("load", function() {
-    var elmnt = frameContent.contentWindow.document.getElementsByName("theme")[0];
+    frameContent.addEventListener("load", function() {
+      var leftFrame = frameContent.contentWindow.document.getElementById("left");
+      console.log(leftFrame);
+
+      var leftTheme = leftFrame.contentWindow.document.getElementsByName("theme")[0];
+
+      var rightFrame = frameContent.contentWindow.document.getElementById("right");
+      console.log(rightFrame);
+      var rightTheme = rightFrame.contentWindow.document.getElementsByName("theme")[0];
+
+      leftTheme.setAttribute("href", "../../../css/" + input.name + ".css");
+      rightTheme.setAttribute("href", "../../../css/" + input.name + ".css");
+    });
+
     document.getElementById("currentTheme").innerHTML = input.name;
-    elmnt.setAttribute("href", "../../css/" + input.name + ".css");
-  });
+
+  } else {
+
+    if (document.getElementById("currentTheme").innerHTML != ""){
+      frameContent.contentWindow.location.reload();
+    };
+
+    frameContent.addEventListener("load", function() {
+      var theme = frameContent.contentWindow.document.getElementsByName("theme")[0];
+      document.getElementById("currentTheme").innerHTML = input.name;
+      theme.setAttribute("href", "../../css/" + input.name + ".css");
+    });
+  }
 
   if ($(".menu").hasClass("active")) {
     menuToggle();

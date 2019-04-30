@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="img/logo.png" type="image/png" sizes="16x16">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <!-- Stylesheet -->
+  <link id=original rel="stylesheet" type="text/css" href="css/styleEU.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body style="overflow:hidden;">
+
+  <div id="content">
+    <div style="float:left;height:100vh;width:50vw;">
+    <iframe id="left" style="overflow:auto;height:100%;width:100%;" src="documents/english.html"></iframe></div>
+    <div style="float:right;height:100vh;width:50vw;">
+    <iframe id="right" style="overflow:auto;height:100%;width:100%" src="documents/italian.html"></iframe></div>
+  </div>
+
+</body>
+<script>
+
+window.addEventListener("load", function() {
+
+  var right = $("#right").contents();
+  var left = $("#left").contents();
+
+  $(left).scroll(function(){
+    $(right).scrollTop($(this).scrollTop());
+  });
+
+  $(right).scroll(function(){
+    $(left).scrollTop($(this).scrollTop());
+  });
+});
+
+</script>
+</html>
