@@ -212,29 +212,11 @@ html, body {
 /* Switch Menu */
 
 @media (min-width: 767px) {
-  .source-menu {
+  .switch-menu {
     position: fixed;
     height: 100%;
     z-index: 500;
   }
-
-  #source-button {
-    position: fixed;
-    height: 100%;
-    width: 2.5rem;
-    padding: 0; /* TBD */
-    display: flex;
-    bottom: 0;
-    padding-left: 50vw;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .switch-menu {
-      position: fixed;
-      height: 100%;
-      z-index: 500;
-    }
 
   /* Document Menu */
   #doc-nav {
@@ -282,6 +264,29 @@ html, body {
   }
 
   .theme-icon {
+    padding: 0; /* TBD */
+    width: 1.5rem;
+  }
+
+  #source-nav {
+    position: fixed;
+    height: 2.5rem;
+    width: 2.5rem;
+    padding: 0;
+    bottom: 0;
+    left: 50vw;
+  }
+
+  .source-btn {
+    border: none;
+    background: none;
+  }
+
+  .source-btn.active {
+    background-color: #f9eb0f;
+  }
+
+  .source-icon {
     padding: 0; /* TBD */
     width: 1.5rem;
   }
