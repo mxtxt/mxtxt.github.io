@@ -35,20 +35,34 @@ h1, h2, h3, h4, h5, .display-1, .display-2 {
 .display-5 {
   font-family: 'Lato', sans-serif;
   font-size: 1.5rem;
+  color: white;
+
+
 }
 .display-7 {
   font-family: 'Lato', sans-serif;
   font-size: 1rem;
+  color: white;
 }
+
+.card-text {
+  font-family: 'Lato';
+
+}
+
+
+
 @media (max-width: 768px) {
   .display-1 {
     font-size: 9.6rem;
+    padding-right: 40vw;
   }
   .display-2 {
     font-size: 2.4rem;
   }
   .display-5 {
     font-size: 1.2rem;
+
   }
 }
 .text-white {
@@ -57,7 +71,8 @@ h1, h2, h3, h4, h5, .display-1, .display-2 {
 .intro {
   display: flex;
   background-color: #e2dfae;
-  background: url("../img/bg/mxtxtback.png");
+  background: url("../img/homeimg/stripes.png");
+  background-size: cover;
 
   height: 100%;
   align-items: center;
@@ -76,14 +91,14 @@ h1, h2, h3, h4, h5, .display-1, .display-2 {
 .timeline-wrapper {
   padding-top: 90px;
   padding-bottom: 90px;
-  background-color: #3968cb;
+  background-color: #99B1C9; /*brick yellow */
   color: #232323;
   text-align: center;
   font-weight: 300;
 }
 .timeline-wrapper .timeline-text-content {
   padding: 2rem 2.5rem;
-  background: #10e7e2;
+  background: #D02D1C;
   margin-right: 2rem;
   transition: all .4s;
 }
@@ -118,7 +133,7 @@ h1, h2, h3, h4, h5, .display-1, .display-2 {
   text-align: center;
   border-radius: 50%;
   display: inline-block;
-  background-color: #10e7e2;
+  background-color: #D02D1C;
   top: 20px;
   margin-left: -30px;
 }
@@ -128,7 +143,7 @@ h1, h2, h3, h4, h5, .display-1, .display-2 {
   position: absolute;
   content: "";
   width: 2px;
-  background-color: #10e7e2;
+  background-color: #D02D1C;
   left: calc(50% - 1px);
   height: calc(100% + 4rem);
 }
@@ -185,13 +200,13 @@ h1, h2, h3, h4, h5, .display-1, .display-2 {
   -webkit-align-items: center;
 }
 .themes-yellow {
-  background-color: #f9eb0f;
+  background-color: #1f7ba9;
 }
 .themes-turquoise {
-  background-color: #10e7e2;
+  background-color: #B0DABE;
 }
 .themes-blue {
-  background-color: #3968cb;
+  background-color: #EFCF48;
 }
 .footer {
   padding-top: 60px;
