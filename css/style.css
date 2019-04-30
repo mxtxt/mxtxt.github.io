@@ -270,7 +270,7 @@ html, body {
 
   #source-nav {
     position: fixed;
-    height: 100%;
+    height: 2.5rem;
     width: 2.5rem;
     padding: 0; /* TBD */
     display: flex;
@@ -278,7 +278,6 @@ html, body {
     left: 50vw;
     flex-direction: column;
     justify-content: center;
-    float: bottom;
   }
 
   .source-btn {
