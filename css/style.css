@@ -254,7 +254,7 @@ html, body {
     background-color: #f9eb0f;
   }
 
-  .theme-icon {
+  .nav-icon {
     padding: 0; /* TBD */
     width: 1.5rem;
   }
@@ -361,7 +361,7 @@ html, body {
     background-color: #f9eb0f;
   }
 
-  .theme-icon {
+  .nav-icon {
     width: 9vw;
   }
 
