@@ -1,13 +1,6 @@
-/*
--webkit-transition: all 0.5s linear;
--moz-transition: all 0.5s linear;
--o-transition: all 0.5s linear;
-transition: all 0.5s linear;
-*/
-
-/* General */
 @import url(https://fonts.googleapis.com/css?family=Lato:100);
 
+/* General */
 html, body {
   height: 100vh;
   width: 100vw;
@@ -231,8 +224,7 @@ html, body {
   }
 
   .doc-btn {
-    margin: 0.5rem 0.2rem;
-    border: 1px solid black;
+    border: none;
     background: none;
   }
 
@@ -262,9 +254,14 @@ html, body {
     background-color: #f9eb0f;
   }
 
-  .theme-icon {
+  .nav-icon {
     padding: 0; /* TBD */
     width: 1.5rem;
+  }
+
+  .random-btn {
+    border: none;
+    background: none;
   }
 
   #source-nav {
@@ -287,9 +284,11 @@ html, body {
 
   .source-icon {
     padding: 0; /* TBD */
-    width: 1.5rem;
+    width: 2.5rem;
   }
 }
+
+
 /* Switch Menu – MOBILE */
 
 @media (max-width: 766px) {
@@ -302,7 +301,7 @@ html, body {
     display: flex;
     width: 100vw;
     height: 20vh;
-    top: 70vh;
+    top: 55vh;
     z-index: 1000;
     flex-direction: column;
     justify-content: center;
@@ -316,7 +315,7 @@ html, body {
     width: 80vw;
     background-color: #ffffff;
     z-index: -1;
-    top: 70vh;
+    top: 55vh;
     left: 50%;
     transform: translate(-50%);
   }
@@ -325,12 +324,14 @@ html, body {
   #doc-nav {
     height: 10vh;
     width: 80vw;
+    line-height: 10vh;
     margin-left: auto;
     margin-right: auto;
+    border-bottom: 0.5px solid #000000;
+    padding: 0 2.5vw 0 2.5vw;
   }
 
   .doc-btn {
-    margin: 0.5rem 0.2rem;
     border: none;
     background: none;
   }
@@ -343,12 +344,15 @@ html, body {
   #theme-nav {
     height: 10vh;
     width: 80vw;
+    line-height: 10vh;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 2.5vw 0 2.5vw;
   }
 
   .theme-btn {
-    margin: 0.5rem 0.2rem;
+    padding: 0;
+    margin-left: 2vw;
     border: none;
     background: none;
   }
@@ -357,17 +361,16 @@ html, body {
     background-color: #f9eb0f;
   }
 
-  .theme-icon {
-    padding: 0; /* TBD */
-    width: 1.5rem;
+  .nav-icon {
+    width: 9vw;
   }
 
   .random-btn {
-    top: 70vh;
-    height: 20vh;
-    width: 10vw;
-    position: fixed;
-    margin-left: auto;
+    padding: 0;
+    padding-right: 2vw;
+    border: none;
+    border-right: 0.5px solid #000000;
+    background: none;
   }
 }
 
