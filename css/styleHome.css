@@ -9,6 +9,7 @@ body {
   color: #232323;
   font-style: normal;
   line-height: 1.5;
+  font-family: 'Lato';
 }
 a {
   font-style: normal;
@@ -50,7 +51,23 @@ h1, h2, h3, h4, h5, .display-1, .display-2 {
 
 }
 
+.documentation, .about, .disclaimer {
+  background-color: #C8D2DE;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
 
+.documentation h3 {
+  font-weight: 800;
+}
+
+
+.documentation h1 > small {
+  font-weight: 700;
+  font-size: 2rem;
+}
 
 @media (max-width: 768px) {
   .display-1 {
