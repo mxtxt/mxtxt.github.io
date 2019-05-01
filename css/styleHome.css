@@ -126,13 +126,16 @@ h1, h2, h3, h4, h5, .display-1, .display-2 {
 }
 
 .doctheme h2 {
-  color: #d8b213;
+  color: #2b3d5b;
 }
 
 .doctheme h3 {
   color: #D02D1C;
 }
 
+.doctheme card {
+  right: 0;
+}
 .btn {
     border-radius: 0;
     border: 0;
