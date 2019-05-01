@@ -67,7 +67,6 @@ h1, h2, h3, h4, h5, .display-1, .display-2 {
 .documentation
 
 .documentation h1 > small {
-  font-weight: 700;
   font-size: 2rem;
 }
 
