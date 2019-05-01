@@ -31,7 +31,7 @@ function random(){
 
 
 function randomDoc(){
-  var listDocs = ["bloomberg/Bloomberg_final","EU_Directive/EUDirective_EN","harpers/Harpers_Final","huffington/Huffington_Final","thecut/thecut","tls/TimesLiterarySupplement_Final"];
+  var listDocs = ["bloomberg/Bloomberg_final","harpers/Harpers_Final","huffington/Huffington_Final","thecut/thecut","tls/TimesLiterarySupplement_Final"];
 
   var choiceDoc = listDocs[Math.floor(Math.random()*listDocs.length)];
   document.getElementsByName(choiceDoc)[0].click();

@@ -6,6 +6,34 @@ html, body {
   overflow: hidden;
 }
 
+/* Block Landscape */
+#smallScreen{display:none;}
+#bigScreen{display:block;}
+
+
+@media screen and (max-width: 1000px) {
+  #smallScreen {
+    display: block;
+    font-size: 2rem;
+    height: 100vh;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    text-align: center;
+    overflow: hidden;
+  }
+  #smallScreen img {
+    width: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #bigScreen {display:none;}
+}
+
 #leftContainer {
   width: 100vw;
   height: 100vh;
