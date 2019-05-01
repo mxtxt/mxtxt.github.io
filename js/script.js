@@ -39,7 +39,7 @@ function randomDoc(){
 
 
 function randomTheme(){
-  var listThemes = ["style1","themes/vPlaybill","themes/artDeco","themes/tropicalia","style5","themes/aurora"];
+  var listThemes = ["themes/Gutenberg","themes/vPlaybill","themes/artDeco","themes/tropicalia","themes/the_face","themes/aurora"];
 
   var frameContent = document.getElementById("frameDocument");
   var choiceTheme = listThemes[Math.floor(Math.random()*listThemes.length)];
