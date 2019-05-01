@@ -260,6 +260,9 @@ html, body {
     width: 1.5rem;
   }
 
+  #random-nav {
+  }
+
   .random-btn {
     cursor: pointer;
     border: none;
@@ -274,6 +277,9 @@ html, body {
   }
 
   #source-nav {
+  }
+
+  .source-btn {
     position: fixed;
     height: 2.5rem;
     width: 2.5rem;
@@ -281,9 +287,6 @@ html, body {
     margin: 0;
     bottom: 0;
     left: 50vw;
-  }
-
-  .source-btn {
     cursor: pointer;
     border: none;
     background: none;
@@ -291,11 +294,6 @@ html, body {
 
   .source-btn.active {
     background-color: #f9eb0f;
-  }
-
-  .source-icon {
-    padding: 0; /* TBD */
-    width: 2.5rem;
   }
 }
 
@@ -311,7 +309,6 @@ html, body {
     position: fixed;
     display: flex;
     width: 100vw;
-    height: 20vh;
     top: 55vh;
     z-index: 1000;
     flex-direction: column;
@@ -322,7 +319,7 @@ html, body {
   .switch-menu.active:before {
     content: '';
     position: fixed;
-    height: 20vh;
+    height: 18vh;
     width: 80vw;
     background-color: #ffffff;
     z-index: -1;
@@ -333,18 +330,25 @@ html, body {
 
   /* Document Menu */
   #doc-nav {
-    height: 10vh;
+    height: 9vh;
     width: 80vw;
-    line-height: 10vh;
+    line-height: 9vh;
     margin-left: auto;
     margin-right: auto;
     border-bottom: 0.5px solid #000000;
-    padding: 0 2.5vw 0 2.5vw;
+    padding: 0 1.5vw 0 10.5vw;
   }
 
   .doc-btn {
+    padding: 0;
+    margin: 0;
+    margin-left: 1.5vw;
     border: none;
     background: none;
+  }
+
+  .doc-btn:first-of-type {
+    margin-left: 0;
   }
 
   .doc-btn.active {
@@ -353,35 +357,68 @@ html, body {
 
   /* Theme Menu */
   #theme-nav {
-    height: 10vh;
+    height: 9vh;
     width: 80vw;
-    line-height: 10vh;
+    line-height: 9vh;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 2.5vw 0 2.5vw;
+    padding: 0 1.5vw 0 1.5vw;
   }
 
   .theme-btn {
     padding: 0;
-    margin-left: 2vw;
+    margin: 0;
+    margin-left: 1.5vw;
     border: none;
     background: none;
-  }
+}
 
   .theme-btn.active {
     background-color: #f9eb0f;
   }
 
   .nav-icon {
+    padding: 0;
+    margin: 0;
     width: 9vw;
   }
 
-  .random-btn {
+  #random-nav {
+    position: fixed;
+    height: 9vh;
     padding: 0;
-    padding-right: 2vw;
+    margin: 0;
+    top: 64vh;
+    left: 11.5vw;
+  }
+
+  .random-btn {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
     border: none;
-    border-right: 0.5px solid #000000;
     background: none;
+    border-right: 0.5px solid #000000;
+  }
+
+  #source-nav {
+    position: fixed;
+    height: 9vh;
+    padding: 0;
+    margin: 0;
+    top: 55vh;
+    left: 11.5vw;
+  }
+
+  .source-btn {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    border: none;
+    background: none;
+    border-right: 0.5px solid #000000;
   }
 }
 
