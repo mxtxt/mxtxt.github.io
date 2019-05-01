@@ -67,7 +67,7 @@
                   <p>The audio file was implemented in the JavaScript file, as part of the switchTheme(input) function which initializes Tropicalia when selected by the user:</p>
                   <p>
                     <pre>
-                      <code>
+                      <code class="js">
 var sounds = document.getElementsByTagName('audio');
 for(i=0; i&lt;sounds.length; i++) sounds[i].pause();
 
@@ -112,7 +112,7 @@ if (input.name == "themes/tropicalia") {
                   <p>The open fonts were imported as local files:</p>
                   <p>
                     <pre>
-                      <code>
+                      <code class="cs">
 /* beamie */
 @font-face {
     font-family: beamie;
@@ -212,7 +212,7 @@ if (input.name == "themes/tropicalia") {
                   <p>And were applied to each of the core structural elements of the HTML document:</p>
                   <p>
                     <pre>
-                      <code>
+                      <code class="css">
 body {
   font-family: "yoxall";
 }
@@ -268,7 +268,7 @@ h3 {
                   <p>Small Screens</p>
                   <p>
                     <pre>
-                      <code>
+                      <code class="css">
 h1 {
   transform: rotate(180deg);
   transition: transform 3s ease-in-out 2.9s;
@@ -284,7 +284,7 @@ h3 {
                   <p>Large Screens</p>
                   <p>
                     <pre>
-                      <code>
+                      <code class="css">
 h1 {
   transform: rotate(-180deg);
   transition: transform 5s ease-in-out 2.9s;
@@ -311,7 +311,7 @@ h3:hover {
                   <p>The samurai psychedelic background works as follows:</p>
                   <p>
                     <pre>
-                      <code>
+                      <code class="css">
 @keyframes cells {
   from { background-size: 22px 22px; }
   to { background-size: 24px 24px; }
@@ -327,7 +327,7 @@ h4 {
                   <p>This is the code that makes the image round,  creates two shadows to make them look like a 3D border, and makes the colors rotate as a gradient through the color wheel:</p>
                   <p>
                     <pre>
-                      <code>
+                      <code class="css">
 figure > img {
   border-radius: 50%;
   box-shadow: -1vw 1vw 0 1vw black, 1vw 0 0 3vw #e0d289;
@@ -394,7 +394,7 @@ figure > img:hover {
                   <p>The way the see-through background title was applied was the following:</p>
                   <p>
                     <pre>
-                      <code>
+                      <code class="css">
 h1 {
   background: url("../../img/bg/tropicalia/tropheader.jpg");
   -webkit-background-clip: text;
@@ -437,7 +437,7 @@ h1 {
                 <p>The layout of the main article was structured as follows:</p>
                 <p>
                   <pre>
-                    <code>
+                    <code class="css">
 main p {
   text-align: justify;
 }
