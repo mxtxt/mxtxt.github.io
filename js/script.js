@@ -164,12 +164,14 @@ function switchPage(input){
     currentTheme[0].className = currentTheme[0].className.replace(" active", "");
   }
   document.getElementById("currentTheme").innerHTML = "";
+  console.log(document.getElementById("currentTheme"))
 
   var currentDoc = document.getElementById("doc-nav").getElementsByClassName("active");
   if (currentDoc.length > 0) {
     currentDoc[0].className = currentDoc[0].className.replace(" active", "");
   }
   document.getElementById("currentDoc").innerHTML = "";
+  console.log(document.getElementById("currentDoc"))
 
   var sounds = document.getElementsByTagName('audio');
   for(i=0; i<sounds.length; i++) sounds[i].pause();
