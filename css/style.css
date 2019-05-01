@@ -108,6 +108,64 @@ html, body {
   }
 }
 
+/* Navbar */
+.navbarName {
+  float: left;
+  margin: 0.5rem 0 0.5rem 2.5rem;
+  padding: 0;
+}
+
+.navbarName h1 {
+  color: #000000;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+.navbarName a:hover {
+  text-decoration: none;
+}
+
+#menu-toggle {
+  position: relative;
+  background-image: url("../img/bg/distortion.gif");
+  float: right;
+  margin: 0.5rem 2.5rem 0.5rem 0;
+  padding: 0;
+  border: none;
+  z-index: 100;
+}
+
+#menu-toggle:hover {
+  text-decoration: none;
+}
+
+#menu-toggle p {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 1rem; /* Responsive font size */
+  font-weight: bold;
+  text-transform: uppercase;
+  mix-blend-mode: screen; /* This makes the cutout text possible */
+}
+
+@media (max-width: 766px) {
+  #menu-toggle {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    margin: 0;
+    z-index: 150;
+  }
+
+  #menu-toggle p {
+    padding: 0.5rem;
+  }
+}
+
 /* Navbar Menu */
 
 .menu {
@@ -185,7 +243,7 @@ html, body {
   }
 
   #menu-nav {
-    max-height: 60vh;
+    max-height: 50vh;
   }
 
   .menu-item {
@@ -311,7 +369,7 @@ html, body {
     position: fixed;
     display: flex;
     width: 100vw;
-    top: 55vh;
+    top: 60vh;
     z-index: 1000;
     flex-direction: column;
     justify-content: center;
@@ -325,7 +383,7 @@ html, body {
     width: 80vw;
     background-color: #ffffff;
     z-index: -1;
-    top: 55vh;
+    top: 60vh;
     left: 50%;
     transform: translate(-50%);
   }
@@ -386,7 +444,7 @@ html, body {
     height: 9vh;
     padding: 0;
     margin: 0;
-    top: 64vh;
+    top: 69vh;
     left: 11.5vw;
   }
 
@@ -406,7 +464,7 @@ html, body {
     height: 9vh;
     padding: 0;
     margin: 0;
-    top: 55vh;
+    top: 60vh;
     left: 12vw;
   }
 
