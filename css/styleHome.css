@@ -50,6 +50,23 @@ h1, h2, h3, h4, h5, .display-1, .display-2 {
    margin-right:15vw;
 }
 
+.home h2, h4, p {
+  font-weight: 800;
+}
+
+.home h4 {
+  font-size: 1.5rem;
+}
+
+.home .display-7 {
+  font-size: 1.2rem;
+}
+
+.disclaimer .display-7 {
+  font-size: 1.2rem;
+  color: black;
+}
+
 .documentation, .about, .disclaimer, .theframe, .userguide, .themelist, .doctheme {
   background-color: #C8D2DE;
   padding-top: 5vh;
@@ -61,7 +78,6 @@ h1, h2, h3, h4, h5, .display-1, .display-2 {
 .documentation h3 {
   font-weight: 800;
 }
-
 
 .documentation h1 > small {
   font-weight: 700;
