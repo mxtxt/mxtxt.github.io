@@ -39,6 +39,52 @@
         </p>
 
         <div id="card-42350">
+
+
+
+          <!-- Music -->
+          <div class="row">
+            <div class="col-md-3">
+              <a href="#">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=zT5w8nibDlE" allowfullscreen></iframe>
+                </div>              </a>
+            </div>
+            <div class="col-md-9">
+              <h3 class="my-2">Music</h3>
+              <p>Tropicalia was, above all, Brazil's defiant soundtrack in the late ’60s and early ’70s. The scene was encompassed by a bold and adventurous take on Brazilian pop music. Crucial names include Caetano Veloso, Gilberto Gil, and Gal Costa, as well as Tom Zé and Os Mutantes. The combination of adventurous rock’n’roll and avant-garde sounds with the native rhythms of Brazil is why the theme includes-- perhaps surpring and even discomforting at first--audio. The song that is played is Quero Sambar Meu Bem by Tom Zé. </p>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-42350" href="#card-element-four">If you are techy... </a>
+              </div>
+              <div id="card-element-four" class="collapse" data-parent="#card-42350">
+                <div class="card-body">
+                  <p>The audio file was implemented in the JavaScript file, as part of the switchTheme(input) function which initializes Tropicalia when selected by the user:</p>
+                  <p>
+                    <pre>
+                      <code>
+var sounds = document.getElementsByTagName('audio');
+for(i=0; i&lt;sounds.length; i++) sounds[i].pause();
+
+if (input.name == "themes/tropicalia") {
+  var audioElement = document.createElement('audio');
+  document.head.appendChild(audioElement);
+  audioElement.setAttribute('src', '../audio/tropicalia/Sambar.mp3');
+  audioElement.play();
+};
+
+                      </code>
+                    </pre>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end of Music -->
+
+          <hr>
+
           <!-- Characteristic One -->
           <div class="row">
             <div class="col-md-3">
@@ -420,7 +466,8 @@ main {
         <!-- Characteristic 5 -->
         <hr>
 
-        <p>Cardoso, Rafael. “Uma Introdução à História do Design.” Rio de Janeiro: 3ª Edição, Edgar Blucher, 2008.</p>
+<p>THEME BACKGROUND IMAGE: Llew Mejia - Illustrator/Surface Designer - <a href="www.llewmejia.com">www.llewmejia.com</a></p>
+<p>Cardoso, Rafael. “Uma Introdução à História do Design.” Rio de Janeiro: 3ª Edição, Edgar Blucher, 2008.</p>
 
 <p>Cuzner, Dave. “Rogerio Duarte and the Tropicalia Movement.” Grain Edit, Grain Edit, 23 June 2010.</p>
 
