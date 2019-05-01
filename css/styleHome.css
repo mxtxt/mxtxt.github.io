@@ -171,8 +171,10 @@ h1, h2, h3, h4, h5, .display-1, .display-2 {
 .intro {
   display: flex;
   background-color: #c8d2de;
-  background-image: url("../img/homeimg/stripes.png");
-  background-size: cover;
+  background-image: url("../img/homeimg/stripesOnly.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 10vw 0;
   height: 100%;
   align-items: center;
   -webkit-align-items: center;
