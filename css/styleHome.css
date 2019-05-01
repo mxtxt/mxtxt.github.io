@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5, .display-1, .display-2 {
 }
 .intro-text {
    margin-left:auto;
-   margin-right:0;
+   margin-right:15vw;
 }
 
 .documentation, .about, .disclaimer, .theframe, .userguide, .themelist, .doctheme {
