@@ -21,16 +21,20 @@ function loadingOff(){
 
 
 function random(){
-  var listDocs = ["bloomberg/Bloomberg_final","EU_Directive/EUDirective_EN","harpers/Harpers_Final","huffington/Huffington_Final","thecut/thecut","tls/TimesLiterarySupplement_Final"];
-
-  var choiceDoc = listDocs[Math.floor(Math.random()*listDocs.length)];
-  document.getElementsByName(choiceDoc)[0].click();
-
+  randomDoc();
   randomTheme();
 
   if ($(".menu").hasClass("active")) {
     menuToggle();
   };
+};
+
+
+function randomDoc(){
+  var listDocs = ["bloomberg/Bloomberg_final","EU_Directive/EUDirective_EN","harpers/Harpers_Final","huffington/Huffington_Final","thecut/thecut","tls/TimesLiterarySupplement_Final"];
+
+  var choiceDoc = listDocs[Math.floor(Math.random()*listDocs.length)];
+  document.getElementsByName(choiceDoc)[0].click();
 };
 
 
@@ -69,6 +73,8 @@ function switchTheme(input){
 
     document.getElementById("currentTheme").innerHTML = input.name;
 
+  } else if (document.getElementById("currentDoc").innerHTML == ""){
+      randomDoc();
   } else {
 
     if (document.getElementById("currentTheme").innerHTML != ""){
