@@ -51,15 +51,23 @@ h1, h2, h3, h4, h5, .display-1, .display-2 {
 }
 
 .home h2, h4, p {
-  font-weight: 800;
+  font-weight: 700;
 }
 
-.home h4 {
-  font-size: 1.5rem;
+.home p.maintitle {
+  font-weight: normal !important;
 }
 
 .home .display-7 {
   font-size: 1.2rem;
+}
+
+.home .card-title {
+  font-size: 1.8rem;
+}
+
+.home h3 {
+  font-size: 1.8rem;
 }
 
 .disclaimer .display-7 {
@@ -166,8 +174,6 @@ h1, h2, h3, h4, h5, .display-1, .display-2 {
     top: 1px;
     margin-top: 4px;
 }
-
-
 
 @media (max-width: 768px) {
   .display-1 {
