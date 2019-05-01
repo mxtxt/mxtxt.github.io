@@ -33,76 +33,88 @@
 
 <body>
 
-  <div class="frame">
-    <div class="frame top">
-      <div class="navbarName">
-        <a href="index.html"><h1>mxTXT</h1></a>
-        <p style="font-size:0.5rem">Current: <span id="currentDoc"></span> + <span id="currentTheme"></span> + <span id="currentPage"></span></p>
+  <div id="landscape">
+    <div id="landscape-text"><p>
+      Sorry.<br>
+      Landscape-mode<br>
+      is <i>not</i> supported.
+    </p></div>
+    <img src="img/icons/landscape.png">
+  </div>
+
+  <div id="portrait">
+    <div class="frame">
+      <div class="frame top">
+        <div class="navbarName">
+          <a href="index.html"><h1>mxTXT</h1></a>
+          <p style="font-size:0.5rem">Current: <span id="currentDoc"></span> + <span id="currentTheme"></span> + <span id="currentPage"></span></p>
+        </div>
+      </div>
+      <div class="frame bottom">
+      </div>
+      <div class="frame left">
+      </div>
+      <div class="frame right">
       </div>
     </div>
-    <div class="frame bottom">
-    </div>
-    <div class="frame left">
-    </div>
-    <div class="frame right">
-    </div>
-  </div>
 
-  <button id="menu-toggle" onclick="menuToggle()"><p>Menu</p></button>
+    <button id="menu-toggle" onclick="menuToggle()"><p>Menu</p></button>
 
-  <div class="menu">
-    <div id="menu-nav-wrapper">
-      <ul id="menu-nav">
-        <li class="menu-item">
-          <a name="home" class="menu-btn active" onclick="switchPage(this)">Home.</a>
-        </li>
-        <li class="menu-item">
-          <a name="documentation" class="menu-btn" onclick="switchPage(this)">Documentation.</a>
-        </li>
-        <li class="menu-item">
-          <a name="disclaimer" class="menu-btn" onclick="switchPage(this)">Disclaimer.</a>
-        </li>
-        <li class="menu-item">
-          <a name="about" class="menu-btn" onclick="switchPage(this)">About.</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="switch-menu">
-    <div id="doc-nav">
-      <button name="bloomberg/Bloomberg_final" class="doc-btn" onclick="switchDoc(this)"><img src="img/icons/docs/doc1.png" class="nav-icon"></button>
-      <button name="thecut/thecut" class="doc-btn" onclick="switchDoc(this)"><img src="img/icons/docs/doc2.png" class="nav-icon"></button>
-      <button name="harpers/Harpers_Final" class="doc-btn" onclick="switchDoc(this)"><img src="img/icons/docs/doc3.png" class="nav-icon"></button>
-      <button name="tls/TimesLiterarySupplement_Final" class="doc-btn" onclick="switchDoc(this)"><img src="img/icons/docs/doc4.png" class="nav-icon"></button>
-      <button name="huffington/Huffington_Final" class="doc-btn" onclick="switchDoc(this)"><img src="img/icons/docs/doc5.png" class="nav-icon"></button>
-      <button name="EU_Directive/EU_Directive" class="doc-btn" onclick="switchDoc(this)"><img src="img/icons/docs/legal.png" class="nav-icon"></button>
+    <div class="menu">
+      <div id="menu-nav-wrapper">
+        <ul id="menu-nav">
+          <li class="menu-item">
+            <a name="home" class="menu-btn active" onclick="switchPage(this)">Home.</a>
+          </li>
+          <li class="menu-item">
+            <a name="documentation" class="menu-btn" onclick="switchPage(this)">Documentation.</a>
+          </li>
+          <li class="menu-item">
+            <a name="disclaimer" class="menu-btn" onclick="switchPage(this)">Disclaimer.</a>
+          </li>
+          <li class="menu-item">
+            <a name="about" class="menu-btn" onclick="switchPage(this)">About.</a>
+          </li>
+        </ul>
+      </div>
     </div>
 
-    <div id="random-nav">
-      <button class="random-btn" onclick="random()"><img src="img/icons/random.png" class="nav-icon"></button>
+    <div class="switch-menu">
+      <div id="doc-nav">
+        <button name="bloomberg/Bloomberg_final" class="doc-btn" onclick="switchDoc(this)"><img src="img/icons/docs/doc1.png" class="nav-icon"></button>
+        <button name="thecut/thecut" class="doc-btn" onclick="switchDoc(this)"><img src="img/icons/docs/doc2.png" class="nav-icon"></button>
+        <button name="harpers/Harpers_Final" class="doc-btn" onclick="switchDoc(this)"><img src="img/icons/docs/doc3.png" class="nav-icon"></button>
+        <button name="tls/TimesLiterarySupplement_Final" class="doc-btn" onclick="switchDoc(this)"><img src="img/icons/docs/doc4.png" class="nav-icon"></button>
+        <button name="huffington/Huffington_Final" class="doc-btn" onclick="switchDoc(this)"><img src="img/icons/docs/doc5.png" class="nav-icon"></button>
+        <button name="EU_Directive/EU_Directive" class="doc-btn" onclick="switchDoc(this)"><img src="img/icons/docs/legal.png" class="nav-icon"></button>
+      </div>
+
+      <div id="random-nav">
+        <button class="random-btn" onclick="random()"><img src="img/icons/random.png" class="nav-icon"></button>
+      </div>
+
+      <div id="theme-nav">
+        <button name="style1" class="theme-btn" onclick="switchTheme(this)"><img src="img/icons/gutenberg.png" class="nav-icon"></button>
+        <button name="themes/vPlaybill" class="theme-btn" onclick="switchTheme(this)"><img src="img/icons/vPlaybill2.png" class="nav-icon"></button>
+        <button name="themes/artDeco" class="theme-btn" onclick="switchTheme(this)"><img src="img/icons/artDeco.png" class="nav-icon"></button>
+        <button name="themes/tropicalia" class="theme-btn" onclick="switchTheme(this)"><img src="img/icons/tropi2.png" class="nav-icon"></button>
+        <button name="style5" class="theme-btn" onclick="switchTheme(this)"><img src="img/icons/theface.png" class="nav-icon"></button>
+        <button name="themes/aurora" class="theme-btn" onclick="switchTheme(this)"><img src="img/icons/futurama.png" class="nav-icon"></button>
+      </div>
+
+      <div id="source-nav">
+        <button class="source-btn"><a id="source-link" target="_blank"><img src="img/icons/source.png" class="nav-icon"></a></button>
+      </div>
     </div>
 
-    <div id="theme-nav">
-      <button name="style1" class="theme-btn" onclick="switchTheme(this)"><img src="img/icons/gutenberg.png" class="nav-icon"></button>
-      <button name="themes/vPlaybill" class="theme-btn" onclick="switchTheme(this)"><img src="img/icons/vPlaybill2.png" class="nav-icon"></button>
-      <button name="themes/artDeco" class="theme-btn" onclick="switchTheme(this)"><img src="img/icons/artDeco.png" class="nav-icon"></button>
-      <button name="themes/tropicalia" class="theme-btn" onclick="switchTheme(this)"><img src="img/icons/tropi2.png" class="nav-icon"></button>
-      <button name="style5" class="theme-btn" onclick="switchTheme(this)"><img src="img/icons/theface.png" class="nav-icon"></button>
-      <button name="themes/aurora" class="theme-btn" onclick="switchTheme(this)"><img src="img/icons/futurama.png" class="nav-icon"></button>
+    <div class="loading-wrapper">
+      <div id="loading"></div>
     </div>
 
-    <div id="source-nav">
-      <button class="source-btn"><a id="source-link" target="_blank"><img src="img/icons/source.png" class="nav-icon"></a></button>
+    <div id="content">
+      <iframe id="frameDocument" src="pages/home.html"></iframe>
     </div>
-  </div>
 
-  <div class="loading-wrapper">
-    <div id="loading"></div>
-  </div>
-
-  <div id="content">
-    <iframe id="frameDocument" src="pages/home.html"></iframe>
   </div>
 
   <script src="js/navHighlight.js"></script>

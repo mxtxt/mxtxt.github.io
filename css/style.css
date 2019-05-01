@@ -11,6 +11,33 @@ html, body {
   overflow: hidden;
 }
 
+@media only screen and (orientation:landscape){
+  #landscape {
+    display: block;
+    font-size: 2rem;
+    height: 100vh;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    text-align: center;
+    overflow: hidden;
+  }
+  #landscape img {
+    width: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #portrait{display:none;}
+}
+@media only screen and (orientation:portrait){
+  #landscape{display:none;}
+  #portrait{display:block;}
+}
+
 /* Frame */
 .frame {
   position: fixed;
