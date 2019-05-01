@@ -174,7 +174,8 @@ h1, h2, h3, h4, h5, .display-1, .display-2 {
   background-image: url("../img/homeimg/stripesOnly.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: 10vw 0;
+  background-position: 15vw 0;
+  background-size: contain;
   height: 100%;
   align-items: center;
   -webkit-align-items: center;
