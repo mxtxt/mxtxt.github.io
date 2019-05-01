@@ -247,6 +247,7 @@ html, body {
   }
 
   .theme-btn {
+    cursor: pointer;
     border: none;
     background: none;
   }
@@ -256,44 +257,45 @@ html, body {
   }
 
   .nav-icon {
+    cursor: pointer;
     padding: 0; /* TBD */
     width: 1.5rem;
   }
 
   #random-nav {
+    position: fixed;
+    height: 2.5rem;
+    width: 100%;
+    padding: 0; /* TBD */
+    display: flex;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .random-btn {
     cursor: pointer;
     border: none;
     background: none;
-    position: fixed;
-    height: 2.5rem;
-    width: 2.5rem;
-    padding: 0;
-    margin: 0;
-    top: 0;
-    left: 50vw;
   }
 
   #source-nav {
+    position: fixed;
+    height: 2.5rem;
+    width: 100%;
+    padding: 0; /* TBD */
+    display: flex;
+    bottom: 0;
+    right: 0;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .source-btn {
-    position: fixed;
-    height: 2.5rem;
-    width: 2.5rem;
-    padding: 0;
-    margin: 0;
-    bottom: 0;
-    left: 50vw;
     cursor: pointer;
     border: none;
     background: none;
-  }
-
-  .source-btn.active {
-    background-color: #f9eb0f;
   }
 }
 
