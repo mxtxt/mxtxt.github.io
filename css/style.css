@@ -11,6 +11,8 @@ html, body {
   overflow: hidden;
 }
 
+#portrait{display:block;}
+
 @media screen and (max-width: 767px) and (orientation: landscape){
   #landscape {
     display: block;
@@ -37,7 +39,6 @@ html, body {
 #landscape{display:none;}
 #landscape-text {display:none;}
 #landscape img {display:none;}
-#portrait{display:block;}
 
 /* Frame */
 .frame {
