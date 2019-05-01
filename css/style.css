@@ -295,6 +295,11 @@ html, body {
     cursor: pointer;
     border: none;
     background: none;
+    display: none;
+  }
+
+  .source-btn.active {
+    display: block;
   }
 }
 
@@ -418,6 +423,11 @@ html, body {
     padding-right: 1vw;
     background: none;
     border-right: 0.5px solid #000000;
+    opacity: 0.1;
+  }
+
+  .source-btn.active {
+    opacity: 1;
   }
 }
 

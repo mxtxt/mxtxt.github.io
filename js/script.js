@@ -139,6 +139,7 @@ function sourceButton(doc){
   for (var key in dictURL) {
     if (key == doc){
       document.getElementById("source-link").setAttribute("href", dictURL[key]);
+      document.getElementsByClassName("source-btn")[0].className += " active";
     }
   }
 }
@@ -148,6 +149,8 @@ function switchPage(input){
   document.getElementById("frameDocument").setAttribute("src", "pages/" + input.name + ".html");
 
   document.getElementById("source-link").removeAttribute("href");
+  var sourceBtnClass = document.getElementsByClassName("source-btn")[0]
+    sourceBtnClass.className = sourceBtnClass.className.replace("active", "");
 
   var currentTheme = document.getElementById("theme-nav").getElementsByClassName("active");
   if (currentTheme.length > 0) {
