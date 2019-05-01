@@ -10,6 +10,7 @@ body {
   font-style: normal;
   line-height: 1.5;
   font-family: 'Lato';
+  padding-bottom: 4vh;
 }
 a {
   font-style: normal;
@@ -50,6 +51,31 @@ h1, h2, h3, h4, h5, .display-1, .display-2 {
    margin-right:15vw;
 }
 
+.home h2, h4, p {
+  font-weight: 700;
+}
+
+.home p.maintitle {
+  font-weight: normal !important;
+}
+
+.home .display-7 {
+  font-size: 1.2rem;
+}
+
+.home .card-title {
+  font-size: 1.8rem;
+}
+
+.home h3 {
+  font-size: 1.8rem;
+}
+
+.disclaimer .display-7 {
+  font-size: 1.2rem;
+  color: black;
+}
+
 .documentation, .about, .disclaimer, .theframe, .userguide, .themelist, .doctheme {
   background-color: #C8D2DE;
   padding-top: 5vh;
@@ -61,7 +87,6 @@ h1, h2, h3, h4, h5, .display-1, .display-2 {
 .documentation h3 {
   font-weight: 800;
 }
-
 
 .documentation h1 > small {
   font-weight: 700;
@@ -150,8 +175,6 @@ h1, h2, h3, h4, h5, .display-1, .display-2 {
     top: 1px;
     margin-top: 4px;
 }
-
-
 
 @media (max-width: 768px) {
   .display-1 {
