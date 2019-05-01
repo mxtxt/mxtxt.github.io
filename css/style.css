@@ -35,6 +35,8 @@ html, body {
 }
 @media only screen and (orientation:portrait){
   #landscape{display:none;}
+  #landscape-text {display:none;}
+  #landscape img {display:none;}
   #portrait{display:block;}
 }
 
