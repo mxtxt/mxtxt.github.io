@@ -13,7 +13,6 @@ var audioDict = {
 function initiate(){
   block: {
     var doc = window.location.pathname;
-    console.log(doc)
 
     for (var key in audioDict) {
       if (key == doc){
