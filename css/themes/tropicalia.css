@@ -177,12 +177,6 @@
  }
 }
 
-/* Change color */
-@keyframes colorChange {
-  from {color: red;}
-  to {color: yellow;}
-}
-
 /* animation goback */
 @keyframes unpuzzle {
   transform: rotate(-100deg);
@@ -324,7 +318,6 @@ header p {
     0.1vw 0.1vw 4px grey;
   /* background color same as h1. SOURCE Image 7. */
   background: url("../../img/bg/tropicalia/tropheader.jpg");
-  text-transform: uppercase;
 
   width: 100%;
   /* position at bottom of header */
@@ -579,12 +572,26 @@ main footer {
 
 
 @media screen and (min-width: 812px) {
+
+    html {
+      border: 5vw solid #131819;
+    }
+
+    header {
+      width: 100%;
+    }
+
     h1 {
       font-size: 9vw;
       line-height: 7vw;
       padding-top: 8vh;
       transform: rotate(-180deg);
       transition: transform 5s ease-in-out 2.9s;
+    }
+
+    h1:hover {
+      transform: rotate(0deg);
+      transition: transform 2s ease;
     }
 
     h2 {
@@ -600,6 +607,11 @@ main footer {
       line-height: 6vh;
       transform: rotate(-180deg);
       transition: transform 5s ease-in-out 2.9s, color 5s linear 1s;
+    }
+
+    h3:hover {
+      transform: rotate(0deg);
+      transition: transform 2s ease;
     }
 
     header > p > a:hover {
@@ -645,6 +657,11 @@ main footer {
 
     figure > img {
       margin-left: 3vw;
+    }
+
+    figure > img:hover {
+      transform: rotate(1080deg);
+      transition: transform 3s ease-in;
     }
 
     figure > video {

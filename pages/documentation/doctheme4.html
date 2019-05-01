@@ -27,6 +27,7 @@
     <h1 class="my-4">Tropicalia<small> antropophagous design</small></h1>
     <div class="row">
       <p>Tropicália was an art movement that opposed the military regime that controlled Brazil between 1964 and 1985. In 1964, a CIA-backed military xtagroup brought down the elected government of President João Goulart. By 1968, the military crackdown on dissent was devastating to Brazil as a whole and specifically for artists: it led to an era deemed the “vazio cultural” (“cultural void”). Tropicalia emerged during this period as a counterpoint to the prevailing style of the military dictatorship. A scrappy, distinctly Brazilian take on pop art, it informed every medium from rock music to posters, seeking to redefine the country’s culture, let down by modernity.</p>
+    <p>Tropicalia emerged as a new, alternative aesthetic to the predominance of modernism (Cardoso 2008, p. 200). It’s core was the concept of “visual antropophagy” — the ingestion and re-appropiation of international cultural elements to incorporate them and adapt them to the Brazilian context (Espinosa 2018). In this sense, it consisted of a mixture of eclectic elements: technical and sophisticated kitsch, the visual pollution of American pop art, the sinus lines of Art Nouveau, symmetrical layouts and sans-serif types inspired by the Ulm school and the fine rules of German layout (Longo 2016, Espinosa 2018). More than anything, it was a contrasting locus of reality and fantasy, as well as the contrast of tradition and innovation (Tafarelo de Oliveira 2011). In the face of the lack of formal design rules of the movement, a philosophy of ingestion was followed in the design of this theme.</p>
     </div>
 
     <div class="row">
@@ -49,8 +50,8 @@
               </a>
             </div>
             <div class="col-md-9">
-              <h3 class="my-2">Antropofagia</h3>
-              <p>Explanation and sources for the characteristic.</p>
+              <h3 class="my-2">Antropophagic Typography</h3>
+              <p>The anthropophagous nature of the movement is evident in its eclectic typography. A mixture of sans-serif, minimalist typefaces were mixed with psychedelic and pop-art influenced ones, as well as ones resembling the local culture. This is why in the tropical design you can find a mix of sans-serif typefaces (Yoxall, Tex Gyre Adventor, Ostrich Sans, and Boomtown Deco), psychedelic ones (Dogsmoke, Beamie), and distinctly Brazilian ones (Tropicalia, Milho). To give the viewer an anthropophagi mood since the beginning, she is first presented with the three main titles of the document in a mix of psychedelic and sans-serif typefaces.</p>
             </div>
             <div class="card">
               <div class="card-header">
@@ -58,7 +59,128 @@
               </div>
               <div id="card-element-one" class="collapse" data-parent="#card-42350">
                 <div class="card-body">
-                  Here godes the css and js code snippets and explanation!
+                  <p>The open fonts were imported as local files:</p>
+                  <p>
+                    <pre>
+                      <code>
+/* beamie */
+@font-face {
+    font-family: beamie;
+    src: url("../../fonts/tropicalia/beamie.ttf") format("opentype");
+}
+
+/* boomtown-deco */
+@font-face {
+    font-family: boomtown-deco;
+    src: url("../../fonts/tropicalia/Boomtown-deco.otf") format("opentype");
+}
+
+/********DOGSMOKE********/
+/* dogsmoke */
+@font-face {
+    font-family: dogsmoke;
+    src: url("../../fonts/tropicalia/Dogsmoke.ttf") format("opentype");
+}
+
+/* dogsmoke-ii */
+@font-face {
+    font-family: dogsmoke-ii;
+    src: url("../../fonts/tropicalia/Dogsmoke-II.ttf") format("opentype");
+}
+
+/* dogsmoke-thunder-ii */
+@font-face {
+    font-family: dogsmoke-thunder-ii;
+    src: url("../../fonts/tropicalia/Dogsmoke-Thunder-II.ttf") format("opentype");
+}
+
+/* dogsmoke-thunder */
+@font-face {
+    font-family: dogsmoke-thunder;
+    src: url("../../fonts/tropicalia/Dogsmoke-Thunder.ttf") format("opentype");
+}
+
+/* dogsmoke-ii */
+@font-face {
+    font-family: dogsmoke-ii;
+    src: url("../../fonts/tropicalia/Dogsmoke-II.ttf") format("opentype");
+}
+/********DOGSMOKE********/
+
+/* milho */
+@font-face {
+    font-family: milho;
+    src: url("../../fonts/tropicalia/Milho-Cozido.ttf") format("opentype");
+}
+
+/* ostrichsans */
+@font-face {
+    font-family: ostrichsans;
+    src: url("../../fonts/tropicalia/ostrichsans-medium-webfont.ttf") format("opentype");
+}
+
+/* tropicalia */
+@font-face {
+    font-family: tropicalia;
+    src: url("../../fonts/tropicalia/Tropicalia-Brush.ttf") format("opentype");
+}
+
+/********TEXGYREADVENTOR********/
+/* texgyreadventor-italic */
+@font-face {
+    font-family: texgyreadventor-italic;
+    src: url("../../fonts/tropicalia/texgyreadventor-italic.otf") format("opentype");
+}
+
+/* texgyreadventor-bolditalic */
+@font-face {
+    font-family: texgyreadventor-bolditalic;
+    src: url("../../fonts/tropicalia/texgyreadventor-bolditalic.otf") format("opentype");
+}
+
+/* texgyreadventor-bold */
+@font-face {
+    font-family: texgyreadventor-bold;
+    src: url("../../fonts/tropicalia/texgyreadventor-bold.otf") format("opentype");
+}
+
+/* texgyreadventor-regular */
+@font-face {
+    font-family: texgyreadventor-regular;
+    src: url("../../fonts/tropicalia/texgyreadventor-regular.otf") format("opentype");
+}
+/********TEXGYREADVENTOR********/
+
+/* yoxall */
+@font-face {
+    font-family: yoxall;
+    src: url("../../fonts/tropicalia/Yoxall.ttf") format("opentype");
+}
+                      </code>
+                    </pre>
+                  </p>
+                  <p>And were applied to each of the core structural elements of the HTML document:</p>
+                  <p>
+                    <pre>
+                      <code>
+body {
+  font-family: "yoxall";
+}
+
+h1 {
+  font-family: "dogsmoke";
+}
+
+h2 {
+  font-family: 'yoxall', sans-serif;
+}
+
+h3 {
+  font-family: 'beamie';
+}
+                      </code>
+                    </pre>
+                  </p>
                 </div>
               </div>
             </div>
@@ -71,17 +193,20 @@
           <div class="row">
             <div class="col-md-3">
               <a href="#">
-                <img class="img-fluid rounded mb-3 mb-md-0" src="../../img/docimg/doc4/psychedelic.png" alt="">
+                <img class="img-fluid rounded mb-3 mb-md-0" src="../../img/docimg/doc4/psychedelic2.png" alt="">
               </a>
               <a href="#">
-                <img class="img-fluid rounded mb-3 mb-md-0" src="../../img/docimg/doc4/psychedelic2.png" alt="">
+                <img class="img-fluid rounded mb-3 mb-md-0" src="../../img/docimg/doc4/psychedelic.png" alt="">
               </a>
             </div>
             <div class="col-md-9">
-              <h3 class="my-2">Psychedelic and Pop-art Influence</h3>
-              <p>Tridimensionality</p>
-              <p>See-through type</p>
-              <p>Surrealism</p>
+              <h3 class="my-2">Psychedelic Influence</h3>
+              <p>This theme is inspired by the psychedelic and pop-art elements ingested by the Tropicalia movement. Duarte used "psychedelic features through illustration [to] refer to a dreamlike atmosphere” (Tafarelo de Oliveira 2011). While most of the objects from that time were printed and thus had no real animations, the concept behind (hallucinations, distortions of perception and awareness, abstraction and confusion) is captured by the theme’s use of animation. The initial animations create a sense of disorientation in the user, and fulfill the psychedelic goal of making letters look like they are moving.
+              </p>
+              <p>You can also see psychedelic influence in the background chosen for the h4 (section title) elements, which employ an animation created by <a href="http://simurai.com/lab/2011/10/03/space-cacss">samurai</a> (credited in the CSS code as well).
+              </p>
+              <p>Another example of these effects is the theme’s styling of images. The images were styled according the the movement’s predilection for circled images with pop-art and psychedelic styled elements. This is why the images in the theme were circled, have a border as seen on multiple source images, and also have a hover effect (only on desktop screens) that provides a disorienting animation.
+              </p>
             </div>
             <div class="card">
               <div class="card-header">
@@ -89,7 +214,83 @@
               </div>
               <div id="card-element-two" class="collapse" data-parent="#card-42350">
                 <div class="card-body">
-                  Here godes the css and js code snippets and explanation!
+                  <p>The initial animations were created by simply using CSS transform, in different ways for small and large screens:</p>
+                  <p>Small Screens</p>
+                  <p>
+                    <pre>
+                      <code>
+h1 {
+  transform: rotate(180deg);
+  transition: transform 3s ease-in-out 2.9s;
+}
+
+h3 {
+  transform: scale(1.5) translate(25vw);
+  transition: transform 5s ease-in-out 5s;
+}
+                      </code>
+                    </pre>
+                  </p>
+                  <p>Large Screens</p>
+                  <p>
+                    <pre>
+                      <code>
+h1 {
+  transform: rotate(-180deg);
+  transition: transform 5s ease-in-out 2.9s;
+}
+
+h1:hover {
+  transform: rotate(0deg);
+  transition: transform 2s ease;
+}
+
+
+h3 {
+  transform: rotate(-180deg);
+  transition: transform 5s ease-in-out 2.9s, color 5s linear 1s;
+}
+
+h3:hover {
+  transform: rotate(0deg);
+  transition: transform 2s ease;
+}
+                      </code>
+                    </pre>
+                  </p>
+                  <p>The samurai psychedelic background works as follows:</p>
+                  <p>
+                    <pre>
+                      <code>
+@keyframes cells {
+  from { background-size: 22px 22px; }
+  to { background-size: 24px 24px; }
+}
+
+h4 {
+  animation: cells 0.4s linear infinite;
+  background-image: repeating-radial-gradient(#A9A355 8px, white 12px);
+}
+                      </code>
+                    </pre>
+                  </p>
+                  <p>This is the code that makes the image round,  creates two shadows to make them look like a 3D border, and makes the colors rotate as a gradient through the color wheel:</p>
+                  <p>
+                    <pre>
+                      <code>
+figure > img {
+  border-radius: 50%;
+  box-shadow: -1vw 1vw 0 1vw black, 1vw 0 0 3vw #e0d289;
+  animation: colorRotate 10s infinite;
+}
+
+figure > img:hover {
+  transform: rotate(1080deg);
+  transition: transform 3s ease-in;
+}
+                      </code>
+                    </pre>
+                  </p>
                 </div>
               </div>
             </div>
@@ -102,45 +303,37 @@
           <div class="row">
             <div class="col-md-3">
               <a href="#">
-                <img class="img-fluid rounded mb-3 mb-md-0" src="../../img/docimg/doc4/colors.png" alt="">
+                <img class="img-fluid rounded mb-3 mb-md-0" src="../../img/docimg/doc4/daring.png" alt="">
               </a>
               <a href="#">
-                <img class="img-fluid rounded mb-3 mb-md-0" src="../../img/docimg/doc4/font.png" alt="">
+                <img class="img-fluid rounded mb-3 mb-md-0" src="../../img/docimg/doc4/daring2.png" alt="">
               </a>
             </div>
             <div class="col-md-9">
-              <h3 class="my-2">Daring and Layered Colors</h3>
-              <p>Green yellow red</p>
-              <p>Complementary colors</p>
-            </div>
-            <div class="card">
-              <div class="card-header">
-                <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-42350" href="#card-element-three">If you are techy... </a>
-              </div>
-              <div id="card-element-three" class="collapse" data-parent="#card-42350">
-                <div class="card-body">
-                  Here godes the css and js code snippets and explanation!
-                </div>
-              </div>
+              <h3 class="my-2">Daring and Complementary Colors</h3>
+              <p>The Tropicalia design bid farewell to the achromatic tones that design schools taught at the time (Cuzner). Instead, the designs used “daring” colors. Especially green, yellow and red shades were popular, as the colors represented a "green-and-yellow Brazil stained with blood, metaphorized in a cynical and debauched layer" (Rodrigues, 2008, page 207, translation mine). This choice of colors represents a relation with dictatorial violence and the historical facts of the time. This is also what influenced the choice to have a black border on desktop, as seen in some of the source images. </p>
+              <p>One of the most relevant color combinations for the pieces is the complementary contrast (a combination of colors that are in opposition of 180 ° in the chromatic circle). This was the direct inspiration for the choice of the color for highlight and linked text (#9B62AB), as it is the exact complementary color of the background (#ABA362). This also directly inspired the rest of the color palette: it was created with <a href="https://www.sessions.edu/color-calculator/">Color Wheel</a>, an online tool that uses math to find mathematical color complements and harmonies.</p>
             </div>
           </div>
           <!-- end of Characteristic 3 -->
 
           <hr>
 
+
           <!-- Characteristic 4 -->
           <div class="row">
             <div class="col-md-3">
               <a href="#">
-                <img class="img-fluid rounded mb-3 mb-md-0" src="../../img/docimg/doc4/circles.png" alt="">
+                <img class="img-fluid rounded mb-3 mb-md-0" src="../../img/docimg/doc4/fragmentation.png" alt="">
               </a>
               <a href="#">
-                <img class="img-fluid rounded mb-3 mb-md-0" src="../../img/docimg/doc4/symmetry.png" alt="">
+                <img class="img-fluid rounded mb-3 mb-md-0" src="../../img/docimg/doc4/fragmentation2.png" alt="">
               </a>
             </div>
             <div class="col-md-9">
-              <h3 class="my-2">Circles and (Non-)Grids</h3>
-              <p>Explanation and sources for the characteristic.</p>
+              <h3 class="my-2">Fragmentation, Superposition, Recombination</h3>
+              <p>Tropicalia championed fragmentation, superposition and recombination of elements as an anthropophagous practice, and this has remained even in modern Brazilian design (Cardoso 2005, p. 237-239). Using surrealistic elements, they created agglomerated compositions. Due to the overlapping of elements, there was sometimes a difficulty in distinguishing the background from the figures (Zan 2009, p.07). This is the direct inspiration for the large screen version of the initial animation, creating a super-imposed, barely readable conglomeration of letters.</p>
+              <p>The idea of superposition is clearly visible in items from the era and those influenced by it. The cover of the album <a href="https://www.unitypixel.com/files/wallpapers/Psychedelic-Background-Wallpaper-10397.jpg">“Technicolor”</a>by Os Mutantes is a good example of Tropicalist influence. This was the inspiration for the utilization of making the magazine title (h1) see-through, so that the colorful background was exposed.</p>
             </div>
             <div class="card">
               <div class="card-header">
@@ -148,19 +341,91 @@
               </div>
               <div id="card-element-four" class="collapse" data-parent="#card-42350">
                 <div class="card-body">
-                  Here godes the css and js code snippets and explanation!
+                  <p>The way the see-through background title was applied was the following:</p>
+                  <p>
+                    <pre>
+                      <code>
+h1 {
+  background: url("../../img/bg/tropicalia/tropheader.jpg");
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}
+                      </code>
+                    </pre>
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <!-- end of Characteristic 4 -->
+        <hr>
+
+        <!-- Characteristic 3 -->
+        <div class="row">
+          <div class="col-md-3">
+            <a href="#">
+              <img class="img-fluid rounded mb-3 mb-md-0" src="../../img/docimg/doc4/symmetry.png" alt="">
+            </a>
+            <a href="#">
+              <img class="img-fluid rounded mb-3 mb-md-0" src="../../img/docimg/doc4/symmetry2.png" alt="">
+            </a>
+          </div>
+          <div class="col-md-9">
+            <h3 class="my-2">Circles and Symmetry</h3>
+            <p>There are no formal rules about the layout of Tropicalist-influenced design, as most of the objects created in its influenced are not text-heavy. While the movement had a strong desire to break with the functionalist aesthetics of the 1960s (Tafarelo de Oliveira 2011), it also strongly ingested the concept of symmetrical layouts, as part of Ulm School of Design trends as well as Bauhus influences (Espinosa 2018, Tafarelo de Oliveira 2011). This was the main inspiration for making the text justified and two-columned (on larger than 812px screens).</p>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-42350" href="#card-element-four">If you are techy... </a>
+            </div>
+            <div id="card-element-four" class="collapse" data-parent="#card-42350">
+              <div class="card-body">
+                <p>The layout of the main article was structured as follows:</p>
+                <p>
+                  <pre>
+                    <code>
+main p {
+  text-align: justify;
+}
+
+figure > figcaption {
+  text-align: justify;
+}
+
+main {
+  -webkit-column-count: 1;
+  -moz-column-count: 1;
+    column-count: 1;
+    column-gap: 5vw;
+}
+
+main {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+  column-gap: 7.5vw;
+}
+                    </code>
+                  </pre>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Characteristic 5 -->
+
 
         <hr>
 
         <button type="button" class="btn btn-default btn-pressure btn-sensitive">
           Check out the whole CSS file!
         </button>
+
       </div>
     </div>
 
