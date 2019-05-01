@@ -98,6 +98,10 @@ html, body {
   text-decoration: none;
 }
 
+#breadcrumb {
+  display: none;
+}
+
 #menu-toggle {
   position: relative;
   background-image: url("../img/bg/distortion.gif");
