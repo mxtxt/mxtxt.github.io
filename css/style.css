@@ -330,6 +330,7 @@ html, body {
     right: 0;
     flex-direction: column;
     justify-content: center;
+    z-index: 50;
   }
 
   .random-btn {
