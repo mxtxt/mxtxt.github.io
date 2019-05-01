@@ -11,6 +11,35 @@ html, body {
   overflow: hidden;
 }
 
+
+/* Block Landscape */
+#landscape{display:none;}
+#portrait{display:block;}
+
+
+@media screen and (max-width: 828px) and (orientation: landscape) and (min-aspect-ratio: 16/9) {
+#landscape {
+  display: block;
+  font-size: 2rem;
+  height: 100vh;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  text-align: center;
+  overflow: hidden;
+}
+#landscape img {
+  width: 10vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#portrait{display:none;}
+}
+
 /* Frame */
 .frame {
   position: fixed;
