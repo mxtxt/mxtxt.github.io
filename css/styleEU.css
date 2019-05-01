@@ -7,7 +7,7 @@ html, body {
 }
 
 #leftContainer {
-  width: 50vw;
+  width: 100vw;
   height: 100vh;
   overflow: scroll!important;
   -webkit-overflow-scrolling: touch!important;
@@ -23,7 +23,7 @@ html, body {
 }
 
 #rightContainer {
-  width: 50vw;
+  width: 100vw;
   height: 100vh;
   overflow: scroll!important;
   -webkit-overflow-scrolling: touch!important;
