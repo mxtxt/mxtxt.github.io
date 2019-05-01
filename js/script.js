@@ -163,7 +163,7 @@ function switchPage(input){
   if (currentTheme.length > 0) {
     currentTheme[0].className = currentTheme[0].className.replace(" active", "");
   }
-  document.getElementById("").innerHTML = "";
+  document.getElementById("currentTheme").innerHTML = "";
 
   var currentDoc = document.getElementById("doc-nav").getElementsByClassName("active");
   if (currentDoc.length > 0) {
