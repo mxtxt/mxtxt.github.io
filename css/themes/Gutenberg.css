@@ -272,11 +272,14 @@ figure > table {
   border: solid 5px black;
 }
 
+table, th, td, tr {
+  border: 1vw solid black;
+}
+
 figure > table > th {
   width: auto;
   font-family: 'Medieval Scribish';
   font-size: 1vw;
-  border: solid 1px black;
   padding: 0;
 }
 
@@ -284,7 +287,6 @@ figure > table > tr {
   width: auto;
   font-family: '1454 Gutenberg Bibel';
   font-size: 1vw;
-  border: solid 1px black;
   padding: 0; /* the text was compact without black spaces*/
 }
 
@@ -292,7 +294,6 @@ figure > table > tr > td:first-child { /* use this to style the first column of 
   width: auto;
   font-family: '1454 Gutenberg Bibel';
   font-size: 1vw;
-  border: solid 1px black;
   padding: 0; /* the text was compact without black spaces*/
 }
 
@@ -300,7 +301,6 @@ figure > table > tr > td:nth-child(n) { /* use this to style the n-th column of 
   width: auto;
   font-family: '1454 Gutenberg Bibel';
   font-size: 1vw;
-  border: solid 1px black;
   padding: 0; /* the text was compact without black spaces*/
 }
 
