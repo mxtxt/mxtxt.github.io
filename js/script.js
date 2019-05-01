@@ -51,6 +51,7 @@ function randomTheme(){
 function switchTheme(input){
   loadingOn();
   var frameContent = document.getElementById("frameDocument");
+  document.getElementById("currentTheme").innerHTML = input.name;
 
   if (document.getElementById("currentDoc").innerHTML == "EU_Directive/EU_Directive"){
     if (document.getElementById("currentTheme").innerHTML != ""){
@@ -71,7 +72,7 @@ function switchTheme(input){
       rightTheme.setAttribute("href", "../../../css/" + input.name + ".css");
     });
 
-    document.getElementById("currentTheme").innerHTML = input.name;
+
 
   } else if (document.getElementById("currentDoc").innerHTML == ""){
       randomDoc();
@@ -83,7 +84,6 @@ function switchTheme(input){
 
     frameContent.addEventListener("load", function() {
       var theme = frameContent.contentWindow.document.getElementsByName("theme")[0];
-      document.getElementById("currentTheme").innerHTML = input.name;
       theme.setAttribute("href", "../../css/" + input.name + ".css");
     });
   }
