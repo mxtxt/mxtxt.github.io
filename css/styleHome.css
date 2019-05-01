@@ -71,6 +71,18 @@ h1, h2, h3, h4, h5, .display-1, .display-2 {
   font-size: 2rem;
 }
 
+.disclaimer a {
+  color: #D02D1C;
+}
+
+.about h5 {
+  color: #D02D1C;
+}
+
+.about a {
+  color: #D02D1C;
+}
+
 .theframe h3 {
   color: #D02D1C;
 }
