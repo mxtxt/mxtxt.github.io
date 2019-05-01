@@ -1,10 +1,32 @@
 var wave = new CircularAudioWave(document.getElementById("chart-container"));
 
+var audioDict = new Object()
+var audioDict = {
+  "/docs/bloomberg/Bloomberg_final.html": "../../audio/aurora/bloomberg.mp3",
+  "/docs/thecut/thecut.html": "../../audio/aurora/thecut.mp3",
+  "/docs/harpers/Harpers_Final.html": "../../audio/aurora/harpers.mp3",
+  "/docs/tls/TimesLiterarySupplement_Final.html": "../../audio/aurora/tls.mp3",
+  "/docs/huffington/Huffington_Final.html": "../../audio/aurora/huffington.mp3",
+  "/docs/EU_Directive/EU_Directive.html": "../../audio/aurora/eudirectiveEN.mp3",
+}
+
 function initiate(){
-  var documentText = document.body.textContent;
-  var keyValuePair = {};
-  keyValuePair["text"] = documentText;
-  sendData(keyValuePair);
+  block: {
+    var doc = window.location.pathname;
+    console.log(doc)
+
+    for (var key in audioDict) {
+      if (key == doc){
+        wave.loadAudio(audioDict[key]);
+        break block;
+      }
+    }
+
+    var documentText = document.body.textContent;
+    var keyValuePair = {};
+    keyValuePair["text"] = documentText;
+    sendData(keyValuePair);
+  }
 }
 
 function sendData(data) {
