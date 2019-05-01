@@ -33,12 +33,11 @@ html, body {
 
   #portrait{display:none;}
 }
-@media only screen and (orientation:portrait){
-  #landscape{display:none;}
-  #landscape-text {display:none;}
-  #landscape img {display:none;}
-  #portrait{display:block;}
-}
+
+#landscape{display:none;}
+#landscape-text {display:none;}
+#landscape img {display:none;}
+#portrait{display:block;}
 
 /* Frame */
 .frame {
