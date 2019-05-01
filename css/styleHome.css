@@ -87,6 +87,18 @@ h1, h2, h3, h4, h5, .display-1, .display-2 {
   font-weight: 800;
 }
 
+.disclaimer a {
+  color: #D02D1C;
+}
+
+.about h5 {
+  color: #D02D1C;
+}
+
+.about a {
+  color: #D02D1C;
+}
+
 .doctheme h2 {
   color: #d8b213;
 }
