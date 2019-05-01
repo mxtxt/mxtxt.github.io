@@ -106,7 +106,7 @@ function switchTheme(input){
   if (currentMenu.length > 0) {
     currentMenu[0].className = currentMenu[0].className.replace(" active", "");
   }
-
+  document.getElementById("currentPage").innerHTML = "";
 };
 
 function switchDoc(input){
@@ -129,6 +129,7 @@ function switchDoc(input){
   if (currentMenu.length > 0) {
     currentMenu[0].className = currentMenu[0].className.replace(" active", "");
   }
+  document.getElementById("currentPage").innerHTML = "";
 };
 
 var dictURL = new Object()
@@ -156,17 +157,19 @@ function switchPage(input){
 
   document.getElementById("source-link").removeAttribute("href");
   var sourceBtnClass = document.getElementsByClassName("source-btn")[0]
-    sourceBtnClass.className = sourceBtnClass.className.replace("active", "");
+  sourceBtnClass.className = sourceBtnClass.className.replace("active", "");
 
   var currentTheme = document.getElementById("theme-nav").getElementsByClassName("active");
   if (currentTheme.length > 0) {
     currentTheme[0].className = currentTheme[0].className.replace(" active", "");
   }
+  document.getElementById("").innerHTML = "";
 
   var currentDoc = document.getElementById("doc-nav").getElementsByClassName("active");
   if (currentDoc.length > 0) {
     currentDoc[0].className = currentDoc[0].className.replace(" active", "");
   }
+  document.getElementById("currentDoc").innerHTML = "";
 
   var sounds = document.getElementsByTagName('audio');
   for(i=0; i<sounds.length; i++) sounds[i].pause();
