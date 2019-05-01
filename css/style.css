@@ -55,6 +55,7 @@ html, body {
   float: left;
   margin: 0.5rem 0 0.5rem 2.5rem;
   padding: 0;
+  z-index: 600;
 }
 
 .navbarName h1 {
@@ -76,7 +77,7 @@ html, body {
   margin: 0.5rem 2.5rem 0.5rem 0;
   padding: 0;
   border: none;
-  z-index: 100;
+  z-index: 600;
 }
 
 #menu-toggle:hover {
