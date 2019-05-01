@@ -23,10 +23,10 @@ html {
 body {
   font-family: "Poiret One", cursive;
   color: #fff;
-  height: 95%;
+  height: 100vh;
   margin: auto;
-  width: 60%;
-  padding: 10%;
+  width: 90vw;
+  padding: 0;
 }
 
 h1 {
