@@ -150,6 +150,9 @@ function switchPage(input){
     currentDoc[0].className = currentDoc[0].className.replace(" active", "");
   }
 
+  var sounds = document.getElementsByTagName('audio');
+  for(i=0; i<sounds.length; i++) sounds[i].pause();
+
   if ($(".menu").hasClass("active")) {
     menuToggle();
   };
