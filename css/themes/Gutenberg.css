@@ -47,11 +47,6 @@ body {
   border-right: ;/* some floral decoration */
 }
 
-main {
-  font-family: '1454 Gutenberg Bibel';
-  font-size: 1rem; /* whatever number size you choose, but rem */
-}
-
 h1 {
   font-family: 'Medieval Scribish';
   font-size: 2rem; /* whatever number size you choose, but rem */
@@ -176,10 +171,10 @@ section {
   padding-top: 1vh;
   padding-bottom: 1vh;
   border-image: url(GUT_VATICANO.png) 0 0 100 0;
+  font-family: '1454 Gutenberg Bibel';
 }
 
 section > p {
-  display: inline;
   font-family: '1454 Gutenberg Bibel';
   font-size: 1rem;
   text-align: justify;
@@ -188,10 +183,11 @@ section > p {
 }
 
 section > section > p {
-  display: inline;
   font-family: '1454 Gutenberg Bibel';
   font-size: 1rem;
   text-align: justify;
+  column-count: 2;
+  column-gap: 4vw;
 }
 
 main > section > p {
