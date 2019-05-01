@@ -96,6 +96,11 @@ function switchTheme(input){
     audioElement.play();
   };
 
+  var currentMenu = document.getElementById("menu-nav").getElementsByClassName("active");
+  if (currentMenu.length > 0) {
+    currentMenu[0].className = currentMenu[0].className.replace(" active", "");
+  }
+
 };
 
 function switchDoc(input){
@@ -114,6 +119,10 @@ function switchDoc(input){
     menuToggle();
   };
 
+  var currentMenu = document.getElementById("menu-nav").getElementsByClassName("active");
+  if (currentMenu.length > 0) {
+    currentMenu[0].className = currentMenu[0].className.replace(" active", "");
+  }
 };
 
 var dictURL = new Object()
