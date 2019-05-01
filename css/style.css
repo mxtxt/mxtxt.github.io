@@ -11,7 +11,7 @@ html, body {
   overflow: hidden;
 }
 
-@media only screen and (orientation:landscape){
+@media screen and (max-width: 767px) and (orientation: landscape){
   #landscape {
     display: block;
     font-size: 2rem;
