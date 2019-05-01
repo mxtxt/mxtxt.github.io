@@ -33,16 +33,6 @@
 
 <body>
 
-  <div id="landscape">
-    <div id="landscape-text"><p>
-      Sorry.<br>
-      Landscape-mode<br>
-      is <i>not</i> supported.
-    </p></div>
-    <img src="img/icons/landscape.png">
-  </div>
-
-  <div id="portrait">
     <div class="frame">
       <div class="frame top">
         <div class="navbarName">
@@ -105,26 +95,16 @@
       <div id="source-nav">
         <button class="source-btn"><a id="source-link" target="_blank"><img src="img/icons/source.png" class="nav-icon"></a></button>
       </div>
-
-      <div id="theme-nav">
-        <button name="themes/Gutenberg" class="theme-btn" onclick="switchTheme(this)"><img src="img/icons/gutenberg.png" class="nav-icon"></button>
-        <button name="themes/vPlaybill" class="theme-btn" onclick="switchTheme(this)"><img src="img/icons/vPlaybill2.png" class="nav-icon"></button>
-        <button name="themes/artDeco" class="theme-btn" onclick="switchTheme(this)"><img src="img/icons/artDeco.png" class="nav-icon"></button>
-        <button name="themes/tropicalia" class="theme-btn" onclick="switchTheme(this)"><img src="img/icons/tropi2.png" class="nav-icon"></button>
-        <button name="themes/the_face" class="theme-btn" onclick="switchTheme(this)"><img src="img/icons/theface.png" class="nav-icon"></button>
-        <button name="themes/aurora" class="theme-btn" onclick="switchTheme(this)"><img src="img/icons/futurama.png" class="nav-icon"></button>
-      </div>
-
-      <div class="loading-wrapper">
-        <div id="loading"></div>
-      </div>
-
-      <div id="content">
-        <iframe id="frameDocument" src="pages/home.html"></iframe>
-      </div>
-
     </div>
 
-    <script src="js/navHighlight.js"></script>
-  </body>
-  </html>
+    <div class="loading-wrapper">
+      <div id="loading"></div>
+    </div>
+
+    <div id="content">
+      <iframe id="frameDocument" src="pages/home.html"></iframe>
+    </div>
+
+  <script src="js/navHighlight.js"></script>
+</body>
+</html>
