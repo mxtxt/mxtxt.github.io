@@ -104,6 +104,7 @@ function switchDoc(input){
   document.getElementById("frameDocument").setAttribute("src", "docs/" + input.name + ".html");
 
   injectAurora();
+  sourceButton(input.name);
 
   if (document.getElementById("currentTheme").innerHTML == ""){
     randomTheme();
@@ -115,10 +116,39 @@ function switchDoc(input){
 
 };
 
+var dictURL = new Object()
+var dictURL = {
+  "bloomberg/Bloomberg_final": "https://www.bloomberg.com/news/features/2018-03-16/japan-s-prisons-are-a-haven-for-elderly-women",
+  "thecut/thecut": "https://www.thecut.com/2018/05/how-anna-delvey-tricked-new-york.html",
+  "harpers/Harpers_Final": "https://harpers.org/archive/2018/07/as-goes-the-south-so-goes-the-nation/",
+  "tls/TimesLiterarySupplement_Final": "https://www.the-tls.co.uk/articles/public/ridiculously-complicated-algorithms/",
+  "huffington/Huffington_Final": "https://highline.huffingtonpost.com/articles/en/lotto-winners/",
+  "EU_Directive/EU_Directive": "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1552167424995&uri=CELEX:32009L0041",
+}
+
+function sourceButton(doc){
+  for (var key in dictURL) {
+    if (key == doc){
+      document.getElementById("source-link").setAttribute("href", dictURL[key]);
+    }
+  }
+}
 
 function switchPage(input){
   document.getElementById("currentPage").innerHTML = input.name;
   document.getElementById("frameDocument").setAttribute("src", "pages/" + input.name + ".html");
+
+  document.getElementById("source-link").removeAttribute("href");
+
+  var currentTheme = document.getElementById("theme-nav").getElementsByClassName("active");
+  if (currentTheme.length > 0) {
+    currentTheme[0].className = currentTheme[0].className.replace(" active", "");
+  }
+
+  var currentDoc = document.getElementById("doc-nav").getElementsByClassName("active");
+  if (currentDoc.length > 0) {
+    currentDoc[0].className = currentDoc[0].className.replace(" active", "");
+  }
 
   if ($(".menu").hasClass("active")) {
     menuToggle();
