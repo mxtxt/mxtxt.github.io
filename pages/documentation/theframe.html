@@ -13,6 +13,11 @@
 
     <link rel="stylesheet" href="../../css/styleHome.css">
 
+    <!-- Highlight.js -->
+    <link rel="stylesheet" href="../../css/hljs/atom-one-light.css">
+    <script src="../../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
   </head>
 
   <body class="theframe">
@@ -36,11 +41,13 @@
             <p>
               <pre>
                   <code class="html">
+  &#60;!--- HTML ---&#62;
   &#60;div id="content"&#62;
     &#60;iframe id="frameDocument" src="pages/home.html"&#62;&#60;/iframe&#62;
   &#60;/div&#62;
                   </code>
                   <code class="css">
+  /* --- CSS --- */
   #content {
     width: 100vw;
     height: 100vh;
