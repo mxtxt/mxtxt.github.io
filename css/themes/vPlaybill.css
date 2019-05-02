@@ -124,6 +124,12 @@ body {
   text-align: center;
 }
 
+body:after {
+  content: "";
+  display: block;
+  height: 20vh;
+}
+
 header {
   width: 100%;
 }
