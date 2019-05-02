@@ -98,12 +98,12 @@ function switchTheme(input){
   var sounds = document.getElementsByTagName('audio');
   for(i=0; i<sounds.length; i++) sounds[i].pause();
 
-  // if (input.name == "themes/tropicalia") {
-  //   var audioElement = document.createElement('audio');
-  //   document.head.appendChild(audioElement);
-  //   audioElement.setAttribute('src', '../audio/tropicalia/Sambar.mp3');
-  //   audioElement.play();
-  // };
+  if (input.name == "themes/tropicalia") {
+    var audioElement = document.createElement('audio');
+    document.head.appendChild(audioElement);
+    audioElement.setAttribute('src', '../audio/tropicalia/Sambar.mp3');
+    audioElement.play();
+  };
 
   var currentMenu = document.getElementById("menu-nav").getElementsByClassName("active");
   if (currentMenu.length > 0) {
