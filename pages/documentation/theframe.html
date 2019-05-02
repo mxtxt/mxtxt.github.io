@@ -80,7 +80,58 @@
             <p>This process is completed by the following JavaScript function:<p>
             <p>
               <pre>
-                  <code> This is the code.
+                  <code class="js">
+  function switchDoc(input){
+    loadingOn();
+    document.getElementById("currentDoc").innerHTML = input.name;
+    document.getElementById("frameDocument").setAttribute("src", "docs/" + input.name + ".html");
+
+    injectAurora();
+    sourceButton(input.name);
+
+    if (document.getElementById("currentTheme").innerHTML == ""){
+      randomTheme();
+    };
+
+    if ($(".menu").hasClass("active")) {
+      menuToggle();
+    };
+
+    var currentMenu = document.getElementById("menu-nav").getElementsByClassName("active");
+    if (currentMenu.length > 0) {
+      currentMenu[0].className = currentMenu[0].className.replace(" active", "");
+    }
+    document.getElementById("currentPage").innerHTML = "";
+  };
+                  </code>
+                  <code class="js">
+  function switchPage(input){
+    document.getElementById("currentPage").innerHTML = input.name;
+    document.getElementById("frameDocument").setAttribute("src", "pages/" + input.name + ".html");
+
+    document.getElementById("source-link").removeAttribute("href");
+    var sourceBtnClass = document.getElementsByClassName("source-btn")[0]
+    sourceBtnClass.className = sourceBtnClass.className.replace("active", "");
+
+    var currentTheme = document.getElementById("theme-nav").getElementsByClassName("active");
+    if (currentTheme.length > 0) {
+      currentTheme[0].className = currentTheme[0].className.replace(" active", "");
+    }
+    document.getElementById("currentTheme").innerHTML = "";
+
+    var currentDoc = document.getElementById("doc-nav").getElementsByClassName("active");
+    if (currentDoc.length > 0) {
+      currentDoc[0].className = currentDoc[0].className.replace(" active", "");
+    }
+    document.getElementById("currentDoc").innerHTML = "";
+
+    var sounds = document.getElementsByTagName('audio');
+    for(i=0; i < sounds.length; i++) sounds[i].pause();
+
+    if ($(".menu").hasClass("active")) {
+      menuToggle();
+    };
+  };
                   </code>
               </pre>
             </p>
@@ -91,7 +142,69 @@
             <p>This injection is performed by the following code:<p>
             <p>
               <pre>
-                  <code> This is the code.
+                  <code class="js">
+  function switchTheme(input){
+    loadingOn();
+    var frameContent = document.getElementById("frameDocument");
+
+    if (document.getElementById("currentDoc").innerHTML == "EU_Directive/EU_Directive"){
+      if (document.getElementById("currentTheme").innerHTML != ""){
+        frameContent.contentWindow.location.reload();
+      };
+
+      frameContent.addEventListener("load", function() {
+        var leftFrame = frameContent.contentWindow.document.getElementById("left");
+        var leftTheme = leftFrame.contentWindow.document.getElementsByName("theme")[0];
+
+        var rightFrame = frameContent.contentWindow.document.getElementById("right");
+        var rightTheme = rightFrame.contentWindow.document.getElementsByName("theme")[0];
+
+        leftTheme.setAttribute("href", "../../../css/" + input.name + ".css");
+        rightTheme.setAttribute("href", "../../../css/" + input.name + ".css");
+      });
+
+      document.getElementById("currentTheme").innerHTML = input.name;
+
+    } else if (document.getElementById("currentDoc").innerHTML == ""){
+        document.getElementById("currentTheme").innerHTML = input.name;
+        randomDoc();
+        frameContent.addEventListener("load", function() {
+          var theme = frameContent.contentWindow.document.getElementsByName("theme")[0];
+          document.getElementById("currentTheme").innerHTML = input.name;
+          theme.setAttribute("href", "../../css/" + input.name + ".css");
+        });
+    } else {
+      if (document.getElementById("currentTheme").innerHTML != ""){
+        frameContent.contentWindow.location.reload();
+      };
+
+      frameContent.addEventListener("load", function() {
+        var theme = frameContent.contentWindow.document.getElementsByName("theme")[0];
+        document.getElementById("currentTheme").innerHTML = input.name;
+        theme.setAttribute("href", "../../css/" + input.name + ".css");
+      });
+    }
+
+    if ($(".menu").hasClass("active")) {
+      menuToggle();
+    };
+
+    var sounds = document.getElementsByTagName('audio');
+    for(i=0; i < sounds.length; i++) sounds[i].pause();
+
+    if (input.name == "themes/tropicalia") {
+      var audioElement = document.createElement('audio');
+      document.head.appendChild(audioElement);
+      audioElement.setAttribute('src', '../audio/tropicalia/Sambar.mp3');
+      audioElement.play();
+    };
+
+    var currentMenu = document.getElementById("menu-nav").getElementsByClassName("active");
+    if (currentMenu.length > 0) {
+      currentMenu[0].className = currentMenu[0].className.replace(" active", "");
+    }
+    document.getElementById("currentPage").innerHTML = "";
+  };
                   </code>
               </pre>
             </p>
