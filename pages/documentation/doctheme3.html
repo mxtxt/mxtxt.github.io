@@ -150,12 +150,12 @@
           <div class="row">
             <div class="col-md-3">
               <a href="#">
-                <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+                <img class="img-fluid rounded mb-3 mb-md-0" src="../../img/docimg/doc3/blueShapes.png" alt="">
               </a>
             </div>
             <div class="col-md-9">
-              <h3 class="my-2">Fonts</h3>
-              <p>While Art Deco was often highly decorative, practitioners were devoted to creating functional design. This is reflected in the fonts which the zeitgeist brought forth: the collection ranges from ornated to rectilinear fonts. This variety is reflected in the Art Deco theme by an ornamental font for headings and an easily readable type for the body.</p>
+              <h3 class="my-2">Colours</h3>
+              <p>The Art Deco colour palette exists in two sets which cover two aspects of the period: bold and bright, and neutral and streamlined. The first refers to energetic and lively colours which are inspired by the prosperity of the roaring twenties. The later, however, embodies the before mentioned wealth which is represented with valuable metals. Those metallic colours were combined with neutrals, monochromatic colours which served to achieve a streamlined, modern look. For the theme, all those aspects were channelled and combined in the royal blue velvet background and the polished gold.</p>
             </div>
             <div class="card">
               <div class="card-header">
@@ -163,16 +163,20 @@
               </div>
               <div id="card-element-three" class="collapse" data-parent="#card-42350">
                 <div class="card-body">
+                  <p>
                   <pre>
                       <small><code class="css">
-                        &#60;!DOCTYPE html&#62;
+  html {
+    background-image: url("../../img/bg/velvet.png");
+    background-repeat: repeat;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
                       </code></small>
                   </pre>
-                  <pre>
-                      <small><code class="js">
-                        &#60;!DOCTYPE html&#62;
-                      </code></small>
-                  </pre>
+                </p>
                 </div>
               </div>
             </div>
@@ -185,12 +189,12 @@
           <div class="row">
             <div class="col-md-3">
               <a href="#">
-                <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+                <img class="img-fluid rounded mb-3 mb-md-0" src="../../img/docimg/doc3/chryslerMotors.png" alt="">
               </a>
             </div>
             <div class="col-md-9">
-              <h3 class="my-2">Characteristic 4</h3>
-              <p>Explanation and sources for the characteristic.</p>
+              <h3 class="my-2">Fonts</h3>
+              <p>While Art Deco was often highly decorative, practitioners were devoted to creating functional design. This is reflected in the fonts which the zeitgeist brought forth: the collection ranges from ornated to rectilinear fonts. This variety is reflected in the Art Deco theme by an ornamental font for headings and an easily readable type for the body.</p>
             </div>
             <div class="card">
               <div class="card-header">
@@ -198,17 +202,33 @@
               </div>
               <div id="card-element-four" class="collapse" data-parent="#card-42350">
                 <div class="card-body">
-                  Here godes the css and js code snippets and explanation!
+                  <p>
                   <pre>
                       <small><code class="css">
-                        &#60;!DOCTYPE html&#62;
+  @import url('https://fonts.googleapis.com/css?family=Poiret+One');
+  @font-face {
+      font-family: parklane;
+      src: url("../../fonts/artDeco/parklane.otf") format("opentype");
+  }
+  body {
+    font-family: "Poiret One", cursive;
+    color: #fff;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+  header > p {
+    text-align: center;
+    background: -webkit-linear-gradient(#BF953F, #FCF6BA, #FBF5B7, #AA771C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "parklane";
+    font-size: 1rem;
+  }
                       </code></small>
                   </pre>
-                  <pre>
-                      <small><code class="js">
-                        &#60;!DOCTYPE html&#62;
-                      </code></small>
-                  </pre>
+                </p>
                 </div>
               </div>
             </div>
