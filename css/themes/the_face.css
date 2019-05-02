@@ -1,255 +1,26 @@
-/* COVER */
-/*The Face name of the magazine*/
-@font-face {
-  font-family: 'Crazy Loop in Paris'; /*----USED FOR H1, title of the documents (TLS, The Cut etc.)----*/
-  font-style: normal;
-  font-weight: normal;
-  src: local('CRAZLP_'), url("../../fonts/the_face/CRAZLP_.TTF") format("truetype");
-}
 
-@font-face {
-  font-family: 'TypefaceSixSevenOTW03-Seven'; /* alternative font for H1*/
-  font-style: normal;
-  font-weight: normal;
-  src: local('Typeface Six Seven OT W03 Seven'), url("../../fonts/the_face/Typeface Six Seven OT W03 Seven.otf") format("opentype");
-}
-
-@font-face {
-  font-family: 'HelveticaNeue BlackCond'; /* USED FOR H2, title of the article. Source image: different_fonts.jpg*/
-  font-style: normal;
-  font-weight: normal;
-  src: local('HelveticaNeue-BlackCondObl'), url("../../fonts/the_face/HelveticaNeue-BlackCondObl.otf") format("opentype");
-}
-
-@font-face {
-  font-family: 'Helvetica Neue'; /* USED FOR H3, right below h2. Source image: different_fonts.jpg*/
-  font-style: bold;
-  font-weight: normal;
-  letter-spacing: 10px;
-  src: local('HelveticaNeue-LightExt'), url("../../fonts/the_face/Helvetica Neue/HelveticaNeue-LightExt.otf") format("opentype");
-}
-
-@font-face {
-  font-family: 'Insignia'; /* USED FOR H4 */
-  font-style: bold;
-  font-weight: normal;
-  letter-spacing: 10px;
-  src: local('Insignia'), url("../../fonts/the_face/Insignia.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: 'Industria'; /*used on bottom of cover page*/
-  font-style: normal;
-  font-weight: normal;
-  letter-spacing: 10px; /*source: image of the kid*/
-  src: local('Industria_Solid'), url("../../fonts/the_face/Industria_Solid.ttf") format("truetype");
-}
-@font-face {
-  font-family: 'Helvetica Neue'; /*USED FOR SHORT PARAGRAPHS in the cover (header). Source image: different_fonts.jpg */
-  font-style: normal;
-  font-weight: normal;
-  src: local('Helvetica Neue Condensed Black'), url("../../fonts/the_face/Helvetica Neue/Helvetica Neue Condensed Black.ttf") format("opentype");
-}
-
-@font-face {
-  font-family: 'Helvetica Neue'; /*USED FOR SHORT PARAGRAPHS in the cover (header) with a SMALLER SIZE. Source image: different_fonts.jpg */
-  font-style: normal;
-  font-weight: normal;
-  src: local('HelveticaNeue-BoldExt'), url("../../fonts/the_face/Helvetica Neue/HelveticaNeue-BoldExt.otf") format("opentype");
-}
-
-/*almost every text in the header must be converted into uppercase with text-transform: uppercase;*/
-
-/* INTERNAL PAGES */
-
-@font-face {
-  font-family: 'Franklin Gothic Std ExtraCond'; /* USED FOR H4, internal titles*/
-  font-style: normal;
-  font-weight: normal;
-  src: local('Franklin Gothic Std Extra Condensed-cosmopolitan magazine'), url("../../fonts/the_face/Franklin Gothic Std Extra Condensed-cosmopolitan magazine.otf") format("opentype");
-}
-
-@font-face {
-  font-family: 'Helvetica'; /* USED FOR ALL THE PARAGRAPHS IN MAIN, SECTION, FOOTER*/
-  font-style: normal;
-  font-weight: normal;
-  src: local('Helvetica'), url("../../fonts/the_face/Helvetica/Helvetica.ttf") format("opentype");
-}
-
-@font-face {
-  font-family: 'Helvetica Rounded'; /*USED FOR EM*/
-  font-style: normal;
-  font-weight: normal;
-  src: local('HelveticaRounded-Bold'), url("../../fonts/the_face/Helvetica/HelveticaRounded-Bold.otf") format("opentype");
-}
-
-html {
-  height: 100vh;
-  width: 100vw;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  margin: 0;
-  background-color: #F2D474
-}
-
-main: {
-  background-color: #F2D474; /*yellowish, ochre*/
-  font-family: ;
-  font-size: ;
-  padding: 0;
-  margin: 0;
-  column-count: 2;
-  column-gap: 10px;
-}
-
-h1:before {
-  position: left;
-  background-image: url("../../img/icons/logo.jpg");
-  background-position: left;
-  background-size: 30vw;
-}
-
-h1 {
-  text-transform: uppercase;
-  font-family: 'Crazy Loop in Paris';
-  font-size: 15vw; /* whatever number size you choose, but rem */
-  font-style: normal;
-  text-align: right;
-  margin: ;
-  padding: ;
-}
-
-h2 {
-  text-transform: uppercase;
-  font-family: 'HelveticaNeue BlackCond';
-  font-size: 6vw; /* whatever number size you choose, but rem */
-  font-style: italic;
-  color: #F29D1F;
-  margin: ;
-  padding: ;
-}
-
-h3 {
-  text-transform: uppercase;
-  font-family: 'Helvetica Neue';
-  font-size: 3vw; /* whatever number size you choose, but rem */
-  font-style: bold;
-  letter-spacing: 10px;
-  color: #D43D14;
-  margin: ;
-  padding: ;
-}
-
-h4 {
-  text-transform: uppercase;
-  font-family: 'TypefaceSixSevenOTW03-Seven';
-  font-size: 2.5vw; /* whatever number size you choose, but rem */
-  font-style: bold;
-  margin: 0;
-  padding: 0;
-}
-
-h5 {
-  text-transform: uppercase;
-  font-family: 'Helvetica Neue';
-  font-size: 2rem; /* whatever number size you choose, but rem */
-  font-style: bold;
-  letter-spacing: 10px;
-  margin: ;
-  padding: ;
-}
-
-h6 {
-  text-transform: uppercase;
-  font-family: 'Helvetica Neue';
-  font-size: 1rem; /* whatever number size you choose, but rem */
-  font-style: bold;
-  letter-spacing: 10px;
-  margin: ;
-  padding: ;
-}
-
-p {
-  font-family: 'Helvetica Rounded';
-  font-size: 0.8rem; /* whatever number size you choose, but rem */
-  font-style: normal;
-  text-align: justify;
-}
-
-em {
-  font-family: 'Helvetica Rounded';
-  font-size: 1.5rem; /* whatever number size you choose, but rem */
-  font-style: ;
-  padding: ;
-}
-
-small {
-  font-family: 'Helvetica Neue';
-  font-size: 0.8rem; /* whatever number size you choose, but rem */
-  font-style: bold;
-  padding: ;
-}
-
-q {
-  font-family: "Helvetica Rounded";
-  text-decoration: underline;
-  font-size: 1rem; /* whatever number size you choose, but rem */
-  font-style: ;
-  padding: ;
-}
-
-a {
-  font-family: ;
-  font-size: 1rem; /* whatever number size you choose, but rem */
-  font-style: ;
-  padding: ;
-}
-
-a:hover {
-  font-family: ;
-  font-size: 1rem; /* whatever number size you choose, but rem */
-  font-style: ;
-  padding: ;
-}
-
-header { /* example of a header that we want in the center of the page */
-  background-color: #4D7791; /*light-bluish*/
-  text-align: left;
-  padding-right: 2vw;
-  padding-left: 2vw;
-  border-bottom: 20px;
-  border-bottom-style: solid;
-  border-bottom-color: #d43D14;
-}
 
 header > p {
   font-family: 'Helvetica Neue';
   font-size: 1rem;
+  font-stretch: extra-condensed;
 }
 
 
 header > section {
   background-color: #4D7791;
   border: 0;
-  column-count: 0;
-  column-gap: 10px;
 }
 
 header > section > p {
   font-family: 'Industria'; /*used on bottom of cover page*/
   font-size: 5vw;
   font-style: normal;
-  text-align: right;
+  column-count: 0;
 }
 
 body > section {
   background-color: #F2D474; /*yellowish, ochre*/
-  column-count: 2;
-  column-width: 20vw;
-  column-gap: 40vw;
   text-align: justify;
   padding-top: 5vh;
   padding-left: 5vw;
@@ -267,10 +38,26 @@ body > section > p {
 
 body > main > section {
   background-color: #F2D474; /*yellowish, ochre*/
-  column-count: 2;
-  column-width: 20vw;
-  column-gap: 10px;
   text-align: justify;
+  padding-top: 5vh;
+  padding-left: 5vw;
+  padding-right: 30vw;
+  border-left: 8vw;
+  border-left-style: solid;
+  border-left-color: black; /*let the border overlap with the text*/
+}
+
+/*--- the two following rules have been applied for the cases in which there are no sections, like in Bloomberg article ---*/
+body > p {
+  padding-top: 5vh;
+  padding-left: 5vw;
+  padding-right: 30vw;
+  border-left: 8vw;
+  border-left-style: solid;
+  border-left-color: black; /*let the border overlap with the text*/
+}
+
+body > main > p {
   padding-top: 5vh;
   padding-left: 5vw;
   padding-right: 30vw;
@@ -294,7 +81,7 @@ section > section > p {
 }
 
 figure {
-  width: 100%; /* use percentage of viewwidth */
+  width: 80%; /* use percentage of viewwidth */
   -webkit-column-span: all; /* Chrome, Safari, Opera */
   column-span: all;
   padding-left: 0;
@@ -305,28 +92,11 @@ figure {
   overflow: hidden;
 }
 
-body > figure { /*initial image before the header*/
-  border: 0;
-  width: auto;
-}
-
-body > figure > img {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-body > figure > figcaption{
-  padding: 0;
-  margin: 0;
-  width: 100%
-}
-
 figure > figcaption {
   width: 30%;
-  font-family: 'Helvetica Neue Condensed Black';
+  font-family: 'Helvetica Neue';
   font-size: 0.8rem; /* whatever number size you choose, but rem */
-  font-style: ;
+  font-style: bold;
   float: right;
   padding: 5px;
   border-left: 1vw;
@@ -373,6 +143,29 @@ figure > table {
   border-left: 2vw solid #1E1605;
 }
 
+/*--- ADAPTATION OF TABLES TO CELLPHONES ---*/
+
+@media screen and (max-width: 768px) {
+
+    figure > table {
+      margin-left: 0;
+      padding-left: 0;
+      font-size: 1vw;
+    }
+
+    td > a {
+      font-size: 1rem;
+    }
+
+    td > a:hover {
+      font-size: 2rem;
+    }
+
+    table {
+        display: inline-table;
+    }
+}
+
 figure > table > th {
   font-family: 'Helvetica';
   font-size: 0.8rem;
@@ -401,11 +194,14 @@ ul {
   width: 100%; /* use percentage of viewwidth */
   padding: 10px;
   text-indent: 2rem;
-  list-style-type: none; /* no symbol before each list element */
+  list-style-type: square; /* no symbol before each list element */
   font-family: 'Helvetica';
   font-size: 0.8rem; /* whatever number size you choose, but rem */
   font-style: normal;
   text-align: justify;
+  column-count: 2;
+  column-gap: 4vw;
+  column-width: 20vw;
 }
 
 ul > li {
@@ -415,19 +211,17 @@ ul > li {
   text-align: justify;
 }
 
-ul > li:before {
-  content: "--"; /* choose your own symbol before each list element */
-  padding-right: 5px;
-}
-
 ol {
   width: 100%; /* use percentage of viewwidth */
   padding: 10px;
-  list-style-type: upper-roman;
+  list-style-type: upper-alpha;
   font-family: 'Helvetica';
   font-size: 0.8rem; /* whatever number size you choose, but rem */
   font-style: normal;
   text-align: justify;
+  column-count: 2;
+  column-gap: 4vw;
+  column-width: 20vw;
 }
 
 ol > li {
@@ -438,7 +232,7 @@ ol > li {
 }
 
 ol > li > ol {
-  list-style-type: decimal;
+  list-style-type: lower-alpha;
   font-family: 'Helvetica';
   font-size: 0.8rem; /* whatever number size you choose, but rem */
   font-style: normal;
@@ -453,8 +247,18 @@ ol > li > ol > li {
 }
 
 footer {
+  font-family: 'Helvetica Rounded';
+  font-size: 1rem;
+  font-style: bold;
   background-color: #D43D14; /*red*/
   padding: 20px;
   border-top: ;
   text-align: justify;
+}
+
+footer > p > a > em {
+  font-family: 'Helvetica Rounded';
+  font-size: 1rem;
+  font-style: bold;
+  color: #FBCC2D;
 }
