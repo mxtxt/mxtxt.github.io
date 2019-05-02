@@ -118,7 +118,7 @@ html {
 body {
   font-family: "bodoni-bold";
   color: black;
-  height: 100vh; /* the style requires an infinite scroll type of interaction, as the original docs were very long*/
+  height: 100%; /* the style requires an infinite scroll type of interaction, as the original docs were very long*/
   padding-left: 10%;
   padding-right: 10%;
   text-align: center;

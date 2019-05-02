@@ -29,7 +29,7 @@
   <div class="container">
 
     <!-- Portfolio Item Heading -->
-    <h1 class="my-4">Gutenberg<small> <i>Everything old is new again</i></small></h1>
+    <h1 class="my-4">Gutenberg<small> Everything old is new again</small></h1>
     <div class="row">
       <p>Gutenberg is known as the man who invented a method of printing by using moveable type. 
 His greatest printing achievement, besides being the first book ever to be printed by moveable print in the West, was the Gutenberg Bible, a two-volume copy of Jerome’s Latin Vulgate. It was 1454. Gutenberg and his work stand on the threshold between the end of the handwritten manuscript tradition and the rise of the print tradition in the West. In 2001 the Gutenberg Bible has been included by UNESCO in its program “Memory of the world”. 
@@ -51,12 +51,17 @@ His greatest printing achievement, besides being the first book ever to be print
           <div class="row">
             <div class="col-md-3">
               <a href="#">
-                <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+                <img class="img-fluid rounded mb-3 mb-md-0" src="../../img/docimg/doc1/gutenberg_bible_old_testament_epistle_of_st_jerome.jpg" alt="">
               </a>
             </div>
             <div class="col-md-9">
-              <h3 class="my-2">Characteristic 1</h3>
-              <p>Explanation and sources for the characteristic.</p>
+              <h3 class="my-2">Medieval manuscript influence in the layout </h3>
+              <p>Here there is a list of the elements that reveal the persistence of the manuscript tradition but which are also signals that things are changing:</p>
+              <ul>
+                <li>bordering: asymmetric organization of the text on the page, symmetric organization of the text on the spread. See Golden Ratio below. </li>
+                <li>disposition of the text:  medieval manuscripts were printed on a single sheet, not on both sides of a page, while incunabula used both the sides of every page, like Gutenberg in his Bible. Text in manuscripts was usually set in one justified column per page, while the first printed booked, like Gutenberg’s Bible, usually organized text in two columns per page.</li>
+                <li>Justified setting: printed layouts differed from manuscripts in the justified setting.</li>
+              </ul>  
             </div>
             <div class="card">
               <div class="card-header">
@@ -64,15 +69,17 @@ His greatest printing achievement, besides being the first book ever to be print
               </div>
               <div id="card-element-one" class="collapse" data-parent="#card-42350">
                 <div class="card-body">
-                  Here godes the css and js code snippets and explanation!
+                  Division of the text in the paragraph into two columns: 
                   <pre>
                       <small><code class="css">
-                        &#60;!DOCTYPE html&#62;
-                      </code></small>
-                  </pre>
-                  <pre>
-                      <small><code class="js">
-                        &#60;!DOCTYPE html&#62;
+p {
+  font-family: '1454 Gutenberg Bibel';
+  font-size: 1rem;
+  font-style: normal;
+  column-count: 2;
+  column-gap: 4vw;
+  text-align: justify;
+}
                       </code></small>
                   </pre>
                 </div>
@@ -87,12 +94,12 @@ His greatest printing achievement, besides being the first book ever to be print
           <div class="row">
             <div class="col-md-3">
               <a href="#">
-                <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+                <img class="img-fluid rounded mb-3 mb-md-0" src="../../img/docimg/doc1/capital_letter_illuminated.jpg" alt="">
               </a>
             </div>
             <div class="col-md-9">
-              <h3 class="my-2">Characteristic 2</h3>
-              <p>Explanation and sources for the characteristic.</p>
+              <h3 class="my-2">Precious details </h3>
+              <p>Following the design of manuscripts, printers of incunabula also had the initial of the first word of each chapter in large size and mainly red ink, then other colours were used for the illumination. For the Gutenberg theme the colour blue ultramarine has been used to give an idea of the variety of colours. In the process of printing the illumination, the corresponding part of the page for the initial was left blank, and later decorated by a specialist called "rubricator". To designate the letter to be drawn, a small form of the letter ("guide letter") was sometimes printed in the space beforehand. Other typical decorations of manuscripts, including border decorations and pictorially represented initials, were also used in incunabula.</p>
             </div>
             <div class="card">
               <div class="card-header">
@@ -100,15 +107,19 @@ His greatest printing achievement, besides being the first book ever to be print
               </div>
               <div id="card-element-two" class="collapse" data-parent="#card-42350">
                 <div class="card-body">
-                  Here godes the css and js code snippets and explanation!
+                  the image used as divider of sections has been taken from a page of the original Gutenberg’s Bible.
                   <pre>
                       <small><code class="css">
-                        &#60;!DOCTYPE html&#62;
-                      </code></small>
-                  </pre>
-                  <pre>
-                      <small><code class="js">
-                        &#60;!DOCTYPE html&#62;
+  figure:after {
+  content: "";
+  display: inline-block;
+  background-image: url("../../img/divider/decoration.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 120%;
+  width: 100%;
+  padding-top: 30%;
+}
                       </code></small>
                   </pre>
                 </div>
