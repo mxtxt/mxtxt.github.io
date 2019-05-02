@@ -46,7 +46,10 @@ body {
     height: 100vh;
     font-size: 2vw; 
   }
-
+    h2{
+    border: 0; 
+  }
+}
 
 h1 {
   font-family: 'Medieval Scribish';
