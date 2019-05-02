@@ -1,4 +1,234 @@
+/* COVER */
+/*The Face name of the magazine*/
+@font-face {
+  font-family: 'Crazy Loop in Paris'; /*----USED FOR H1, title of the documents (TLS, The Cut etc.)----*/
+  font-style: normal;
+  font-weight: normal;
+  src: local('CRAZLP_'), url("../../fonts/the_face/CRAZLP_.TTF") format("truetype");
+}
 
+@font-face {
+  font-family: 'TypefaceSixSevenOTW03-Seven'; /* alternative font for H1*/
+  font-style: normal;
+  font-weight: normal;
+  src: local('Typeface Six Seven OT W03 Seven'), url("../../fonts/the_face/Typeface Six Seven OT W03 Seven.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'HelveticaNeue BlackCond'; /* USED FOR H2, title of the article. Source image: different_fonts.jpg*/
+  font-style: normal;
+  font-weight: normal;
+  src: local('HelveticaNeue-BlackCondObl'), url("../../fonts/the_face/HelveticaNeue-BlackCondObl.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Helvetica Neue'; /* USED FOR H3, right below h2. Source image: different_fonts.jpg*/
+  font-style: bold;
+  font-weight: normal;
+  letter-spacing: 10px;
+  src: local('HelveticaNeue-LightExt'), url("../../fonts/the_face/Helvetica Neue/HelveticaNeue-LightExt.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Insignia'; /* USED FOR H4 */
+  font-style: bold;
+  font-weight: normal;
+  letter-spacing: 10px;
+  src: local('Insignia'), url("../../fonts/the_face/Insignia.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Industria'; /*used on bottom of cover page*/
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 10px; /*source: image of the kid*/
+  src: local('Industria_Solid'), url("../../fonts/the_face/Industria_Solid.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Helvetica Neue'; /*USED FOR SHORT PARAGRAPHS in the cover (header). Source image: different_fonts.jpg */
+  font-style: normal;
+  font-weight: normal;
+  src: local('Helvetica Neue Condensed Black'), url("../../fonts/the_face/Helvetica Neue/Helvetica Neue Condensed Black.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Helvetica Neue'; /*USED FOR SHORT PARAGRAPHS in the cover (header) with a SMALLER SIZE. Source image: different_fonts.jpg */
+  font-style: normal;
+  font-weight: normal;
+  src: local('HelveticaNeue-BoldExt'), url("../../fonts/the_face/Helvetica Neue/HelveticaNeue-BoldExt.otf") format("opentype");
+}
+
+/*almost every text in the header must be converted into uppercase with text-transform: uppercase;*/
+
+/* INTERNAL PAGES */
+
+@font-face {
+  font-family: 'Franklin Gothic Std ExtraCond'; /* USED FOR H4, internal titles*/
+  font-style: normal;
+  font-weight: normal;
+  src: local('Franklin Gothic Std Extra Condensed-cosmopolitan magazine'), url("../../fonts/the_face/Franklin Gothic Std Extra Condensed-cosmopolitan magazine.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Helvetica'; /* USED FOR ALL THE PARAGRAPHS IN MAIN, SECTION, FOOTER*/
+  font-style: normal;
+  font-weight: normal;
+  src: local('Helvetica'), url("../../fonts/the_face/Helvetica/Helvetica.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Helvetica Rounded'; /*USED FOR EM*/
+  font-style: normal;
+  font-weight: normal;
+  src: local('HelveticaRounded-Bold'), url("../../fonts/the_face/Helvetica/HelveticaRounded-Bold.otf") format("opentype");
+}
+
+/*--- COLUMNS ARE APPLIED TO P, OL AND UL --- */
+
+html {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  background-color: #F2D474
+}
+
+main: {
+  background-color: #F2D474; /*yellowish, ochre*/
+  font-family: ;
+  font-size: ;
+  padding: 0;
+  margin: 0;
+}
+
+h1:before {
+  position: left;
+  background-image: url("../../img/icons/logo.jpg");
+  background-position: left;
+  background-size: 30vw;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-family: 'Crazy Loop in Paris';
+  font-size: 13vw; /* whatever number size you choose, but rem */
+  font-style: normal;
+  text-align: right;
+  margin: ;
+  padding: ;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-family: 'HelveticaNeue BlackCond';
+  font-size: 6vw; /* whatever number size you choose, but rem */
+  font-style: italic;
+  color: #F29D1F;
+  margin: ;
+  padding: ;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-family: 'Helvetica Neue';
+  font-size: 3vw; /* whatever number size you choose, but rem */
+  font-style: bold;
+  letter-spacing: 10px;
+  color: #D43D14;
+  margin: ;
+  padding: ;
+}
+
+h4 {
+  text-transform: uppercase;
+  font-family: 'TypefaceSixSevenOTW03-Seven';
+  font-size: 2.5vw; /* whatever number size you choose, but rem */
+  font-style: bold;
+  margin: 0;
+  padding: 0;
+}
+
+h5 {
+  text-transform: uppercase;
+  font-family: 'Helvetica Neue';
+  font-size: 2rem; /* whatever number size you choose, but rem */
+  font-style: bold;
+  letter-spacing: 10px;
+  margin: ;
+  padding: ;
+}
+
+h6 {
+  text-transform: uppercase;
+  font-family: 'Helvetica Neue';
+  font-size: 1rem; /* whatever number size you choose, but rem */
+  font-style: bold;
+  letter-spacing: 10px;
+  margin: ;
+  padding: ;
+}
+
+p {
+  font-family: 'Helvetica';
+  font-size: 0.8rem; /* whatever number size you choose, but rem */
+  font-style: normal;
+  text-align: justify;
+  column-count: 2;
+  column-gap: 4vw;
+  column-width: 20vw;
+}
+
+em {
+  font-family: 'Helvetica Rounded';
+  font-size: 2vw; /* whatever number size you choose, but rem */
+  color: #D43D14;
+  font-style: ;
+  padding: ;
+}
+
+small {
+  font-family: 'Helvetica Neue';
+  font-size: 0.8rem; /* whatever number size you choose, but rem */
+  font-style: bold;
+  padding: ;
+}
+
+q {
+  font-family: "Helvetica Rounded";
+  text-decoration: underline;
+  font-size: 1.5vw; /* whatever number size you choose, but rem */
+}
+
+main > q {
+  padding-left: 13vw;
+}
+
+a {
+  font-family: 'Industria';
+  font-size: 3rem; /* whatever number size you choose, but rem */
+  font-style: bold;
+  color: #0E4BDB;
+}
+
+a:hover {
+  font-family: 'Industria';
+  font-size: 4rem; /* whatever number size you choose, but rem */
+  font-style: bold;
+}
+
+header { /* example of a header that we want in the center of the page */
+  background-color: #4D7791; /*light-bluish*/
+  text-align: left;
+  padding-right: 2vw;
+  padding-left: 2vw;
+  border-bottom: 20px;
+  border-bottom-style: solid;
+  border-bottom-color: #d43D14;
+}
 
 header > p {
   font-family: 'Helvetica Neue';
