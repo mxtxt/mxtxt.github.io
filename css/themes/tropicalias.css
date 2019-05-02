@@ -1,0 +1,757 @@
+/*-------------------------------Fonts------------------------------- */
+/*----Psychedelic, Pop Art, Sans-Serif, Brazilian----*/
+/* franklin */
+@font-face {
+  font-family: franklin;
+  src: url("../../fonts/tropicalia/franklin.eot"); /* IE9*/
+  src: url("../../fonts/tropicalia/franklin.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("../../fonts/tropicalia/franklin.woff2") format("woff2"), /* chrome、firefox */
+  url("../../fonts/tropicalia/franklin.woff") format("woff"), /* chrome、firefox */
+  url("../../fonts/tropicalia/franklin.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("../../fonts/tropicalia/franklin.svg#Franklin Gothic Hand W01 Cond") format("svg"); /* iOS 4.1- */
+}
+
+/********AZEDO********/
+/* azedo-bold */
+@font-face {
+    font-family: azedo-bold;
+    src: url("../../fonts/tropicalia/Azedo-Bold.otf") format("opentype");
+}
+
+/* azedo-light */
+@font-face {
+    font-family: azedo-light;
+    src: url("../../fonts/tropicalia/Azedo-Light.otf") format("opentype");
+}
+
+/********BOOMTOWN DECO********/
+/* boomtown-deco */
+@font-face {
+    font-family: boomtown-deco;
+    src: url("../../fonts/tropicalia/Boomtown-deco.otf") format("opentype");
+}
+
+/********DOGSMOKE********/
+/* dogsmoke */
+@font-face {
+    font-family: dogsmoke;
+    src: url("../../fonts/tropicalia/Dogsmoke.ttf") format("opentype");
+}
+
+/* dogsmoke-ii */
+@font-face {
+    font-family: dogsmoke-ii;
+    src: url("../../fonts/tropicalia/Dogsmoke-II.ttf") format("opentype");
+}
+
+/* dogsmoke-thunder-ii */
+@font-face {
+    font-family: dogsmoke-thunder-ii;
+    src: url("../../fonts/tropicalia/Dogsmoke-Thunder-II.ttf") format("opentype");
+}
+
+/* dogsmoke-thunder */
+@font-face {
+    font-family: dogsmoke-thunder;
+    src: url("../../fonts/tropicalia/Dogsmoke-Thunder.ttf") format("opentype");
+}
+
+/* dogsmoke-ii */
+@font-face {
+    font-family: dogsmoke-ii;
+    src: url("../../fonts/tropicalia/Dogsmoke-II.ttf") format("opentype");
+}
+
+/********TEXGYREADVENTOR********/
+/* texgyreadventor-italic */
+@font-face {
+    font-family: texgyreadventor-italic;
+    src: url("../../fonts/tropicalia/texgyreadventor-italic.otf") format("opentype");
+}
+
+/* texgyreadventor-bolditalic */
+@font-face {
+    font-family: texgyreadventor-bolditalic;
+    src: url("../../fonts/tropicalia/texgyreadventor-bolditalic.otf") format("opentype");
+}
+
+/* texgyreadventor-bold */
+@font-face {
+    font-family: texgyreadventor-bold;
+    src: url("../../fonts/tropicalia/texgyreadventor-bold.otf") format("opentype");
+}
+
+/* texgyreadventor-regular */
+@font-face {
+    font-family: texgyreadventor-regular;
+    src: url("../../fonts/tropicalia/texgyreadventor-regular.otf") format("opentype");
+}
+
+/********OTHER********/
+/* tropicalia */
+@font-face {
+    font-family: tropicalia;
+    src: url("../../fonts/tropicalia/Tropicalia-Brush.ttf") format("opentype");
+}
+
+/* ostrichsans */
+@font-face {
+    font-family: ostrichsans;
+    src: url("../../fonts/tropicalia/ostrichsans-medium-webfont.ttf") format("opentype");
+}
+
+/* village */
+@font-face {
+    font-family: village;
+    src: url("../../fonts/tropicalia/Village.ttf") format("opentype");
+}
+
+/* flames */
+@font-face {
+    font-family: flames;
+    src: url("../../fonts/tropicalia/Flames.ttf") format("opentype");
+}
+
+/* beamie */
+@font-face {
+    font-family: beamie;
+    src: url("../../fonts/tropicalia/beamie.ttf") format("opentype");
+}
+
+/* ftact */
+@font-face {
+    font-family: ftact;
+    src: url("../../fonts/tropicalia/Ftact.ttf") format("opentype");
+}
+
+/* lettersinthehands */
+@font-face {
+    font-family: lettersinthehands;
+    src: url("../../fonts/tropicalia/Lettersinthehands.ttf") format("opentype");
+}
+
+/* pseudolux-regular */
+@font-face {
+    font-family: pseudolux-regular;
+    src: url("../../fonts/tropicalia/Pseudolux-Regular.ttf") format("opentype");
+}
+
+/* pseudolux */
+@font-face {
+    font-family: pseudolux;
+    src: url("../../fonts/tropicalia/Pseudolux.ttf") format("opentype");
+}
+
+/* yoxall */
+@font-face {
+    font-family: yoxall;
+    src: url("../../fonts/tropicalia/Yoxall.ttf") format("opentype");
+}
+
+/* ipanema */
+@font-face {
+    font-family: ipanema;
+    src: url("../../fonts/tropicalia/Ipanema-Secco.ttf") format("opentype");
+}
+
+/* milho */
+@font-face {
+    font-family: milho;
+    src: url("../../fonts/tropicalia/Milho-Cozido.ttf") format("opentype");
+}
+
+/* beigly */
+@font-face {
+    font-family: beigly;
+    src: url("../../fonts/tropicalia/Beigly.ttf") format("opentype");
+}
+
+@import url('https://fonts.googleapis.com/css?family=Gothic+A1');
+
+/*-----------------------------Animations------------------------------ */
+
+/* Psychedelic CSS Filter Animations - A PEN BY Luke Andersen*/
+@keyframes colorRotate {
+ 100% {
+   -webkit-filter: hue-rotate(-360deg);
+ }
+}
+
+/* animation goback */
+@keyframes unpuzzle {
+  transform: rotate(-100deg);
+}
+
+/* simurai http://simurai.com/lab/2011/10/03/space-cacss */
+@keyframes cells {
+  from { background-size: 22px 22px; }
+  to { background-size: 24px 24px; }
+}
+
+
+
+html {
+  background-color: #ABA362; /* alternate #e0d289 */
+}
+
+body {
+  font-family: "yoxall";
+  color: 	#FEF8F3;
+  margin: 0;
+  padding: 0;
+}
+
+body:after {
+  content: "";
+  display: block;
+  height: 20vh;
+}
+/*--------------------Header Structure and Style--------------------- */
+
+header {
+  /* takes up 100% of the viewport */
+  width: 100vw;
+  height: 100vh;
+  /* takes up 100% of the viewport */
+  margin: 0;
+  padding: 0;
+  color: #A9A355;
+  position: relative;
+}
+
+h1 {
+  /* psychedelic font. SOURCE Tafarelo de Oliveira, 2011. */
+  font-family: "dogsmoke";
+  /* lowercase. SOURCE Image 2. */
+  text-transform: lowercase;
+  /* font size is 20% of the width of the viewport. SOURCE Image 2. */
+  font-size: 4rem;
+  /* has limited line-height to give it a psychedelic effect. */
+  line-height: 3rem;
+
+  /* see-through colorful background. SOURCE Image 4. */
+  background: url("../../img/bg/tropicalia/tropheader.jpg");
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+
+  /* takes up 100% of the width of its parent element, the header. */
+  width: 100%;
+  /* aligned to the right. SOURCE Image 3. */
+  text-align: right;
+  /* upper padding. SOURCE Image 2. */
+  padding-top: 9rem;
+  /* no space between the title and the next element. SOURCE Image 2. */
+  margin-bottom: 0vw;
+  padding-bottom: 0vw;
+
+  /* transition */
+  transform: rotate(180deg);
+  transition: transform 3s ease-in-out 2.9s;
+}
+
+h2 {
+  /* sans-serif font. SOURCE Espinosa, 2018. */
+  font-family: 'yoxall', sans-serif;
+  font-size: 2.6rem;
+  text-transform: uppercase;
+  line-height: normal;
+  /* font color cosmic latte */
+  color: #ABA362;
+  /* */
+  /*takes up 100% of the width of its parent element, the header */
+  width: 50%;
+
+  /* no space between the title and the next element. SOURCE Image 2. */
+  margin-bottom: 0;
+  padding-bottom: 0;
+  margin-top: 1.4vw;
+  padding-right: 1vw;
+  /* aligned to the right. SOURCE Image 3. */
+  text-align: right;
+  /* floated to the right. SOURCE Image 3. */
+  float: right;
+
+  /* transition */
+  transition: color 5s linear 6s;
+}
+
+h3 {
+  /* psychedelic font. */
+  font-family: 'beamie';
+  font-weight: 100;
+  font-size: 1.5rem;
+  /* font color from SOURCE Image 7. */
+  color: #B74254;
+  line-height: 2rem;
+  /* aligned to the left. SOURCE Image 3. */
+  text-align: left;
+  width: 50%;
+  /* upper padding. SOURCE Image 5. */
+  margin-top: 0;
+  padding-top: 0;
+  /* no space between the title and the next element. SOURCE Image 2. */
+  margin-bottom: 0;
+  padding-bottom: 0;
+  /* left padding. SOURCE Image 8. */
+  padding-left: 1vw;
+
+  /* transition */
+  transform: scale(1.5) translate(15vw);
+  transition: transform 5s ease-in-out 5s;
+}
+
+header > section {
+  border: none;
+}
+
+header > section > p {
+  display: none;
+}
+
+header p {
+
+  font-family: 'texgyreadventor-regular';
+  font-size: 1.2rem;
+  /* font color cosmic latte */
+  color: beige;
+  /* pop-art inspirted shadow effect for easier reading. SOURCE Image 6. */
+  /* background color same as h1. SOURCE Image 7. */
+  background: url("../../img/bg/tropicalia/tropheader.jpg");
+
+  width: 100%;
+  /* position at bottom of header */
+  position: absolute;
+  bottom: 0;
+  padding-left: 2vw;
+}
+
+header > p > a {
+  /* font color cosmic latte. */
+  color: #fff8e7;
+}
+
+/*------------------Main Article Structure and Style------------------- */
+
+main {
+  /* upper padding. */
+  padding-top: 0.1rem;
+  /* side padding matches header paragraphs'. */
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  /* main is divided into two columns. SOURCE Image 9. */
+  -webkit-column-count: 1;
+     -moz-column-count: 1;
+          column-count: 1;
+          column-gap: 1.5rem;
+}
+
+section {
+  /* space between one section and the other */
+  margin-bottom: 0.5rem;
+  /* each section finishes with a coral red rounded border. */
+  border-top: 2vw solid #af443a;
+  /* each section finishes with a coral red rounded border. */
+  border-bottom: 2vw solid #af443a;
+  /* borders have rounded corners. SOURCE Image 7. */
+  border-radius: 25px;
+}
+
+h4 {
+  /* psychedelic font. */
+  font-family: 'beamie';
+  font-size: 3.5rem;
+  /* makes the psychedelic effect visible. */
+  font-weight: 100;
+
+  text-align: right;
+  /* makes the background touch the border. */
+  margin-top: 0;
+  /* upper padding for extra background. */
+  padding-top: 0.5rem;
+  /* makes the background touch the border. */
+  margin-bottom: 0;
+  /* upper padding for extra background. */
+  padding-bottom: 0.5rem;
+
+  /* animation right to left */
+  animation: cells 0.4s linear infinite;
+  /* this is a special background designed by @samurai. SOURCE http://simurai.com/lab/2011/10/03/space-cacss#top  */
+  background-image: repeating-radial-gradient(#A9A355 8px, white 12px);
+}
+
+main p {
+  /* sans-serif font */
+  font-family: 'texgyreadventor-regular';
+  font-size: 1rem;
+  text-align: justify;
+}
+
+main p > em {
+  /* literally tropicalia-inspired font. */
+  font-family: 'tropicalia';
+  font-size: 1.5rem;
+  /* don't make it more cursive. */
+  font-style: normal;
+  /* exact complementary color of background color */
+  color: #9b62ab;
+}
+
+a {
+  /* do not underline */
+  text-decoration: none;
+  color: #e0d289;
+  /* exact complementary color of #e0d289. */
+  background-color: #9b62ab;
+}
+
+q {
+  font-family: 'boomtown-deco';
+  font-size: 2.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/*------------------------------Figures------------------------------- */
+
+/*--------------First Figure--------------*/
+
+body > figure {
+  /* do not display figures that aren't part of the main article. */
+  display: none !important;
+}
+
+/*--------------Other Figures--------------*/
+
+figure {
+  /* make the figure background take up all the figure space*/
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+figure > figcaption {
+  font-family: "milho" ;
+  font-size: 1.3rem;
+  text-align: justify;
+  color: black;
+
+  width: 100%;
+  margin-top: 0.2rem;
+}
+
+figure > figcaption > small {
+    /* make the text 0.5 viewport width smaller */
+    font-size: 0.9rem;
+}
+
+/*-------------Figures: Images-------------*/
+
+figure > img {
+  /* make the image round */
+  border-radius: 50%;
+  /* create shdows to make it look like a 3D border*/
+  box-shadow: -1vw 1vw 0 1vw black, 1vw 0 0 3vw #e0d289;
+  /* make the colors rotate as a gradient through the color wheel */
+  animation: colorRotate 10s infinite;
+
+  /* image takes up 80 percent of the figure width. */
+  width: 80%;
+  /* for taller than average images, restrict. */
+  max-height: 20rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 10vw;
+  margin-right: 5vw;
+}
+
+/*--------------Figures: Videos--------------*/
+
+figure > video {
+  /* make the image round */
+  border-radius: 50%;
+  /* create a border that works as a shadow */
+  box-shadow: -1vw 1vw 0 1vw black, 1vw 0 0 3vw #e0d289;
+  /* make the colors rotate as a gradient through the color wheel */
+  animation: colorRotate 10s  infinite;
+
+  /* image takes up 80 percent of the figure width. */
+  width: 80%;
+  /* for taller than average images, restrict. */
+  max-height: 20rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+/*--------------Figures: Tables--------------*/
+
+figure > table {
+  font-family: 'ostrichsans';
+  /* table takes the whole width of the figure. */
+  width: 100%;
+  table-layout: fixed;
+  /* not readable until hover. */
+  font-size: 1rem;
+  color: #262B2F;
+  /* collapse borders */
+  border-collapse: collapse;
+  background-color:	#D2E0DF;
+}
+
+th {
+  /* headers are slightly bigger and uppercase. */
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  border: 0.1vw solid purple;
+}
+
+td {
+    border: 0.1vw solid purple;
+}
+
+/*-------------------------------Lists-------------------------------- */
+
+section > ul {
+  font-family: 'ostrichsans' ;
+  font-size: 1.5rem;
+  list-style: circle;
+}
+
+section > ol {
+  font-family: 'ostrichsans' ;
+  font-size: 1.5rem;
+  /* list item marker is lower case sans-serif. */
+  list-style-type: lower-alpha;
+}
+
+section > ol > li > em {
+  /* make emphasized content a bit bigger. */
+  font-size: 1.7rem;
+}
+
+section > ol ol {
+  padding-left: 2.5vw;
+}
+
+section ol ul {
+  padding-left: 2.5vw;
+}
+
+section > ol table {
+  /* make sure tables inside lists have the same font-size. */
+  font-size: 1.2rem;
+}
+
+
+/*------------------------------Footer------------------------------- */
+
+body > footer {
+  font-family: 'texgyreadventor-bold';
+  font-size: 0.9rem;
+  /* background image by same artist as h1 background */
+  background: url("../../img/bg/tropicalia/aplant.png");
+  background-size: cover;
+  background-position: left;
+  /* green rounded border */
+  border-top: 2vw solid green;
+  border-bottom: 2vw solid green;
+  border-radius: 25px;
+
+  width: 100%;
+  /* space between footer and article */
+  margin-top: 0.5rem;
+
+}
+
+main footer {
+  font-family: 'texgyreadventor-regular';
+  font-size: 0.7rem;
+}
+
+
+@media screen and (min-width: 812px) {
+
+    html {
+      border: 5vw solid #131819;
+    }
+
+    header {
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 7vw;
+      line-height: 5vw;
+      padding-top: 10vw;
+      margin-top: 0;
+      transform: rotate(-180deg);
+      transition: transform 5s ease-in-out 2.9s;
+    }
+
+    h1:hover {
+      transform: rotate(0deg);
+      transition: transform 2s ease;
+    }
+
+    h2 {
+      font-size: 4vw;
+      line-height: normal;
+      color: #FDF2F4;
+      margin-top: 0.7vh;
+      padding-right: 2vw;
+    }
+
+    h3 {
+      font-size: 3.5vw;
+      color: #B74254;
+      line-height: 4vw;
+      width: 100%;
+      margin-top: 0;
+      padding-top: 1vh;
+      /* no space between the title and the next element. SOURCE Image 2. */
+      margin-bottom: 1vh;
+      padding-bottom: 1vh;
+      /* left padding. SOURCE Image 8. */
+      padding-left: 1vw;
+      transform: rotate(-180deg);
+      transition: transform 5s ease-in-out 2.9s, color 5s linear 1s;
+    }
+
+    h3:hover {
+      transform: rotate(0deg);
+      transition: transform 2s ease;
+    }
+
+    header p {
+
+      font-family: 'texgyreadventor-regular';
+      font-size: 3vw;
+      /* font color cosmic latte */
+      color: beige;
+      /* background color same as h1. SOURCE Image 7. */
+      background: url("../../img/bg/tropicalia/tropheader.jpg");
+
+      width: 100%;
+      /* position at bottom of header */
+      position: absolute;
+      bottom: 0;
+      padding-left: 2vw;
+    }
+
+    header > p > a:hover {
+      color: pink;
+    }
+
+    main {
+      padding-left: 7.5vw;
+      padding-right: 7.5vw;
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+      column-count: 2;
+      column-gap: 7.5vw;
+    }
+
+    section {
+      /* space between one section and the other */
+      margin-bottom: 0.5vw;
+      /* each section finishes with a coral red rounded border. */
+      border-top: 2vw solid #af443a;
+      /* each section finishes with a coral red rounded border. */
+      border-bottom: 2vw solid #af443a;
+      /* borders have rounded corners. SOURCE Image 7. */
+      border-radius: 25px;
+    }
+
+    h4 {
+      font-size: 5vw;
+    }
+
+    main p {
+      font-size: 1.5vw;
+    }
+
+    main p > em {
+      font-size: 2.5vw;
+    }
+
+    a:hover {
+      color: #9b62ab;
+    }
+
+    q {
+      font-size: 5vw;
+      padding-top: 2vh;
+      padding-bottom: 2vh;
+    }
+
+    figure > figcaption {
+      font-size: 1.5vw;
+    }
+
+    figure > figcaption > small {
+      font-size: 1vw;
+    }
+
+    figure > img {
+      margin-left: 3vw;
+      max-height: 40vh;
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+      margin-right: 5vw;
+    }
+
+    figure > img:hover {
+      transform: rotate(1080deg);
+      transition: transform 3s ease-in;
+    }
+
+    figure > video {
+      margin-left: 3vw;
+
+    }
+
+    figure > table {
+      font-size: 1.5vw;
+      font-weight: 800;
+    }
+
+    th {
+      font-size: 2.5vw;
+    }
+
+    table:hover {
+      /* make the table bigger and centered, with a background to make it readable. */
+      transform: scale(1.2);
+      color: #9b62ab;
+      background-color: #fff8e7;
+    }
+
+    section > ul {
+      font-size: 2vw;
+    }
+
+    section > ol {
+      font-size: 2vw;
+    }
+
+    section > ol > li > em {
+      font-size: 2vw;
+    }
+
+    section > ol table {
+      font-size: 2vw;
+    }
+
+    body > footer {
+      font-size: 1.5vw;
+    }
+
+    main footer {
+      font-size: 1.3vw;
+    }
+
+}
