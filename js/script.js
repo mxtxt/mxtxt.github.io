@@ -51,7 +51,6 @@ function randomTheme(){
 function switchTheme(input){
   loadingOn();
   var frameContent = document.getElementById("frameDocument");
-  document.getElementById("currentTheme").innerHTML = input.name;
 
   if (document.getElementById("currentDoc").innerHTML == "EU_Directive/EU_Directive"){
     if (document.getElementById("currentTheme").innerHTML != ""){
@@ -60,22 +59,21 @@ function switchTheme(input){
 
     frameContent.addEventListener("load", function() {
       var leftFrame = frameContent.contentWindow.document.getElementById("left");
-      console.log(leftFrame);
-
       var leftTheme = leftFrame.contentWindow.document.getElementsByName("theme")[0];
 
       var rightFrame = frameContent.contentWindow.document.getElementById("right");
-      console.log(rightFrame);
       var rightTheme = rightFrame.contentWindow.document.getElementsByName("theme")[0];
 
       leftTheme.setAttribute("href", "../../../css/" + input.name + ".css");
       rightTheme.setAttribute("href", "../../../css/" + input.name + ".css");
     });
 
-
+    document.getElementById("currentTheme").innerHTML = input.name;
 
   } else if (document.getElementById("currentDoc").innerHTML == ""){
+      document.getElementById("currentTheme").innerHTML = input.name;
       randomDoc();
+      document.getElementsByName(input.name)[0].click();
   } else {
 
     if (document.getElementById("currentTheme").innerHTML != ""){
@@ -84,6 +82,7 @@ function switchTheme(input){
 
     frameContent.addEventListener("load", function() {
       var theme = frameContent.contentWindow.document.getElementsByName("theme")[0];
+      document.getElementById("currentTheme").innerHTML = input.name;
       theme.setAttribute("href", "../../css/" + input.name + ".css");
     });
   }
