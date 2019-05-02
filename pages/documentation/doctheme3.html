@@ -47,7 +47,7 @@
           <div class="row">
             <div class="col-md-3">
               <a href="#">
-                <img class="img-fluid rounded mb-3 mb-md-0" src="../../img/docimg/doc3/metals.png" alt="">
+                <img class="img-fluid rounded mb-3 mb-md-0" src="../../img/docimg/doc3/metals.png" alt="Metals were emphasized in art.">
               </a>
             </div>
             <div class="col-md-9">
@@ -60,13 +60,20 @@
               </div>
               <div id="card-element-one" class="collapse" data-parent="#card-42350">
                 <div class="card-body">
-                  <p>See how the gold effect is created</p>:
+                  <p>See how the gold effect is created:</p>
                   <p>
                     <pre>
                       <small><code class="css">
-  background: -webkit-linear-gradient(#BF953F, #FCF6BA, #FBF5B7, #AA771C);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  h1 {
+    background: -webkit-linear-gradient(#BF953F, #FCF6BA, #FBF5B7, #AA771C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "parklane";
+    font-size: 3vh;
+    margin: 0;
+    padding: 0 0 0 0;
+    line-height: normal;
+  }
                       </code></small>
                   </pre>
                 </p>
@@ -82,12 +89,12 @@
           <div class="row">
             <div class="col-md-3">
               <a href="#">
-                <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+                <img class="img-fluid rounded mb-3 mb-md-0" src="../../img/docimg/doc3/goldenShapes.png" alt="">
               </a>
             </div>
             <div class="col-md-9">
-              <h3 class="my-2">Characteristic 2</h3>
-              <p>Explanation and sources for the characteristic.</p>
+              <h3 class="my-2">Shapes</h3>
+              <p>With Art Deco, a certain the degree of soberness entered a flourishing art scene. This soberness, however, was of his own character. The floristic shapes of Art Nouveau were revisited and merged with the geometric reduction which Cubism aimed to master. The resulting shapes were in their own way complex and simplistic. At last, the forms were still pure decoration. In the theme, the look was achieved by using the pseudoclass ':before' and ':after', with which the insertion of images became possible without changing the HTML files.</p>
             </div>
             <div class="card">
               <div class="card-header">
@@ -95,17 +102,42 @@
               </div>
               <div id="card-element-two" class="collapse" data-parent="#card-42350">
                 <div class="card-body">
-                  Here godes the css and js code snippets and explanation!
+                  <p>
                   <pre>
                       <small><code class="css">
-                        &#60;!DOCTYPE html&#62;
+  header {
+    width: 80vw;
+    margin: 8vmin auto;
+    text-align: center;
+  }
+  header:before {
+    content: "";
+    display: inline-block;
+    background-image: url("../../img/divider/divider-6.svg");
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 60vw;
+    margin: 0;
+    padding: 0;
+    padding-top: 25vmax;
+  }
+  header:after {
+    content: "";
+    display: inline-block;
+    background-image: url("../../img/divider/divider-9.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 60vw;
+    margin: 0;
+    padding: 0;
+    padding-top: 13.5vmax;
+  }
                       </code></small>
                   </pre>
-                  <pre>
-                      <small><code class="js">
-                        &#60;!DOCTYPE html&#62;
-                      </code></small>
-                  </pre>
+                </p>
                 </div>
               </div>
             </div>
