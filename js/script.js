@@ -16,11 +16,12 @@ function loadingOn(){
 function loadingOff(){
   setTimeout(function(){
     $(".loading-wrapper").toggleClass("active");
-  }, 2000);
+  }, 3000);
 };
 
 
 function random(){
+  loadingOn();
   randomDoc();
   randomTheme();
 
