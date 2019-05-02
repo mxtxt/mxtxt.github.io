@@ -509,14 +509,6 @@ html, body {
   overflow: scroll!important;
   -webkit-overflow-scrolling: touch!important;
 }
-
-/*
-@media (min-width: 767px) {
-  #content {
-    padding: 2.5rem;
-  }
-}*/
-
 #content iframe {
   position: absolute;
   top: 2.5rem;
@@ -525,8 +517,6 @@ html, body {
   height: calc(100vh - 5rem);
   border: none;
 }
-
-
 @media (max-width: 767px) {
   #content iframe {
     top: 0;
@@ -534,3 +524,4 @@ html, body {
     width: 100vw;
     height: 100vh;
   }
+}

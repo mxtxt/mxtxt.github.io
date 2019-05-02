@@ -23,7 +23,7 @@
       <!-- Portfolio Item Heading -->
       <h1 class="my-4">The Frame</h1>
       <div class="row">
-        <p> This is a short paragraph about the general approach to the frame.</p>
+        <p>The frame is essential for mxTXT – not only for the final user interface but also for its intelligence. The frame wraps the actual content and contains three menus: for the navigation through mxTXT pages, the selection of a document-style combination, and the execution of the random or the source button. All the menus and the application of mxTXT styles is based on JavaScript. The implementation is explained in the following.</p>
       </div>
       <!-- Portfolio Item Row -->
       <div class="row">
@@ -31,19 +31,46 @@
         <div class="col">
           <div>
             <h3 class="my-3">iFrame</h3>
-            <p>Here are the details about how we implemented iFrame.</p>
-            <p>This is some text about the code.<p>
+            <p>The iFrame technology was employed in order to have no limitations in the styling process. An iFrame allows opening an HTML file within another HTML file without any interference of the two. This trick allows the full separation of mxTXT styles from the cascading style sheets (CSS) used for the frame. Without using iFrame, it would have been necessary to consider the HTML and CSS of the mxTXT user interface while creating the styles.</p>
+            <p>The iFrame is implemented with the following HTML markup and CSS styling:<p>
             <p>
               <pre>
-                  <code> This is the code.
+                  <code class="html">
+  &#60;div id="content"&#62;
+    &#60;iframe id="frameDocument" src="pages/home.html"&#62;&#60;/iframe&#62;
+  &#60;/div&#62;
+                  </code>
+                  <code class="css">
+  #content {
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll!important;
+    -webkit-overflow-scrolling: touch!important;
+  }
+  #content iframe {
+    position: absolute;
+    top: 2.5rem;
+    left: 2.5rem;
+    width: calc(100vw - 5rem);
+    height: calc(100vh - 5rem);
+    border: none;
+  }
+  @media (max-width: 767px) {
+    #content iframe {
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+    }
+  }
                   </code>
               </pre>
             </p>
           </div>
           <div>
             <h3 class="my-3">Navigation</h3>
-            <p>Here are the details about how we implemented navigation.</p>
-            <p>This is some text about the code.<p>
+            <p>The document linked with the attribute "src" is opened by the iFrame. Selecting another document in the document menu, hence, has to change the value for the "src" attribute.</p>
+            <p>This process is completed by the following JavaScript function:<p>
             <p>
               <pre>
                   <code> This is the code.
@@ -53,8 +80,8 @@
           </div>
           <div>
             <h3 class="my-3">Theme Switcher</h3>
-            <p>Here are the details about how we implemented the theme switcher.</p>
-            <p>This is some text about the code.<p>
+            <p>The defining feature of mxTXT is the application of historical and futuristic designs on a comprehensive selection of documents. While the document menu serves to choose content, styling is applied by picking one of the six mxTXT styles. With clicking a button in the theme menu, a link to the respective CSS files is injected into the corresponding HTML file of the currently selected document.</p>
+            <p>This injection is performed by the following code:<p>
             <p>
               <pre>
                   <code> This is the code.
@@ -64,8 +91,8 @@
           </div>
           <div>
             <h3 class="my-3">Side-by-side Viewer</h3>
-            <p>Here are the details about how we implemented the theme side-by-side viewer, and the priority reasoning behind it.</p>
-            <p>This is some text about the code.<p>
+            <p>An additional feature of mxTXT is the Side-by-Side Viewer which displays one legal document in two different languages side by side. This unique view is activated by clicking the document symbol emblemed with an Iustitia scale. The idea behind the Side-by-Side Viewer is to simultanous scroll both versions for their comparison. This result is achieved by doubling the iFrame approach and synchronising the two iFrames with a Javascript.</p>
+            <p>See the realization below:<p>
             <p>
               <pre>
                   <code> This is the code.
