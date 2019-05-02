@@ -6,13 +6,6 @@
 }
 
 @font-face {
-  font-family: 'ATOIdEnglish';
-  font-style: normal;
-  font-weight: normal;
-  src: local('ATOIdEnglish'), url("../../fonts/first_printed_books/ATOIdEnglish.otf") format('otf');
-}
-
-@font-face {
   font-family: 'Carolingia';
   font-style: normal;
   font-weight: normal;
@@ -24,6 +17,13 @@
   font-style: normal;
   font-weight: normal;
   src: local('scribish'), url("../../fonts/first_printed_books/scribish.otf") format('otf');
+}
+
+@font-face {
+  font-family: 'ATOIdEnglish';
+  font-style: normal;
+  font-weight: normal;
+  src: local('ATOIdEnglish'), url("../../fonts/first_printed_books/ATOIdEnglish.otf") format('otf');
 }
 
 html {
