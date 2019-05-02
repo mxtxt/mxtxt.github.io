@@ -47,6 +47,13 @@ body {
   border-right: ;/* some floral decoration */
 }
 
+@media screen and (max-width: 768px) {
+  body{
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
 h1 {
   font-family: 'Medieval Scribish';
   font-size: 2rem; /* whatever number size you choose, but rem */
