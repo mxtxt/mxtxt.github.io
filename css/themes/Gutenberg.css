@@ -29,6 +29,8 @@
 html {
   background-image: url("../../img/bg/nSydVZm.png");
   background-size: cover;
+  width: 100vw;
+  height: 100vh; 
   /*background-color: #D3C2A0;*/
 }
 
