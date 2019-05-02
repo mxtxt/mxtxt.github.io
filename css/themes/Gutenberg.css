@@ -26,17 +26,10 @@
   src: local('scribish'), url("../../fonts/first_printed_books/scribish.otf") format('otf');
 }
 
-@media {
-
-}
-
 html {
   background-image: url("../../img/bg/nSydVZm.png");
   background-size: cover;
   /*background-color: #D3C2A0;*/
-  height: 100vh; /*the element spans for the entire height of the browser's window*/
-  width: 100vw; /*the element spans for the entire width of the browser's window*/
-  border-right: /* some floral decoration */
 }
 
 body {
