@@ -1,6 +1,5 @@
-/* check out first-child and nth-child pseudoclasses. These will be very helpful
-to define special characteristics of certain elemens, since we cannot use classes or ids. */
 
+/* ------ Fonts ------ */
 @import url('https://fonts.googleapis.com/css?family=Poiret+One');
 @font-face {
     font-family: grenadier;
@@ -11,6 +10,8 @@ to define special characteristics of certain elemens, since we cannot use classe
     src: url("../../fonts/artDeco/parklane.otf") format("opentype");
 }
 
+
+/* ------ html + body ------ */
 html {
   background-image: url("../../img/bg/velvet.png");
   background-repeat: repeat;
@@ -19,145 +20,128 @@ html {
   margin: 0;
   padding: 0;
 }
-
 body {
   font-family: "Poiret One", cursive;
   color: #fff;
   height: 100vh;
-  margin: auto;
-  width: 90vw;
+  width: 100vw;
+  margin: 0;
   padding: 0;
 }
+body:after {
+  content: "";
+  display: block;
+  width: 60vw;
+  height: 20vh;
+}
 
+
+/* ------ General Text Styling ------ */
 h1 {
   background: -webkit-linear-gradient(#BF953F, #FCF6BA, #FBF5B7, #AA771C);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "parklane";
-  font-size: 2rem; /* whatever number size you choose, but rem */
-  font-style: ;
-  margin: ;
-  padding: ;
+  font-size: 3vh;
+  margin: 0;
+  padding: 0 0 0 0;
+  line-height: normal;
 }
-
 h2 {
   background: -webkit-linear-gradient(#BF953F, #FCF6BA, #FBF5B7, #AA771C);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "parklane";
-  font-size: 4rem; /* whatever number size you choose, but rem */
+  font-size: 6vh;
   font-style: ;
-  margin: ;
-  padding: ;
+  margin: 0;
+  padding: 2rem 0 0 0;
 }
-
 h3 {
   background: -webkit-linear-gradient(#BF953F, #FCF6BA, #FBF5B7, #AA771C);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "parklane";
-  font-size: 2rem; /* whatever number size you choose, but rem */
+  font-size: 3vh;
   font-style: ;
-  margin: 0 0 5rem 0;
-  padding: ;
+  margin: 0;
+  padding: 2rem 0 2rem 0;
 }
-
 h4 {
   background: -webkit-linear-gradient(#BF953F, #FCF6BA, #FBF5B7, #AA771C);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
   font-family: "parklane";
-  font-size: 2rem; /* whatever number size you choose, but rem */
+  font-size: 2rem;
   font-style: ;
   margin: 0;
-  padding: ;
+  padding: 1rem 0 0 0;
 }
-
 h5 {
   background: -webkit-linear-gradient(#BF953F, #FCF6BA, #FBF5B7, #AA771C);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "parklane";
-  font-size: 1rem; /* whatever number size you choose, but rem */
+  font-size: 1rem;
   font-style: ;
   margin: 0;
-  padding: ;
+  padding: 1rem 0 0 0;
 }
-
 h6 {
   background: -webkit-linear-gradient(#BF953F, #FCF6BA, #FBF5B7, #AA771C);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "parklane";
-  font-size: 1rem; /* whatever number size you choose, but rem */
+  font-size: 1rem;
   font-style: ;
   margin: 0;
-  padding: ;
+  padding: 1rem 0 0 0;
 }
-
 p {
-  font-family: ;
   text-align: justify;
-  font-size: 1rem; /* whatever number size you choose, but rem */
-  font-style: ;
-  margin: ;
-  padding: ;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+  margin: 0;
+  padding: 1rem 0 0 0;
 }
-
-/*
-p:first-of-type {
-  font-family: ;
-  text-align: justify;
-  font-size: 1rem; /* whatever number size you choose, but rem
-  font-style: ;
-  margin: ;
-  padding: ;
-}*/
-
 em {
-  font-family: ;
-  font-size: 1rem; /* whatever number size you choose, but rem */
-  font-style: ;
-  padding: ;
+  background: -webkit-linear-gradient(#BF953F, #FCF6BA, #FBF5B7, #AA771C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1rem;
+  font-weight: bold;
 }
-
 small {
   font-family: ;
-  font-size: 1rem; /* whatever number size you choose, but rem */
+  font-size: 1rem;
   font-style: ;
-  padding: ;
 }
-
 q {
   font-family: ;
-  font-size: 1rem; /* whatever number size you choose, but rem */
+  font-size: 1rem;
   font-style: ;
-  padding: ;
 }
-
 a {
-  font-family: ;
-  font-size: 1rem; /* whatever number size you choose, but rem */
-  font-style: ;
-  padding: ;
+  background: -webkit-linear-gradient(#BF953F, #FCF6BA, #FBF5B7, #AA771C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "parklane";
+  font-size: 1rem;
+  font-style: normal;
 }
-
 a:hover {
-  font-family: ;
-  font-size: 1rem; /* whatever number size you choose, but rem */
-  font-style: ;
-  padding: ;
+  font-style: italic;
 }
 
-header { /* example of a header that we want in the center of the page */
-  /* position: absolute; */
-  /* top: 50%; /* this positions the header at the vertical center  */
-  /* left: 50%; /* this positions the header at the horizontal center  */
-  /* transform: translate(-50%, -50%); */
+
+/* ------ Header ------ */
+header {
+  width: 80vw;
+  margin: 8vmin auto;
   text-align: center;
 }
-
 header:before {
   content: "";
   display: inline-block;
@@ -166,10 +150,11 @@ header:before {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  width: 100%;
-  padding-top: 30%;
+  width: 60vw;
+  margin: 0;
+  padding: 0;
+  padding-top: 25vmax;
 }
-
 header:after {
   content: "";
   display: inline-block;
@@ -177,48 +162,97 @@ header:after {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  width: 100%;
-  padding-top: 15%;
+  width: 60vw;
+  margin: 0;
+  padding: 0;
+  padding-top: 13.5vmax;
 }
-
+@media (max-width: 766px) {
+  header:before {
+    width: 80vw;
+    margin: 0;
+  }
+  header:after {
+    width: 80vw;
+    margin: 0;
+  }
+}
 header > p {
   text-align: center;
   background: -webkit-linear-gradient(#BF953F, #FCF6BA, #FBF5B7, #AA771C);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "parklane";
-  font-size: 1rem; /* whatever number size you choose, but rem */
+  font-size: 1rem;
+}
+header section p {
+  text-align: center;
+  background: -webkit-linear-gradient(#BF953F, #FCF6BA, #FBF5B7, #AA771C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "parklane";
+  font-size: 1rem;
 }
 
-section {
-  /* border-top: 1rem double #f7f7f7;  three values: thickness, styling, color */
-  border-bottom: ;
-  border-left: ;
-  border-right: ;
-  padding-top: ;
-  padding-bottom: ;
-  padding-left: ;
-  padding-right: ;
-}
 
-/*
-section:after {
+/* ------ Main ------ */
+main {
+  width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+main figure {
+  width: 80vw;
+  margin: 5vmin 0;
+  padding: 0;
+}
+main footer {
+  width: 80vw;
+  margin: 0;
+  padding: 0;
+}
+main footer:before {
   content: "";
-  display: inline-block;
-  background-image: url("../img/divider/divider-5.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  width: 100%;
-  padding-top: 15%;
-} */
-
-figure {
-  width: 100%; /* use percentage of viewwidth */
+  background-image: none;
+  width: 80vw;
   margin: 0;
   padding: 0;
 }
 
+
+/* ------ Section ------ */
+section {
+}
+section p {
+  text-align: justify;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+  margin: 0;
+  padding: 1rem 0 0 0;
+}
+section footer {
+  width: 80vw;
+  margin: 0;
+  padding: 0;
+}
+section footer:before {
+  content: "";
+  width: 80vw;
+  margin: 0;
+  padding: 0;
+}
+section footer p {
+  text-align: center;
+}
+
+
+/* ------ Figure ------ */
+figure {
+  width: 80vw;
+  margin: 2vmin 10vw 0 10vw;
+  padding: 0;
+}
 figure:before {
   content: "";
   display: inline-block;
@@ -226,10 +260,11 @@ figure:before {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  width: 100%;
-  padding-top: 15%;
+  width: 60vw;
+  margin: 0 10vw 0 10vw;
+  padding: 0;
+  padding-top: 10vh;
 }
-
 figure:after {
   content: "";
   display: inline-block;
@@ -237,140 +272,185 @@ figure:after {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  width: 100%;
-  padding-top: 15%;
+  width: 60vw;
+  margin: 0 10vw 0 10vw;
+  padding: 0;
+  padding-top: 10vh;
 }
-
+@media (max-width: 766px) {
+  figure:before {
+    width: 80vw;
+    margin: 0;
+  }
+  figure:after {
+    width: 80vw;
+    margin: 0;
+  }
+}
 figure > figcaption {
   background: -webkit-linear-gradient(#BF953F, #FCF6BA, #FBF5B7, #AA771C);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  width: 80%;
+  width: 40vw;
   font-family: "parklane";
-  font-size: 1rem; /* whatever number size you choose, but rem */
-  font-style: ;
+  font-size: 0.6rem;
+  line-height: 1rem;
   text-align: center;
-  margin: auto;
-  padding-top: 2rem;
-}
-
-figure > figcaption > em {
-  font-family: ;
-  font-size: 1rem; /* whatever number size you choose, but rem */
-  font-style: ;
-  padding: ;
-}
-
-figure > img {
-  display: block;
   margin-left: auto;
   margin-right: auto;
-  margin: auto;
-  width: 80%; /* use percentage of the figure box width */
+  padding: 2vh 0 0 0;
+}
+figure > figcaption > em {
+  font-size: 0.6rem;
+}
+figure > figcaption > small {
+  font-size: 0.4rem;
+}
+figure > img {
+  display: block;
+  width: auto;
+  max-height: 30vh;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0;
   filter: grayscale(20%) sepia(20%) contrast(0.8);
   -webkit-filter: grayscale(20%) sepia(20%) contrast(0.8);
   clip-path: polygon(10% 0, 90% 0, 100% 7.5%, 100% 92.5%, 90% 100%, 10% 100%, 0 92.5%, 0 7.5%);
   -webkit-clip-path: polygon(10% 0, 90% 0, 100% 7.5%, 100% 92.5%, 90% 100%, 10% 100%, 0 92.5%, 0 7.5%);
-  /*-webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
-  transition: all 0.5s linear;*/
 }
-
-/*
-figure > img:hover {
-  filter: none;
-  -webkit-filter: none;
-}*/
-
 figure > video {
-  width: 80%; /* use percentage of the figure box width */
-  margin: 0;
+  display: block;
+  width: auto;
+  max-height: 30vh;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0;
 }
 
+
+/* ------ Tables ------ */
 figure > table {
-  font-family: ;
-  font-size: ;
-  font-style: ;
-  width: 80%; /* use percentage of the figure box width */
-  border-top: ;
-  border-bottom: ;
-  border-left: ;
-  border-right: ;
-  padding-top: ;
-  padding-bottom: ;
-  padding-left: ;
-  padding-right: ;
+  background-image: linear-gradient(#BF953F, #FCF6BA, #FBF5B7, #AA771C);
+  background-origin: border-box;
+  border-spacing: 2px;
+  text-align: center;
+  display: block;
+  margin: 5vh auto;
+  padding: 0;
+  font-size: 2vmin;
+  font-weight: bold;
+  width: 80vw;
+}
+figure > table p {
+  font-size: 2vmin;
+  font-weight: bold;
+  text-align: center;
+  padding: 0;
+}
+figure > table a {
+  font-size: 2vmin;
+}
+figure > table th {
+  background-image: url("../../img/bg/velvet.png");
+  background-repeat: repeat;
+  font-size: 3vmin;
+  margin: 0;
+  padding: 1vmin;
+}
+figure > table td {
+  background-image: url("../../img/bg/velvet.png");
+  background-repeat: repeat;
+  margin: 0;
+  padding: 1vmin;
 }
 
-figure > table > th {
-  font-size: ;
-  font-weight: ;
-  border-top: ;
-  border-bottom: ;
-  border-left: ;
-  border-right: ;
-  padding-top: ;
-  padding-bottom: ;
-  padding-left: ;
-  padding-right: ;
-}
 
-figure > table > tr {
-  border-top: ;
-  border-bottom: ;
-  border-left: ;
-  border-right: ;
-  padding-top: ;
-  padding-bottom: ;
-  padding-left: ;
-  padding-right: ;
-}
-
-figure > table > tr > td:first-child { /* use this to style the first column of a table */
-}
-
-figure > table > tr > td:nth-child(n) { /* use this to style the n-th column of a table */
-}
-
+/* ------ List ------ */
 ul {
-  width: 90%; /* use percentage of viewwidth */
+  width: 80vw;
   padding: 0;
-  text-indent: 2rem;
-  list-style-type: none; /* no symbol before each list element */
+  margin: 0;
+  text-align: justify;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+  list-style-type: none;
 }
-
-ul > li {
-}
-
-ul > li:before {
-  content: "--"; /* choose your own symbol before each list element */
-  padding-right: 5px;
-}
-
 ol {
-  width: 90%; /* use percentage of viewwidth */
-  padding: 0;
+  width: 75vw;
+  padding: 0 0 0 5vw;
+  margin: 0 0 5vh 0;
+  text-align: justify;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5rem;
   list-style-type: upper-roman;
 }
-
-ol > li {
-}
-
 ol > li > ol {
+  width: 70vw;
+  padding: 0 0 0 5vw;
+  margin: 0;
+  text-align: justify;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5rem;
   list-style-type: decimal;
 }
-
-ol > li > ol > li {
+ol > li > ol > li > ol {
+  width: 65vw;
+  padding: 0 0 0 5vw;
+  margin: 0;
+  text-align: justify;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+  list-style-type: lower-latin;
+}
+ol > li > ol > li > ol > li > ol {
+  width: 60vw;
+  padding: 0 0 0 5vw;
+  margin: 0;
+  text-align: justify;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+  list-style-type: lower-greek;
+}
+ol > li > ol > li > ul {
+  width: 65vw;
+  padding: 0 0 0 5vw;
+  margin: 0;
+  list-style-type: none;
+  text-align: justify;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5rem;
 }
 
+
+/* ------ Footer ------ */
 footer {
-  padding: 2rem 0;
-  border-top: ;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  width: 80vw;
+  margin: 0 10vw 0 10vw;
+  padding: 5vh 0;
 }
-
+footer p {
+  text-align: center;
+}
+footer small {
+  font-size: 0.8rem;
+}
+footer a {
+  font-size: 0.8rem;
+}
+footer ul > li {
+  width: 75vw;
+}
+footer li {
+  line-height: 1rem;
+}
 footer:before {
   content: "";
   display: inline-block;
@@ -378,6 +458,8 @@ footer:before {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  width: 100%;
+  width: 80vw;
+  margin: 0 0 5vh 0;
+  padding: 0;
   padding-top: 15%;
 }
