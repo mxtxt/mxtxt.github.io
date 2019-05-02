@@ -42,7 +42,12 @@ body {
   border-right: ;/* some floral decoration */
 }
 
-@media screen and (min-width: 812px) {
+@media screen and (max-width: 768px) {
+  html {
+  background-image: url("../../img/bg/nSydVZm.png");
+  background-size: cover;
+  }
+  
   body{
     width: 100vw;
     height: 100vh;
