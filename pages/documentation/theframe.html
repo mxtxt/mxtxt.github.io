@@ -213,16 +213,34 @@
           </div>
           <div>
             <h3 class="my-3">Side-by-side Viewer</h3>
-            <p>An additional feature of mxTXT is the Side-by-Side Viewer which displays one legal document in two different languages side by side. This unique view is activated by clicking the document symbol emblemed with an Iustitia scale. The idea behind the Side-by-Side Viewer is to simultaneously scroll both versions for their comparison. This result is achieved by doubling the iFrame approach and synchronising the two iFrames with a Javascript.</p>
+            <p>An additional feature of mxTXT is the Side-by-Side Viewer which displays one legal document in two different languages side by side. This unique view is activated by clicking the document symbol emblemed with an Iustitia scale. The idea behind the Side-by-Side Viewer is to simultaneously scroll both versions for their comparison. This result is achieved by opening an HTML document in the original iFrame, which itself doubles the iFrame approach, and synchronising the two iFrames with a simple event listener.</p>
             <p>See the realization below:<p>
             <p>
               <pre>
-                  <code class="html">
+                <code class="html">
   &#60;!--- HTML ---&#62;
-                  </code>
-                  <code class="css">
-  /* --- CSS --- */
-                  </code>
+  &#60;!--- Double iFrame Approach ---&#62;
+  &#60;div id="leftContainer"&#62;
+  &#60;iframe id="left" src="documents/english.html"&#62;&#60;/iframe>&#60;/div&#62;
+  &#60;div id="rightContainer"&#62;
+    &#60;iframe id="right" src="documents/italian.html"&#62;&#60;/iframe&#62;
+  &#60;/div&#62;
+                </code>
+                <code class="js">
+  window.addEventListener("load", function() {
+
+    var right = $("#right").contents();
+    var left = $("#left").contents();
+
+    $(left).scroll(function(){
+      $(right).scrollTop($(this).scrollTop());
+    });
+
+    $(right).scroll(function(){
+      $(left).scrollTop($(this).scrollTop());
+    });
+  });
+                </code>
               </pre>
             </p>
           </div>
