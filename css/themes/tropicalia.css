@@ -189,9 +189,10 @@
 }
 
 
-
 html {
   background-color: #ABA362; /* alternate #e0d289 */
+  height: 100%;
+  overflow-y: scroll;
 }
 
 body {
@@ -199,6 +200,7 @@ body {
   color: 	#FEF8F3;
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 body:after {
@@ -206,6 +208,7 @@ body:after {
   display: block;
   height: 20vh;
 }
+
 /*--------------------Header Structure and Style--------------------- */
 
 header {
