@@ -40,6 +40,8 @@ function injectAuroraScript(){
 }
 
 function loadAurora(){
-  var frameContent = document.getElementById("frameDocument");
-  frameContent.contentWindow.initiate();
+  if (document.getElementById("currentTheme").innerHTML == "themes/aurora"){
+    var frameContent = document.getElementById("frameDocument");
+    frameContent.contentWindow.initiate();
+  };
 };
