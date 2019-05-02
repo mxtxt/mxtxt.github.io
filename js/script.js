@@ -103,7 +103,7 @@ function switchTheme(input){
   //   document.head.appendChild(audioElement);
   //   audioElement.setAttribute('src', '../audio/tropicalia/Sambar.mp3');
   //   audioElement.play();
-  };
+  // };
 
   var currentMenu = document.getElementById("menu-nav").getElementsByClassName("active");
   if (currentMenu.length > 0) {
