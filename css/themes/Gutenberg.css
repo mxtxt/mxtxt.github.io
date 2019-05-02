@@ -272,6 +272,29 @@ figure > table {
   border: solid 5px black;
 }
 
+/*--- THE FOLLOWING MEDIA QUERIES ALLOW TO ADAPT TABLES TO CELLPHONES SCREENS---*/
+
+@media screen and (max-width: 768px) {
+
+    figure > table {
+      margin-left: 0;
+      padding-left: 0;
+      font-size: 1vw;
+    }
+
+    td > a {
+      font-size: 1rem;
+    }
+
+    td > a:hover {
+      font-size: 2rem;
+    }
+
+    table {
+        display: inline-table;
+    }
+}
+
 table, th, td, tr {
   border: 1vw solid black;
 }
