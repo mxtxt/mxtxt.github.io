@@ -148,8 +148,8 @@ h1, h2, h3, h4, h5, .display-1, .display-2 {
   color: #D02D1C;
 }
 
-.doctheme card {
-  right: 0;
+.doctheme card-link {
+  color: black;
 }
 .btn {
     border-radius: 0;
