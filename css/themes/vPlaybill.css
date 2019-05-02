@@ -1,9 +1,3 @@
-/* fix japan graph image */
-/* fix quotes -- delete automatic quotation marks */
-/* fix background image decoration, delete from tables */
-
-
-
 /*--------------Fonts--------------*/
 
 /********BODONI********/
@@ -123,8 +117,8 @@ html {
 }
 
 body {
-  color: black;
   font-family: "bodoni-bold";
+  color: black;
   height: 100vh; /* the style requires an infinite scroll type of interaction, as the original docs were very long*/
   padding-left: 10%;
   padding-right: 10%;
@@ -137,121 +131,119 @@ header {
 
 header > section > p {
   font-family: "semplicita-ombra";
-  font-size: 3.2vw;
+  font-size: 1rem;
   font-weight: 500;
-  line-height: 1vh;
   text-align: center;
   text-transform: uppercase;
 
-  margin-top: 1vh;
-  padding-top: 2vh;
+  margin-top: 0;
+  padding-top: 0.1rem;
 
-  margin-bottom: 1vh;
-  padding-bottom: 2vh;
-  border-bottom: 0.3vh solid black;
+  margin-bottom: 0;
+  padding-bottom: 0.1rem;
+  border-bottom: 0.3rem solid black;
 }
 
 header > p {
   font-family: "fette-egyptienne";
-  font-size: 2.7vw;
+  font-size: 1rem;
   font-weight: 500;
   text-align: center;
   text-transform: uppercase;
   text-justify: inter-character;
   letter-spacing: 1.5vw;
 
-  margin-top: 1vh;
-  padding-top: 2vh;
+  margin-top: 0;
+  padding-top: 0.2rem;
 
-  margin-bottom: 1vh;
-  padding-bottom: 1vh;
-  border-bottom: 0.3vh solid black;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0.3vw solid black;
 }
 
 header > p > a {
   font-family: "woodcut";
-  font-size: 5vw;
+  font-size: 1.3rem;
   font-weight: 100;
-  line-height: 3vh;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 0.2vw;
+  letter-spacing: 0.2rem;
   color: red;
 }
 
 header > p > a:hover {
   font-family: "woodcut";
-  font-size: 5.2vw;
+  font-size: 1.6rem;
   color: black;
 }
 
 h1 {
   font-family: "vineta-regular";
-  font-size: 6vw;
+  font-size: 2rem;
   font-weight: 500;
   line-height: 0.85em;
   text-align: center;
   text-transform: uppercase;
 
-  margin-top: 1vh;
-  padding-top: 1vh;
+  margin-top: 0;
+  padding-top: 0.5rem;
 
-  margin-bottom: 1vh;
-  padding-bottom: 1vh;
-  border-bottom: 0.5vh dotted black;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0.3rem dotted black;
 }
 
 h2 {
   font-family: "plastische-plakat-antiqua";
-  font-size: 9vw;
+  font-size: 3rem;
   font-weight: 400;
   line-height: 0.9em;
   text-align: center;
   text-transform: uppercase;
 
-  margin-top: 1vh;
-  padding-top: 1vh;
+  margin-top: 0;
+  padding-top: 0.5rem;
 
-  margin-bottom: 1vh;
-  padding-bottom: 1vh;
-  border-bottom: 1vh double black;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 1rem double black;
 }
 
 h2:hover {
-  font-size: 12vw;
+  font-size: 4rem;
 }
 
 h3 {
   font-family: "jfringmaster";
-  font-size: 4vw;
+  font-size: 1.2rem;
   font-weight: 100;
   text-align: center;
   text-transform: uppercase;
 
-  margin-top: 1vh;
-  padding-top: 0vh;
+  margin-top: 0;
+  padding-top: 0;
 
-  margin-bottom: 1vh;
-  padding-bottom: 1vh;
-  border-bottom: 0.5vh double black;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0.5vw double black;
 }
 
 section {
-  border-top: 3vh double black;
+  border-top: 1rem double black;
 }
 
 h4 {
   font-family: "semplicita-ombra";
-  font-size: 11vw;
+  font-size: 3rem;
   font-weight: 100;
   text-align: center;
   text-transform: uppercase;
 
-  margin-top: 1vh;
+  margin-top: 0.2rem;
   padding-top: 0vh;
 
-  margin-bottom: 1vh;
-  padding-bottom: 1vh;
+  margin-bottom: 0;
+  padding-bottom: 0;
 
   background-image: url("../../img/bg/playbill/decleft0.png"), url("../../img/bg/playbill/decright0.png");
   background-repeat: no-repeat;
@@ -265,27 +257,27 @@ p:last-child {
 
 p {
   font-family: "bodoni-bold";
-  font-size: 2vw;
+  font-size: 1rem;
   text-align: justify;
 
-  margin-top: 1vh;
-  padding-top: 0vh;
+  margin-top: 0;
+  padding-top: 0.2rem;
 
-  margin-bottom: 1vh;
-  padding-bottom: 1vh;
-  border-bottom: 0.7vh double black; /* all paragraphs except the last one (see above) have a bottom border*/
+  margin-bottom: 0;
+  padding-bottom: 0.2rem;
+  border-bottom: 0.3rem double black; /* all paragraphs except the last one (see above) have a bottom border*/
 }
 
 p > em {
   font-family: "klein-slabserif";
-  font-size: 4vw; /* no italics */
+  font-size: 1.4rem; /* no italics */
   font-style: normal;
   text-transform: uppercase;
 }
 
 a {
   font-family: "klein-slabserif";
-  font-size: 3vw;
+  font-size: 1.5rem;
   text-transform: uppercase;
   text-decoration: none; /* take out the automatic underlining */
   color: red;
@@ -293,21 +285,16 @@ a {
 
 a:hover {
   font-family: "plastische-plakat-antiqua";
-  font-size: 5vw;
 }
 
 q {
   font-family: "vineta-regular";
-  font-size: 3.5vw;
+  font-size: 1.6rem;
   text-align: justify;
 }
 
 q:before, q:after {
   content:''
-}
-
-small {
-  font-size: 1vw;
 }
 
 /*--------------First Figure--------------*/
@@ -330,7 +317,7 @@ body > figure figcaption {
 body > figure img {
   width: 50%; /* use percentage of the figure box width */
   border-radius: 10%;
-  max-height: 70vh;
+  max-height: 17rem;
   transition: all .2s ease-in-out;
   float: none;
 }
@@ -346,9 +333,9 @@ figure {
   margin: 0;
   padding-left: 0;
   padding-right: 0;
-  padding-top: 2vh;
-  padding-bottom: 2vh;
-  border-bottom: 0.5vh dotted black;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  border-bottom: 0.5vw dotted black;
   background-image: url("../../img/bg/playbill/decleft.png"), url("../../img/bg/playbill/decright.png");
   background-repeat: no-repeat;
   background-position: left top, right top;
@@ -358,8 +345,6 @@ figure {
 figure:has(table) {
   background-image: none;
   background-size: 0;
-  /* will have to do with jquery,
-  $("p:has(img)") */
 }
 
 figure:last-child {
@@ -369,19 +354,18 @@ figure:last-child {
 figure > figcaption {
   font-family: "semplicita-ombra";
   width: 100%;
-  padding-top: 2vh;
-  font-size: 2vw;
+  padding-top: 1vw;
+  font-size: 0.8rem;
   text-align: justify;
 }
 
 figure > figcaption > em {
   font-family: "toskanische-egyptienneInitialen";
-  font-size: 2vw;
+  font-size: 0.8rem;
 }
 
 figure > figcaption > small {
   font-family: "semplicita-medium";
-  font-size: 2vw;
 }
 
 /*--------------Figures: Images--------------*/
@@ -392,8 +376,12 @@ figure > img {
   padding: 0;
   border-radius: 40%;
   filter: sepia();
+  transition: transform .2s ease-in-out;
 }
 
+figure > img:hover {
+  transform: scale(1.1);
+}
 /*--------------Figures: Videos--------------*/
 
 figure > video {
@@ -409,13 +397,13 @@ figure > video {
 figure > table {
   width: 100%;
   font-family: "semplicita-medium";
-  font-size: 3vw;
+  font-size: 0.7rem;
   overflow: scroll;
 }
 
 th {
   font-family: "toskanische-egyptienneInitialen";
-  font-size: 6vw;
+  font-size: 1rem;
 }
 
 td {
@@ -438,14 +426,14 @@ section > figure > table {
    width: 100%;
    table-layout: fixed;
    font-family: "semplicita-medium";
-   font-size: 2vw;
+   font-size: 0.7rem;
    border: 4px dashed black;
    border-collapse: collapse;
 }
 
 section > figure > table  th {
    font-family: "fette-egyptienne";
-   font-size: 2vw;
+   font-size: 1rem;
    border: 2px solid black;
 }
 
@@ -458,23 +446,23 @@ section > figure > table  td {
 section > ol {
 
   font-family: "bodoni-bold";
-  font-size: 2vw;
+  font-size: 0.7rem;
   list-style-type: upper-roman;
   border: 4px dashed black;
 
   text-align: justify;
   width: 89%;
   padding-left: 10%;
-  margin-top: 1vh;
-  padding-top: 0vh;
+  margin-top: 0;
+  padding-top: 0.5vw;
 
-  margin-bottom: 1vh;
-  padding-bottom: 1vh;
+  margin-bottom: 0;
+  padding-bottom: 0.5vw;
 }
 
 section > ol > li {
   margin: 5px;
-  border-bottom: 0.7vh solid black;
+  border-bottom: 0.7vw solid black;
 }
 
 section > ol > li > em {
@@ -488,7 +476,7 @@ section > ul {
 
   padding-left: 10%;
   font-family: "bodoni-bold";
-  font-size: 2vw;
+  font-size: 0.6rem;
   text-align: justify;
 
   margin-top: 1vh;
@@ -499,7 +487,7 @@ section > ul {
 }
 
 li > small {
-  font-size: 2vw;
+  font-size: 0.5rem;
 }
 
 /*--------------Footer--------------*/
@@ -509,11 +497,97 @@ footer {
 }
 
 footer > ul > li {
-  font-size: 2vw;
+  font-size: 0.8rem;
   text-align: justify;
 }
 
 footer > ul > li > a {
-  font-size: 2vw;
+  font-size: 0.8rem;
   text-align: justify;
+}
+
+
+@media screen and (min-width: 812px) {
+
+  header > p {
+    font-size: 2.7vw;
+  }
+
+  header > section > p {
+    font-size: 3.2vw;
+  }
+
+  header > p > a {
+    font-size: 5vw;
+    letter-spacing: 0.2vw;
+  }
+
+  header > p > a:hover {
+    font-size: 5.2vw;
+  }
+
+  h1 {
+    font-size: 6vw;
+  }
+
+  h2 {
+    font-size: 9vw;
+  }
+
+  h2:hover {
+    font-size: 12vw;
+  }
+
+  h3 {
+    font-size: 4vw;
+  }
+
+  section {
+    border-top: 3vw double black;
+  }
+
+  h4 {
+    font-size: 11vw;
+  }
+
+  p {
+    font-size: 2vw;
+  }
+
+  p > em {
+    font-size: 4vw;
+  }
+
+  a {
+    font-size: 3vw
+  }
+
+  q {
+    font-size: 3.5vw;
+  }
+
+  body > figure img {
+    max-height: 40vw;
+  }
+
+  figure > figcaption {
+    font-size: 2vw;
+  }
+
+  figure > figcaption > em {
+    font-size: 2vw;
+  }
+
+  section > figure > table {
+    font-size: 2vw;
+  }
+
+  th {
+    font-size: 6vw;
+  }
+
+  footer > ul > li {
+    font-size: 2vw;
+  }
+
 }
