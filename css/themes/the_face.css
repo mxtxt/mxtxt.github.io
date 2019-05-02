@@ -233,7 +233,6 @@ header { /* example of a header that we want in the center of the page */
 header > p {
   font-family: 'Helvetica Neue';
   font-size: 1rem;
-  font-stretch: extra-condensed;
 }
 
 
