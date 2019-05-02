@@ -5,7 +5,7 @@ function injectAurora(){
   if (!injected) {
     frameContent.addEventListener("load", function() {
       bodyArea = frameContent.contentWindow.document.getElementsByTagName("body")[0];
-      bodyArea.insertAdjacentHTML('afterbegin','<div id="auroraWrapper" style="display:none;"><div id="chart-container" onclick="wave.play()"></div></div>');
+      bodyArea.insertAdjacentHTML('afterbegin','<div id="auroraWrapper" style="display:none;"><div id="chart-container" onclick="wave.play()"><div id="text-container"><p>Hi,<br>I am <b>Aurora</b>.</p><p>I am powered by <a href="https://talkify.net/" target="_blank">Talkify</a>.</p><p>My face was designed by <a href="https://medium.com/@kelvinau4413/circular-audio-wave-js-library-for-audio-visualization-in-circular-waveform-49afe0aa87a" target="_blank">Kelvin Au</a>.</p></div></div></div>');
 
       var jquery   = frameContent.contentWindow.document.createElement("script");
       jquery.type  = "text/javascript";

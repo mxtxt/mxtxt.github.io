@@ -3,11 +3,12 @@
     src: url("../../fonts/aurora/rajdhani/Rajdhani-Light.ttf") format("truetype");
 }
 
+
+/* ------ html + body ------ */
 html {
   padding: 0;
   margin: 0;
 }
-
 body {
   padding: 2.5vw;
   margin: 0;
@@ -18,7 +19,6 @@ body {
   animation: aurora 15s infinite;
   box-sizing: border-box;
 }
-
 body:before {
   margin: -2.5vw;
   background: radial-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15));
@@ -29,7 +29,6 @@ body:before {
   width: 100%;
   height: 100%;
 }
-
 @keyframes aurora {
   0% {
     background-position: left top;
@@ -48,19 +47,21 @@ body:before {
   }
 }
 
-/* Hide Content – display: none in a parent cannot be overwritten in a child */
 
+/* ------ Hide Content ------ */
+/* display: none in a parent cannot be overwritten in a child */
 section, article, footer {
   padding: 0;
   margin: 0;
   height: 0;
   width: 0;
 }
-
 h1, h2, h3, h4, h5, h6, p, q, ul, ol {
   display: none;
 }
 
+
+/* ------ General Styling ------*/
 header {
   font-family: rajdhaniLight;
   position: fixed;
@@ -68,8 +69,10 @@ header {
   flex-direction: column;
   text-align: center;
   width: 42.5vw;
+  max-height: calc(100vh - 30vw);
+  overflow-y: scroll;
   margin: 27.5vw 0 0 2.5vw;
-  padding: 1.5rem;
+  padding: 3vmin;
   top: 0;
   left: 0;
   background: radial-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.3));
@@ -78,14 +81,12 @@ header {
   border-radius: 5px;
   box-sizing: border-box;
 }
-
 header, figure,
-#auroraWrapper, #auroraWrapper:after {
+#auroraWrapper, #text-container {
     -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
        -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
             box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
-
 header > section {
   display: block;
   width: auto;
@@ -93,50 +94,58 @@ header > section {
   box-sizing: border-box;
 }
 
+
+/* ------ Text Styling ------ */
 header > h1,
 header > section > h1 {
   display: block;
-  margin: 1rem 0;
-  font-size: 2rem;
-  line-height: 2rem;
+  margin: 0;
+  padding: 0;
+  font-size: 3vmin;
+  line-height: 3vmin;
 }
-
 header > h2,
 header > section > h2 {
   display: block;
-  margin: 1rem 0;
+  margin: 3vmin 0 0 0;
   font-weight: bold;
-  font-size: 2.5rem;
-  line-height: 2rem;
+  font-size: 4vmin;
+  line-height: 4vmin;
 }
-
 header > h3,
 header > section > h3 {
   display: block;
-  margin: 1rem 0;
+  margin: 3vmin 0 0 0;
   font-weight: bold;
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 2vmin;
+  line-height: 2vmin;
 }
-
-header > p,
+header > p {
+  display: block;
+  margin: 2vmin 0 0 0;
+  font-size: 1.5vmin;
+  line-height: 1.5vmin;
+}
 header > section > p {
   display: block;
-  margin: 0 0 0 0;
-  font-size: 1rem;
-  line-height: 1rem;
+  margin: 0;
+  font-size: 2vmin;
+  line-height: 2vmin;
 }
-
+header > section > p:first-of-type {
+  margin-top: 2vmin;
+}
 header a {
   color: #e91e62;
   text-decoration: none;
 }
-
 header a:hover {
   color: #3f51b5;
   text-decoration: none;
 }
 
+
+/* ------ Aurora ------ */
 #auroraWrapper {
   background: radial-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.3));
   background-size: 200%;
@@ -152,28 +161,34 @@ header a:hover {
   height: 22.5vw;
   box-sizing: border-box;
 }
-
-#auroraWrapper:after {
-  display: block;
-  white-space: pre-wrap;
+#text-container {
+  display: flex;
+  flex-direction: column;
   background: radial-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.3));
   background-size: 200%;
   animation: aurora 15s infinite;
   border-radius: 5px;
-  font-family: rajdhaniLight;
-  font-size: 2rem;
-  line-height: 2rem;
-  content: "Hi, \A I am Aurora.";
   position: absolute;
   top: 0;
   left: 22.5vw;
-  padding: 1.5rem;
+  padding: 2vw;
   margin: 0 2.5vw;
   width: 17.5vw;
   height: 22.5vw;
   box-sizing: border-box;
 }
-
+#text-container > p {
+  padding: 0 0 2vw 0;
+  margin: 0;
+  display: block;
+  font-family: rajdhaniLight;
+  font-size: 2vw;
+  line-height: 2vw;
+}
+#text-container a {
+  color: #e91e62;
+  text-decoration: none;
+}
 #chart-container {
   padding: 0;
   margin: 0;
@@ -181,59 +196,139 @@ header a:hover {
   width: 100%!important;
 }
 
+
+/* ------ Figures ------ */
 figure {
   background: radial-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.3));
   background-size: 200%;
   animation: aurora 15s infinite;
   border-radius: 5px;
+  width: 50vw;
   margin: 0 0 2.5vw 45vw;
+  padding: 0.5vw;
   float: left;
   position: relative;
-  padding: 0.5vw;
   box-sizing: border-box;
 }
-
 figure > img {
   width: 49vw;
   border-radius: 5px;
 }
-
 figure > img:nth-child(2) {
   margin-top: 2.5vw;
 }
-
-figure > table {
-  font-family: rajdhaniLight;
+figure > video {
   width: 49vw;
-  font-size: 0.7rem;
-  margin: 0;
-  border-spacing: 0;
 }
-
-figure > table th {
-  border-bottom: 1px solid black;
-}
-
-figure > table td {
-  border-bottom: 1px solid black;
-}
-
 figure > figcaption {
+  width: 50vw;
   display: flex;
   flex-direction: column;
-  font-size: 1rem;
-  line-height: 1rem;
+  font-size: 3vmin;
+  line-height: 4vmin;
+  word-wrap: break-word;
   margin-top: 0.5vw;
   padding: 0.5vw;
   font-family: rajdhaniLight;
 }
-
 figure > figcaption em {
+  font-size: 3vmin;
   font-weight: bold;
   font-style: normal;
 }
-
 figure > figcaption small {
-  font-size: 1rem;
+  font-size: 3vmin;
   font-style: normal;
+}
+
+
+/* ------ Tables ------ */
+figure > table {
+  border-collapse: collapse;
+  border: none;
+  text-align: center;
+  word-wrap: break-word;
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: 1.3vw;
+  font-family: rajdhaniLight;
+  width: 49vw;
+}
+figure > table p {
+  font-size: 1.3vw;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+figure > table a {
+  font-size: 1.3vw;
+  color: black;
+  text-decoration: none;
+}
+figure > table th {
+  border-bottom: 1px solid #000;
+  font-size: 1.8vw;
+  margin: 0;
+  padding: 0.5vw;
+}
+figure > table td {
+  border-bottom: 1px solid #000;
+  margin: 0;
+  padding: 0.5vw;
+}
+
+figure > table tr:last-child td {
+  border-bottom: none;
+}
+
+/* ------ Mobile ------ */
+@media (max-width: 766px){
+  body {
+    padding: 0;
+  }
+  body:before {
+    margin: 0;
+  }
+  header {
+    position: absolute;
+    width: 95vw;
+    height: 30vmax;
+    overflow-y: auto;
+    margin: 0 2.5vw 0 2.5vw;
+    padding: 3vmin;
+    top: 27.5vw;
+    justify-content: center;
+  }
+  #auroraWrapper {
+    position: absolute;
+    z-index: 1000;
+  }
+  #text-container {
+    position: absolute;
+    width: calc(100vw - 30vw);
+    padding: 1.5vh;
+  }
+  #text-container > p {
+    padding: 0 0 2vw 0;
+    font-size: 2vh;
+    line-height: 2vh;
+  }
+  figure {
+    width: 95vw;
+    margin: 0 2.5vw 2.5vw 2.5vw;
+    top: calc(30vw + 30vmax);
+  }
+  figure > img {
+    width: 94vw;
+  }
+  figure > video {
+    width: 94vw;
+  }
+  figure > figcaption {
+    width: 94vw;
+  }
+  figure > table {
+    width: 94vw;
+  }
 }
