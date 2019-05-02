@@ -28,7 +28,7 @@
       <!-- Portfolio Item Heading -->
       <h1 class="my-4">The Frame</h1>
       <div class="row">
-        <p>The frame is essential for mxTXT – not only for the final user interface but also for its intelligence. The frame wraps the actual content and contains three menus: for the navigation through mxTXT pages, the selection of a document-style combination, and the execution of the random or the source button. All the menus and the application of mxTXT styles is based on JavaScript. The implementation is explained in the following.</p>
+        <p>The frame is essential for mxTXT – not only for the final user interface but also for its intelligence. The frame wraps the actual content and contains three menus: for the navigation through mxTXT pages, the selection of a document-theme combination, and the execution of the random or the source button. All the menus and the application of mxTXT styles is based on JavaScript (JS). The implementation is explained in the following.</p>
       </div>
       <!-- Portfolio Item Row -->
       <div class="row">
@@ -36,7 +36,7 @@
         <div class="col">
           <div>
             <h3 class="my-3">iFrame</h3>
-            <p>The iFrame technology was employed in order to have no limitations in the styling process. An iFrame allows opening an HTML file within another HTML file without any interference of the two. This trick allows the full separation of mxTXT styles from the cascading style sheets (CSS) used for the frame. Without using iFrame, it would have been necessary to consider the HTML and CSS of the mxTXT user interface while creating the styles.</p>
+            <p>The iFrame technology was employed in order to have no limitations in the styling process. An iFrame allows opening an HTML file within another HTML file without any interference of the two. This trick allows the full separation of mxTXT themes from the cascading style sheets (CSS) used for the frame. Without using iFrame, it would have been necessary to consider the HTML and CSS of the mxTXT user interface while creating the themes.</p>
             <p>The iFrame is implemented with the following HTML markup and CSS styling:<p>
             <p>
               <pre>
@@ -76,11 +76,12 @@
           </div>
           <div>
             <h3 class="my-3">Navigation</h3>
-            <p>The document linked with the attribute "src" is opened by the iFrame. Selecting another document in the document menu, hence, has to change the value for the "src" attribute.</p>
-            <p>This process is completed by the following JavaScript function:<p>
+            <p>The document linked with the attribute "src" is opened by the iFrame. Selecting an exemplary document in the document menu or browsing to a subpage of mxTXT, hence, has to change the value for the "src" attribute. The conceptual approach for the implementation is similar in both cases. The first lines are therefore nearly identical. However, differences exist in order to handle the active state of menu buttons and the functionality of the source button.</p>
+            <p>Compare the JS for the documentation and mxTXT menu below:<p>
             <p>
               <pre>
                   <code class="js">
+  // JS for Injecting Exemplary Documents
   function switchDoc(input){
     loadingOn();
     document.getElementById("currentDoc").innerHTML = input.name;
@@ -105,6 +106,7 @@
   };
                   </code>
                   <code class="js">
+  // JS for Injecting mxTXT Subpages
   function switchPage(input){
     document.getElementById("currentPage").innerHTML = input.name;
     document.getElementById("frameDocument").setAttribute("src", "pages/" + input.name + ".html");
@@ -138,8 +140,8 @@
           </div>
           <div>
             <h3 class="my-3">Theme Switcher</h3>
-            <p>The defining feature of mxTXT is the application of historical and futuristic designs on a comprehensive selection of documents. While the document menu serves to choose content, styling is applied by picking one of the six mxTXT styles. With clicking a button in the theme menu, a link to the respective CSS files is injected into the corresponding HTML file of the currently selected document.</p>
-            <p>This injection is performed by the following code:<p>
+            <p>The defining feature of mxTXT is the application of historical and futuristic themes on a comprehensive selection of documents. While the document menu serves to choose content, styling is applied by picking one of the six mxTXT themes. With clicking a button in the theme menu, a link to the respective CSS files is injected into the corresponding HTML file of the currently selected document. The JS function handling the injection is performing various checks to consider special events expected by the themes.</p>
+            <p>See the extensive code below:<p>
             <p>
               <pre>
                   <code class="js">
@@ -211,11 +213,15 @@
           </div>
           <div>
             <h3 class="my-3">Side-by-side Viewer</h3>
-            <p>An additional feature of mxTXT is the Side-by-Side Viewer which displays one legal document in two different languages side by side. This unique view is activated by clicking the document symbol emblemed with an Iustitia scale. The idea behind the Side-by-Side Viewer is to simultanous scroll both versions for their comparison. This result is achieved by doubling the iFrame approach and synchronising the two iFrames with a Javascript.</p>
+            <p>An additional feature of mxTXT is the Side-by-Side Viewer which displays one legal document in two different languages side by side. This unique view is activated by clicking the document symbol emblemed with an Iustitia scale. The idea behind the Side-by-Side Viewer is to simultaneously scroll both versions for their comparison. This result is achieved by doubling the iFrame approach and synchronising the two iFrames with a Javascript.</p>
             <p>See the realization below:<p>
             <p>
               <pre>
-                  <code> This is the code.
+                  <code class="html">
+  &#60;!--- HTML ---&#62;
+                  </code>
+                  <code class="css">
+  /* --- CSS --- */
                   </code>
               </pre>
             </p>
