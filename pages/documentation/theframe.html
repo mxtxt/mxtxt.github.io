@@ -218,8 +218,7 @@
             <p>
               <pre>
                 <code class="html">
-  &#60;!--- HTML ---&#62;
-  &#60;!--- Double iFrame Approach ---&#62;
+  &#60;!--- HTML for Double iFrame ---&#62;
   &#60;div id="leftContainer"&#62;
   &#60;iframe id="left" src="documents/english.html"&#62;&#60;/iframe>&#60;/div&#62;
   &#60;div id="rightContainer"&#62;
@@ -227,6 +226,7 @@
   &#60;/div&#62;
                 </code>
                 <code class="js">
+  // Event Listener for Synchronising Scrolling
   window.addEventListener("load", function() {
 
     var right = $("#right").contents();
