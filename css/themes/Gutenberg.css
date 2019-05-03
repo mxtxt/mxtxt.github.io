@@ -36,10 +36,9 @@ html {
 
 body {
   margin-top: 10vh;
-  margin-right: 40vh;
-  margin-left: 20vh;
+  margin-right: 40vw;
+  margin-left: 20vw;
   margin-bottom: 40vh; /*this value is very important to give the idea of the page of a book*/
-  border-right: ;/* some floral decoration */
 }
 
 h1 {
@@ -365,22 +364,21 @@ footer {
   body {
     width: 100vw;
     height: 100vh;
-    font-size: 2vw; 
-    padding-top: 1vh;
-    padding-right: 1vw;
-    padding-left: 1vw; 
-    padding-bottom: 2vh;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    font-size: 2vw;
   }
   
    h1 {
     font-family: 'Medieval Scribish';
     font-size: 2vw; 
+    margin: 0
   }
 
    h2 {
      font-family: 'Medieval Scribish';
      font-size: 4vw;
-     border: 0;
+     padding: 0;
   }
 
    h3 {
