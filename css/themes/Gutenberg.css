@@ -367,8 +367,8 @@ footer {
     height: 100vh;
     font-size: 2vw; 
     padding-top: 1vh;
-    padding-right: 2vw;
-    padding-left: 2vw; 
+    padding-right: 1vw;
+    padding-left: 1vw; 
     padding-bottom: 2vh;
   }
   
@@ -413,7 +413,7 @@ footer {
 
   p::first-letter {
      font-family: 'Medieval Scribish';
-     font-size: 4vw;
+     font-size: 6vw;
   }
 
   em {
