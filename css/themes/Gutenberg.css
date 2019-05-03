@@ -42,19 +42,6 @@ body {
   border-right: ;/* some floral decoration */
 }
 
-@media screen and (max-width: 768px) {
-  
-  body{
-    width: 100vw;
-    height: 100vh;
-    font-size: 2vw; 
-    margin: 0; /*---I choose to maintain the columns rather than the margins, due to the limited size of small screens*/
-  }
-    h2{
-    border: 0; 
-  }
-}
-
 h1 {
   font-family: 'Medieval Scribish';
   font-size: 2rem; /* whatever number size you choose, but rem */
@@ -382,4 +369,129 @@ ol > li > ol > li {
 footer {
   font-family: '1454 Gutenberg Bibel';
   font-size: 0.5rem;
+}
+
+
+@media screen and (max-width: 768px) {
+  
+  body {
+    width: 100vw;
+    height: 100vh;
+    font-size: 2vw; 
+    margin: 0; /*---I choose to maintain the columns rather than the margins, due to the limited size of small screens*/
+  }
+  
+   h1 {
+    font-family: 'Medieval Scribish';
+    font-size: 2vw; 
+  }
+
+   h2 {
+     font-family: 'Medieval Scribish';
+     font-size: 4vw;
+     border: 0;
+  }
+
+   h3 {
+     font-family: '1454 Gutenberg Bibel';
+     font-size: 3vw; 
+  }
+
+   h4 {
+     font-family: '1454 Gutenberg Bibel';
+     font-size: 2vw; 
+  }
+
+   h5 {
+     font-family: '1454 Gutenberg Bibel';
+     font-size: 1vw;
+     font-style: normal;
+  }
+
+   h6 {
+     font-family: '1454 Gutenberg Bibel';
+     font-size: 1vw; 
+     font-style: normal;
+  }
+
+  p {
+     font-family: '1454 Gutenberg Bibel';
+     font-size: 1.5vh; 
+     font-style: normal;
+  }
+
+  p::first-letter {
+     font-family: 'Medieval Scribish';
+     font-size: 4vw;
+  }
+
+  em {
+    font-family: '1454 Gutenberg Bibel';
+    font-size: 1.5vw;
+    font-style: bold;
+  }
+
+  small {
+    font-family: '1454 Gutenberg Bibel';
+    font-size: 1vw; 
+  }
+
+
+  q {
+    font-family: 'carolingia';
+    font-size: 1vw;
+  }
+
+  a {
+    font-family: 'carolingia';
+    font-size: 1.5vw; 
+  }
+
+  a:hover { /*Select and style a link when you mouse over it:*/
+    font-family: 'carolingia';
+    font-size: 1.5vw; 
+    font-style: normal;
+  }
+  
+  header > p {
+    font-family: '1454 Gutenberg Bibel';
+    font-size: 2vw;
+  }
+
+  header > section > p {
+    font-family: '1454 Gutenberg Bibel';
+    font-size: 2vw;
+  }
+
+  section > p {
+    font-family: '1454 Gutenberg Bibel';
+    font-size: 2vw;
+  }
+
+  section > section > p {
+    font-family: '1454 Gutenberg Bibel';
+    font-size: 2vw;
+  }
+
+  main > section > p {
+    font-family: '1454 Gutenberg Bibel';
+    font-size: 2vw;
+  }
+
+  figure > figcaption {
+    font-family: '1454 Gutenberg Bibel';
+    font-size: 1vw;
+  }
+
+  figure > figcaption > em {
+    font-family: '1454 Gutenberg Bibel';
+    font-size: 1vw;
+  }
+
+  figure > table {
+    font-family: '1454 Gutenberg Bibel';
+    font-size: 1vw;
+    font-style: normal;
+    border: solid 2px black;
+ }
 }
