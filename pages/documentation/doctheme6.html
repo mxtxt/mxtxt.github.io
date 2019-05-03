@@ -29,9 +29,14 @@
   <div class="container">
 
     <!-- Portfolio Item Heading -->
-    <h1 class="my-4">Aurora<small> cool quote, phrase, etc</small></h1>
+    <h1 class="my-4">Aurora<small> – The New Age</small></h1>
     <div class="row">
-      <p> This is a paragraph about the theme, its historical, cultural, social, political, artistic location and importance etc. More humanistic paragraph.</p>
+      <p>
+        While the other five themes have provided a glimpse into the past, Aurora is offering an idea of what the future might offer. The concept behind Aurora is based on the common belief people would eventually stop reading.  If one googles the provocative question "Will people stop reading?", the search engine offers 978.000.000 results which one could read. The most relevant being an article by The New Yorker which was discussing this question already in 2007 and once more in 2018. The articles question whether or not our society shifts to "secondary orality" – a term used in sociology to describe the concept of a society which once read but now gladly switches back to oral information transmission. According to the statistics, literature is evidently competing with other media like television and the motivation for Americans to read books keeps declining.
+      </p>
+      <p>
+        What are nearly a billion articles worth if nobody reads them? Well, nothing. Aurora, therefore, imagines a web in which the already existing articles are converted into the prefered audio and the only content displayed is the title,  photos and tables. It's about turning information into an experience people care about.
+      </p>
     </div>
 
     <div class="row">
@@ -39,7 +44,7 @@
         <h2 class="my-3">Key Characteristics
         </h2>
         <p>
-          The main characteristics of this theme were:
+          The main characteristics of Aurora:
         </p>
 
         <div id="card-42350">
@@ -119,12 +124,12 @@
           <div class="row">
             <div class="col-md-3">
               <a href="#">
-                <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+                <img class="img-fluid rounded mb-3 mb-md-0" src="../../img/docimg/doc6/noTextInterface.png" alt="">
               </a>
             </div>
             <div class="col-md-9">
-              <h3 class="my-2">Characteristic 3</h3>
-              <p>Explanation and sources for the characteristic.</p>
+              <h3 class="my-2">No Boring Text</h3>
+              <p>Most of the original content, i.e. the text, is hidden. The remaining elements are the title and visual organisation of information like images and tables. This result is achieved only with CSS styling. Consequently, the method does not require to modify the HTML files. The look could be achieved for any pre-existing webpage without actually removing content from the webpage. In the end, the CSS file just includes the value 'display: none;' for all hidden HTML tags. However, if a tag is a parent, all children would be irreversibly affected by the value 'none', which is why some elements are dropped by setting the height and width to zero.</p>
             </div>
             <div class="card">
               <div class="card-header">
@@ -132,17 +137,22 @@
               </div>
               <div id="card-element-three" class="collapse" data-parent="#card-42350">
                 <div class="card-body">
-                  Here godes the css and js code snippets and explanation!
+                  <p>See the actual CSS: </p>
+                  <p>
                   <pre>
                       <small><code class="css">
-                        &#60;!DOCTYPE html&#62;
+  section, article, footer {
+    padding: 0;
+    margin: 0;
+    height: 0;
+    width: 0;
+  }
+  h1, h2, h3, h4, h5, h6, p, q, ul, ol {
+    display: none;
+  }
                       </code></small>
                   </pre>
-                  <pre>
-                      <small><code class="js">
-                        &#60;!DOCTYPE html&#62;
-                      </code></small>
-                  </pre>
+                </p>
                 </div>
               </div>
             </div>
