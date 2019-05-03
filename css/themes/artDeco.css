@@ -167,16 +167,6 @@ header:after {
   padding: 0;
   padding-top: 13.5vmax;
 }
-@media (max-width: 766px) {
-  header:before {
-    width: 80vw;
-    margin: 0;
-  }
-  header:after {
-    width: 80vw;
-    margin: 0;
-  }
-}
 header > p {
   text-align: center;
   background: -webkit-linear-gradient(#BF953F, #FCF6BA, #FBF5B7, #AA771C);
@@ -276,16 +266,6 @@ figure:after {
   margin: 0 10vw 0 10vw;
   padding: 0;
   padding-top: 10vh;
-}
-@media (max-width: 766px) {
-  figure:before {
-    width: 80vw;
-    margin: 0;
-  }
-  figure:after {
-    width: 80vw;
-    margin: 0;
-  }
 }
 figure > figcaption {
   background: -webkit-linear-gradient(#BF953F, #FCF6BA, #FBF5B7, #AA771C);
@@ -462,4 +442,67 @@ footer:before {
   margin: 0 0 5vh 0;
   padding: 0;
   padding-top: 15%;
+}
+
+
+/* ------ Mobile ------ */
+@media (max-width: 766px) {
+  body:after {
+    height: 20%;
+  }
+  h1 {
+    font-size: 1.2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+  figure:before {
+    padding-top: 10%;
+  }
+  figure:after {
+    padding-top: 10%;
+  }
+  figure > figcaption {
+    padding: 2% 0 0 0;
+  }
+  figure > img {
+    max-height: 30%;
+  }
+  figure > video {
+    max-height: 30%;
+  }
+  figure > table {
+    margin: 5% auto;
+  }
+  ol {
+    margin: 0 0 5% 0;
+}
+  footer {
+    padding: 5% 0;
+  }
+  footer:before {
+    margin: 0 0 5% 0;
+    padding-top: 15%;
+  }
+  header:before {
+    width: 80vw;
+    margin: 0;
+    padding-top: 25vmin;
+  }
+  header:after {
+    width: 80vw;
+    margin: 0;
+    padding-top: 13.5vmin;
+  }
+  figure:before {
+    width: 80vw;
+    margin: 0;
+  }
+  figure:after {
+    width: 80vw;
+    margin: 0;
+  }
 }

@@ -290,10 +290,42 @@ figure > table tr:last-child td {
   body:before {
     margin: 0;
   }
+  html:after {
+    content: "";
+    display: block;
+    height: 200rem;
+    width: 10rem;
+  }
+  header > h1,
+  header > section > h1 {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+  }
+  header > h2,
+  header > section > h2 {
+    margin: 3vmin 0 0 0;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+  header > h3,
+  header > section > h3 {
+    margin: 3vmin 0 0 0;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+  }
+  header > p {
+    margin: 2vmin 0 0 0;
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+  header > section > p {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
   header {
     position: absolute;
     width: 95vw;
-    height: 30vmax;
+    height: 50vmin;
     overflow-y: auto;
     margin: 0 2.5vw 0 2.5vw;
     padding: 3vmin;
@@ -307,17 +339,18 @@ figure > table tr:last-child td {
   #text-container {
     position: absolute;
     width: calc(100vw - 30vw);
-    padding: 1.5vh;
+    max-height: 22.5vw;
+    padding: 1rem;
   }
   #text-container > p {
-    padding: 0 0 2vw 0;
-    font-size: 2vh;
-    line-height: 2vh;
+    padding: 0 0 0 0;
+    font-size: 1rem;
+    line-height: 1rem;
   }
   figure {
     width: 95vw;
     margin: 0 2.5vw 2.5vw 2.5vw;
-    top: calc(30vw + 30vmax);
+    top: calc(30vw + 50vmin);
   }
   figure > img {
     width: 94vw;
