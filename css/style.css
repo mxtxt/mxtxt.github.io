@@ -14,7 +14,13 @@ html, body {
 
 /* Block Landscape */
 #landscape{display:none;}
-#portrait{display:block;}
+#portrait{
+  display:block;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
 
 
 @media screen and (max-width: 828px) and (orientation: landscape) and (min-aspect-ratio: 16/9) {
@@ -506,7 +512,7 @@ html, body {
 #content {
   width: 100vw;
   height: 100vh;
-  overflow: scroll!important;
+  overflow: auto;
   -webkit-overflow-scrolling: touch!important;
 }
 #content iframe {
@@ -519,9 +525,10 @@ html, body {
 }
 @media (max-width: 767px) {
   #content iframe {
+    position: relative;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
   }
 }
