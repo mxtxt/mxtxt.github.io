@@ -1,7 +1,7 @@
 /* COVER */
 /*The Face name of the magazine*/
 @font-face {
-  font-family: 'Crazy Loop in Paris'; /*----USED FOR H1, title of the documents (TLS, The Cut etc.)----*/
+  font-family: 'Crazy_Loop_in_Paris'; /*----USED FOR H1, title of the documents (TLS, The Cut etc.)----*/
   font-style: normal;
   font-weight: normal;
   src: local('CRAZLP_'), url("../../fonts/the_face/CRAZLP_.TTF") format("truetype");
@@ -114,7 +114,7 @@ h1:before {
 
 h1 {
   text-transform: uppercase;
-  font-family: 'Crazy Loop in Paris';
+  font-family: 'Crazy_Loop_in_Paris';
   font-size: 11vw; /* whatever number size you choose, but rem */
   font-style: normal;
   text-align: right;
