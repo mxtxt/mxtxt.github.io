@@ -363,10 +363,8 @@ footer {
 @media screen and (max-width: 768px) {
   
   body {
-    margin-top: 10vh;
-    margin-right: 40vh;
-    margin-left: 20vh;
-    margin-bottom: 40vh; 
+    width: 100vw;
+    height: 100vh;
     font-size: 2vw; 
     /*---I choose to maintain the columns rather than the margins, due to the limited size of small screens*/
   }
@@ -374,15 +372,12 @@ footer {
    h1 {
     font-family: 'Medieval Scribish';
     font-size: 2vw; 
-    padding-top: 1vh; 
   }
 
    h2 {
      font-family: 'Medieval Scribish';
      font-size: 4vw;
      border: 0;
-     padding-top: 1vh;
-     padding-bottom: 1vh;
   }
 
    h3 {
