@@ -149,7 +149,7 @@
             </div>
             <div class="col-md-9">
               <h3 class="my-2">Injection</h3>
-              <p>Explanation and sources for the characteristic.</p>
+              <p>Provided that the modification of the document HTML files was not allowed, a workaround was required for placing all Aurora components inside the files. A JS script was written which injects the Aurora &#60;div&#62; container, a &#60;div&#62; container for the credits, an URL to a jQuery distribution, an auroraBrain.js and an auroraWave.js file. All this happens dynamically and automatically as soon as the user selected a document in the menu.</p>
             </div>
             <div class="card">
               <div class="card-header">
@@ -157,16 +157,59 @@
               </div>
               <div id="card-element-two" class="collapse" data-parent="#card-42350">
                 <div class="card-body">
-                  Here godes the css and js code snippets and explanation!
-                  <pre>
-                      <small><code class="css">
-                        &#60;!DOCTYPE html&#62;
-                      </code></small>
-                  </pre>
+                  <p>See the full auroraInjection.js below:</p>
+                  <p>
                   <pre>
                       <small><code class="js">
-                        &#60;!DOCTYPE html&#62;
+  function injectAurora(){
+    var frameContent = document.getElementById("frameDocument");
+    var injected = frameContent.contentWindow.document.getElementsByName("auroraWave")[0];
+
+    if (!injected) {
+      frameContent.addEventListener("load", function() {
+        bodyArea = frameContent.contentWindow.document.getElementsByTagName("body")[0];
+        bodyArea.insertAdjacentHTML('afterbegin','&#60;div id="auroraWrapper" style="display:none;"&#62;&#60;div id="chart-container" onclick="wave.play()"&#62;&#60;/div&#62;&#60;div id="text-container"&#62;&#60;p&#62;Hi,&#60;br&#62;I am &#60;b&#62;Aurora&#60;/b&#62;.&#60;/p&#62;&#60;p&#62;I am powered by &#60;a href="https://talkify.net/" target="_blank"&#62;Talkify&#60;/a&#62;.&#60;/p&#62;&#60;p&#62;My face was designed by &#60;a href="https://medium.com/@kelvinau4413/circular-audio-wave-js-library-for-audio-visualization-in-circular-waveform-49afe0aa87a" target="_blank"&#62;Kelvin Au&#60;/a&#62;.&#60;/p&#62;&#60;/div&#62;&#60;/div&#62;');
+
+        var jquery   = frameContent.contentWindow.document.createElement("script");
+        jquery.type  = "text/javascript";
+        jquery.src   = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js";
+        frameContent.contentWindow.document.head.appendChild(jquery);
+
+        var auroraWave   = frameContent.contentWindow.document.createElement("script");
+        auroraWave.type  = "text/javascript";
+        auroraWave.src   = "../../js/auroraWave.min.js";
+        auroraWave.setAttribute("name","auroraWave");
+        if(auroraWave.addEventListener) {
+          auroraWave.addEventListener("load",injectAuroraScript,false);
+        } else if(auroraWave.readyState) {
+          auroraWave.onreadystatechange = injectAuroraScript;
+        }
+        frameContent.contentWindow.document.head.appendChild(auroraWave);
+      });
+    };
+  };
+
+  function injectAuroraScript(){
+    var frameContent = document.getElementById("frameDocument");
+    var auroraBrain = frameContent.contentWindow.document.createElement("script");
+    auroraBrain.type  = "text/javascript";
+    auroraBrain.src   = "../../js/auroraBrain.js";
+    if(auroraBrain.addEventListener) {
+      auroraBrain.addEventListener("load",loadAurora,false);
+    } else if(auroraBrain.readyState) {
+      auroraBrain.onreadystatechange = loadAurora;
+    }
+    frameContent.contentWindow.document.body.appendChild(auroraBrain);
+  }
+
+  function loadAurora(){
+    if (document.getElementById("currentTheme").innerHTML == "themes/aurora"){
+      var frameContent = document.getElementById("frameDocument");
+      frameContent.contentWindow.initiate();
+    };
+  };
                       </code></small>
+                    </p>
                   </pre>
                 </div>
               </div>
