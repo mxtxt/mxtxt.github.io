@@ -365,11 +365,7 @@ footer {
   body {
     width: 100vw;
     height: 100vh;
-    font-size: 2vw; 
-    padding-top: 1vh;
-    padding-right: 1vw;
-    padding-left: 1vw; 
-    padding-bottom: 2vh;
+    font-size: 2vw;
   }
   
    h1 {
