@@ -366,8 +366,9 @@ footer {
     width: 100vw;
     height: 100vh;
     font-size: 2vw; 
-    margin: 0; 
-    /*---I choose to maintain the columns rather than the margins, due to the limited size of small screens*/
+    margin: 0;
+    padding-right: 1vw;
+    padding-left: 1vw; 
   }
   
    h1 {
