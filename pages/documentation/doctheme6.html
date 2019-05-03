@@ -52,12 +52,14 @@
           <div class="row">
             <div class="col-md-3">
               <a href="#">
-                <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+                <img class="img-fluid rounded mb-3 mb-md-0" src="../../img/docimg/doc6/sofia.png" alt="">
               </a>
             </div>
             <div class="col-md-9">
               <h3 class="my-2">Characteristic 1</h3>
-              <p>Explanation and sources for the characteristic.</p>
+              <p>
+                The goal was to employ a speech to text service with a voice which people actually enjoy listening to. <a href="https://talkify.net" target="_blank">Talkify</a> offered the desired result: a naturally sounding voice of a middle-aged woman with a slight British accent. Talkify is fully integrated. If an unknown text is provided to mxTXT, the JS script sends the data to Talkify and uses the response for the audio player. This being said, in order to enhance the user experience, the example documents are already preloaded onto the web server. The JS recognises if a preloaded file exists and retrieves it instead of sending the text to Talkify.
+              </p>
             </div>
             <div class="card">
               <div class="card-header">
@@ -65,17 +67,71 @@
               </div>
               <div id="card-element-one" class="collapse" data-parent="#card-42350">
                 <div class="card-body">
-                  Here godes the css and js code snippets and explanation!
+                  See the full implementation below:
                   <pre>
-                      <small><code class="css">
-                        &#60;!DOCTYPE html&#62;
-                      </code></small>
-                  </pre>
-                  <pre>
+                    <p>
                       <small><code class="js">
-                        &#60;!DOCTYPE html&#62;
+  var wave = new CircularAudioWave(document.getElementById("chart-container"));
+
+  var audioDict = new Object()
+  var audioDict = {
+    "/docs/bloomberg/Bloomberg_final.html": "../../audio/aurora/bloomberg.mp3",
+    "/docs/thecut/thecut.html": "../../audio/aurora/thecut.mp3",
+    "/docs/harpers/Harpers_Final.html": "../../audio/aurora/harpers.mp3",
+    "/docs/tls/TimesLiterarySupplement_Final.html": "../../audio/aurora/tls.mp3",
+    "/docs/huffington/Huffington_Final.html": "../../audio/aurora/huffington.mp3",
+    "/docs/EU_Directive/EU_Directive.html": "../../audio/aurora/eudirectiveEN.mp3",
+  }
+
+  function initiate(){
+    block: {
+      var doc = window.location.pathname;
+
+      for (var key in audioDict) {
+        if (key == doc){
+          wave.loadAudio(audioDict[key]);
+          break block;
+        }
+      }
+
+      var documentText = document.body.textContent;
+      var keyValuePair = {};
+      keyValuePair["text"] = documentText;
+      sendData(keyValuePair);
+    }
+  }
+
+  function sendData(data) {
+    var XHR = new XMLHttpRequest();
+    var urlEncodedData = "";
+    var urlEncodedDataPairs = [];
+    var name;
+
+    // Turn the data object into an array of URL-encoded key/value pairs.
+    for(name in data) {
+      urlEncodedDataPairs.push(encodeURIComponent(name) + "=" + encodeURIComponent(data[name]));
+    }
+
+    // Combine the pairs into a single string and replace all %-encoded spaces to
+    // the '+' character; matches the behaviour of browser form submissions.
+    urlEncodedData = urlEncodedDataPairs.join("&").replace(/%20/g, "+");
+
+    XHR.onload = function(e) {
+      var audioPath = URL.createObjectURL(XHR.response);
+      wave.loadAudio(audioPath);
+    }
+
+    // Set up our request
+    XHR.open("POST", "https://talkify.net/api/speech/v1/download");
+    XHR.responseType = "blob";
+    XHR.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    XHR.setRequestHeader("X-API-Key", "493cbf85-63ea-4afb-9d0b-f04a87682761");
+
+    XHR.send(urlEncodedData);
+  }
                       </code></small>
                   </pre>
+                </p>
                 </div>
               </div>
             </div>
