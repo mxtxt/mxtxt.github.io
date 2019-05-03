@@ -15,7 +15,7 @@ body {
 body:after {
   content: "";
   display: block;
-  height: 10vh;
+  height: 20vh;
 }
 a {
   font-style: normal;
@@ -352,7 +352,7 @@ h1, h2, h3, h4, h5, .display-1, .display-2 {
   background-color: #EFCF48;
 }
 .footer {
-  margin-bottom: -10vh;
+  margin-bottom: -20vh;
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #232323;
