@@ -158,10 +158,6 @@ function switchPage(input){
   document.getElementById("currentPage").innerHTML = input.name;
   document.getElementById("frameDocument").setAttribute("src", "pages/" + input.name + ".html");
 
-  document.getElementById("frameDocument").addEventListener("load", function() {
-     document.getElementById("frameDocument").contentWindow.location.reload();
-  });
-
   document.getElementById("source-link").removeAttribute("href");
   var sourceBtnClass = document.getElementsByClassName("source-btn")[0]
   sourceBtnClass.className = sourceBtnClass.className.replace("active", "");
