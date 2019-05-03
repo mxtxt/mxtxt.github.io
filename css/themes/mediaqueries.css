@@ -1,0 +1,17 @@
+
+
+@media only screen
+and (min-device-width: 375px)
+and (max-device-height: 736px)
+and (-webkit-device-pixel-ratio: 2){
+
+}
+
+
+@supports (-webkit-overflow-scrolling: touch) {
+  /* CSS specific to iOS devices */
+}
+
+@supports not (-webkit-overflow-scrolling: touch) {
+  /* CSS for other than iOS devices */
+}
