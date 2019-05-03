@@ -362,10 +362,10 @@ footer {
 @media screen and (max-width: 768px) {
   
   body {
-    margin-top: 1vh;
-    margin-right: 2vh;
-    margin-left: 1vh;
-    margin-bottom: 2vh; 
+    margin-top: 2vh;
+    margin-right: 4vh;
+    margin-left: 2vh;
+    margin-bottom: 4vh; 
     width: 100vw;
     height: 100vh; 
     font-size: 2vw;
