@@ -12,28 +12,28 @@
   font-family: '1454 Gutenberg Bibel';
   font-style: normal;
   font-weight: normal;
-  src: local('1454-Gutenberg-Bibel'), url("../../fonts/first_printed_books/1454-Gutenberg-Bibel.otf") format('otf');
+  src: local('1454-Gutenberg-Bibel'), url("../../fonts/first_printed_books/1454-Gutenberg-Bibel.otf") format('opentype');
 }
 
 @font-face {
   font-family: 'Carolingia';
   font-style: normal;
   font-weight: normal;
-  src: local('carolingia'), url("../../fonts/first_printed_books/carolingia.otf") format('otf');
+  src: local('carolingia'), url("../../fonts/first_printed_books/carolingia.otf") format('opentype');
 }
 
 @font-face {
   font-family: 'Medieval Scribish';
   font-style: normal;
   font-weight: normal;
-  src: local('scribish'), url("../../fonts/first_printed_books/scribish.otf") format('otf');
+  src: local('scribish'), url("../../fonts/first_printed_books/scribish.otf") format('opentype');
 }
 
 @font-face {
   font-family: 'ATOIdEnglish';
   font-style: normal;
   font-weight: normal;
-  src: local('ATOIdEnglish'), url("../../fonts/first_printed_books/ATOIdEnglish.otf") format('otf');
+  src: local('ATOIdEnglish'), url("../../fonts/first_printed_books/ATOIdEnglish.otf") format('opentype');
 }
 
 html {
