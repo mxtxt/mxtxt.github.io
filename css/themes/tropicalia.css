@@ -206,7 +206,7 @@ body {
 header {
   /* takes up 100% of the viewport */
   width: 100vw;
-  /* height: 100vh; */
+  height: 100vh;
   /* takes up 100% of the viewport */
   margin: 0;
   padding: 0;
