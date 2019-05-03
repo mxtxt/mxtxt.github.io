@@ -226,7 +226,7 @@
             </div>
             <div class="col-md-9">
               <h3 class="my-2">Colours</h3>
-              <p>Explanation and sources for the characteristic.</p>
+              <p>While choosing the colour palette for Aurora, the intention was to create an optimistic vision of the future: clean, healthy,  and dynamic. This is why the colours are mainly shades of blue with some having a tendency towards green. The overall feeling of a modern flow is fostered by the animated background which constantly mixes a predefined set of colours.  </p>
             </div>
             <div class="card">
               <div class="card-header">
@@ -234,17 +234,50 @@
               </div>
               <div id="card-element-four" class="collapse" data-parent="#card-42350">
                 <div class="card-body">
-                  Here godes the css and js code snippets and explanation!
+                  See how the background is created in CSS:
+                  <p>
                   <pre>
                       <small><code class="css">
-                        &#60;!DOCTYPE html&#62;
+  body {
+    padding: 2.5vw;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(60deg, #8bbbcc 0%, #86b9ca 49%, #4051b5 82%);
+    background-size: 200%;
+    animation: aurora 15s infinite;
+    box-sizing: border-box;
+  }
+  body:before {
+    margin: -2.5vw;
+    background: radial-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15));
+    background-size: 200%;
+    content: " ";
+    position: fixed;
+    animation: aurora 15s infinite;
+    width: 100%;
+    height: 100%;
+  }
+  @keyframes aurora {
+    0% {
+      background-position: left top;
+    }
+    25% {
+      background-position: right top;
+    }
+    50% {
+      background-position: right bottom;
+    }
+    75% {
+      background-position: left bottom;
+    }
+    100% {
+      background-position: left top;
+    }
+  }
                       </code></small>
                   </pre>
-                  <pre>
-                      <small><code class="js">
-                        &#60;!DOCTYPE html&#62;
-                      </code></small>
-                  </pre>
+                </p>
                 </div>
               </div>
             </div>
