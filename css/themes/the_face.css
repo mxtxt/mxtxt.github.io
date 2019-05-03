@@ -115,7 +115,7 @@ h1:before {
 h1 {
   text-transform: uppercase;
   font-family: 'Crazy Loop in Paris';
-  font-size: 13vw; /* whatever number size you choose, but rem */
+  font-size: 11vw; /* whatever number size you choose, but rem */
   font-style: normal;
   text-align: right;
   margin: ;
